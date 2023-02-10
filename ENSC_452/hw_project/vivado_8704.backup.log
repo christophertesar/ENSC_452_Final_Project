@@ -1,0 +1,36 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Wed Jan 25 21:45:37 2023
+# Process ID: 8704
+# Current directory: C:/Users/Christopher/Desktop/ENSC_452/audio_tutorial
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent18728 C:\Users\Christopher\Desktop\ENSC_452\audio_tutorial\audio_tutorial.xpr
+# Log file: C:/Users/Christopher/Desktop/ENSC_452/audio_tutorial/vivado.log
+# Journal file: C:/Users/Christopher/Desktop/ENSC_452/audio_tutorial\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/Christopher/Desktop/ENSC_452/audio_tutorial/audio_tutorial.xpr
+WARNING: [filemgmt 56-3] IP Repository Path: Could not find the directory 'C:/Users/Christopher/Desktop/ENSC_452/audio_tutorial_given_files/sources/zedboard/adventures_with_ip_integrator/ip'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'c:/Users/Christopher/Desktop/ENSC_452/audio_tutorial_given_files/sources/zedboard/adventures_with_ip_integrator/ip'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.2/data/ip'.
+WARNING: [BD 41-1661] One or more IPs have been locked in the design 'design_1.bd'. Please run report_ip_status for more details and recommendations on how to fix this issue.
+List of locked IPs:
+design_1_led_controller_0_0
+design_1_zed_audio_ctrl_0_0
+
+open_project: Time (s): cpu = 00:00:14 ; elapsed = 00:00:08 . Memory (MB): peak = 1000.074 ; gain = 0.000
+update_compile_order -fileset sources_1
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Wed Jan 25 21:46:13 2023] Launched impl_1...
+Run output will be captured here: C:/Users/Christopher/Desktop/ENSC_452/audio_tutorial/audio_tutorial.runs/impl_1/runme.log
+INFO: [Vivado 12-8231] Launching Vitis
+INFO: [Vivado 12-417] Running vitis
+INFO: [Vivado 12-8232] Vitis launch initiated. Please check console for any further messages.
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu Jan 26 01:07:44 2023...

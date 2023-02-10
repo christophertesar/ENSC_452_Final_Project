@@ -1,0 +1,17 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Wed Jan 25 13:21:26 2023
+# Process ID: 2692
+# Current directory: C:/Users/Christopher/Desktop/ENSC_452/audio_tutorial
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent9560 C:\Users\Christopher\Desktop\ENSC_452\audio_tutorial\audio_tutorial.xpr
+# Log file: C:/Users/Christopher/Desktop/ENSC_452/audio_tutorial/vivado.log
+# Journal file: C:/Users/Christopher/Desktop/ENSC_452/audio_tutorial\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/Christopher/Desktop/ENSC_452/audio_tutorial/audio_tutorial.xpr
+update_compile_order -fileset sources_1
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1

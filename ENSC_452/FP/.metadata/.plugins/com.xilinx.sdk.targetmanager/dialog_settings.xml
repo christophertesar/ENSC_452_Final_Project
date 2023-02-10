@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item key="AudioLabReal_system-bitFile" value="${project_loc:AudioLabReal}/_ide/bitstream/design_1_wrapper.bit"/>
+	<item key="AudioLabReal_system-bmmFile" value=""/>
+	<item key="AudioLabReal_system-target" value="Local"/>
+	<item key="AudioLabReal_system-device" value="Auto Detect"/>
+	<item key="AudioLabReal_system-partial_bit" value="false"/>
+	<item key="AudioLabReal_system-skip_rev_check" value="false"/>
+	<item key="programfpga.sdxproject" value="VideoComponent_system"/>
+	<item key="devices_info_Local" value="{&quot;cables&quot;:[{&quot;name&quot;:&quot;Digilent Zed 210248469741&quot;,&quot;indexContextMap&quot;:{&quot;2&quot;:&quot;jsn-Zed-210248469741-4ba00477-0&quot;,&quot;3&quot;:&quot;jsn-Zed-210248469741-03727093-0&quot;}}]}"/>
+	<item key="VideoComponent_system-bitFile" value="${project_loc:VideoComponent}/_ide/bitstream/FinalProject.bit"/>
+	<item key="VideoComponent_system-bmmFile" value=""/>
+	<item key="VideoComponent_system-target" value="Local"/>
+	<item key="VideoComponent_system-device" value="Auto Detect"/>
+	<item key="VideoComponent_system-partial_bit" value="false"/>
+	<item key="VideoComponent_system-skip_rev_check" value="false"/>
+</section>
