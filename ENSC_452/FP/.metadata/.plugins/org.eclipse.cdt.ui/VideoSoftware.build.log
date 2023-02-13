@@ -1,0 +1,10 @@
+00:18:58 **** Build of configuration Debug for project VideoSoftware ****
+make all 
+make --no-print-directory pre-build
+a9-linaro-pre-build-step
+' '
+make --no-print-directory main-build
+make[1]: Nothing to be done for 'main-build'.
+
+00:18:58 Build Finished (took 316ms)
+

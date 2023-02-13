@@ -185,3 +185,142 @@ timestamp=[2023-02-08 21:10:05], mode=BUILD, duration=0:00:00.319, duration_ms=3
 timestamp=[2023-02-09 21:03:31], mode=WORKBENCH_START, duration=0:00:14.982, duration_ms=14982, data={}
 timestamp=[2023-02-09 21:03:33], mode=WORKBENCH_UI_INIT, duration=0:00:01.382, duration_ms=1382, data={editors_count=21, platform_editors_count=9, projects_count=9, platform_projects_count=2, active_platform_editor=false, projects=AudioLabReal,AudioLabReal_system,AudioSoftware,AudioSoftware_system,FinalProject,RemoteSystemsTempFiles,VideoComponent,VideoComponent_system,design_1_wrapper}
 timestamp=[2023-02-09 21:03:35], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:01.142, duration_ms=1142, data={}
+timestamp=[2023-02-10 13:40:26], mode=WORKBENCH_START, duration=0:00:18.067, duration_ms=18067, data={}
+timestamp=[2023-02-10 13:40:27], mode=WORKBENCH_UI_INIT, duration=0:00:01.774, duration_ms=1774, data={editors_count=21, platform_editors_count=9, projects_count=9, platform_projects_count=2, active_platform_editor=false, projects=AudioLabReal,AudioLabReal_system,AudioSoftware,AudioSoftware_system,FinalProject,RemoteSystemsTempFiles,VideoComponent,VideoComponent_system,design_1_wrapper}
+timestamp=[2023-02-10 13:40:30], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:01.283, duration_ms=1283, data={}
+timestamp=[2023-02-10 13:44:12], mode=PLATFORM_GENERATION, duration=0:00:04.873, duration_ms=4873, data={name=FinalProject}
+timestamp=[2023-02-10 13:57:38], mode=BUILD, duration=0:00:00.394, duration_ms=394, data={name=VideoComponent, configuration=Debug, clean_build=false}
+timestamp=[2023-02-10 13:57:42], mode=BUILD, duration=0:00:00.486, duration_ms=486, data={name=AudioSoftware, configuration=Debug, clean_build=false}
+timestamp=[2023-02-10 15:21:46], mode=PLATFORM_GENERATION, duration=0:00:12.876, duration_ms=12876, data={name=FinalProject}
+timestamp=[2023-02-10 15:23:34], mode=BUILD, duration=0:00:03.234, duration_ms=3234, data={name=VideoComponent, configuration=Debug, clean_build=false}
+timestamp=[2023-02-10 15:24:24], mode=BUILD, duration=0:00:00.708, duration_ms=708, data={name=VideoComponent, configuration=Debug, clean_build=false}
+timestamp=[2023-02-10 15:25:26], mode=BUILD, duration=0:00:01.194, duration_ms=1194, data={name=VideoComponent, configuration=Debug, clean_build=false}
+timestamp=[2023-02-10 15:25:37], mode=BUILD, duration=0:00:01.145, duration_ms=1145, data={name=AudioSoftware, configuration=Debug, clean_build=false}
+timestamp=[2023-02-10 15:30:42], mode=BUILD, duration=0:00:00.694, duration_ms=694, data={name=VideoComponent, configuration=Debug, clean_build=false}
+timestamp=[2023-02-10 15:31:40], mode=BUILD, duration=0:00:00.638, duration_ms=638, data={name=VideoComponent, configuration=Debug, clean_build=false}
+timestamp=[2023-02-10 15:33:30], mode=BUILD, duration=0:00:01.094, duration_ms=1094, data={name=VideoComponent, configuration=Debug, clean_build=false}
+timestamp=[2023-02-10 15:33:34], mode=BUILD, duration=0:00:00.982, duration_ms=982, data={name=AudioSoftware, configuration=Debug, clean_build=false}
+timestamp=[2023-02-10 15:33:43], mode=BUILD, duration=0:00:00.893, duration_ms=893, data={name=AudioSoftware, configuration=Debug, clean_build=false}
+timestamp=[2023-02-10 15:52:25], mode=WORKBENCH_START, duration=0:00:12.773, duration_ms=12773, data={}
+timestamp=[2023-02-10 15:52:26], mode=WORKBENCH_UI_INIT, duration=0:00:00.806, duration_ms=806, data={editors_count=10, platform_editors_count=3, projects_count=6, platform_projects_count=1, active_platform_editor=false, projects=AudioSoftware,AudioSoftware_system,FinalProject,RemoteSystemsTempFiles,VideoComponent,VideoComponent_system}
+timestamp=[2023-02-10 15:52:27], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.333, duration_ms=333, data={}
+timestamp=[2023-02-10 15:53:29], mode=PLATFORM_GENERATION, duration=0:00:20.536, duration_ms=20536, data={name=FinalProject}
+timestamp=[2023-02-10 15:53:32], mode=BUILD, duration=0:00:00.355, duration_ms=355, data={name=VideoComponent, configuration=Debug, clean_build=false}
+timestamp=[2023-02-10 15:53:39], mode=BUILD, duration=0:00:06.991, duration_ms=6991, data={name=VideoComponent_system, configuration=Debug, clean_build=false}
+timestamp=[2023-02-10 15:54:12], mode=BUILD, duration=0:00:00.488, duration_ms=488, data={name=AudioSoftware, configuration=Debug, clean_build=false}
+timestamp=[2023-02-10 15:54:19], mode=BUILD, duration=0:00:01.244, duration_ms=1244, data={name=AudioSoftware, configuration=Debug, clean_build=false}
+timestamp=[2023-02-10 18:12:54], mode=APP_CREATION, duration=0:00:09.513, duration_ms=9513, data={name=VideoSoftware, project_type=sdk, os=standalone, processor=cortex-a9, runtime=C/C++, platform=FinalProject, application_type=application}
+timestamp=[2023-02-10 19:56:00], mode=PLATFORM_GENERATION, duration=0:00:04.790, duration_ms=4790, data={name=FinalProject}
+timestamp=[2023-02-10 19:56:35], mode=BUILD, duration=0:00:00.844, duration_ms=844, data={name=AudioSoftware, configuration=Debug, clean_build=false}
+timestamp=[2023-02-10 19:56:37], mode=BUILD, duration=0:00:01.513, duration_ms=1513, data={name=VideoSoftware, configuration=Debug, clean_build=false}
+timestamp=[2023-02-10 19:56:46], mode=BUILD, duration=0:00:09.074, duration_ms=9074, data={name=AudioSoftware_system, configuration=Debug, clean_build=false}
+timestamp=[2023-02-10 20:00:42], mode=WORKBENCH_START, duration=0:00:13.807, duration_ms=13807, data={}
+timestamp=[2023-02-10 20:00:43], mode=WORKBENCH_UI_INIT, duration=0:00:00.952, duration_ms=952, data={editors_count=10, platform_editors_count=1, projects_count=7, platform_projects_count=1, active_platform_editor=false, projects=AudioSoftware,AudioSoftware_system,FinalProject,RemoteSystemsTempFiles,VideoComponent,VideoComponent_system,VideoSoftware}
+timestamp=[2023-02-10 20:00:46], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.343, duration_ms=343, data={}
+timestamp=[2023-02-10 20:01:39], mode=PLATFORM_GENERATION, duration=0:00:20.258, duration_ms=20258, data={name=FinalProject}
+timestamp=[2023-02-10 20:01:42], mode=BUILD, duration=0:00:00.462, duration_ms=462, data={name=AudioSoftware, configuration=Debug, clean_build=false}
+timestamp=[2023-02-10 20:01:43], mode=BUILD, duration=0:00:00.461, duration_ms=461, data={name=VideoSoftware, configuration=Debug, clean_build=false}
+timestamp=[2023-02-10 20:01:52], mode=BUILD, duration=0:00:07.881, duration_ms=7881, data={name=AudioSoftware_system, configuration=Debug, clean_build=false}
+timestamp=[2023-02-10 20:03:57], mode=WORKBENCH_START, duration=0:00:12.835, duration_ms=12835, data={}
+timestamp=[2023-02-10 20:03:58], mode=WORKBENCH_UI_INIT, duration=0:00:00.933, duration_ms=933, data={editors_count=10, platform_editors_count=1, projects_count=7, platform_projects_count=1, active_platform_editor=false, projects=AudioSoftware,AudioSoftware_system,FinalProject,RemoteSystemsTempFiles,VideoComponent,VideoComponent_system,VideoSoftware}
+timestamp=[2023-02-10 20:04:02], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.331, duration_ms=331, data={}
+timestamp=[2023-02-10 20:04:48], mode=PLATFORM_GENERATION, duration=0:00:19.381, duration_ms=19381, data={name=FinalProject}
+timestamp=[2023-02-10 20:04:51], mode=BUILD, duration=0:00:00.404, duration_ms=404, data={name=AudioSoftware, configuration=Debug, clean_build=false}
+timestamp=[2023-02-10 20:04:53], mode=BUILD, duration=0:00:00.834, duration_ms=834, data={name=VideoSoftware, configuration=Debug, clean_build=false}
+timestamp=[2023-02-10 20:05:00], mode=BUILD, duration=0:00:07.326, duration_ms=7326, data={name=AudioSoftware_system, configuration=Debug, clean_build=false}
+timestamp=[2023-02-10 20:08:53], mode=WORKBENCH_START, duration=0:00:13.218, duration_ms=13218, data={}
+timestamp=[2023-02-10 20:08:53], mode=WORKBENCH_UI_INIT, duration=0:00:00.942, duration_ms=942, data={editors_count=10, platform_editors_count=1, projects_count=7, platform_projects_count=1, active_platform_editor=false, projects=AudioSoftware,AudioSoftware_system,FinalProject,RemoteSystemsTempFiles,VideoComponent,VideoComponent_system,VideoSoftware}
+timestamp=[2023-02-10 20:08:57], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.434, duration_ms=434, data={}
+timestamp=[2023-02-10 20:12:40], mode=MISC, duration=0:00:08.761, duration_ms=8761, data={name=AudioSoftware_system, type=bif_creation}
+timestamp=[2023-02-10 20:21:41], mode=WORKBENCH_START, duration=0:00:13.433, duration_ms=13433, data={}
+timestamp=[2023-02-10 20:21:43], mode=WORKBENCH_UI_INIT, duration=0:00:01.084, duration_ms=1084, data={editors_count=10, platform_editors_count=1, projects_count=7, platform_projects_count=1, active_platform_editor=false, projects=AudioSoftware,AudioSoftware_system,FinalProject,RemoteSystemsTempFiles,VideoComponent,VideoComponent_system,VideoSoftware}
+timestamp=[2023-02-10 20:21:45], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.576, duration_ms=576, data={}
+timestamp=[2023-02-10 20:45:24], mode=PLATFORM_GENERATION, duration=0:00:19.719, duration_ms=19719, data={name=FinalProject}
+timestamp=[2023-02-10 20:45:24], mode=BUILD, duration=0:00:00.404, duration_ms=404, data={name=AudioSoftware, configuration=Debug, clean_build=false}
+timestamp=[2023-02-10 20:45:30], mode=BUILD, duration=0:00:00.415, duration_ms=415, data={name=VideoSoftware, configuration=Debug, clean_build=false}
+timestamp=[2023-02-10 20:51:27], mode=WORKBENCH_START, duration=0:00:14.772, duration_ms=14772, data={}
+timestamp=[2023-02-10 20:51:28], mode=WORKBENCH_UI_INIT, duration=0:00:01.050, duration_ms=1050, data={editors_count=9, platform_editors_count=1, projects_count=5, platform_projects_count=1, active_platform_editor=false, projects=AudioSoftware,AudioSoftware_system,FinalProject,RemoteSystemsTempFiles,VideoSoftware}
+timestamp=[2023-02-10 20:51:30], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.429, duration_ms=429, data={}
+timestamp=[2023-02-10 20:51:52], mode=PLATFORM_GENERATION, duration=0:00:17.896, duration_ms=17896, data={name=FinalProject}
+timestamp=[2023-02-10 20:51:55], mode=BUILD, duration=0:00:00.387, duration_ms=387, data={name=AudioSoftware, configuration=Debug, clean_build=false}
+timestamp=[2023-02-10 20:51:56], mode=BUILD, duration=0:00:00.515, duration_ms=515, data={name=VideoSoftware, configuration=Debug, clean_build=false}
+timestamp=[2023-02-10 20:52:04], mode=BUILD, duration=0:00:07.011, duration_ms=7011, data={name=AudioSoftware_system, configuration=Debug, clean_build=false}
+timestamp=[2023-02-10 22:05:10], mode=BUILD, duration=0:00:00.400, duration_ms=400, data={name=AudioSoftware, configuration=Debug, clean_build=false}
+timestamp=[2023-02-10 22:06:05], mode=BUILD, duration=0:00:00.379, duration_ms=379, data={name=AudioSoftware, configuration=Debug, clean_build=false}
+timestamp=[2023-02-10 22:40:10], mode=WORKBENCH_START, duration=0:00:17.626, duration_ms=17626, data={}
+timestamp=[2023-02-10 22:40:11], mode=WORKBENCH_UI_INIT, duration=0:00:01.385, duration_ms=1385, data={editors_count=7, platform_editors_count=1, projects_count=5, platform_projects_count=1, active_platform_editor=false, projects=AudioSoftware,AudioSoftware_system,FinalProject,RemoteSystemsTempFiles,VideoSoftware}
+timestamp=[2023-02-10 22:40:14], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.760, duration_ms=760, data={}
+timestamp=[2023-02-10 22:44:53], mode=BUILD, duration=0:00:00.494, duration_ms=494, data={name=AudioSoftware, configuration=Debug, clean_build=false}
+timestamp=[2023-02-10 22:44:55], mode=BUILD, duration=0:00:00.917, duration_ms=917, data={name=VideoSoftware, configuration=Debug, clean_build=false}
+timestamp=[2023-02-10 22:45:06], mode=BUILD, duration=0:00:10.934, duration_ms=10934, data={name=AudioSoftware_system, configuration=Debug, clean_build=false}
+timestamp=[2023-02-10 22:51:08], mode=APP_CREATION, duration=0:00:09.971, duration_ms=9971, data={name=VideoSW, project_type=sdk, os=standalone, processor=cortex-a9, runtime=C/C++, platform=FinalProject, application_type=application}
+timestamp=[2023-02-10 23:36:29], mode=WORKBENCH_START, duration=0:00:12.785, duration_ms=12785, data={}
+timestamp=[2023-02-10 23:36:31], mode=WORKBENCH_UI_INIT, duration=0:00:01.021, duration_ms=1021, data={editors_count=3, platform_editors_count=0, projects_count=6, platform_projects_count=1, active_platform_editor=false, projects=AudioSoftware,AudioSoftware_system,FinalProject,RemoteSystemsTempFiles,VideoSW,VideoSoftware}
+timestamp=[2023-02-10 23:36:32], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.646, duration_ms=646, data={}
+timestamp=[2023-02-10 23:36:51], mode=BUILD, duration=0:00:01.858, duration_ms=1858, data={name=VideoSW, configuration=Debug, clean_build=false}
+timestamp=[2023-02-10 23:37:42], mode=BUILD, duration=0:00:00.438, duration_ms=438, data={name=AudioSoftware, configuration=Debug, clean_build=false}
+timestamp=[2023-02-10 23:37:43], mode=BUILD, duration=0:00:00.648, duration_ms=648, data={name=VideoSW, configuration=Debug, clean_build=false}
+timestamp=[2023-02-10 23:37:44], mode=BUILD, duration=0:00:00.330, duration_ms=330, data={name=VideoSoftware, configuration=Debug, clean_build=false}
+timestamp=[2023-02-10 23:37:55], mode=BUILD, duration=0:00:10.840, duration_ms=10840, data={name=AudioSoftware_system, configuration=Debug, clean_build=false}
+timestamp=[2023-02-10 23:40:42], mode=BUILD, duration=0:00:01.581, duration_ms=1581, data={name=AudioSoftware, configuration=Release, clean_build=false}
+timestamp=[2023-02-10 23:40:56], mode=BUILD, duration=0:00:00.490, duration_ms=490, data={name=AudioSoftware, configuration=Debug, clean_build=false}
+timestamp=[2023-02-10 23:57:37], mode=WORKBENCH_START, duration=0:00:14.057, duration_ms=14057, data={}
+timestamp=[2023-02-10 23:57:38], mode=WORKBENCH_UI_INIT, duration=0:00:01.067, duration_ms=1067, data={editors_count=3, platform_editors_count=0, projects_count=6, platform_projects_count=1, active_platform_editor=false, projects=AudioSoftware,AudioSoftware_system,FinalProject,RemoteSystemsTempFiles,VideoSW,VideoSoftware}
+timestamp=[2023-02-10 23:57:39], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.248, duration_ms=248, data={}
+timestamp=[2023-02-11 00:31:01], mode=BUILD, duration=0:00:00.496, duration_ms=496, data={name=AudioSoftware, configuration=Debug, clean_build=false}
+timestamp=[2023-02-11 00:31:06], mode=BUILD, duration=0:00:00.378, duration_ms=378, data={name=VideoSW, configuration=Debug, clean_build=false}
+timestamp=[2023-02-11 00:42:37], mode=WORKBENCH_START, duration=0:00:15.486, duration_ms=15486, data={}
+timestamp=[2023-02-11 00:42:38], mode=WORKBENCH_UI_INIT, duration=0:00:01.291, duration_ms=1291, data={editors_count=3, platform_editors_count=0, projects_count=6, platform_projects_count=1, active_platform_editor=false, projects=AudioSoftware,AudioSoftware_system,FinalProject,RemoteSystemsTempFiles,VideoSW,VideoSoftware}
+timestamp=[2023-02-11 00:42:39], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.485, duration_ms=485, data={}
+timestamp=[2023-02-11 15:39:04], mode=WORKBENCH_START, duration=0:00:16.701, duration_ms=16701, data={}
+timestamp=[2023-02-11 15:39:05], mode=WORKBENCH_UI_INIT, duration=0:00:01.186, duration_ms=1186, data={editors_count=3, platform_editors_count=0, projects_count=6, platform_projects_count=1, active_platform_editor=false, projects=AudioSoftware,AudioSoftware_system,FinalProject,RemoteSystemsTempFiles,VideoSW,VideoSoftware}
+timestamp=[2023-02-11 15:39:07], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:01.437, duration_ms=1437, data={}
+timestamp=[2023-02-11 23:31:26], mode=PLATFORM_GENERATION, duration=0:00:22.096, duration_ms=22096, data={name=FinalProject}
+timestamp=[2023-02-11 23:31:30], mode=BUILD, duration=0:00:00.753, duration_ms=753, data={name=AudioSoftware, configuration=Debug, clean_build=false}
+timestamp=[2023-02-11 23:32:55], mode=BUILD, duration=0:00:00.604, duration_ms=604, data={name=AudioSoftware, configuration=Debug, clean_build=false}
+timestamp=[2023-02-11 23:35:11], mode=BUILD, duration=0:00:00.622, duration_ms=622, data={name=AudioSoftware, configuration=Debug, clean_build=false}
+timestamp=[2023-02-11 23:35:30], mode=BUILD, duration=0:00:00.605, duration_ms=605, data={name=AudioSoftware, configuration=Debug, clean_build=false}
+timestamp=[2023-02-11 23:35:59], mode=BUILD, duration=0:00:00.936, duration_ms=936, data={name=AudioSoftware, configuration=Debug, clean_build=false}
+timestamp=[2023-02-11 23:38:41], mode=BUILD, duration=0:00:00.548, duration_ms=548, data={name=AudioSoftware, configuration=Debug, clean_build=false}
+timestamp=[2023-02-11 23:38:57], mode=BUILD, duration=0:00:00.988, duration_ms=988, data={name=AudioSoftware, configuration=Debug, clean_build=false}
+timestamp=[2023-02-11 23:40:41], mode=BUILD, duration=0:00:00.531, duration_ms=531, data={name=AudioSoftware, configuration=Debug, clean_build=false}
+timestamp=[2023-02-11 23:40:59], mode=BUILD, duration=0:00:00.539, duration_ms=539, data={name=AudioSoftware, configuration=Debug, clean_build=false}
+timestamp=[2023-02-11 23:41:20], mode=BUILD, duration=0:00:00.536, duration_ms=536, data={name=AudioSoftware, configuration=Debug, clean_build=false}
+timestamp=[2023-02-11 23:42:59], mode=BUILD, duration=0:00:00.597, duration_ms=597, data={name=AudioSoftware, configuration=Debug, clean_build=false}
+timestamp=[2023-02-11 23:44:02], mode=BUILD, duration=0:00:00.546, duration_ms=546, data={name=AudioSoftware, configuration=Debug, clean_build=false}
+timestamp=[2023-02-11 23:47:45], mode=BUILD, duration=0:00:00.536, duration_ms=536, data={name=AudioSoftware, configuration=Debug, clean_build=false}
+timestamp=[2023-02-11 23:48:22], mode=BUILD, duration=0:00:00.550, duration_ms=550, data={name=AudioSoftware, configuration=Debug, clean_build=false}
+timestamp=[2023-02-11 23:49:40], mode=BUILD, duration=0:00:01.036, duration_ms=1036, data={name=AudioSoftware, configuration=Debug, clean_build=false}
+timestamp=[2023-02-11 23:50:15], mode=BUILD, duration=0:00:00.880, duration_ms=880, data={name=AudioSoftware, configuration=Debug, clean_build=false}
+timestamp=[2023-02-11 23:50:38], mode=BUILD, duration=0:00:00.814, duration_ms=814, data={name=AudioSoftware, configuration=Debug, clean_build=false}
+timestamp=[2023-02-11 23:51:25], mode=BUILD, duration=0:00:00.936, duration_ms=936, data={name=AudioSoftware, configuration=Debug, clean_build=false}
+timestamp=[2023-02-12 00:18:56], mode=BUILD, duration=0:00:00.434, duration_ms=434, data={name=AudioSoftware, configuration=Debug, clean_build=false}
+timestamp=[2023-02-12 00:18:58], mode=BUILD, duration=0:00:01.536, duration_ms=1536, data={name=VideoSW, configuration=Debug, clean_build=false}
+timestamp=[2023-02-12 00:18:58], mode=BUILD, duration=0:00:00.324, duration_ms=324, data={name=VideoSoftware, configuration=Debug, clean_build=false}
+timestamp=[2023-02-12 00:19:06], mode=BUILD, duration=0:00:07.369, duration_ms=7369, data={name=AudioSoftware_system, configuration=Debug, clean_build=false}
+timestamp=[2023-02-12 00:22:56], mode=BUILD, duration=0:00:00.940, duration_ms=940, data={name=AudioSoftware, configuration=Debug, clean_build=false}
+timestamp=[2023-02-12 00:51:39], mode=BUILD, duration=0:00:01.086, duration_ms=1086, data={name=AudioSoftware, configuration=Debug, clean_build=false}
+timestamp=[2023-02-12 00:53:01], mode=BUILD, duration=0:00:00.429, duration_ms=429, data={name=AudioSoftware, configuration=Debug, clean_build=false}
+timestamp=[2023-02-12 11:52:35], mode=WORKBENCH_START, duration=0:00:15.681, duration_ms=15681, data={}
+timestamp=[2023-02-12 11:52:37], mode=WORKBENCH_UI_INIT, duration=0:00:01.223, duration_ms=1223, data={editors_count=11, platform_editors_count=0, projects_count=6, platform_projects_count=1, active_platform_editor=false, projects=AudioSoftware,AudioSoftware_system,FinalProject,RemoteSystemsTempFiles,VideoSW,VideoSoftware}
+timestamp=[2023-02-12 11:52:38], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:01.163, duration_ms=1163, data={}
+timestamp=[2023-02-12 11:55:52], mode=BUILD, duration=0:00:00.468, duration_ms=468, data={name=AudioSoftware, configuration=Debug, clean_build=false}
+timestamp=[2023-02-12 12:07:39], mode=BUILD, duration=0:00:01.673, duration_ms=1673, data={name=AudioSoftware, configuration=Debug, clean_build=false}
+timestamp=[2023-02-12 12:09:23], mode=BUILD, duration=0:00:01.221, duration_ms=1221, data={name=AudioSoftware, configuration=Debug, clean_build=false}
+timestamp=[2023-02-12 12:12:50], mode=BUILD, duration=0:00:00.944, duration_ms=944, data={name=AudioSoftware, configuration=Debug, clean_build=false}
+timestamp=[2023-02-12 12:14:38], mode=BUILD, duration=0:00:01.454, duration_ms=1454, data={name=AudioSoftware, configuration=Debug, clean_build=false}
+timestamp=[2023-02-12 12:16:34], mode=BUILD, duration=0:00:00.931, duration_ms=931, data={name=AudioSoftware, configuration=Debug, clean_build=false}
+timestamp=[2023-02-12 12:17:21], mode=BUILD, duration=0:00:01.056, duration_ms=1056, data={name=AudioSoftware, configuration=Debug, clean_build=false}
+timestamp=[2023-02-12 12:19:33], mode=BUILD, duration=0:00:00.990, duration_ms=990, data={name=AudioSoftware, configuration=Debug, clean_build=false}
+timestamp=[2023-02-12 12:21:10], mode=BUILD, duration=0:00:01.196, duration_ms=1196, data={name=AudioSoftware, configuration=Debug, clean_build=false}
+timestamp=[2023-02-12 12:22:30], mode=BUILD, duration=0:00:01.010, duration_ms=1010, data={name=AudioSoftware, configuration=Debug, clean_build=false}
+timestamp=[2023-02-12 12:25:45], mode=BUILD, duration=0:00:00.952, duration_ms=952, data={name=AudioSoftware, configuration=Debug, clean_build=false}
+timestamp=[2023-02-12 12:28:20], mode=BUILD, duration=0:00:00.936, duration_ms=936, data={name=AudioSoftware, configuration=Debug, clean_build=false}
+timestamp=[2023-02-12 12:29:44], mode=BUILD, duration=0:00:00.990, duration_ms=990, data={name=AudioSoftware, configuration=Debug, clean_build=false}
+timestamp=[2023-02-12 12:35:00], mode=BUILD, duration=0:00:01.144, duration_ms=1144, data={name=AudioSoftware, configuration=Debug, clean_build=false}
+timestamp=[2023-02-12 13:34:03], mode=BUILD, duration=0:00:00.680, duration_ms=680, data={name=AudioSoftware, configuration=Debug, clean_build=false}
+timestamp=[2023-02-12 13:34:34], mode=BUILD, duration=0:00:00.895, duration_ms=895, data={name=AudioSoftware, configuration=Debug, clean_build=false}
+timestamp=[2023-02-12 13:35:01], mode=BUILD, duration=0:00:00.894, duration_ms=894, data={name=AudioSoftware, configuration=Debug, clean_build=false}
+timestamp=[2023-02-12 22:00:11], mode=BUILD, duration=0:00:01.541, duration_ms=1541, data={name=AudioSoftware, configuration=Debug, clean_build=false}
+timestamp=[2023-02-12 22:08:40], mode=BUILD, duration=0:00:00.989, duration_ms=989, data={name=AudioSoftware, configuration=Debug, clean_build=false}
+timestamp=[2023-02-12 22:10:31], mode=BUILD, duration=0:00:01.096, duration_ms=1096, data={name=AudioSoftware, configuration=Debug, clean_build=false}

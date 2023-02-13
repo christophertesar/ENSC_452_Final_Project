@@ -12,14 +12,8 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_pr
 # IP: bd/design_1/ip/design_1_xbar_0/design_1_xbar_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_xbar_0 || ORIG_REF_NAME==design_1_xbar_0} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_auto_pc_0 || ORIG_REF_NAME==design_1_auto_pc_0} -quiet] -quiet
-
 # IP: bd/design_1/ip/design_1_ps7_0_axi_periph_0/design_1_ps7_0_axi_periph_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_ps7_0_axi_periph_0 || ORIG_REF_NAME==design_1_ps7_0_axi_periph_0} -quiet] -quiet
-
-# IP: bd/design_1/ip/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_rst_ps7_0_100M_0 || ORIG_REF_NAME==design_1_rst_ps7_0_100M_0} -quiet] -quiet
 
 # IP: bd/design_1/ip/design_1_axi_gpio_0_0/design_1_axi_gpio_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_axi_gpio_0_0 || ORIG_REF_NAME==design_1_axi_gpio_0_0} -quiet] -quiet
@@ -38,5 +32,11 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_ax
 
 # IP: bd/design_1/ip/design_1_zed_audio_ctrl_1_0/design_1_zed_audio_ctrl_1_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_zed_audio_ctrl_1_0 || ORIG_REF_NAME==design_1_zed_audio_ctrl_1_0} -quiet] -quiet
+
+# IP: bd/design_1/ip/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_rst_ps7_0_100M_0 || ORIG_REF_NAME==design_1_rst_ps7_0_100M_0} -quiet] -quiet
+
+# IP: bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_auto_pc_0 || ORIG_REF_NAME==design_1_auto_pc_0} -quiet] -quiet
 
 # XDC: c:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.gen/sources_1/bd/design_1/design_1_ooc.xdc

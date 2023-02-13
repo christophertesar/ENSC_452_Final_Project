@@ -2,59 +2,24 @@
 # Vivado v2020.2 (64-bit)
 # SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
 # IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
-# Start of session at: Thu Feb  9 21:38:43 2023
-# Process ID: 7552
+# Start of session at: Thu Feb  9 23:11:40 2023
+# Process ID: 8408
 # Current directory: C:/Users/Christopher/Desktop/FP/ENSC_452/hw_project
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent13488 C:\Users\Christopher\Desktop\FP\ENSC_452\hw_project\audio_tutorial.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent3248 C:\Users\Christopher\Desktop\FP\ENSC_452\hw_project\audio_tutorial.xpr
 # Log file: C:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/vivado.log
 # Journal file: C:/Users/Christopher/Desktop/FP/ENSC_452/hw_project\vivado.jou
 #-----------------------------------------------------------
 start_gui
 open_project C:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.xpr
-INFO: [Project 1-313] Project file moved from 'C:/Users/Christopher/Desktop/FinalProject/ENSC_452/audio_tutorial' since last save.
-INFO: [filemgmt 56-1] IP Repository Path: Directory not found as 'C:/Users/Christopher/Desktop/FP/ENSC_452/AudioLabTest/ip_repo/zed_audio_ctrl'; using path 'C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabTest/ip_repo/zed_audio_ctrl' instead.
 Scanning sources...
 Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Christopher/Desktop/FP/ENSC_452/vga_tutorial_students/vga_controller_ip'.
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabTest/ip_repo/zed_audio_ctrl'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.2/data/ip'.
-open_project: Time (s): cpu = 00:00:17 ; elapsed = 00:00:10 . Memory (MB): peak = 1000.070 ; gain = 0.000
+open_project: Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 999.859 ; gain = 0.000
 update_compile_order -fileset sources_1
-reset_run impl_1 -prev_step 
-WARNING: [Vivado 12-1017] Problems encountered:
-1. Couldn't access process for termination
-
-launch_runs impl_1 -jobs 2
-[Thu Feb  9 21:56:02 2023] Launched impl_1...
-Run output will be captured here: C:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.runs/impl_1/runme.log
-open_run impl_1
-INFO: [Device 21-403] Loading part xc7z020clg484-1
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.164 . Memory (MB): peak = 1063.020 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 105 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
-INFO: [Project 1-479] Netlist was created with Vivado 2020.2
-INFO: [Project 1-570] Preparing netlist for logic optimization
-WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'design_1_i/clk_wiz_0/clk_in1' is not directly connected to top level port. Synthesis is ignored for IBUF_LOW_PWR but preserved for implementation.
-INFO: [Timing 38-478] Restoring timing data from binary archive.
-INFO: [Timing 38-479] Binary timing data restore complete.
-INFO: [Project 1-856] Restoring constraints from binary archive.
-INFO: [Project 1-853] Binary constraint restore complete.
-Reading XDEF placement.
-Reading placer database...
-Reading XDEF routing.
-Read XDEF File: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.450 . Memory (MB): peak = 1765.770 ; gain = 0.000
-Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB |
-Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.452 . Memory (MB): peak = 1765.770 ; gain = 0.000
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1765.770 ; gain = 0.000
-INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 4 instances were transformed.
-  IOBUF => IOBUF (IBUF, OBUFT): 4 instances
-
-open_run: Time (s): cpu = 00:00:26 ; elapsed = 00:00:23 . Memory (MB): peak = 1886.945 ; gain = 886.875
-CRITICAL WARNING: [Timing 38-282] The design failed to meet the timing requirements. Please see the timing summary report for details on the timing violations.
-WARNING: [Timing 38-436] There are set_bus_skew constraint(s) in this design. Please run report_bus_skew to ensure that bus skew requirements are met.
-open_bd_design {C:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.srcs/sources_1/bd/design_1/design_1.bd}
+exopen_bd_design {C:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.srcs/sources_1/bd/design_1/design_1.bd}
 Reading block design file <C:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.srcs/sources_1/bd/design_1/design_1.bd>...
 Adding component instance block -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
 Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - ps7_0_axi_periph
@@ -68,15 +33,433 @@ Adding component instance block -- xilinx.com:ip:clk_wiz:6.0 - clk_wiz_0
 Adding component instance block -- xilinx.com:ip:axi_timer:2.0 - axi_timer_0
 Adding component instance block -- xilinx.com:user:zed_audio_ctrl:1.0 - zed_audio_ctrl_1
 Successfully read diagram <design_1> from block design file <C:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.srcs/sources_1/bd/design_1/design_1.bd>
-open_bd_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2450.453 ; gain = 0.000
-launch_runs impl_1 -to_step write_bitstream -jobs 2
-[Thu Feb  9 22:13:19 2023] Launched impl_1...
-Run output will be captured here: C:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.runs/impl_1/runme.log
+open_bd_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 985.031 ; gain = 0.000
+WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
+startgroup
+set_property -dict [list CONFIG.PCW_APU_PERIPHERAL_FREQMHZ {200} CONFIG.PCW_FPGA0_PERIPHERAL_FREQMHZ {120.000000} CONFIG.PCW_QSPI_GRP_SINGLE_SS_ENABLE {1}] [get_bd_cells processing_system7_0]
+endgroup
+reset_run design_1_processing_system7_0_0_synth_1
+save_bd_design
+Wrote  : <C:\Users\Christopher\Desktop\FP\ENSC_452\hw_project\audio_tutorial.srcs\sources_1\bd\design_1\design_1.bd> 
+Wrote  : <C:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
 reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 2
-[Thu Feb  9 22:16:36 2023] Launched synth_1...
+launch_runs synth_1 -jobs 2
+CRITICAL WARNING: [BD 41-1343] Reset pin /ps7_0_axi_periph/ARESETN (associated clock /ps7_0_axi_periph/ACLK) is connected to reset source /rst_ps7_0_100M/peripheral_aresetn (synchronous to clock source /clk_wiz_0/clk_out1).
+This may prevent design from meeting timing. Please add Processor System Reset module to create a reset that is synchronous to the associated clock source /processing_system7_0/FCLK_CLK0.
+CRITICAL WARNING: [BD 41-1343] Reset pin /ps7_0_axi_periph/S00_ARESETN (associated clock /ps7_0_axi_periph/S00_ACLK) is connected to reset source /rst_ps7_0_100M/peripheral_aresetn (synchronous to clock source /clk_wiz_0/clk_out1).
+This may prevent design from meeting timing. Please add Processor System Reset module to create a reset that is synchronous to the associated clock source /processing_system7_0/FCLK_CLK0.
+CRITICAL WARNING: [BD 41-1343] Reset pin /ps7_0_axi_periph/M00_ARESETN (associated clock /ps7_0_axi_periph/M00_ACLK) is connected to reset source /rst_ps7_0_100M/peripheral_aresetn (synchronous to clock source /clk_wiz_0/clk_out1).
+This may prevent design from meeting timing. Please add Processor System Reset module to create a reset that is synchronous to the associated clock source /processing_system7_0/FCLK_CLK0.
+CRITICAL WARNING: [BD 41-1343] Reset pin /ps7_0_axi_periph/M01_ARESETN (associated clock /ps7_0_axi_periph/M01_ACLK) is connected to reset source /rst_ps7_0_100M/peripheral_aresetn (synchronous to clock source /clk_wiz_0/clk_out1).
+This may prevent design from meeting timing. Please add Processor System Reset module to create a reset that is synchronous to the associated clock source /processing_system7_0/FCLK_CLK0.
+CRITICAL WARNING: [BD 41-1343] Reset pin /ps7_0_axi_periph/M02_ARESETN (associated clock /ps7_0_axi_periph/M02_ACLK) is connected to reset source /rst_ps7_0_100M/peripheral_aresetn (synchronous to clock source /clk_wiz_0/clk_out1).
+This may prevent design from meeting timing. Please add Processor System Reset module to create a reset that is synchronous to the associated clock source /processing_system7_0/FCLK_CLK0.
+CRITICAL WARNING: [BD 41-1343] Reset pin /ps7_0_axi_periph/M03_ARESETN (associated clock /ps7_0_axi_periph/M03_ACLK) is connected to reset source /rst_ps7_0_100M/peripheral_aresetn (synchronous to clock source /clk_wiz_0/clk_out1).
+This may prevent design from meeting timing. Please add Processor System Reset module to create a reset that is synchronous to the associated clock source /processing_system7_0/FCLK_CLK0.
+CRITICAL WARNING: [BD 41-1343] Reset pin /axi_gpio_0/s_axi_aresetn (associated clock /axi_gpio_0/s_axi_aclk) is connected to reset source /rst_ps7_0_100M/peripheral_aresetn (synchronous to clock source /clk_wiz_0/clk_out1).
+This may prevent design from meeting timing. Please add Processor System Reset module to create a reset that is synchronous to the associated clock source /processing_system7_0/FCLK_CLK0.
+CRITICAL WARNING: [BD 41-1343] Reset pin /axi_gpio_1/s_axi_aresetn (associated clock /axi_gpio_1/s_axi_aclk) is connected to reset source /rst_ps7_0_100M/peripheral_aresetn (synchronous to clock source /clk_wiz_0/clk_out1).
+This may prevent design from meeting timing. Please add Processor System Reset module to create a reset that is synchronous to the associated clock source /processing_system7_0/FCLK_CLK0.
+CRITICAL WARNING: [BD 41-1343] Reset pin /vga_controller_0/rstn (associated clock /vga_controller_0/clk) is connected to reset source /rst_ps7_0_100M/peripheral_aresetn (synchronous to clock source /clk_wiz_0/clk_out1).
+This may prevent design from meeting timing. Please add Processor System Reset module to create a reset that is synchronous to the associated clock source /processing_system7_0/FCLK_CLK0.
+CRITICAL WARNING: [BD 41-1343] Reset pin /axi_timer_0/s_axi_aresetn (associated clock /axi_timer_0/s_axi_aclk) is connected to reset source /rst_ps7_0_100M/peripheral_aresetn (synchronous to clock source /clk_wiz_0/clk_out1).
+This may prevent design from meeting timing. Please add Processor System Reset module to create a reset that is synchronous to the associated clock source /processing_system7_0/FCLK_CLK0.
+CRITICAL WARNING: [BD 41-1343] Reset pin /zed_audio_ctrl_1/S_AXI_ARESETN (associated clock /zed_audio_ctrl_1/S_AXI_ACLK) is connected to reset source /rst_ps7_0_100M/peripheral_aresetn (synchronous to clock source /clk_wiz_0/clk_out1).
+This may prevent design from meeting timing. Please add Processor System Reset module to create a reset that is synchronous to the associated clock source /processing_system7_0/FCLK_CLK0.
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_0 clk_wiz propagate
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_0 clk_wiz propagate
+WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /processing_system7_0/S_AXI_HP0(0) and /vga_controller_0/M_AXI(5)
+WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /processing_system7_0/S_AXI_HP0(0) and /vga_controller_0/M_AXI(5)
+WARNING: [BD 41-927] Following properties on pin /vga_controller_0/clk have been updated from connected ip, but BD cell '/vga_controller_0' does not accept parameter changes, so they may not be synchronized with cell properties:
+	FREQ_HZ = 125000000 
+Please resolve any mismatches by directly setting properties on BD cell </vga_controller_0> to completely resolve these warnings.
+WARNING: [BD 41-927] Following properties on pin /vga_controller_0/pixel_clk have been updated from connected ip, but BD cell '/vga_controller_0' does not accept parameter changes, so they may not be synchronized with cell properties:
+	PHASE = 0.0 
+Please resolve any mismatches by directly setting properties on BD cell </vga_controller_0> to completely resolve these warnings.
+WARNING: [BD 41-927] Following properties on pin /vga_controller_0/fifo_rst have been updated from connected ip, but BD cell '/vga_controller_0' does not accept parameter changes, so they may not be synchronized with cell properties:
+	POLARITY = ACTIVE_HIGH 
+Please resolve any mismatches by directly setting properties on BD cell </vga_controller_0> to completely resolve these warnings.
+WARNING: [BD 41-927] Following properties on pin /zed_audio_ctrl_1/S_AXI_ACLK have been updated from connected ip, but BD cell '/zed_audio_ctrl_1' does not accept parameter changes, so they may not be synchronized with cell properties:
+	FREQ_HZ = 125000000 
+Please resolve any mismatches by directly setting properties on BD cell </zed_audio_ctrl_1> to completely resolve these warnings.
+CRITICAL WARNING: [BD 41-759] The input pins (listed below) are either not connected or do not have a source port, and they don't have a tie-off specified. These pins are tied-off to all 0's to avoid error in Implementation flow.
+Please check your design and connect them as needed: 
+/vga_controller_0/switch_buffer
+
+Wrote  : <C:\Users\Christopher\Desktop\FP\ENSC_452\hw_project\audio_tutorial.srcs\sources_1\bd\design_1\design_1.bd> 
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_AWID'(6) to pin: '/vga_controller_0/M_AXI_AWID'(3) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/vga_controller_0/M_AXI_RID'(3) to pin: '/processing_system7_0/S_AXI_HP0_RID'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/vga_controller_0/M_AXI_BID'(3) to pin: '/processing_system7_0/S_AXI_HP0_BID'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_ARID'(6) to pin: '/vga_controller_0/M_AXI_ARID'(3) - Only lower order bits will be connected.
+VHDL Output written to : c:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.gen/sources_1/bd/design_1/synth/design_1.vhd
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_AWID'(6) to pin: '/vga_controller_0/M_AXI_AWID'(3) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/vga_controller_0/M_AXI_RID'(3) to pin: '/processing_system7_0/S_AXI_HP0_RID'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/vga_controller_0/M_AXI_BID'(3) to pin: '/processing_system7_0/S_AXI_HP0_BID'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_ARID'(6) to pin: '/vga_controller_0/M_AXI_ARID'(3) - Only lower order bits will be connected.
+VHDL Output written to : c:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.gen/sources_1/bd/design_1/sim/design_1.vhd
+VHDL Output written to : c:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.gen/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI_GP0'. A default connection has been created.
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI_HP0'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block clk_wiz_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.gen/sources_1/bd/design_1/ip/design_1_axi_timer_0_0/design_1_axi_timer_0_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_timer_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file c:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.gen/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file c:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.gen/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File c:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.gen/sources_1/bd/design_1/synth/design_1.hwdef
+INFO: [IP_Flow 19-7066] Running IP cache check for IP design_1_auto_pc_0
+INFO: [IP_Flow 19-7066] Running IP cache check for IP design_1_axi_timer_0_0
+INFO: [IP_Flow 19-7066] Running IP cache check for IP design_1_clk_wiz_0_0
+INFO: [IP_Flow 19-7066] Running IP cache check for IP design_1_processing_system7_0_0
+INFO: [IP_Flow 19-7066] Running IP cache check for IP design_1_xbar_0
+[Thu Feb  9 23:19:50 2023] Launched design_1_xbar_0_synth_1, design_1_processing_system7_0_0_synth_1, design_1_clk_wiz_0_0_synth_1, design_1_axi_timer_0_0_synth_1, design_1_auto_pc_0_synth_1...
+Run output will be captured here:
+design_1_xbar_0_synth_1: C:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.runs/design_1_xbar_0_synth_1/runme.log
+design_1_processing_system7_0_0_synth_1: C:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.runs/design_1_processing_system7_0_0_synth_1/runme.log
+design_1_clk_wiz_0_0_synth_1: C:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.runs/design_1_clk_wiz_0_0_synth_1/runme.log
+design_1_axi_timer_0_0_synth_1: C:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.runs/design_1_axi_timer_0_0_synth_1/runme.log
+design_1_auto_pc_0_synth_1: C:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.runs/design_1_auto_pc_0_synth_1/runme.log
+[Thu Feb  9 23:19:50 2023] Launched synth_1...
 Run output will be captured here: C:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.runs/synth_1/runme.log
-[Thu Feb  9 22:16:36 2023] Launched impl_1...
+launch_runs: Time (s): cpu = 00:01:02 ; elapsed = 00:01:05 . Memory (MB): peak = 1531.070 ; gain = 384.289
+INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
+INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
+launch_runs impl_1 -jobs 2
+[Thu Feb  9 23:23:32 2023] Launched impl_1...
 Run output will be captured here: C:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.runs/impl_1/runme.log
+INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
+WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
+startgroup
+set_property -dict [list CONFIG.PCW_FPGA0_PERIPHERAL_FREQMHZ {100.000000}] [get_bd_cells processing_system7_0]
+endgroup
+disconnect_bd_net /clk_wiz_0_clk_out1 [get_bd_pins rst_ps7_0_100M/slowest_sync_clk]
+startgroup
+connect_bd_net [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins rst_ps7_0_100M/slowest_sync_clk]
+endgroup
+reset_run design_1_processing_system7_0_0_synth_1
+save_bd_design
+Wrote  : <C:\Users\Christopher\Desktop\FP\ENSC_452\hw_project\audio_tutorial.srcs\sources_1\bd\design_1\design_1.bd> 
+Wrote  : <C:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+CRITICAL WARNING: [BD 41-1343] Reset pin /vga_controller_0/pixel_rstn (associated clock /vga_controller_0/pixel_clk) is connected to reset source /rst_ps7_0_100M/peripheral_aresetn (synchronous to clock source /processing_system7_0/FCLK_CLK0).
+This may prevent design from meeting timing. Please add Processor System Reset module to create a reset that is synchronous to the associated clock source /clk_wiz_0/clk_out1.
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_0 clk_wiz propagate
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_0 clk_wiz propagate
+WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /processing_system7_0/S_AXI_HP0(0) and /vga_controller_0/M_AXI(5)
+WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /processing_system7_0/S_AXI_HP0(0) and /vga_controller_0/M_AXI(5)
+WARNING: [BD 41-927] Following properties on pin /vga_controller_0/pixel_clk have been updated from connected ip, but BD cell '/vga_controller_0' does not accept parameter changes, so they may not be synchronized with cell properties:
+	PHASE = 0.0 
+Please resolve any mismatches by directly setting properties on BD cell </vga_controller_0> to completely resolve these warnings.
+WARNING: [BD 41-927] Following properties on pin /vga_controller_0/fifo_rst have been updated from connected ip, but BD cell '/vga_controller_0' does not accept parameter changes, so they may not be synchronized with cell properties:
+	POLARITY = ACTIVE_HIGH 
+Please resolve any mismatches by directly setting properties on BD cell </vga_controller_0> to completely resolve these warnings.
+CRITICAL WARNING: [BD 41-759] The input pins (listed below) are either not connected or do not have a source port, and they don't have a tie-off specified. These pins are tied-off to all 0's to avoid error in Implementation flow.
+Please check your design and connect them as needed: 
+/vga_controller_0/switch_buffer
+
+Wrote  : <C:\Users\Christopher\Desktop\FP\ENSC_452\hw_project\audio_tutorial.srcs\sources_1\bd\design_1\design_1.bd> 
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_AWID'(6) to pin: '/vga_controller_0/M_AXI_AWID'(3) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/vga_controller_0/M_AXI_RID'(3) to pin: '/processing_system7_0/S_AXI_HP0_RID'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/vga_controller_0/M_AXI_BID'(3) to pin: '/processing_system7_0/S_AXI_HP0_BID'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_ARID'(6) to pin: '/vga_controller_0/M_AXI_ARID'(3) - Only lower order bits will be connected.
+VHDL Output written to : c:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.gen/sources_1/bd/design_1/synth/design_1.vhd
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_AWID'(6) to pin: '/vga_controller_0/M_AXI_AWID'(3) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/vga_controller_0/M_AXI_RID'(3) to pin: '/processing_system7_0/S_AXI_HP0_RID'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/vga_controller_0/M_AXI_BID'(3) to pin: '/processing_system7_0/S_AXI_HP0_BID'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_ARID'(6) to pin: '/vga_controller_0/M_AXI_ARID'(3) - Only lower order bits will be connected.
+VHDL Output written to : c:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.gen/sources_1/bd/design_1/sim/design_1.vhd
+VHDL Output written to : c:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.gen/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI_GP0'. A default connection has been created.
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI_HP0'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_100M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block clk_wiz_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.gen/sources_1/bd/design_1/ip/design_1_axi_timer_0_0/design_1_axi_timer_0_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_timer_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file c:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.gen/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file c:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.gen/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File c:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.gen/sources_1/bd/design_1/synth/design_1.hwdef
+INFO: [IP_Flow 19-7066] Running IP cache check for IP design_1_auto_pc_0
+INFO: [IP_Flow 19-7066] Running IP cache check for IP design_1_axi_timer_0_0
+INFO: [IP_Flow 19-7066] Running IP cache check for IP design_1_clk_wiz_0_0
+INFO: [IP_Flow 19-7066] Running IP cache check for IP design_1_processing_system7_0_0
+INFO: [IP_Flow 19-7066] Running IP cache check for IP design_1_rst_ps7_0_100M_0
+INFO: [IP_Flow 19-7066] Running IP cache check for IP design_1_xbar_0
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_0, cache-ID = db7e160575667fbe; cache size = 12.573 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_axi_timer_0_0, cache-ID = 972b1c2a30bdafde; cache size = 12.573 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_clk_wiz_0_0, cache-ID = 510bb3249e9fc8b7; cache size = 12.573 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_xbar_0, cache-ID = ae71314a851e9f10; cache size = 12.573 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_rst_ps7_0_100M_0, cache-ID = 6021b2eb30514c74; cache size = 12.573 MB.
+[Thu Feb  9 23:32:23 2023] Launched design_1_processing_system7_0_0_synth_1...
+Run output will be captured here: C:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.runs/design_1_processing_system7_0_0_synth_1/runme.log
+[Thu Feb  9 23:32:23 2023] Launched synth_1...
+Run output will be captured here: C:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.runs/synth_1/runme.log
+launch_runs: Time (s): cpu = 00:00:56 ; elapsed = 00:00:58 . Memory (MB): peak = 1614.203 ; gain = 26.910
+disconnect_bd_net /processing_system7_0_FCLK_CLK0 [get_bd_pins rst_ps7_0_100M/slowest_sync_clk]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/processing_system7_0/FCLK_CLK0 (100 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins rst_ps7_0_100M/slowest_sync_clk]
+disconnect_bd_net /processing_system7_0_FCLK_CLK0 [get_bd_pins rst_ps7_0_100M/slowest_sync_clk]
+connect_bd_net [get_bd_pins clk_wiz_0/clk_out1] [get_bd_pins rst_ps7_0_100M/slowest_sync_clk]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:proc_sys_reset:5.0 proc_sys_reset_0
+INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
+endgroup
+set_property location {2 407 1012} [get_bd_cells proc_sys_reset_0]
+disconnect_bd_net /clk_wiz_0_clk_out1 [get_bd_pins rst_ps7_0_100M/slowest_sync_clk]
+connect_bd_net [get_bd_pins clk_wiz_0/clk_out1] [get_bd_pins rst_ps7_0_100M/slowest_sync_clk]
+delete_bd_objs [get_bd_cells proc_sys_reset_0]
+WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
+save_bd_design
+Wrote  : <C:\Users\Christopher\Desktop\FP\ENSC_452\hw_project\audio_tutorial.srcs\sources_1\bd\design_1\design_1.bd> 
+Wrote  : <C:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+CRITICAL WARNING: [BD 41-1343] Reset pin /ps7_0_axi_periph/ARESETN (associated clock /ps7_0_axi_periph/ACLK) is connected to reset source /rst_ps7_0_100M/peripheral_aresetn (synchronous to clock source /clk_wiz_0/clk_out1).
+This may prevent design from meeting timing. Please add Processor System Reset module to create a reset that is synchronous to the associated clock source /processing_system7_0/FCLK_CLK0.
+CRITICAL WARNING: [BD 41-1343] Reset pin /ps7_0_axi_periph/S00_ARESETN (associated clock /ps7_0_axi_periph/S00_ACLK) is connected to reset source /rst_ps7_0_100M/peripheral_aresetn (synchronous to clock source /clk_wiz_0/clk_out1).
+This may prevent design from meeting timing. Please add Processor System Reset module to create a reset that is synchronous to the associated clock source /processing_system7_0/FCLK_CLK0.
+CRITICAL WARNING: [BD 41-1343] Reset pin /ps7_0_axi_periph/M00_ARESETN (associated clock /ps7_0_axi_periph/M00_ACLK) is connected to reset source /rst_ps7_0_100M/peripheral_aresetn (synchronous to clock source /clk_wiz_0/clk_out1).
+This may prevent design from meeting timing. Please add Processor System Reset module to create a reset that is synchronous to the associated clock source /processing_system7_0/FCLK_CLK0.
+CRITICAL WARNING: [BD 41-1343] Reset pin /ps7_0_axi_periph/M01_ARESETN (associated clock /ps7_0_axi_periph/M01_ACLK) is connected to reset source /rst_ps7_0_100M/peripheral_aresetn (synchronous to clock source /clk_wiz_0/clk_out1).
+This may prevent design from meeting timing. Please add Processor System Reset module to create a reset that is synchronous to the associated clock source /processing_system7_0/FCLK_CLK0.
+CRITICAL WARNING: [BD 41-1343] Reset pin /ps7_0_axi_periph/M02_ARESETN (associated clock /ps7_0_axi_periph/M02_ACLK) is connected to reset source /rst_ps7_0_100M/peripheral_aresetn (synchronous to clock source /clk_wiz_0/clk_out1).
+This may prevent design from meeting timing. Please add Processor System Reset module to create a reset that is synchronous to the associated clock source /processing_system7_0/FCLK_CLK0.
+CRITICAL WARNING: [BD 41-1343] Reset pin /ps7_0_axi_periph/M03_ARESETN (associated clock /ps7_0_axi_periph/M03_ACLK) is connected to reset source /rst_ps7_0_100M/peripheral_aresetn (synchronous to clock source /clk_wiz_0/clk_out1).
+This may prevent design from meeting timing. Please add Processor System Reset module to create a reset that is synchronous to the associated clock source /processing_system7_0/FCLK_CLK0.
+CRITICAL WARNING: [BD 41-1343] Reset pin /axi_gpio_0/s_axi_aresetn (associated clock /axi_gpio_0/s_axi_aclk) is connected to reset source /rst_ps7_0_100M/peripheral_aresetn (synchronous to clock source /clk_wiz_0/clk_out1).
+This may prevent design from meeting timing. Please add Processor System Reset module to create a reset that is synchronous to the associated clock source /processing_system7_0/FCLK_CLK0.
+CRITICAL WARNING: [BD 41-1343] Reset pin /axi_gpio_1/s_axi_aresetn (associated clock /axi_gpio_1/s_axi_aclk) is connected to reset source /rst_ps7_0_100M/peripheral_aresetn (synchronous to clock source /clk_wiz_0/clk_out1).
+This may prevent design from meeting timing. Please add Processor System Reset module to create a reset that is synchronous to the associated clock source /processing_system7_0/FCLK_CLK0.
+CRITICAL WARNING: [BD 41-1343] Reset pin /vga_controller_0/rstn (associated clock /vga_controller_0/clk) is connected to reset source /rst_ps7_0_100M/peripheral_aresetn (synchronous to clock source /clk_wiz_0/clk_out1).
+This may prevent design from meeting timing. Please add Processor System Reset module to create a reset that is synchronous to the associated clock source /processing_system7_0/FCLK_CLK0.
+CRITICAL WARNING: [BD 41-1343] Reset pin /axi_timer_0/s_axi_aresetn (associated clock /axi_timer_0/s_axi_aclk) is connected to reset source /rst_ps7_0_100M/peripheral_aresetn (synchronous to clock source /clk_wiz_0/clk_out1).
+This may prevent design from meeting timing. Please add Processor System Reset module to create a reset that is synchronous to the associated clock source /processing_system7_0/FCLK_CLK0.
+CRITICAL WARNING: [BD 41-1343] Reset pin /zed_audio_ctrl_1/S_AXI_ARESETN (associated clock /zed_audio_ctrl_1/S_AXI_ACLK) is connected to reset source /rst_ps7_0_100M/peripheral_aresetn (synchronous to clock source /clk_wiz_0/clk_out1).
+This may prevent design from meeting timing. Please add Processor System Reset module to create a reset that is synchronous to the associated clock source /processing_system7_0/FCLK_CLK0.
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_0 clk_wiz propagate
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_0 clk_wiz propagate
+WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /processing_system7_0/S_AXI_HP0(0) and /vga_controller_0/M_AXI(5)
+WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /processing_system7_0/S_AXI_HP0(0) and /vga_controller_0/M_AXI(5)
+WARNING: [BD 41-927] Following properties on pin /vga_controller_0/pixel_clk have been updated from connected ip, but BD cell '/vga_controller_0' does not accept parameter changes, so they may not be synchronized with cell properties:
+	PHASE = 0.0 
+Please resolve any mismatches by directly setting properties on BD cell </vga_controller_0> to completely resolve these warnings.
+WARNING: [BD 41-927] Following properties on pin /vga_controller_0/fifo_rst have been updated from connected ip, but BD cell '/vga_controller_0' does not accept parameter changes, so they may not be synchronized with cell properties:
+	POLARITY = ACTIVE_HIGH 
+Please resolve any mismatches by directly setting properties on BD cell </vga_controller_0> to completely resolve these warnings.
+CRITICAL WARNING: [BD 41-759] The input pins (listed below) are either not connected or do not have a source port, and they don't have a tie-off specified. These pins are tied-off to all 0's to avoid error in Implementation flow.
+Please check your design and connect them as needed: 
+/vga_controller_0/switch_buffer
+
+Wrote  : <C:\Users\Christopher\Desktop\FP\ENSC_452\hw_project\audio_tutorial.srcs\sources_1\bd\design_1\design_1.bd> 
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_AWID'(6) to pin: '/vga_controller_0/M_AXI_AWID'(3) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/vga_controller_0/M_AXI_RID'(3) to pin: '/processing_system7_0/S_AXI_HP0_RID'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/vga_controller_0/M_AXI_BID'(3) to pin: '/processing_system7_0/S_AXI_HP0_BID'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_ARID'(6) to pin: '/vga_controller_0/M_AXI_ARID'(3) - Only lower order bits will be connected.
+VHDL Output written to : c:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.gen/sources_1/bd/design_1/synth/design_1.vhd
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_AWID'(6) to pin: '/vga_controller_0/M_AXI_AWID'(3) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/vga_controller_0/M_AXI_RID'(3) to pin: '/processing_system7_0/S_AXI_HP0_RID'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/vga_controller_0/M_AXI_BID'(3) to pin: '/processing_system7_0/S_AXI_HP0_BID'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_ARID'(6) to pin: '/vga_controller_0/M_AXI_ARID'(3) - Only lower order bits will be connected.
+VHDL Output written to : c:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.gen/sources_1/bd/design_1/sim/design_1.vhd
+VHDL Output written to : c:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.gen/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_100M .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file c:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.gen/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file c:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.gen/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File c:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.gen/sources_1/bd/design_1/synth/design_1.hwdef
+INFO: [IP_Flow 19-7066] Running IP cache check for IP design_1_auto_pc_0
+INFO: [IP_Flow 19-7066] Running IP cache check for IP design_1_rst_ps7_0_100M_0
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_0, cache-ID = db7e160575667fbe; cache size = 13.405 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_rst_ps7_0_100M_0, cache-ID = bc36639ec87c32ac; cache size = 13.405 MB.
+[Thu Feb  9 23:49:49 2023] Launched synth_1...
+Run output will be captured here: C:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.runs/synth_1/runme.log
+launch_runs: Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 1643.219 ; gain = 16.238
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:proc_sys_reset:5.0 proc_sys_reset_0
+INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
+endgroup
+set_property location {3 754 983} [get_bd_cells proc_sys_reset_0]
+delete_bd_objs [get_bd_nets rst_ps7_0_100M_peripheral_reset] [get_bd_cells rst_ps7_0_100M]
+undo
+INFO: [Common 17-17] undo 'delete_bd_objs [get_bd_nets rst_ps7_0_100M_peripheral_reset] [get_bd_cells rst_ps7_0_100M]'
+set_property location {2 515 820} [get_bd_cells proc_sys_reset_0]
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:board -config { Manual_Source {Auto}}  [get_bd_pins proc_sys_reset_0/ext_reset_in]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/processing_system7_0/FCLK_CLK0 (100 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins proc_sys_reset_0/slowest_sync_clk]
+endgroup
+set_property location {5 1663 701} [get_bd_cells rst_ps7_0_100M]
+delete_bd_objs [get_bd_cells proc_sys_reset_0]
+regenerate_bd_layout
+set_property location {2 381 780} [get_bd_cells rst_ps7_0_100M]
+set_property location {2 383 870} [get_bd_cells rst_ps7_0_100M]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:proc_sys_reset:5.0 proc_sys_reset_0
+INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
+endgroup
+delete_bd_objs [get_bd_cells proc_sys_reset_0]
+WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
+startgroup
+set_property -dict [list CONFIG.PCW_FPGA0_PERIPHERAL_FREQMHZ {120.000000}] [get_bd_cells processing_system7_0]
+endgroup
+startgroup
+set_property -dict [list CONFIG.PRIM_IN_FREQ.VALUE_SRC USER] [get_bd_cells clk_wiz_0]
+set_property -dict [list CONFIG.PRIM_IN_FREQ {120.000} CONFIG.CLKIN1_JITTER_PS {83.33} CONFIG.MMCM_DIVCLK_DIVIDE {5} CONFIG.MMCM_CLKFBOUT_MULT_F {41.625} CONFIG.MMCM_CLKIN1_PERIOD {8.333} CONFIG.MMCM_CLKOUT0_DIVIDE_F {9.250} CONFIG.CLKOUT1_JITTER {216.638} CONFIG.CLKOUT1_PHASE_ERROR {243.536}] [get_bd_cells clk_wiz_0]
+endgroup
+INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
+WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
+startgroup
+endgroup
+reset_run design_1_processing_system7_0_0_synth_1
+save_bd_design
+Wrote  : <C:\Users\Christopher\Desktop\FP\ENSC_452\hw_project\audio_tutorial.srcs\sources_1\bd\design_1\design_1.bd> 
+Wrote  : <C:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+CRITICAL WARNING: [BD 41-1343] Reset pin /ps7_0_axi_periph/ARESETN (associated clock /ps7_0_axi_periph/ACLK) is connected to reset source /rst_ps7_0_100M/peripheral_aresetn (synchronous to clock source /clk_wiz_0/clk_out1).
+This may prevent design from meeting timing. Please add Processor System Reset module to create a reset that is synchronous to the associated clock source /processing_system7_0/FCLK_CLK0.
+CRITICAL WARNING: [BD 41-1343] Reset pin /ps7_0_axi_periph/S00_ARESETN (associated clock /ps7_0_axi_periph/S00_ACLK) is connected to reset source /rst_ps7_0_100M/peripheral_aresetn (synchronous to clock source /clk_wiz_0/clk_out1).
+This may prevent design from meeting timing. Please add Processor System Reset module to create a reset that is synchronous to the associated clock source /processing_system7_0/FCLK_CLK0.
+CRITICAL WARNING: [BD 41-1343] Reset pin /ps7_0_axi_periph/M00_ARESETN (associated clock /ps7_0_axi_periph/M00_ACLK) is connected to reset source /rst_ps7_0_100M/peripheral_aresetn (synchronous to clock source /clk_wiz_0/clk_out1).
+This may prevent design from meeting timing. Please add Processor System Reset module to create a reset that is synchronous to the associated clock source /processing_system7_0/FCLK_CLK0.
+CRITICAL WARNING: [BD 41-1343] Reset pin /ps7_0_axi_periph/M01_ARESETN (associated clock /ps7_0_axi_periph/M01_ACLK) is connected to reset source /rst_ps7_0_100M/peripheral_aresetn (synchronous to clock source /clk_wiz_0/clk_out1).
+This may prevent design from meeting timing. Please add Processor System Reset module to create a reset that is synchronous to the associated clock source /processing_system7_0/FCLK_CLK0.
+CRITICAL WARNING: [BD 41-1343] Reset pin /ps7_0_axi_periph/M02_ARESETN (associated clock /ps7_0_axi_periph/M02_ACLK) is connected to reset source /rst_ps7_0_100M/peripheral_aresetn (synchronous to clock source /clk_wiz_0/clk_out1).
+This may prevent design from meeting timing. Please add Processor System Reset module to create a reset that is synchronous to the associated clock source /processing_system7_0/FCLK_CLK0.
+CRITICAL WARNING: [BD 41-1343] Reset pin /ps7_0_axi_periph/M03_ARESETN (associated clock /ps7_0_axi_periph/M03_ACLK) is connected to reset source /rst_ps7_0_100M/peripheral_aresetn (synchronous to clock source /clk_wiz_0/clk_out1).
+This may prevent design from meeting timing. Please add Processor System Reset module to create a reset that is synchronous to the associated clock source /processing_system7_0/FCLK_CLK0.
+CRITICAL WARNING: [BD 41-1343] Reset pin /axi_gpio_0/s_axi_aresetn (associated clock /axi_gpio_0/s_axi_aclk) is connected to reset source /rst_ps7_0_100M/peripheral_aresetn (synchronous to clock source /clk_wiz_0/clk_out1).
+This may prevent design from meeting timing. Please add Processor System Reset module to create a reset that is synchronous to the associated clock source /processing_system7_0/FCLK_CLK0.
+CRITICAL WARNING: [BD 41-1343] Reset pin /axi_gpio_1/s_axi_aresetn (associated clock /axi_gpio_1/s_axi_aclk) is connected to reset source /rst_ps7_0_100M/peripheral_aresetn (synchronous to clock source /clk_wiz_0/clk_out1).
+This may prevent design from meeting timing. Please add Processor System Reset module to create a reset that is synchronous to the associated clock source /processing_system7_0/FCLK_CLK0.
+CRITICAL WARNING: [BD 41-1343] Reset pin /vga_controller_0/rstn (associated clock /vga_controller_0/clk) is connected to reset source /rst_ps7_0_100M/peripheral_aresetn (synchronous to clock source /clk_wiz_0/clk_out1).
+This may prevent design from meeting timing. Please add Processor System Reset module to create a reset that is synchronous to the associated clock source /processing_system7_0/FCLK_CLK0.
+CRITICAL WARNING: [BD 41-1343] Reset pin /axi_timer_0/s_axi_aresetn (associated clock /axi_timer_0/s_axi_aclk) is connected to reset source /rst_ps7_0_100M/peripheral_aresetn (synchronous to clock source /clk_wiz_0/clk_out1).
+This may prevent design from meeting timing. Please add Processor System Reset module to create a reset that is synchronous to the associated clock source /processing_system7_0/FCLK_CLK0.
+CRITICAL WARNING: [BD 41-1343] Reset pin /zed_audio_ctrl_1/S_AXI_ARESETN (associated clock /zed_audio_ctrl_1/S_AXI_ACLK) is connected to reset source /rst_ps7_0_100M/peripheral_aresetn (synchronous to clock source /clk_wiz_0/clk_out1).
+This may prevent design from meeting timing. Please add Processor System Reset module to create a reset that is synchronous to the associated clock source /processing_system7_0/FCLK_CLK0.
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_0 clk_wiz propagate
+WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /processing_system7_0/S_AXI_HP0(0) and /vga_controller_0/M_AXI(5)
+WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /processing_system7_0/S_AXI_HP0(0) and /vga_controller_0/M_AXI(5)
+ERROR: [BD 41-238] Port/Pin property FREQ_HZ does not match between /clk_wiz_0/clk_in1(120000000) and /processing_system7_0/FCLK_CLK0(125000000)
+WARNING: [BD 41-927] Following properties on pin /vga_controller_0/clk have been updated from connected ip, but BD cell '/vga_controller_0' does not accept parameter changes, so they may not be synchronized with cell properties:
+	FREQ_HZ = 125000000 
+Please resolve any mismatches by directly setting properties on BD cell </vga_controller_0> to completely resolve these warnings.
+WARNING: [BD 41-927] Following properties on pin /vga_controller_0/pixel_clk have been updated from connected ip, but BD cell '/vga_controller_0' does not accept parameter changes, so they may not be synchronized with cell properties:
+	PHASE = 0.0 
+Please resolve any mismatches by directly setting properties on BD cell </vga_controller_0> to completely resolve these warnings.
+WARNING: [BD 41-927] Following properties on pin /vga_controller_0/fifo_rst have been updated from connected ip, but BD cell '/vga_controller_0' does not accept parameter changes, so they may not be synchronized with cell properties:
+	POLARITY = ACTIVE_HIGH 
+Please resolve any mismatches by directly setting properties on BD cell </vga_controller_0> to completely resolve these warnings.
+WARNING: [BD 41-927] Following properties on pin /zed_audio_ctrl_1/S_AXI_ACLK have been updated from connected ip, but BD cell '/zed_audio_ctrl_1' does not accept parameter changes, so they may not be synchronized with cell properties:
+	FREQ_HZ = 125000000 
+Please resolve any mismatches by directly setting properties on BD cell </zed_audio_ctrl_1> to completely resolve these warnings.
+ERROR: [BD 41-1031] Hdl Generation failed for the IP Integrator design C:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.srcs/sources_1/bd/design_1/design_1.bd 
+INFO: [IP_Flow 19-7066] Running IP cache check for IP design_1_axi_timer_0_0
+INFO: [IP_Flow 19-7066] Running IP cache check for IP design_1_clk_wiz_0_0
+INFO: [IP_Flow 19-7066] Running IP cache check for IP design_1_processing_system7_0_0
+INFO: [IP_Flow 19-7066] Running IP cache check for IP design_1_xbar_0
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_axi_timer_0_0, cache-ID = 9cccca99a1454d15; cache size = 13.405 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_processing_system7_0_0, cache-ID = d6a4428d5d83f903; cache size = 13.405 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_xbar_0, cache-ID = ce122c6850a4e15e; cache size = 13.405 MB.
+ERROR: [Vivado 12-4756] Launch of runs aborted due to earlier errors while preparing sub-designs for run execution.
+INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
+startgroup
+set_property -dict [list CONFIG.PRIM_IN_FREQ.VALUE_SRC PROPAGATED] [get_bd_cells clk_wiz_0]
+set_property -dict [list CONFIG.CLKIN1_JITTER_PS {100.0} CONFIG.MMCM_DIVCLK_DIVIDE {1} CONFIG.MMCM_CLKFBOUT_MULT_F {10.125} CONFIG.MMCM_CLKIN1_PERIOD {10.000} CONFIG.MMCM_CLKOUT0_DIVIDE_F {9.375} CONFIG.CLKOUT1_JITTER {127.691} CONFIG.CLKOUT1_PHASE_ERROR {97.646}] [get_bd_cells clk_wiz_0]
+WARNING: [IP_Flow 19-3374] An attempt to modify the value of disabled parameter 'MMCM_DIVCLK_DIVIDE' from '5' to '1' has been ignored for IP 'clk_wiz_0'
+WARNING: [IP_Flow 19-3374] An attempt to modify the value of disabled parameter 'MMCM_CLKFBOUT_MULT_F' from '41.625' to '10.125' has been ignored for IP 'clk_wiz_0'
+WARNING: [IP_Flow 19-3374] An attempt to modify the value of disabled parameter 'MMCM_CLKIN1_PERIOD' from '8.333' to '10.000' has been ignored for IP 'clk_wiz_0'
+WARNING: [IP_Flow 19-3374] An attempt to modify the value of disabled parameter 'MMCM_CLKOUT0_DIVIDE_F' from '9.250' to '9.375' has been ignored for IP 'clk_wiz_0'
+endgroup
+WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
+startgroup
+set_property -dict [list CONFIG.PCW_FPGA0_PERIPHERAL_FREQMHZ {100}] [get_bd_cells processing_system7_0]
+endgroup
+startgroup
+set_property -dict [list CONFIG.PRIM_IN_FREQ.VALUE_SRC PROPAGATED] [get_bd_cells clk_wiz_0]
+set_property -dict [list CONFIG.MMCM_DIVCLK_DIVIDE {1} CONFIG.MMCM_CLKFBOUT_MULT_F {10.125} CONFIG.MMCM_CLKIN1_PERIOD {10.000} CONFIG.MMCM_CLKOUT0_DIVIDE_F {9.375}] [get_bd_cells clk_wiz_0]
+WARNING: [IP_Flow 19-3374] An attempt to modify the value of disabled parameter 'MMCM_DIVCLK_DIVIDE' from '5' to '1' has been ignored for IP 'clk_wiz_0'
+WARNING: [IP_Flow 19-3374] An attempt to modify the value of disabled parameter 'MMCM_CLKFBOUT_MULT_F' from '41.625' to '10.125' has been ignored for IP 'clk_wiz_0'
+WARNING: [IP_Flow 19-3374] An attempt to modify the value of disabled parameter 'MMCM_CLKIN1_PERIOD' from '8.333' to '10.000' has been ignored for IP 'clk_wiz_0'
+WARNING: [IP_Flow 19-3374] An attempt to modify the value of disabled parameter 'MMCM_CLKOUT0_DIVIDE_F' from '9.250' to '9.375' has been ignored for IP 'clk_wiz_0'
+endgroup
+save_bd_design
+Wrote  : <C:\Users\Christopher\Desktop\FP\ENSC_452\hw_project\audio_tutorial.srcs\sources_1\bd\design_1\design_1.bd> 
+launch_runs synth_1 -jobs 4
+CRITICAL WARNING: [BD 41-1343] Reset pin /ps7_0_axi_periph/ARESETN (associated clock /ps7_0_axi_periph/ACLK) is connected to reset source /rst_ps7_0_100M/peripheral_aresetn (synchronous to clock source /clk_wiz_0/clk_out1).
+This may prevent design from meeting timing. Please add Processor System Reset module to create a reset that is synchronous to the associated clock source /processing_system7_0/FCLK_CLK0.
+CRITICAL WARNING: [BD 41-1343] Reset pin /ps7_0_axi_periph/S00_ARESETN (associated clock /ps7_0_axi_periph/S00_ACLK) is connected to reset source /rst_ps7_0_100M/peripheral_aresetn (synchronous to clock source /clk_wiz_0/clk_out1).
+This may prevent design from meeting timing. Please add Processor System Reset module to create a reset that is synchronous to the associated clock source /processing_system7_0/FCLK_CLK0.
+CRITICAL WARNING: [BD 41-1343] Reset pin /ps7_0_axi_periph/M00_ARESETN (associated clock /ps7_0_axi_periph/M00_ACLK) is connected to reset source /rst_ps7_0_100M/peripheral_aresetn (synchronous to clock source /clk_wiz_0/clk_out1).
+This may prevent design from meeting timing. Please add Processor System Reset module to create a reset that is synchronous to the associated clock source /processing_system7_0/FCLK_CLK0.
+CRITICAL WARNING: [BD 41-1343] Reset pin /ps7_0_axi_periph/M01_ARESETN (associated clock /ps7_0_axi_periph/M01_ACLK) is connected to reset source /rst_ps7_0_100M/peripheral_aresetn (synchronous to clock source /clk_wiz_0/clk_out1).
+This may prevent design from meeting timing. Please add Processor System Reset module to create a reset that is synchronous to the associated clock source /processing_system7_0/FCLK_CLK0.
+CRITICAL WARNING: [BD 41-1343] Reset pin /ps7_0_axi_periph/M02_ARESETN (associated clock /ps7_0_axi_periph/M02_ACLK) is connected to reset source /rst_ps7_0_100M/peripheral_aresetn (synchronous to clock source /clk_wiz_0/clk_out1).
+This may prevent design from meeting timing. Please add Processor System Reset module to create a reset that is synchronous to the associated clock source /processing_system7_0/FCLK_CLK0.
+CRITICAL WARNING: [BD 41-1343] Reset pin /ps7_0_axi_periph/M03_ARESETN (associated clock /ps7_0_axi_periph/M03_ACLK) is connected to reset source /rst_ps7_0_100M/peripheral_aresetn (synchronous to clock source /clk_wiz_0/clk_out1).
+This may prevent design from meeting timing. Please add Processor System Reset module to create a reset that is synchronous to the associated clock source /processing_system7_0/FCLK_CLK0.
+CRITICAL WARNING: [BD 41-1343] Reset pin /axi_gpio_0/s_axi_aresetn (associated clock /axi_gpio_0/s_axi_aclk) is connected to reset source /rst_ps7_0_100M/peripheral_aresetn (synchronous to clock source /clk_wiz_0/clk_out1).
+This may prevent design from meeting timing. Please add Processor System Reset module to create a reset that is synchronous to the associated clock source /processing_system7_0/FCLK_CLK0.
+CRITICAL WARNING: [BD 41-1343] Reset pin /axi_gpio_1/s_axi_aresetn (associated clock /axi_gpio_1/s_axi_aclk) is connected to reset source /rst_ps7_0_100M/peripheral_aresetn (synchronous to clock source /clk_wiz_0/clk_out1).
+This may prevent design from meeting timing. Please add Processor System Reset module to create a reset that is synchronous to the associated clock source /processing_system7_0/FCLK_CLK0.
+CRITICAL WARNING: [BD 41-1343] Reset pin /vga_controller_0/rstn (associated clock /vga_controller_0/clk) is connected to reset source /rst_ps7_0_100M/peripheral_aresetn (synchronous to clock source /clk_wiz_0/clk_out1).
+This may prevent design from meeting timing. Please add Processor System Reset module to create a reset that is synchronous to the associated clock source /processing_system7_0/FCLK_CLK0.
+CRITICAL WARNING: [BD 41-1343] Reset pin /axi_timer_0/s_axi_aresetn (associated clock /axi_timer_0/s_axi_aclk) is connected to reset source /rst_ps7_0_100M/peripheral_aresetn (synchronous to clock source /clk_wiz_0/clk_out1).
+This may prevent design from meeting timing. Please add Processor System Reset module to create a reset that is synchronous to the associated clock source /processing_system7_0/FCLK_CLK0.
+CRITICAL WARNING: [BD 41-1343] Reset pin /zed_audio_ctrl_1/S_AXI_ARESETN (associated clock /zed_audio_ctrl_1/S_AXI_ACLK) is connected to reset source /rst_ps7_0_100M/peripheral_aresetn (synchronous to clock source /clk_wiz_0/clk_out1).
+This may prevent design from meeting timing. Please add Processor System Reset module to create a reset that is synchronous to the associated clock source /processing_system7_0/FCLK_CLK0.
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_0 clk_wiz propagate
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_0 clk_wiz propagate
+WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /processing_system7_0/S_AXI_HP0(0) and /vga_controller_0/M_AXI(5)
+WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /processing_system7_0/S_AXI_HP0(0) and /vga_controller_0/M_AXI(5)
+WARNING: [BD 41-927] Following properties on pin /vga_controller_0/pixel_clk have been updated from connected ip, but BD cell '/vga_controller_0' does not accept parameter changes, so they may not be synchronized with cell properties:
+	PHASE = 0.0 
+Please resolve any mismatches by directly setting properties on BD cell </vga_controller_0> to completely resolve these warnings.
+WARNING: [BD 41-927] Following properties on pin /vga_controller_0/fifo_rst have been updated from connected ip, but BD cell '/vga_controller_0' does not accept parameter changes, so they may not be synchronized with cell properties:
+	POLARITY = ACTIVE_HIGH 
+Please resolve any mismatches by directly setting properties on BD cell </vga_controller_0> to completely resolve these warnings.
+CRITICAL WARNING: [BD 41-759] The input pins (listed below) are either not connected or do not have a source port, and they don't have a tie-off specified. These pins are tied-off to all 0's to avoid error in Implementation flow.
+Please check your design and connect them as needed: 
+/vga_controller_0/switch_buffer
+
+Wrote  : <C:\Users\Christopher\Desktop\FP\ENSC_452\hw_project\audio_tutorial.srcs\sources_1\bd\design_1\design_1.bd> 
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_AWID'(6) to pin: '/vga_controller_0/M_AXI_AWID'(3) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/vga_controller_0/M_AXI_RID'(3) to pin: '/processing_system7_0/S_AXI_HP0_RID'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/vga_controller_0/M_AXI_BID'(3) to pin: '/processing_system7_0/S_AXI_HP0_BID'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_ARID'(6) to pin: '/vga_controller_0/M_AXI_ARID'(3) - Only lower order bits will be connected.
+VHDL Output written to : c:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.gen/sources_1/bd/design_1/synth/design_1.vhd
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_AWID'(6) to pin: '/vga_controller_0/M_AXI_AWID'(3) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/vga_controller_0/M_AXI_RID'(3) to pin: '/processing_system7_0/S_AXI_HP0_RID'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/vga_controller_0/M_AXI_BID'(3) to pin: '/processing_system7_0/S_AXI_HP0_BID'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_ARID'(6) to pin: '/vga_controller_0/M_AXI_ARID'(3) - Only lower order bits will be connected.
+VHDL Output written to : c:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.gen/sources_1/bd/design_1/sim/design_1.vhd
+VHDL Output written to : c:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.gen/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI_GP0'. A default connection has been created.
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI_HP0'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file c:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.gen/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file c:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.gen/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File c:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.gen/sources_1/bd/design_1/synth/design_1.hwdef
+INFO: [IP_Flow 19-7066] Running IP cache check for IP design_1_auto_pc_0
+INFO: [IP_Flow 19-7066] Running IP cache check for IP design_1_processing_system7_0_0
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_0, cache-ID = db7e160575667fbe; cache size = 13.405 MB.
+[Fri Feb 10 00:00:50 2023] Launched design_1_processing_system7_0_0_synth_1, design_1_xbar_0_synth_1, design_1_axi_timer_0_0_synth_1, design_1_clk_wiz_0_0_synth_1...
+Run output will be captured here:
+design_1_processing_system7_0_0_synth_1: C:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.runs/design_1_processing_system7_0_0_synth_1/runme.log
+design_1_xbar_0_synth_1: C:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.runs/design_1_xbar_0_synth_1/runme.log
+design_1_axi_timer_0_0_synth_1: C:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.runs/design_1_axi_timer_0_0_synth_1/runme.log
+design_1_clk_wiz_0_0_synth_1: C:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.runs/design_1_clk_wiz_0_0_synth_1/runme.log
+[Fri Feb 10 00:00:50 2023] Launched synth_1...
+Run output will be captured here: C:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.runs/synth_1/runme.log
+launch_runs: Time (s): cpu = 00:00:49 ; elapsed = 00:00:51 . Memory (MB): peak = 1884.078 ; gain = 34.195
 exit
-INFO: [Common 17-206] Exiting Vivado at Thu Feb  9 22:32:32 2023...
+INFO: [Common 17-206] Exiting Vivado at Fri Feb 10 00:05:30 2023...

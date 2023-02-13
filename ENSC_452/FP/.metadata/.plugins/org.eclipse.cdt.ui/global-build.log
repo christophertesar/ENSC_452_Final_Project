@@ -1,9 +1,24 @@
 Nothing to build in platform 'FinalProject'
 
-21:10:05 **** Incremental Build of configuration Debug for project VideoComponent ****
+22:10:30 **** Incremental Build of configuration Debug for project AudioSoftware ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
 ' '
 make --no-print-directory main-build
-make[1]: Nothing to be done for 'main-build'.
+'Building file: ../src/main_menu.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main_menu.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/sw/FinalProject/standalone_domain/bspinclude/include -MMD -MP -MF"src/main_menu.d" -MT"src/main_menu.o" -o "src/main_menu.o" "../src/main_menu.c"
+'Finished building: ../src/main_menu.c'
+' '
+'Building target: AudioSoftware.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/sw/FinalProject/standalone_domain/bsplib/lib -o "AudioSoftware.elf"  ./src/adventures_with_ip.o ./src/audio.o ./src/input.o ./src/ip_functions.o ./src/main_menu.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: AudioSoftware.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size AudioSoftware.elf  |tee "AudioSoftware.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  42936	   2232	2111688	2156856	 20e938	AudioSoftware.elf
+'Finished building: AudioSoftware.elf.size'
+' '

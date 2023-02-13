@@ -2,8 +2,8 @@
 # Vivado v2020.2 (64-bit)
 # SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
 # IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
-# Start of session at: Thu Feb  9 22:16:40 2023
-# Process ID: 8020
+# Start of session at: Fri Feb 10 13:28:34 2023
+# Process ID: 3352
 # Current directory: C:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.runs/synth_1
 # Command line: vivado.exe -log design_1_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_wrapper.tcl
 # Log file: C:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.runs/synth_1/design_1_wrapper.vds

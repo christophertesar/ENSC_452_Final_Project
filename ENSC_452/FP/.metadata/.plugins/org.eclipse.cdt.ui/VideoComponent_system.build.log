@@ -1,0 +1,10 @@
+15:53:32 **** Build of configuration Debug for project VideoComponent_system ****
+make all 
+Generating bif file for the system project
+generate_system_bif.bat 52799 C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/FinalProject.xpfm standalone_ps7_cortexa9_1 C:/Users/Christopher/Desktop/FP/ENSC_452/FP/VideoComponent_system/Debug/system.bif
+sdcard_gen --xpfm C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/FinalProject.xpfm --sys_config FinalProject --bif C:/Users/Christopher/Desktop/FP/ENSC_452/FP/VideoComponent_system/Debug/system.bif --bitstream C:/Users/Christopher/Desktop/FP/ENSC_452/FP/VideoComponent/_ide/bitstream/FinalProject.bit --elf C:/Users/Christopher/Desktop/FP/ENSC_452/FP/VideoComponent/Debug/VideoComponent.elf,ps7_cortexa9_1
+creating BOOT.BIN using C:/Users/Christopher/Desktop/FP/ENSC_452/FP/VideoComponent/_ide/bitstream/FinalProject.bit
+Running C:/Xilinx/Vitis/2020.2/bin/bootgen  -image C:/Users/Christopher/Desktop/FP/ENSC_452/FP/VideoComponent_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN
+
+15:53:39 Build Finished (took 6s.967ms)
+

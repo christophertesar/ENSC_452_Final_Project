@@ -25,3 +25,38 @@ domain active {standalone_domain}
 domain active {standalone_ps7_cortexa9_1}
 platform generate -quick
 platform generate -domains standalone_ps7_cortexa9_1 
+platform active {FinalProject}
+platform config -updatehw {C:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/FinalProject.xsa}
+platform generate -domains 
+catch {platform remove design_1_wrapper}
+domain create -name {testing} -os {standalone} -proc {ps7_cortexa9_0} -arch {32-bit} -display-name {testing} -desc {} -runtime {cpp}
+platform generate -domains 
+domain -report -json
+platform write
+domain remove testing
+platform generate -domains 
+platform write
+bsp reload
+bsp config extra_compiler_flags "-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+bsp config extra_compiler_flags "-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra -DUSE_AMP=1"
+bsp write
+bsp reload
+catch {bsp regenerate}
+platform generate -domains standalone_ps7_cortexa9_1 
+platform generate
+platform active {FinalProject}
+domain active {zynq_fsbl}
+bsp reload
+domain active {standalone_domain}
+bsp reload
+bsp reload
+domain active {standalone_ps7_cortexa9_1}
+bsp reload
+bsp config extra_compiler_flags "-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra -DUSE_AMP=1"
+bsp write
+platform generate -domains 
+platform generate
+platform generate
+platform generate
+platform generate
+platform generate

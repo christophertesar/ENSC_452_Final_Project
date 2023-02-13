@@ -4690,3 +4690,2514 @@ con
 21:03:34 INFO  : Registering command handlers for Vitis TCF services
 21:03:35 INFO  : Platform repository initialization has completed.
 21:03:36 INFO  : Successfully done query RDI_DATADIR 
+13:40:18 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\Christopher\Desktop\FP\ENSC_452\FP\temp_xsdb_launch_script.tcl
+13:40:22 INFO  : XSCT server has started successfully.
+13:40:22 INFO  : plnx-install-location is set to ''
+13:40:22 INFO  : Successfully done setting XSCT server connection channel  
+13:40:22 INFO  : Successfully done setting workspace for the tool. 
+13:40:30 INFO  : Registering command handlers for Vitis TCF services
+13:40:30 INFO  : Platform repository initialization has completed.
+13:40:31 INFO  : Successfully done query RDI_DATADIR 
+13:44:00 INFO  : Hardware specification for platform project 'FinalProject' is updated.
+13:44:11 INFO  : Result from executing command 'getProjects': FinalProject;design_1_wrapper
+13:44:11 INFO  : Result from executing command 'getPlatforms': FinalProject|C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/FinalProject.xpfm;design_1_wrapper|C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm
+13:57:35 INFO  : Checking for BSP changes to sync application flags for project 'VideoComponent'...
+13:57:42 INFO  : Checking for BSP changes to sync application flags for project 'AudioSoftware'...
+13:59:29 INFO  : Result from executing command 'getProjects': FinalProject
+13:59:29 INFO  : Result from executing command 'getPlatforms': FinalProject|C:/Users/Christopher/Desktop/FP/ENSC_452/FP/FinalProject/export/FinalProject/FinalProject.xpfm;FinalProject|C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/FinalProject.xpfm;design_1_wrapper|C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm
+14:01:57 INFO  : Result from executing command 'getProjects': FinalProject
+14:01:57 INFO  : Result from executing command 'getPlatforms': FinalProject|C:/Users/Christopher/Desktop/FP/ENSC_452/FP/FinalProject/export/FinalProject/FinalProject.xpfm;FinalProject|C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/FinalProject.xpfm;design_1_wrapper|C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm
+14:03:52 ERROR : Unexpected error while reading linker script.
+org.eclipse.core.internal.resources.ResourceException(/AudioLabReal/src/lscript.ld)[368]: java.lang.Exception: Resource '/AudioLabReal/src/lscript.ld' does not exist.
+	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
+	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
+	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:330)
+	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:204)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:273)
+	at com.xilinx.ide.tools.lscript.ui.LscriptEditor.initLscriptEditorPage(LscriptEditor.java:142)
+	at com.xilinx.ide.tools.lscript.ui.LscriptEditor.setInput(LscriptEditor.java:134)
+	at org.eclipse.ui.forms.editor.FormEditor.init(FormEditor.java:132)
+	at com.xilinx.ide.tools.lscript.ui.LscriptEditor.init(LscriptEditor.java:60)
+	at org.eclipse.ui.internal.EditorReference.initialize(EditorReference.java:353)
+	at org.eclipse.ui.internal.e4.compatibility.CompatibilityPart.create(CompatibilityPart.java:340)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.processAnnotated(InjectorImpl.java:1002)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.processAnnotated(InjectorImpl.java:967)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.internalInject(InjectorImpl.java:139)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.internalMake(InjectorImpl.java:408)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.make(InjectorImpl.java:331)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.make(ContextInjectionFactory.java:202)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.createFromBundle(ReflectionContributionFactory.java:91)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.doCreate(ReflectionContributionFactory.java:60)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.create(ReflectionContributionFactory.java:42)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ContributedPartRenderer.createWidget(ContributedPartRenderer.java:132)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createWidget(PartRenderingEngine.java:1002)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:662)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:768)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:739)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:733)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:717)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl$1.handleEvent(PartServiceImpl.java:107)
+	at org.eclipse.e4.ui.services.internal.events.UIEventHandler.lambda$0(UIEventHandler.java:38)
+	at org.eclipse.swt.widgets.Synchronizer.syncExec(Synchronizer.java:236)
+	at org.eclipse.ui.internal.UISynchronizer.syncExec(UISynchronizer.java:133)
+	at org.eclipse.swt.widgets.Display.syncExec(Display.java:4561)
+	at org.eclipse.e4.ui.internal.workbench.swt.E4Application$1.syncExec(E4Application.java:219)
+	at org.eclipse.e4.ui.services.internal.events.UIEventHandler.handleEvent(UIEventHandler.java:38)
+	at org.eclipse.equinox.internal.event.EventHandlerWrapper.handleEvent(EventHandlerWrapper.java:205)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:203)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:151)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.dispatchEvent(EventAdminImpl.java:132)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.sendEvent(EventAdminImpl.java:75)
+	at org.eclipse.equinox.internal.event.EventComponent.sendEvent(EventComponent.java:44)
+	at org.eclipse.e4.ui.services.internal.events.EventBroker.send(EventBroker.java:55)
+	at org.eclipse.e4.ui.internal.workbench.UIEventPublisher.notifyChanged(UIEventPublisher.java:63)
+	at org.eclipse.emf.common.notify.impl.BasicNotifierImpl.eNotify(BasicNotifierImpl.java:424)
+	at org.eclipse.e4.ui.model.application.ui.impl.ElementContainerImpl.setSelectedElementGen(ElementContainerImpl.java:170)
+	at org.eclipse.e4.ui.model.application.ui.impl.ElementContainerImpl.setSelectedElement(ElementContainerImpl.java:188)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.hidePart(PartServiceImpl.java:1386)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.hidePart(PartServiceImpl.java:1336)
+	at org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer.closePart(StackRenderer.java:1270)
+	at org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer.access$0(StackRenderer.java:1256)
+	at org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer$3.close(StackRenderer.java:1128)
+	at org.eclipse.swt.custom.CTabFolder.onMouse(CTabFolder.java:1955)
+	at org.eclipse.swt.custom.CTabFolder.lambda$0(CTabFolder.java:335)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4105)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1037)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3922)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3524)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1160)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1049)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:658)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:557)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:154)
+	at com.xilinx.ide.application.ui.Application.start(Application.java:80)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:657)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1447)
+15:21:45 INFO  : Result from executing command 'getProjects': FinalProject
+15:21:45 INFO  : Result from executing command 'getPlatforms': FinalProject|C:/Users/Christopher/Desktop/FP/ENSC_452/FP/FinalProject/export/FinalProject/FinalProject.xpfm;FinalProject|C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/FinalProject.xpfm;design_1_wrapper|C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm
+15:22:35 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:22:35 INFO  : Jtag cable 'Digilent Zed 210248469741' is selected.
+15:22:35 INFO  : 'jtag frequency' command is executed.
+15:22:35 INFO  : Context for 'APU' is selected.
+15:22:35 INFO  : System reset is completed.
+15:22:38 INFO  : 'after 3000' command is executed.
+15:22:38 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469741" && level==0 && jtag_device_ctx=="jsn-Zed-210248469741-03727093-0"}' command is executed.
+15:22:41 INFO  : Device configured successfully with "C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/bitstream/FinalProject.bit"
+15:22:41 INFO  : Context for 'APU' is selected.
+15:22:41 INFO  : Hardware design and registers information is loaded from 'C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/hw/FinalProject.xsa'.
+15:22:41 INFO  : 'configparams force-mem-access 1' command is executed.
+15:22:41 INFO  : Context for 'APU' is selected.
+15:22:41 INFO  : Sourcing of 'C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/psinit/ps7_init.tcl' is done.
+15:22:41 INFO  : 'ps7_init' command is executed.
+15:22:41 INFO  : 'ps7_post_config' command is executed.
+15:22:41 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:22:41 INFO  : The application 'C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/Debug/AudioSoftware.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:22:41 INFO  : 'configparams force-mem-access 0' command is executed.
+15:22:41 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469741" && level==0 && jtag_device_ctx=="jsn-Zed-210248469741-03727093-0"}
+fpga -file C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/bitstream/FinalProject.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/hw/FinalProject.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/Debug/AudioSoftware.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:22:41 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:22:42 INFO  : 'con' command is executed.
+15:22:42 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+15:22:42 INFO  : Disconnected from the channel tcfchan#3.
+15:23:31 INFO  : Checking for BSP changes to sync application flags for project 'VideoComponent'...
+15:24:23 INFO  : Checking for BSP changes to sync application flags for project 'VideoComponent'...
+15:25:25 INFO  : Checking for BSP changes to sync application flags for project 'VideoComponent'...
+15:25:36 INFO  : Checking for BSP changes to sync application flags for project 'AudioSoftware'...
+15:25:45 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:25:45 INFO  : Jtag cable 'Digilent Zed 210248469741' is selected.
+15:25:45 INFO  : 'jtag frequency' command is executed.
+15:25:45 INFO  : Context for 'APU' is selected.
+15:25:45 INFO  : System reset is completed.
+15:25:48 INFO  : 'after 3000' command is executed.
+15:25:48 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469741" && level==0 && jtag_device_ctx=="jsn-Zed-210248469741-03727093-0"}' command is executed.
+15:25:51 INFO  : Device configured successfully with "C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/bitstream/FinalProject.bit"
+15:25:51 INFO  : Context for 'APU' is selected.
+15:25:51 INFO  : Hardware design and registers information is loaded from 'C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/hw/FinalProject.xsa'.
+15:25:51 INFO  : 'configparams force-mem-access 1' command is executed.
+15:25:51 INFO  : Context for 'APU' is selected.
+15:25:51 INFO  : Sourcing of 'C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/psinit/ps7_init.tcl' is done.
+15:25:51 INFO  : 'ps7_init' command is executed.
+15:25:51 INFO  : 'ps7_post_config' command is executed.
+15:25:51 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:25:51 INFO  : The application 'C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/Debug/AudioSoftware.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:25:51 INFO  : 'configparams force-mem-access 0' command is executed.
+15:25:51 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469741" && level==0 && jtag_device_ctx=="jsn-Zed-210248469741-03727093-0"}
+fpga -file C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/bitstream/FinalProject.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/hw/FinalProject.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/Debug/AudioSoftware.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:25:51 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:25:51 INFO  : 'con' command is executed.
+15:25:51 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+15:25:51 INFO  : Disconnected from the channel tcfchan#4.
+15:26:41 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:26:41 INFO  : Jtag cable 'Digilent Zed 210248469741' is selected.
+15:26:41 INFO  : 'jtag frequency' command is executed.
+15:26:41 INFO  : Context for 'APU' is selected.
+15:26:41 INFO  : System reset is completed.
+15:26:44 INFO  : 'after 3000' command is executed.
+15:26:44 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469741" && level==0 && jtag_device_ctx=="jsn-Zed-210248469741-03727093-0"}' command is executed.
+15:26:47 INFO  : Device configured successfully with "C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/bitstream/FinalProject.bit"
+15:26:47 INFO  : Context for 'APU' is selected.
+15:26:47 INFO  : Hardware design and registers information is loaded from 'C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/hw/FinalProject.xsa'.
+15:26:47 INFO  : 'configparams force-mem-access 1' command is executed.
+15:26:47 INFO  : Context for 'APU' is selected.
+15:26:47 INFO  : Sourcing of 'C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/psinit/ps7_init.tcl' is done.
+15:26:47 INFO  : 'ps7_init' command is executed.
+15:26:47 INFO  : 'ps7_post_config' command is executed.
+15:26:47 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:26:48 INFO  : The application 'C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/Debug/AudioSoftware.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:26:48 INFO  : 'configparams force-mem-access 0' command is executed.
+15:26:48 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469741" && level==0 && jtag_device_ctx=="jsn-Zed-210248469741-03727093-0"}
+fpga -file C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/bitstream/FinalProject.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/hw/FinalProject.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/Debug/AudioSoftware.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:26:48 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:26:48 INFO  : 'con' command is executed.
+15:26:48 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+15:26:48 INFO  : Disconnected from the channel tcfchan#5.
+15:30:42 INFO  : Checking for BSP changes to sync application flags for project 'VideoComponent'...
+15:31:39 INFO  : Checking for BSP changes to sync application flags for project 'VideoComponent'...
+15:33:29 INFO  : Checking for BSP changes to sync application flags for project 'VideoComponent'...
+15:33:33 INFO  : Checking for BSP changes to sync application flags for project 'AudioSoftware'...
+15:33:42 INFO  : Checking for BSP changes to sync application flags for project 'AudioSoftware'...
+15:39:56 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:39:57 INFO  : Jtag cable 'Digilent Zed 210248469741' is selected.
+15:39:57 INFO  : 'jtag frequency' command is executed.
+15:39:57 INFO  : Context for 'APU' is selected.
+15:39:57 INFO  : System reset is completed.
+15:40:00 INFO  : 'after 3000' command is executed.
+15:40:00 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469741" && level==0 && jtag_device_ctx=="jsn-Zed-210248469741-03727093-0"}' command is executed.
+15:40:02 INFO  : Device configured successfully with "C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/bitstream/FinalProject.bit"
+15:40:02 INFO  : Context for 'APU' is selected.
+15:40:02 INFO  : Hardware design and registers information is loaded from 'C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/hw/FinalProject.xsa'.
+15:40:02 INFO  : 'configparams force-mem-access 1' command is executed.
+15:40:02 INFO  : Context for 'APU' is selected.
+15:40:02 INFO  : Sourcing of 'C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/psinit/ps7_init.tcl' is done.
+15:40:03 INFO  : 'ps7_init' command is executed.
+15:40:03 INFO  : 'ps7_post_config' command is executed.
+15:40:03 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:40:03 INFO  : The application 'C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/Debug/AudioSoftware.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:40:03 INFO  : 'configparams force-mem-access 0' command is executed.
+15:40:03 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469741" && level==0 && jtag_device_ctx=="jsn-Zed-210248469741-03727093-0"}
+fpga -file C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/bitstream/FinalProject.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/hw/FinalProject.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/Debug/AudioSoftware.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:40:03 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:40:03 INFO  : 'con' command is executed.
+15:40:03 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+15:40:03 INFO  : Disconnected from the channel tcfchan#6.
+15:48:53 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:48:53 INFO  : Jtag cable 'Digilent Zed 210248469741' is selected.
+15:48:53 INFO  : 'jtag frequency' command is executed.
+15:48:53 INFO  : Context for 'APU' is selected.
+15:48:53 INFO  : System reset is completed.
+15:48:56 INFO  : 'after 3000' command is executed.
+15:48:56 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469741" && level==0 && jtag_device_ctx=="jsn-Zed-210248469741-03727093-0"}' command is executed.
+15:48:58 INFO  : Device configured successfully with "C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/bitstream/FinalProject.bit"
+15:48:58 INFO  : Context for 'APU' is selected.
+15:48:59 INFO  : Hardware design and registers information is loaded from 'C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/hw/FinalProject.xsa'.
+15:48:59 INFO  : 'configparams force-mem-access 1' command is executed.
+15:48:59 INFO  : Context for 'APU' is selected.
+15:48:59 INFO  : Sourcing of 'C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/psinit/ps7_init.tcl' is done.
+15:48:59 INFO  : 'ps7_init' command is executed.
+15:48:59 INFO  : 'ps7_post_config' command is executed.
+15:48:59 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:48:59 INFO  : The application 'C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/Debug/AudioSoftware.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:48:59 INFO  : 'configparams force-mem-access 0' command is executed.
+15:48:59 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469741" && level==0 && jtag_device_ctx=="jsn-Zed-210248469741-03727093-0"}
+fpga -file C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/bitstream/FinalProject.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/hw/FinalProject.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/Debug/AudioSoftware.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:52:20 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\Christopher\Desktop\FP\ENSC_452\FP\temp_xsdb_launch_script.tcl
+15:52:23 INFO  : XSCT server has started successfully.
+15:52:23 INFO  : plnx-install-location is set to ''
+15:52:23 INFO  : Successfully done setting XSCT server connection channel  
+15:52:23 INFO  : Successfully done setting workspace for the tool. 
+15:52:27 INFO  : Platform repository initialization has completed.
+15:52:28 INFO  : Successfully done query RDI_DATADIR 
+15:52:28 INFO  : Registering command handlers for Vitis TCF services
+15:53:28 INFO  : Result from executing command 'getProjects': FinalProject
+15:53:28 INFO  : Result from executing command 'getPlatforms': FinalProject|C:/Users/Christopher/Desktop/FP/ENSC_452/FP/FinalProject/export/FinalProject/FinalProject.xpfm;FinalProject|C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/FinalProject.xpfm;design_1_wrapper|C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm
+15:53:29 INFO  : Checking for BSP changes to sync application flags for project 'VideoComponent'...
+15:54:11 INFO  : Checking for BSP changes to sync application flags for project 'AudioSoftware'...
+15:54:18 INFO  : Checking for BSP changes to sync application flags for project 'AudioSoftware'...
+15:54:28 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:54:28 INFO  : Jtag cable 'Digilent Zed 210248469741' is selected.
+15:54:28 INFO  : 'jtag frequency' command is executed.
+15:54:28 INFO  : Context for 'APU' is selected.
+15:54:28 INFO  : System reset is completed.
+15:54:31 INFO  : 'after 3000' command is executed.
+15:54:31 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469741" && level==0 && jtag_device_ctx=="jsn-Zed-210248469741-03727093-0"}' command is executed.
+15:54:34 INFO  : Device configured successfully with "C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/bitstream/FinalProject.bit"
+15:54:34 INFO  : Context for 'APU' is selected.
+15:54:34 INFO  : Hardware design and registers information is loaded from 'C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/hw/FinalProject.xsa'.
+15:54:34 INFO  : 'configparams force-mem-access 1' command is executed.
+15:54:34 INFO  : Context for 'APU' is selected.
+15:54:34 INFO  : Sourcing of 'C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/psinit/ps7_init.tcl' is done.
+15:54:34 INFO  : 'ps7_init' command is executed.
+15:54:34 INFO  : 'ps7_post_config' command is executed.
+15:54:34 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:54:34 INFO  : The application 'C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/Debug/AudioSoftware.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:54:34 INFO  : 'configparams force-mem-access 0' command is executed.
+15:54:34 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469741" && level==0 && jtag_device_ctx=="jsn-Zed-210248469741-03727093-0"}
+fpga -file C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/bitstream/FinalProject.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/hw/FinalProject.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/Debug/AudioSoftware.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+16:21:48 INFO  : Disconnected from the channel tcfchan#3.
+16:21:49 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:21:49 INFO  : Jtag cable 'Digilent Zed 210248469741' is selected.
+16:21:49 INFO  : 'jtag frequency' command is executed.
+16:21:49 INFO  : Context for 'APU' is selected.
+16:21:49 INFO  : System reset is completed.
+16:21:53 INFO  : 'after 3000' command is executed.
+16:21:53 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469741" && level==0 && jtag_device_ctx=="jsn-Zed-210248469741-03727093-0"}' command is executed.
+16:21:55 INFO  : Device configured successfully with "C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/bitstream/FinalProject.bit"
+16:21:55 INFO  : Context for 'APU' is selected.
+16:21:55 INFO  : Hardware design and registers information is loaded from 'C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/hw/FinalProject.xsa'.
+16:21:55 INFO  : 'configparams force-mem-access 1' command is executed.
+16:21:55 INFO  : Context for 'APU' is selected.
+16:21:55 INFO  : Sourcing of 'C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/psinit/ps7_init.tcl' is done.
+16:21:55 INFO  : 'ps7_init' command is executed.
+16:21:55 INFO  : 'ps7_post_config' command is executed.
+16:21:55 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:21:55 INFO  : The application 'C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/Debug/AudioSoftware.elf' is downloaded to processor 'ps7_cortexa9_0'.
+16:21:55 INFO  : 'configparams force-mem-access 0' command is executed.
+16:21:55 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469741" && level==0 && jtag_device_ctx=="jsn-Zed-210248469741-03727093-0"}
+fpga -file C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/bitstream/FinalProject.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/hw/FinalProject.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/Debug/AudioSoftware.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+16:22:53 INFO  : Disconnected from the channel tcfchan#4.
+16:23:11 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:23:11 INFO  : Jtag cable 'Digilent Zed 210248469741' is selected.
+16:23:11 INFO  : 'jtag frequency' command is executed.
+16:23:11 INFO  : Context for 'APU' is selected.
+16:23:11 INFO  : System reset is completed.
+16:23:14 INFO  : 'after 3000' command is executed.
+16:23:14 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469741" && level==0 && jtag_device_ctx=="jsn-Zed-210248469741-03727093-0"}' command is executed.
+16:23:16 INFO  : Device configured successfully with "C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/bitstream/FinalProject.bit"
+16:23:16 INFO  : Context for 'APU' is selected.
+16:23:16 INFO  : Hardware design and registers information is loaded from 'C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/hw/FinalProject.xsa'.
+16:23:16 INFO  : 'configparams force-mem-access 1' command is executed.
+16:23:16 INFO  : Context for 'APU' is selected.
+16:23:16 INFO  : Sourcing of 'C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/psinit/ps7_init.tcl' is done.
+16:23:17 INFO  : 'ps7_init' command is executed.
+16:23:17 INFO  : 'ps7_post_config' command is executed.
+16:23:17 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:23:17 INFO  : The application 'C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/Debug/AudioSoftware.elf' is downloaded to processor 'ps7_cortexa9_0'.
+16:23:17 INFO  : 'configparams force-mem-access 0' command is executed.
+16:23:17 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469741" && level==0 && jtag_device_ctx=="jsn-Zed-210248469741-03727093-0"}
+fpga -file C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/bitstream/FinalProject.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/hw/FinalProject.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/Debug/AudioSoftware.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+16:23:44 INFO  : Disconnected from the channel tcfchan#5.
+16:23:45 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:23:45 INFO  : Jtag cable 'Digilent Zed 210248469741' is selected.
+16:23:45 INFO  : 'jtag frequency' command is executed.
+16:23:45 INFO  : Context for 'APU' is selected.
+16:23:45 INFO  : System reset is completed.
+16:23:48 INFO  : 'after 3000' command is executed.
+16:23:48 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469741" && level==0 && jtag_device_ctx=="jsn-Zed-210248469741-03727093-0"}' command is executed.
+16:23:51 INFO  : Device configured successfully with "C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/bitstream/FinalProject.bit"
+16:23:51 INFO  : Context for 'APU' is selected.
+16:23:51 INFO  : Hardware design and registers information is loaded from 'C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/hw/FinalProject.xsa'.
+16:23:51 INFO  : 'configparams force-mem-access 1' command is executed.
+16:23:51 INFO  : Context for 'APU' is selected.
+16:23:51 INFO  : Sourcing of 'C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/psinit/ps7_init.tcl' is done.
+16:23:51 INFO  : 'ps7_init' command is executed.
+16:23:51 INFO  : 'ps7_post_config' command is executed.
+16:23:51 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:23:51 INFO  : The application 'C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/Debug/AudioSoftware.elf' is downloaded to processor 'ps7_cortexa9_0'.
+16:23:51 INFO  : 'configparams force-mem-access 0' command is executed.
+16:23:51 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469741" && level==0 && jtag_device_ctx=="jsn-Zed-210248469741-03727093-0"}
+fpga -file C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/bitstream/FinalProject.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/hw/FinalProject.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/Debug/AudioSoftware.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+16:23:51 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:23:51 INFO  : 'con' command is executed.
+16:23:51 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+16:23:51 INFO  : Disconnected from the channel tcfchan#6.
+16:24:39 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:24:39 INFO  : Jtag cable 'Digilent Zed 210248469741' is selected.
+16:24:39 INFO  : 'jtag frequency' command is executed.
+16:24:39 INFO  : Context for 'APU' is selected.
+16:24:39 INFO  : System reset is completed.
+16:24:42 INFO  : 'after 3000' command is executed.
+16:24:42 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469741" && level==0 && jtag_device_ctx=="jsn-Zed-210248469741-03727093-0"}' command is executed.
+16:24:45 INFO  : Device configured successfully with "C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/bitstream/FinalProject.bit"
+16:24:45 INFO  : Context for 'APU' is selected.
+16:24:45 INFO  : Hardware design and registers information is loaded from 'C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/hw/FinalProject.xsa'.
+16:24:45 INFO  : 'configparams force-mem-access 1' command is executed.
+16:24:45 INFO  : Context for 'APU' is selected.
+16:24:45 INFO  : Sourcing of 'C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/psinit/ps7_init.tcl' is done.
+16:24:45 INFO  : 'ps7_init' command is executed.
+16:24:45 INFO  : 'ps7_post_config' command is executed.
+16:24:45 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:24:45 INFO  : The application 'C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/Debug/AudioSoftware.elf' is downloaded to processor 'ps7_cortexa9_0'.
+16:24:45 INFO  : 'configparams force-mem-access 0' command is executed.
+16:24:45 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469741" && level==0 && jtag_device_ctx=="jsn-Zed-210248469741-03727093-0"}
+fpga -file C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/bitstream/FinalProject.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/hw/FinalProject.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/Debug/AudioSoftware.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+16:25:51 INFO  : Disconnected from the channel tcfchan#7.
+16:26:13 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:26:13 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469741" && level==0 && jtag_device_ctx=="jsn-Zed-210248469741-03727093-0"}' command is executed.
+16:26:16 INFO  : Device configured successfully with "C:/Users/Christopher/Desktop/FP/ENSC_452/FP/VideoComponent/_ide/bitstream/FinalProject.bit"
+16:26:33 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:26:33 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469741" && level==0 && jtag_device_ctx=="jsn-Zed-210248469741-03727093-0"}' command is executed.
+16:26:36 INFO  : Device configured successfully with "C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/bitstream/FinalProject.bit"
+16:26:45 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:26:45 INFO  : Jtag cable 'Digilent Zed 210248469741' is selected.
+16:26:45 INFO  : 'jtag frequency' command is executed.
+16:26:45 INFO  : Context for 'APU' is selected.
+16:26:45 INFO  : System reset is completed.
+16:26:48 INFO  : 'after 3000' command is executed.
+16:26:48 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469741" && level==0 && jtag_device_ctx=="jsn-Zed-210248469741-03727093-0"}' command is executed.
+16:26:50 INFO  : Device configured successfully with "C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/bitstream/FinalProject.bit"
+16:26:50 INFO  : Context for 'APU' is selected.
+16:26:50 INFO  : Hardware design and registers information is loaded from 'C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/hw/FinalProject.xsa'.
+16:26:50 INFO  : 'configparams force-mem-access 1' command is executed.
+16:26:50 INFO  : Context for 'APU' is selected.
+16:26:50 INFO  : Sourcing of 'C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/psinit/ps7_init.tcl' is done.
+16:26:51 INFO  : 'ps7_init' command is executed.
+16:26:51 INFO  : 'ps7_post_config' command is executed.
+16:26:51 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:26:51 INFO  : The application 'C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/Debug/AudioSoftware.elf' is downloaded to processor 'ps7_cortexa9_0'.
+16:26:51 INFO  : 'configparams force-mem-access 0' command is executed.
+16:26:51 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469741" && level==0 && jtag_device_ctx=="jsn-Zed-210248469741-03727093-0"}
+fpga -file C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/bitstream/FinalProject.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/hw/FinalProject.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/Debug/AudioSoftware.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+16:29:18 INFO  : Disconnected from the channel tcfchan#8.
+19:55:09 INFO  : No changes in MSS file content so sources will not be generated.
+19:55:42 INFO  : No changes in MSS file content so sources will not be generated.
+19:55:59 INFO  : Result from executing command 'getProjects': FinalProject
+19:55:59 INFO  : Result from executing command 'getPlatforms': FinalProject|C:/Users/Christopher/Desktop/FP/ENSC_452/FP/FinalProject/export/FinalProject/FinalProject.xpfm;FinalProject|C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/FinalProject.xpfm;design_1_wrapper|C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm
+19:56:34 INFO  : Checking for BSP changes to sync application flags for project 'AudioSoftware'...
+19:56:35 INFO  : Checking for BSP changes to sync application flags for project 'VideoSoftware'...
+19:57:32 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:57:32 INFO  : Jtag cable 'Digilent Zed 210248469741' is selected.
+19:57:32 INFO  : 'jtag frequency' command is executed.
+19:57:32 INFO  : Context for 'APU' is selected.
+19:57:32 INFO  : System reset is completed.
+19:57:35 INFO  : 'after 3000' command is executed.
+19:57:36 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469741" && level==0 && jtag_device_ctx=="jsn-Zed-210248469741-03727093-0"}' command is executed.
+19:57:38 INFO  : Device configured successfully with "C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/bitstream/FinalProject.bit"
+19:57:38 INFO  : Context for 'APU' is selected.
+19:57:38 INFO  : Hardware design and registers information is loaded from 'C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/hw/FinalProject.xsa'.
+19:57:38 INFO  : 'configparams force-mem-access 1' command is executed.
+19:57:38 INFO  : Context for 'APU' is selected.
+19:57:38 INFO  : Sourcing of 'C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/psinit/ps7_init.tcl' is done.
+19:57:38 INFO  : 'ps7_init' command is executed.
+19:57:38 INFO  : 'ps7_post_config' command is executed.
+19:57:38 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:57:38 INFO  : The application 'C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/Debug/AudioSoftware.elf' is downloaded to processor 'ps7_cortexa9_0'.
+19:57:39 INFO  : 'configparams force-mem-access 0' command is executed.
+19:57:39 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469741" && level==0 && jtag_device_ctx=="jsn-Zed-210248469741-03727093-0"}
+fpga -file C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/bitstream/FinalProject.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/hw/FinalProject.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/Debug/AudioSoftware.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+20:00:36 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\Christopher\Desktop\FP\ENSC_452\FP\temp_xsdb_launch_script.tcl
+20:00:39 INFO  : XSCT server has started successfully.
+20:00:39 INFO  : plnx-install-location is set to ''
+20:00:39 INFO  : Successfully done setting XSCT server connection channel  
+20:00:39 INFO  : Successfully done setting workspace for the tool. 
+20:00:46 INFO  : Registering command handlers for Vitis TCF services
+20:00:46 INFO  : Platform repository initialization has completed.
+20:00:47 INFO  : Successfully done query RDI_DATADIR 
+20:01:38 INFO  : Result from executing command 'getProjects': FinalProject
+20:01:38 INFO  : Result from executing command 'getPlatforms': FinalProject|C:/Users/Christopher/Desktop/FP/ENSC_452/FP/FinalProject/export/FinalProject/FinalProject.xpfm;FinalProject|C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/FinalProject.xpfm;design_1_wrapper|C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm
+20:01:39 INFO  : Checking for BSP changes to sync application flags for project 'AudioSoftware'...
+20:01:43 INFO  : Checking for BSP changes to sync application flags for project 'VideoSoftware'...
+20:01:55 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:01:56 INFO  : Jtag cable 'Digilent Zed 210248469741' is selected.
+20:01:56 INFO  : 'jtag frequency' command is executed.
+20:01:56 INFO  : Context for 'APU' is selected.
+20:01:56 INFO  : System reset is completed.
+20:01:59 INFO  : 'after 3000' command is executed.
+20:01:59 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469741" && level==0 && jtag_device_ctx=="jsn-Zed-210248469741-03727093-0"}' command is executed.
+20:02:01 INFO  : Device configured successfully with "C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/bitstream/FinalProject.bit"
+20:02:01 INFO  : Context for 'APU' is selected.
+20:02:01 INFO  : Hardware design and registers information is loaded from 'C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/hw/FinalProject.xsa'.
+20:02:01 INFO  : 'configparams force-mem-access 1' command is executed.
+20:02:01 INFO  : Context for 'APU' is selected.
+20:02:01 INFO  : Sourcing of 'C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/psinit/ps7_init.tcl' is done.
+20:02:02 INFO  : 'ps7_init' command is executed.
+20:02:02 INFO  : 'ps7_post_config' command is executed.
+20:02:02 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:02:02 INFO  : The application 'C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/Debug/AudioSoftware.elf' is downloaded to processor 'ps7_cortexa9_0'.
+20:02:02 INFO  : 'configparams force-mem-access 0' command is executed.
+20:02:02 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469741" && level==0 && jtag_device_ctx=="jsn-Zed-210248469741-03727093-0"}
+fpga -file C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/bitstream/FinalProject.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/hw/FinalProject.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/Debug/AudioSoftware.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+20:03:51 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\Christopher\Desktop\FP\ENSC_452\FP\temp_xsdb_launch_script.tcl
+20:03:55 INFO  : XSCT server has started successfully.
+20:03:55 INFO  : plnx-install-location is set to ''
+20:03:55 INFO  : Successfully done setting XSCT server connection channel  
+20:03:55 INFO  : Successfully done setting workspace for the tool. 
+20:04:01 INFO  : Registering command handlers for Vitis TCF services
+20:04:02 INFO  : Platform repository initialization has completed.
+20:04:04 INFO  : Successfully done query RDI_DATADIR 
+20:04:47 INFO  : Result from executing command 'getProjects': FinalProject
+20:04:47 INFO  : Result from executing command 'getPlatforms': FinalProject|C:/Users/Christopher/Desktop/FP/ENSC_452/FP/FinalProject/export/FinalProject/FinalProject.xpfm;FinalProject|C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/FinalProject.xpfm;design_1_wrapper|C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm
+20:04:48 INFO  : Checking for BSP changes to sync application flags for project 'AudioSoftware'...
+20:04:52 INFO  : Checking for BSP changes to sync application flags for project 'VideoSoftware'...
+20:05:21 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:05:22 INFO  : Jtag cable 'Digilent Zed 210248469741' is selected.
+20:05:22 INFO  : 'jtag frequency' command is executed.
+20:05:22 INFO  : Context for 'APU' is selected.
+20:05:22 INFO  : System reset is completed.
+20:05:25 INFO  : 'after 3000' command is executed.
+20:05:25 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469741" && level==0 && jtag_device_ctx=="jsn-Zed-210248469741-03727093-0"}' command is executed.
+20:05:27 INFO  : Device configured successfully with "C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/bitstream/FinalProject.bit"
+20:05:27 INFO  : Context for 'APU' is selected.
+20:05:27 INFO  : Hardware design and registers information is loaded from 'C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/hw/FinalProject.xsa'.
+20:05:27 INFO  : 'configparams force-mem-access 1' command is executed.
+20:05:27 INFO  : Context for 'APU' is selected.
+20:05:27 INFO  : Sourcing of 'C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/psinit/ps7_init.tcl' is done.
+20:05:28 INFO  : 'ps7_init' command is executed.
+20:05:28 INFO  : 'ps7_post_config' command is executed.
+20:05:28 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:05:28 INFO  : The application 'C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/Debug/AudioSoftware.elf' is downloaded to processor 'ps7_cortexa9_0'.
+20:05:28 INFO  : 'configparams force-mem-access 0' command is executed.
+20:05:28 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469741" && level==0 && jtag_device_ctx=="jsn-Zed-210248469741-03727093-0"}
+fpga -file C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/bitstream/FinalProject.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/hw/FinalProject.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/Debug/AudioSoftware.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+20:05:28 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:05:28 INFO  : 'con' command is executed.
+20:05:28 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+20:05:28 INFO  : Disconnected from the channel tcfchan#3.
+20:06:09 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:06:09 INFO  : Jtag cable 'Digilent Zed 210248469741' is selected.
+20:06:09 INFO  : 'jtag frequency' command is executed.
+20:06:09 INFO  : Context for 'APU' is selected.
+20:06:09 INFO  : System reset is completed.
+20:06:12 INFO  : 'after 3000' command is executed.
+20:06:12 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469741" && level==0 && jtag_device_ctx=="jsn-Zed-210248469741-03727093-0"}' command is executed.
+20:06:15 INFO  : Device configured successfully with "C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/bitstream/FinalProject.bit"
+20:06:15 INFO  : Context for 'APU' is selected.
+20:06:15 INFO  : Hardware design and registers information is loaded from 'C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/hw/FinalProject.xsa'.
+20:06:15 INFO  : 'configparams force-mem-access 1' command is executed.
+20:06:15 INFO  : Context for 'APU' is selected.
+20:06:15 INFO  : Sourcing of 'C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/psinit/ps7_init.tcl' is done.
+20:06:15 INFO  : 'ps7_init' command is executed.
+20:06:15 INFO  : 'ps7_post_config' command is executed.
+20:06:15 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:06:15 INFO  : The application 'C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/Debug/AudioSoftware.elf' is downloaded to processor 'ps7_cortexa9_0'.
+20:06:15 INFO  : 'configparams force-mem-access 0' command is executed.
+20:06:15 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469741" && level==0 && jtag_device_ctx=="jsn-Zed-210248469741-03727093-0"}
+fpga -file C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/bitstream/FinalProject.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/hw/FinalProject.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/Debug/AudioSoftware.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+20:08:46 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\Christopher\Desktop\FP\ENSC_452\FP\temp_xsdb_launch_script.tcl
+20:08:50 INFO  : XSCT server has started successfully.
+20:08:50 INFO  : plnx-install-location is set to ''
+20:08:50 INFO  : Successfully done setting XSCT server connection channel  
+20:08:50 INFO  : Successfully done setting workspace for the tool. 
+20:08:56 INFO  : Registering command handlers for Vitis TCF services
+20:08:57 INFO  : Platform repository initialization has completed.
+20:08:58 INFO  : Successfully done query RDI_DATADIR 
+20:12:34 ERROR : (XSDB Server)ERROR: [Hsi 55-1571] The design file C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/hw/FinalProject.xsa is already opened
+
+20:12:34 INFO  : Generated template bif file for AudioSoftware_system
+20:17:12 INFO  : Invoking Bootgen: bootgen -image AudioSoftware_system.bif -arch zynq -o C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware_system/_ide/bootimage/BOOT.bin
+20:17:14 INFO  : Bootgen command execution is done.
+20:20:06 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:20:06 INFO  : Jtag cable 'Digilent Zed 210248469741' is selected.
+20:20:06 INFO  : 'jtag frequency' command is executed.
+20:20:06 INFO  : Context for 'APU' is selected.
+20:20:06 INFO  : System reset is completed.
+20:20:09 INFO  : 'after 3000' command is executed.
+20:20:09 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469741" && level==0 && jtag_device_ctx=="jsn-Zed-210248469741-03727093-0"}' command is executed.
+20:20:12 INFO  : Device configured successfully with "C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/bitstream/FinalProject.bit"
+20:20:12 INFO  : Context for 'APU' is selected.
+20:20:12 INFO  : Hardware design and registers information is loaded from 'C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/hw/FinalProject.xsa'.
+20:20:12 INFO  : 'configparams force-mem-access 1' command is executed.
+20:20:12 INFO  : Context for 'APU' is selected.
+20:20:12 INFO  : Sourcing of 'C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/psinit/ps7_init.tcl' is done.
+20:20:12 INFO  : 'ps7_init' command is executed.
+20:20:12 INFO  : 'ps7_post_config' command is executed.
+20:20:12 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:20:13 INFO  : The application 'C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/Debug/AudioSoftware.elf' is downloaded to processor 'ps7_cortexa9_0'.
+20:20:13 INFO  : 'configparams force-mem-access 0' command is executed.
+20:20:13 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469741" && level==0 && jtag_device_ctx=="jsn-Zed-210248469741-03727093-0"}
+fpga -file C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/bitstream/FinalProject.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/hw/FinalProject.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/Debug/AudioSoftware.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+20:21:35 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\Christopher\Desktop\FP\ENSC_452\FP\temp_xsdb_launch_script.tcl
+20:21:38 INFO  : XSCT server has started successfully.
+20:21:38 INFO  : plnx-install-location is set to ''
+20:21:38 INFO  : Successfully done setting XSCT server connection channel  
+20:21:38 INFO  : Successfully done setting workspace for the tool. 
+20:21:44 INFO  : Registering command handlers for Vitis TCF services
+20:21:45 INFO  : Platform repository initialization has completed.
+20:21:45 INFO  : Successfully done query RDI_DATADIR 
+20:34:06 INFO  : Invoking Bootgen: bootgen -image AudioSoftware_system.bif -arch zynq -o C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware_system/_ide/bootimage/BOOT.bin -w on
+20:34:08 INFO  : Bootgen command execution is done.
+20:45:23 INFO  : Result from executing command 'getProjects': FinalProject
+20:45:23 INFO  : Result from executing command 'getPlatforms': FinalProject|C:/Users/Christopher/Desktop/FP/ENSC_452/FP/FinalProject/export/FinalProject/FinalProject.xpfm;FinalProject|C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/FinalProject.xpfm;design_1_wrapper|C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm
+20:45:24 INFO  : Checking for BSP changes to sync application flags for project 'AudioSoftware'...
+20:45:29 INFO  : Checking for BSP changes to sync application flags for project 'VideoSoftware'...
+20:45:56 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:45:56 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469741" && level==0 && jtag_device_ctx=="jsn-Zed-210248469741-03727093-0"}' command is executed.
+20:45:58 INFO  : Device configured successfully with "C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/bitstream/FinalProject.bit"
+20:48:46 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:48:46 INFO  : Jtag cable 'Digilent Zed 210248469741' is selected.
+20:48:46 INFO  : 'jtag frequency' command is executed.
+20:48:46 INFO  : Context for 'APU' is selected.
+20:48:46 INFO  : System reset is completed.
+20:48:49 INFO  : 'after 3000' command is executed.
+20:48:49 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469741" && level==0 && jtag_device_ctx=="jsn-Zed-210248469741-03727093-0"}' command is executed.
+20:48:51 INFO  : Device configured successfully with "C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/bitstream/FinalProject.bit"
+20:48:52 INFO  : Context for 'APU' is selected.
+20:48:52 INFO  : Hardware design and registers information is loaded from 'C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/hw/FinalProject.xsa'.
+20:48:52 INFO  : 'configparams force-mem-access 1' command is executed.
+20:48:52 INFO  : Context for 'APU' is selected.
+20:48:52 INFO  : Sourcing of 'C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/psinit/ps7_init.tcl' is done.
+20:48:52 INFO  : 'ps7_init' command is executed.
+20:48:52 INFO  : 'ps7_post_config' command is executed.
+20:48:52 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:48:52 INFO  : The application 'C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/Debug/AudioSoftware.elf' is downloaded to processor 'ps7_cortexa9_0'.
+20:48:52 INFO  : 'configparams force-mem-access 0' command is executed.
+20:48:52 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469741" && level==0 && jtag_device_ctx=="jsn-Zed-210248469741-03727093-0"}
+fpga -file C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/bitstream/FinalProject.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/hw/FinalProject.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/Debug/AudioSoftware.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+20:51:21 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\Christopher\Desktop\FP\ENSC_452\FP\temp_xsdb_launch_script.tcl
+20:51:24 INFO  : XSCT server has started successfully.
+20:51:24 INFO  : plnx-install-location is set to ''
+20:51:24 INFO  : Successfully done setting XSCT server connection channel  
+20:51:24 INFO  : Successfully done setting workspace for the tool. 
+20:51:30 INFO  : Registering command handlers for Vitis TCF services
+20:51:30 INFO  : Platform repository initialization has completed.
+20:51:31 INFO  : Successfully done query RDI_DATADIR 
+20:51:51 INFO  : Result from executing command 'getProjects': FinalProject
+20:51:51 INFO  : Result from executing command 'getPlatforms': FinalProject|C:/Users/Christopher/Desktop/FP/ENSC_452/FP/FinalProject/export/FinalProject/FinalProject.xpfm;FinalProject|C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/FinalProject.xpfm;design_1_wrapper|C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm
+20:51:52 INFO  : Checking for BSP changes to sync application flags for project 'AudioSoftware'...
+20:51:55 INFO  : Checking for BSP changes to sync application flags for project 'VideoSoftware'...
+20:52:21 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:52:21 INFO  : Jtag cable 'Digilent Zed 210248469741' is selected.
+20:52:21 INFO  : 'jtag frequency' command is executed.
+20:52:21 INFO  : Context for 'APU' is selected.
+20:52:21 INFO  : System reset is completed.
+20:52:24 INFO  : 'after 3000' command is executed.
+20:52:24 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469741" && level==0 && jtag_device_ctx=="jsn-Zed-210248469741-03727093-0"}' command is executed.
+20:52:26 INFO  : Device configured successfully with "C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/bitstream/FinalProject.bit"
+20:52:27 INFO  : Context for 'APU' is selected.
+20:52:27 INFO  : Hardware design and registers information is loaded from 'C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/hw/FinalProject.xsa'.
+20:52:27 INFO  : 'configparams force-mem-access 1' command is executed.
+20:52:27 INFO  : Context for 'APU' is selected.
+20:52:27 INFO  : Sourcing of 'C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/psinit/ps7_init.tcl' is done.
+20:52:27 INFO  : 'ps7_init' command is executed.
+20:52:27 INFO  : 'ps7_post_config' command is executed.
+20:52:27 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:52:27 INFO  : The application 'C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/Debug/AudioSoftware.elf' is downloaded to processor 'ps7_cortexa9_0'.
+20:52:27 INFO  : 'configparams force-mem-access 0' command is executed.
+20:52:27 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469741" && level==0 && jtag_device_ctx=="jsn-Zed-210248469741-03727093-0"}
+fpga -file C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/bitstream/FinalProject.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/hw/FinalProject.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/Debug/AudioSoftware.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+20:52:27 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:52:27 INFO  : 'con' command is executed.
+20:52:27 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+20:52:27 INFO  : Disconnected from the channel tcfchan#3.
+22:05:09 INFO  : Checking for BSP changes to sync application flags for project 'AudioSoftware'...
+22:05:17 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:05:17 INFO  : Jtag cable 'Digilent Zed 210248469741' is selected.
+22:05:17 INFO  : 'jtag frequency' command is executed.
+22:05:17 INFO  : Context for 'APU' is selected.
+22:05:17 INFO  : System reset is completed.
+22:05:20 INFO  : 'after 3000' command is executed.
+22:05:20 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469741" && level==0 && jtag_device_ctx=="jsn-Zed-210248469741-03727093-0"}' command is executed.
+22:05:23 INFO  : Device configured successfully with "C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/bitstream/FinalProject.bit"
+22:05:23 INFO  : Context for 'APU' is selected.
+22:05:23 INFO  : Hardware design and registers information is loaded from 'C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/hw/FinalProject.xsa'.
+22:05:23 INFO  : 'configparams force-mem-access 1' command is executed.
+22:05:23 INFO  : Context for 'APU' is selected.
+22:05:23 INFO  : Sourcing of 'C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/psinit/ps7_init.tcl' is done.
+22:05:23 INFO  : 'ps7_init' command is executed.
+22:05:23 INFO  : 'ps7_post_config' command is executed.
+22:05:23 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:05:23 INFO  : The application 'C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/Debug/AudioSoftware.elf' is downloaded to processor 'ps7_cortexa9_0'.
+22:05:23 INFO  : 'configparams force-mem-access 0' command is executed.
+22:05:23 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469741" && level==0 && jtag_device_ctx=="jsn-Zed-210248469741-03727093-0"}
+fpga -file C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/bitstream/FinalProject.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/hw/FinalProject.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/Debug/AudioSoftware.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+22:05:23 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:05:23 INFO  : 'con' command is executed.
+22:05:23 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+22:05:23 INFO  : Disconnected from the channel tcfchan#4.
+22:06:05 INFO  : Checking for BSP changes to sync application flags for project 'AudioSoftware'...
+22:06:10 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:06:10 INFO  : Jtag cable 'Digilent Zed 210248469741' is selected.
+22:06:10 INFO  : 'jtag frequency' command is executed.
+22:06:10 INFO  : Context for 'APU' is selected.
+22:06:10 INFO  : System reset is completed.
+22:06:13 INFO  : 'after 3000' command is executed.
+22:06:13 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469741" && level==0 && jtag_device_ctx=="jsn-Zed-210248469741-03727093-0"}' command is executed.
+22:06:16 INFO  : Device configured successfully with "C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/bitstream/FinalProject.bit"
+22:06:16 INFO  : Context for 'APU' is selected.
+22:06:16 INFO  : Hardware design and registers information is loaded from 'C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/hw/FinalProject.xsa'.
+22:06:16 INFO  : 'configparams force-mem-access 1' command is executed.
+22:06:16 INFO  : Context for 'APU' is selected.
+22:06:16 INFO  : Sourcing of 'C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/psinit/ps7_init.tcl' is done.
+22:06:16 INFO  : 'ps7_init' command is executed.
+22:06:16 INFO  : 'ps7_post_config' command is executed.
+22:06:16 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:06:16 INFO  : The application 'C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/Debug/AudioSoftware.elf' is downloaded to processor 'ps7_cortexa9_0'.
+22:06:16 INFO  : 'configparams force-mem-access 0' command is executed.
+22:06:16 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469741" && level==0 && jtag_device_ctx=="jsn-Zed-210248469741-03727093-0"}
+fpga -file C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/bitstream/FinalProject.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/hw/FinalProject.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/Debug/AudioSoftware.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+22:06:17 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:06:17 INFO  : 'con' command is executed.
+22:06:17 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+22:06:17 INFO  : Disconnected from the channel tcfchan#5.
+22:40:02 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\Christopher\Desktop\FP\ENSC_452\FP\temp_xsdb_launch_script.tcl
+22:40:06 INFO  : XSCT server has started successfully.
+22:40:06 INFO  : plnx-install-location is set to ''
+22:40:06 INFO  : Successfully done setting XSCT server connection channel  
+22:40:06 INFO  : Successfully done setting workspace for the tool. 
+22:40:13 INFO  : Registering command handlers for Vitis TCF services
+22:40:14 INFO  : Platform repository initialization has completed.
+22:40:14 INFO  : Successfully done query RDI_DATADIR 
+22:44:50 INFO  : Checking for BSP changes to sync application flags for project 'AudioSoftware'...
+22:44:54 INFO  : Checking for BSP changes to sync application flags for project 'VideoSoftware'...
+22:45:01 ERROR : (XSDB Server)ERROR: [Hsi 55-1571] The design file C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/hw/FinalProject.xsa is already opened
+
+22:45:21 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:45:21 INFO  : Jtag cable 'Digilent Zed 210248469741' is selected.
+22:45:21 INFO  : 'jtag frequency' command is executed.
+22:45:21 INFO  : Context for 'APU' is selected.
+22:45:21 INFO  : System reset is completed.
+22:45:24 INFO  : 'after 3000' command is executed.
+22:45:24 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469741" && level==0 && jtag_device_ctx=="jsn-Zed-210248469741-03727093-0"}' command is executed.
+22:45:27 INFO  : Device configured successfully with "C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/bitstream/FinalProject.bit"
+22:45:27 INFO  : Context for 'APU' is selected.
+22:45:27 INFO  : Hardware design and registers information is loaded from 'C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/hw/FinalProject.xsa'.
+22:45:27 INFO  : 'configparams force-mem-access 1' command is executed.
+22:45:27 INFO  : Context for 'APU' is selected.
+22:45:27 INFO  : Sourcing of 'C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/psinit/ps7_init.tcl' is done.
+22:45:27 INFO  : 'ps7_init' command is executed.
+22:45:27 INFO  : 'ps7_post_config' command is executed.
+22:45:27 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:45:27 INFO  : The application 'C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/Debug/AudioSoftware.elf' is downloaded to processor 'ps7_cortexa9_0'.
+22:45:27 INFO  : 'configparams force-mem-access 0' command is executed.
+22:45:27 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469741" && level==0 && jtag_device_ctx=="jsn-Zed-210248469741-03727093-0"}
+fpga -file C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/bitstream/FinalProject.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/hw/FinalProject.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/Debug/AudioSoftware.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+22:55:21 INFO  : Disconnected from the channel tcfchan#2.
+23:36:23 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\Christopher\Desktop\FP\ENSC_452\FP\temp_xsdb_launch_script.tcl
+23:36:26 INFO  : XSCT server has started successfully.
+23:36:26 INFO  : plnx-install-location is set to ''
+23:36:26 INFO  : Successfully done setting XSCT server connection channel  
+23:36:26 INFO  : Successfully done setting workspace for the tool. 
+23:36:31 INFO  : Registering command handlers for Vitis TCF services
+23:36:32 INFO  : Platform repository initialization has completed.
+23:36:32 INFO  : Successfully done query RDI_DATADIR 
+23:36:47 INFO  : Checking for BSP changes to sync application flags for project 'VideoSW'...
+23:37:41 INFO  : Checking for BSP changes to sync application flags for project 'AudioSoftware'...
+23:37:42 INFO  : Checking for BSP changes to sync application flags for project 'VideoSW'...
+23:37:43 INFO  : Checking for BSP changes to sync application flags for project 'VideoSoftware'...
+23:37:49 ERROR : (XSDB Server)ERROR: [Hsi 55-1571] The design file C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/hw/FinalProject.xsa is already opened
+
+23:40:40 INFO  : Build configuration of 'AudioSoftware_system' is updated to 'Release'
+23:40:40 INFO  : Build configuration of system project is automatically updated to 'Release'.
+23:40:40 INFO  : Checking for BSP changes to sync application flags for project 'AudioSoftware'...
+23:40:42 INFO  : Build configuration of 'VideoSW' is updated to 'Release'
+23:40:55 INFO  : Build configuration of 'AudioSoftware_system' is updated to 'Debug'
+23:40:55 INFO  : Build configuration of system project is automatically updated to 'Debug'.
+23:40:55 INFO  : Build configuration of 'VideoSW' is updated to 'Debug'
+23:40:55 INFO  : Checking for BSP changes to sync application flags for project 'AudioSoftware'...
+23:41:18 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:41:18 INFO  : Jtag cable 'Digilent Zed 210248469741' is selected.
+23:41:18 INFO  : 'jtag frequency' command is executed.
+23:41:18 INFO  : Context for 'APU' is selected.
+23:41:18 INFO  : System reset is completed.
+23:41:21 INFO  : 'after 3000' command is executed.
+23:41:21 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469741" && level==0 && jtag_device_ctx=="jsn-Zed-210248469741-03727093-0"}' command is executed.
+23:41:24 INFO  : Device configured successfully with "C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/bitstream/FinalProject.bit"
+23:41:24 INFO  : Context for 'APU' is selected.
+23:41:24 INFO  : Hardware design and registers information is loaded from 'C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/hw/FinalProject.xsa'.
+23:41:24 INFO  : 'configparams force-mem-access 1' command is executed.
+23:41:24 INFO  : Context for 'APU' is selected.
+23:41:24 INFO  : Sourcing of 'C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/psinit/ps7_init.tcl' is done.
+23:41:24 INFO  : 'ps7_init' command is executed.
+23:41:24 INFO  : 'ps7_post_config' command is executed.
+23:41:24 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:41:24 INFO  : The application 'C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/Debug/AudioSoftware.elf' is downloaded to processor 'ps7_cortexa9_0'.
+23:41:25 INFO  : 'configparams force-mem-access 0' command is executed.
+23:41:25 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469741" && level==0 && jtag_device_ctx=="jsn-Zed-210248469741-03727093-0"}
+fpga -file C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/bitstream/FinalProject.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/hw/FinalProject.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/Debug/AudioSoftware.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+23:41:25 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:41:25 INFO  : 'con' command is executed.
+23:41:25 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+23:41:25 INFO  : Disconnected from the channel tcfchan#2.
+23:49:52 INFO  : Invoking Bootgen: bootgen -image AudioSoftware_system.bif -arch zynq -o C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware_system/_ide/bootimage/BOOT.bin -w on
+23:49:52 INFO  : Overwriting existing bif file C:\Users\Christopher\Desktop\FP\ENSC_452\FP\AudioSoftware_system\_ide\bootimage\AudioSoftware_system.bif
+23:49:54 INFO  : Bootgen command execution is done.
+23:52:59 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:52:59 INFO  : Jtag cable 'Digilent Zed 210248469741' is selected.
+23:52:59 INFO  : 'jtag frequency' command is executed.
+23:52:59 INFO  : Context for 'APU' is selected.
+23:52:59 INFO  : System reset is completed.
+23:53:02 INFO  : 'after 3000' command is executed.
+23:53:02 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469741" && level==0 && jtag_device_ctx=="jsn-Zed-210248469741-03727093-0"}' command is executed.
+23:53:05 INFO  : Device configured successfully with "C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/bitstream/FinalProject.bit"
+23:53:05 INFO  : Context for 'APU' is selected.
+23:53:08 INFO  : Hardware design and registers information is loaded from 'C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/hw/FinalProject.xsa'.
+23:53:08 INFO  : 'configparams force-mem-access 1' command is executed.
+23:53:08 INFO  : Context for 'APU' is selected.
+23:53:08 INFO  : Sourcing of 'C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/psinit/ps7_init.tcl' is done.
+23:53:08 INFO  : 'ps7_init' command is executed.
+23:53:08 INFO  : 'ps7_post_config' command is executed.
+23:53:08 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:53:08 INFO  : The application 'C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/Debug/AudioSoftware.elf' is downloaded to processor 'ps7_cortexa9_0'.
+23:53:08 INFO  : 'configparams force-mem-access 0' command is executed.
+23:53:08 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469741" && level==0 && jtag_device_ctx=="jsn-Zed-210248469741-03727093-0"}
+fpga -file C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/bitstream/FinalProject.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/hw/FinalProject.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/Debug/AudioSoftware.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+23:53:09 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:53:09 INFO  : 'con' command is executed.
+23:53:09 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+23:53:09 INFO  : Disconnected from the channel tcfchan#3.
+23:55:18 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:55:18 INFO  : Jtag cable 'Digilent Zed 210248469741' is selected.
+23:55:18 INFO  : 'jtag frequency' command is executed.
+23:55:18 INFO  : Context for 'APU' is selected.
+23:55:18 INFO  : System reset is completed.
+23:55:21 INFO  : 'after 3000' command is executed.
+23:55:21 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469741" && level==0 && jtag_device_ctx=="jsn-Zed-210248469741-03727093-0"}' command is executed.
+23:55:23 INFO  : Device configured successfully with "C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/bitstream/FinalProject.bit"
+23:55:24 INFO  : Context for 'APU' is selected.
+23:55:26 INFO  : Hardware design and registers information is loaded from 'C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/hw/FinalProject.xsa'.
+23:55:26 INFO  : 'configparams force-mem-access 1' command is executed.
+23:55:26 INFO  : Context for 'APU' is selected.
+23:55:26 INFO  : Sourcing of 'C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/psinit/ps7_init.tcl' is done.
+23:55:27 INFO  : 'ps7_init' command is executed.
+23:55:27 INFO  : 'ps7_post_config' command is executed.
+23:55:27 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:55:27 INFO  : The application 'C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/Debug/AudioSoftware.elf' is downloaded to processor 'ps7_cortexa9_0'.
+23:55:27 INFO  : 'configparams force-mem-access 0' command is executed.
+23:55:27 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469741" && level==0 && jtag_device_ctx=="jsn-Zed-210248469741-03727093-0"}
+fpga -file C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/bitstream/FinalProject.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/hw/FinalProject.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/Debug/AudioSoftware.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+23:57:30 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\Christopher\Desktop\FP\ENSC_452\FP\temp_xsdb_launch_script.tcl
+23:57:33 INFO  : XSCT server has started successfully.
+23:57:33 INFO  : Successfully done setting XSCT server connection channel  
+23:57:33 INFO  : plnx-install-location is set to ''
+23:57:33 INFO  : Successfully done setting workspace for the tool. 
+23:57:39 INFO  : Platform repository initialization has completed.
+23:57:39 INFO  : Registering command handlers for Vitis TCF services
+23:57:39 INFO  : Successfully done query RDI_DATADIR 
+23:59:01 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:59:01 INFO  : Jtag cable 'Digilent Zed 210248469741' is selected.
+23:59:01 INFO  : 'jtag frequency' command is executed.
+23:59:01 INFO  : Context for 'APU' is selected.
+23:59:01 INFO  : System reset is completed.
+23:59:04 INFO  : 'after 3000' command is executed.
+23:59:04 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469741" && level==0 && jtag_device_ctx=="jsn-Zed-210248469741-03727093-0"}' command is executed.
+23:59:07 INFO  : Device configured successfully with "C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/bitstream/FinalProject.bit"
+23:59:07 INFO  : Context for 'APU' is selected.
+23:59:07 INFO  : Hardware design and registers information is loaded from 'C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/hw/FinalProject.xsa'.
+23:59:07 INFO  : 'configparams force-mem-access 1' command is executed.
+23:59:07 INFO  : Context for 'APU' is selected.
+23:59:07 INFO  : Sourcing of 'C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/psinit/ps7_init.tcl' is done.
+23:59:07 INFO  : 'ps7_init' command is executed.
+23:59:07 INFO  : 'ps7_post_config' command is executed.
+23:59:07 INFO  : Context for processor 'ps7_cortexa9_1' is selected.
+23:59:07 INFO  : The application 'C:/Users/Christopher/Desktop/FP/ENSC_452/FP/VideoSW/Debug/VideoSW.elf' is downloaded to processor 'ps7_cortexa9_1'.
+23:59:07 INFO  : 'configparams force-mem-access 0' command is executed.
+23:59:07 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469741" && level==0 && jtag_device_ctx=="jsn-Zed-210248469741-03727093-0"}
+fpga -file C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/bitstream/FinalProject.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/hw/FinalProject.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#1"}
+dow C:/Users/Christopher/Desktop/FP/ENSC_452/FP/VideoSW/Debug/VideoSW.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+23:59:07 INFO  : Context for processor 'ps7_cortexa9_1' is selected.
+23:59:08 INFO  : 'con' command is executed.
+23:59:08 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#1"}
+con
+----------------End of Script----------------
+
+23:59:08 INFO  : Disconnected from the channel tcfchan#1.
+00:13:55 INFO  : Invoking Bootgen: bootgen -image AudioSoftware_system.bif -arch zynq -o C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware_system/_ide/bootimage/BOOT.bin -w on
+00:13:55 INFO  : Overwriting existing bif file C:\Users\Christopher\Desktop\FP\ENSC_452\FP\AudioSoftware_system\_ide\bootimage\AudioSoftware_system.bif
+00:13:57 INFO  : Bootgen command execution is done.
+00:26:44 INFO  : Invoking Bootgen: bootgen -image FinalProject.bif -arch zynq -o C:/Users/Christopher/Desktop/FP/ENSC_452/FP/FinalProject/export/FinalProject/sw/FinalProject/boot/BOOT.bin
+00:26:44 INFO  : Overwriting existing bif file C:\Users\Christopher\Desktop\FP\ENSC_452\FP\FinalProject\export\FinalProject\sw\FinalProject\boot\FinalProject.bif
+00:26:46 INFO  : Bootgen command execution is done.
+00:30:43 INFO  : Invoking Bootgen: bootgen -image AudioSoftware_system.bif -arch zynq -o C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware_system/_ide/bootimage/BOOT.bin -w on
+00:30:45 INFO  : Bootgen command execution is done.
+00:30:58 INFO  : Checking for BSP changes to sync application flags for project 'AudioSoftware'...
+00:31:06 INFO  : Checking for BSP changes to sync application flags for project 'VideoSW'...
+00:34:13 INFO  : Invoking Bootgen: bootgen -image AudioSoftware_system.bif -arch zynq -o C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware_system/_ide/bootimage/BOOT.bin -w on
+00:34:13 INFO  : Overwriting existing bif file C:\Users\Christopher\Desktop\FP\ENSC_452\FP\AudioSoftware_system\_ide\bootimage\AudioSoftware_system.bif
+00:34:15 INFO  : Bootgen command execution is done.
+00:36:47 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:39:21 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:39:22 INFO  : Jtag cable 'Digilent Zed 210248469741' is selected.
+00:39:22 INFO  : 'jtag frequency' command is executed.
+00:39:22 INFO  : Context for 'APU' is selected.
+00:39:22 INFO  : System reset is completed.
+00:39:25 INFO  : 'after 3000' command is executed.
+00:39:25 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469741" && level==0 && jtag_device_ctx=="jsn-Zed-210248469741-03727093-0"}' command is executed.
+00:39:27 INFO  : Device configured successfully with "C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/bitstream/FinalProject.bit"
+00:39:27 INFO  : Context for 'APU' is selected.
+00:39:27 INFO  : Hardware design and registers information is loaded from 'C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/hw/FinalProject.xsa'.
+00:39:27 INFO  : 'configparams force-mem-access 1' command is executed.
+00:39:27 INFO  : Context for 'APU' is selected.
+00:39:27 INFO  : Sourcing of 'C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/psinit/ps7_init.tcl' is done.
+00:39:28 INFO  : 'ps7_init' command is executed.
+00:39:28 INFO  : 'ps7_post_config' command is executed.
+00:39:28 INFO  : Context for processor 'ps7_cortexa9_1' is selected.
+00:39:28 INFO  : The application 'C:/Users/Christopher/Desktop/FP/ENSC_452/FP/VideoSW/Debug/VideoSW.elf' is downloaded to processor 'ps7_cortexa9_1'.
+00:39:28 INFO  : 'configparams force-mem-access 0' command is executed.
+00:39:28 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469741" && level==0 && jtag_device_ctx=="jsn-Zed-210248469741-03727093-0"}
+fpga -file C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/bitstream/FinalProject.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/hw/FinalProject.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#1"}
+dow C:/Users/Christopher/Desktop/FP/ENSC_452/FP/VideoSW/Debug/VideoSW.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+00:40:30 INFO  : Disconnected from the channel tcfchan#2.
+00:41:08 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:41:08 INFO  : Jtag cable 'Digilent Zed 210248469741' is selected.
+00:41:08 INFO  : 'jtag frequency' command is executed.
+00:41:08 INFO  : Context for 'APU' is selected.
+00:41:08 INFO  : System reset is completed.
+00:41:11 INFO  : 'after 3000' command is executed.
+00:41:11 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469741" && level==0 && jtag_device_ctx=="jsn-Zed-210248469741-03727093-0"}' command is executed.
+00:41:14 INFO  : Device configured successfully with "C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/bitstream/FinalProject.bit"
+00:41:14 INFO  : Context for 'APU' is selected.
+00:41:16 INFO  : Hardware design and registers information is loaded from 'C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/hw/FinalProject.xsa'.
+00:41:16 INFO  : 'configparams force-mem-access 1' command is executed.
+00:41:16 INFO  : Context for 'APU' is selected.
+00:41:16 INFO  : Sourcing of 'C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/psinit/ps7_init.tcl' is done.
+00:41:16 INFO  : 'ps7_init' command is executed.
+00:41:16 INFO  : 'ps7_post_config' command is executed.
+00:41:16 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:41:16 INFO  : The application 'C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/Debug/AudioSoftware.elf' is downloaded to processor 'ps7_cortexa9_0'.
+00:41:16 INFO  : 'configparams force-mem-access 0' command is executed.
+00:41:16 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469741" && level==0 && jtag_device_ctx=="jsn-Zed-210248469741-03727093-0"}
+fpga -file C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/bitstream/FinalProject.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/hw/FinalProject.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/Debug/AudioSoftware.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+00:42:30 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\Christopher\Desktop\FP\ENSC_452\FP\temp_xsdb_launch_script.tcl
+00:42:33 INFO  : XSCT server has started successfully.
+00:42:33 INFO  : plnx-install-location is set to ''
+00:42:33 INFO  : Successfully done setting XSCT server connection channel  
+00:42:33 INFO  : Successfully done setting workspace for the tool. 
+00:42:39 INFO  : Platform repository initialization has completed.
+00:42:39 INFO  : Successfully done query RDI_DATADIR 
+00:42:39 INFO  : Registering command handlers for Vitis TCF services
+00:44:38 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:44:38 INFO  : Jtag cable 'Digilent Zed 210248469741' is selected.
+00:44:38 INFO  : 'jtag frequency' command is executed.
+00:44:38 INFO  : Context for 'APU' is selected.
+00:44:38 INFO  : System reset is completed.
+00:44:41 INFO  : 'after 3000' command is executed.
+00:44:41 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469741" && level==0 && jtag_device_ctx=="jsn-Zed-210248469741-03727093-0"}' command is executed.
+00:44:44 INFO  : Device configured successfully with "C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/bitstream/FinalProject.bit"
+00:44:44 INFO  : Context for 'APU' is selected.
+00:44:44 INFO  : Hardware design and registers information is loaded from 'C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/hw/FinalProject.xsa'.
+00:44:44 INFO  : 'configparams force-mem-access 1' command is executed.
+00:44:44 INFO  : Context for 'APU' is selected.
+00:44:44 INFO  : Sourcing of 'C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/psinit/ps7_init.tcl' is done.
+00:44:44 INFO  : 'ps7_init' command is executed.
+00:44:44 INFO  : 'ps7_post_config' command is executed.
+00:44:44 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:44:44 INFO  : The application 'C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/Debug/AudioSoftware.elf' is downloaded to processor 'ps7_cortexa9_0'.
+00:44:44 INFO  : 'configparams force-mem-access 0' command is executed.
+00:44:44 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469741" && level==0 && jtag_device_ctx=="jsn-Zed-210248469741-03727093-0"}
+fpga -file C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/bitstream/FinalProject.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/hw/FinalProject.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/Debug/AudioSoftware.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+00:44:45 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:44:45 INFO  : 'con' command is executed.
+00:44:45 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+00:44:45 INFO  : Disconnected from the channel tcfchan#1.
+15:38:56 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\Christopher\Desktop\FP\ENSC_452\FP\temp_xsdb_launch_script.tcl
+15:39:00 INFO  : XSCT server has started successfully.
+15:39:00 INFO  : plnx-install-location is set to ''
+15:39:00 INFO  : Successfully done setting XSCT server connection channel  
+15:39:00 INFO  : Successfully done setting workspace for the tool. 
+15:39:07 INFO  : Registering command handlers for Vitis TCF services
+15:39:07 INFO  : Platform repository initialization has completed.
+15:39:07 INFO  : Successfully done query RDI_DATADIR 
+23:31:25 INFO  : Result from executing command 'getProjects': FinalProject
+23:31:25 INFO  : Result from executing command 'getPlatforms': FinalProject|C:/Users/Christopher/Desktop/FP/ENSC_452/FP/FinalProject/export/FinalProject/FinalProject.xpfm;FinalProject|C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/FinalProject.xpfm;design_1_wrapper|C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm
+23:31:26 INFO  : Checking for BSP changes to sync application flags for project 'AudioSoftware'...
+23:32:54 INFO  : Checking for BSP changes to sync application flags for project 'AudioSoftware'...
+23:35:10 INFO  : Checking for BSP changes to sync application flags for project 'AudioSoftware'...
+23:35:30 INFO  : Checking for BSP changes to sync application flags for project 'AudioSoftware'...
+23:35:58 INFO  : Checking for BSP changes to sync application flags for project 'AudioSoftware'...
+23:38:40 INFO  : Checking for BSP changes to sync application flags for project 'AudioSoftware'...
+23:38:56 INFO  : Checking for BSP changes to sync application flags for project 'AudioSoftware'...
+23:40:41 INFO  : Checking for BSP changes to sync application flags for project 'AudioSoftware'...
+23:40:59 INFO  : Checking for BSP changes to sync application flags for project 'AudioSoftware'...
+23:41:19 INFO  : Checking for BSP changes to sync application flags for project 'AudioSoftware'...
+23:42:58 INFO  : Checking for BSP changes to sync application flags for project 'AudioSoftware'...
+23:44:01 INFO  : Checking for BSP changes to sync application flags for project 'AudioSoftware'...
+23:47:44 INFO  : Checking for BSP changes to sync application flags for project 'AudioSoftware'...
+23:48:21 INFO  : Checking for BSP changes to sync application flags for project 'AudioSoftware'...
+23:49:39 INFO  : Checking for BSP changes to sync application flags for project 'AudioSoftware'...
+23:50:14 INFO  : Checking for BSP changes to sync application flags for project 'AudioSoftware'...
+23:50:37 INFO  : Checking for BSP changes to sync application flags for project 'AudioSoftware'...
+23:51:24 INFO  : Checking for BSP changes to sync application flags for project 'AudioSoftware'...
+00:18:13 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:18:14 INFO  : Jtag cable 'Digilent Zed 210248469741' is selected.
+00:18:14 INFO  : 'jtag frequency' command is executed.
+00:18:14 INFO  : Context for 'APU' is selected.
+00:18:14 INFO  : System reset is completed.
+00:18:17 INFO  : 'after 3000' command is executed.
+00:18:17 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469741" && level==0 && jtag_device_ctx=="jsn-Zed-210248469741-03727093-0"}' command is executed.
+00:18:20 INFO  : Device configured successfully with "C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/bitstream/FinalProject.bit"
+00:18:20 INFO  : Context for 'APU' is selected.
+00:18:20 INFO  : Hardware design and registers information is loaded from 'C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/hw/FinalProject.xsa'.
+00:18:20 INFO  : 'configparams force-mem-access 1' command is executed.
+00:18:20 INFO  : Context for 'APU' is selected.
+00:18:20 INFO  : Sourcing of 'C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/psinit/ps7_init.tcl' is done.
+00:18:20 INFO  : 'ps7_init' command is executed.
+00:18:20 INFO  : 'ps7_post_config' command is executed.
+00:18:20 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:18:20 INFO  : The application 'C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/Debug/AudioSoftware.elf' is downloaded to processor 'ps7_cortexa9_0'.
+00:18:20 INFO  : 'configparams force-mem-access 0' command is executed.
+00:18:20 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469741" && level==0 && jtag_device_ctx=="jsn-Zed-210248469741-03727093-0"}
+fpga -file C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/bitstream/FinalProject.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/hw/FinalProject.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/Debug/AudioSoftware.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+00:18:20 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:18:20 INFO  : 'con' command is executed.
+00:18:20 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+00:18:20 INFO  : Disconnected from the channel tcfchan#2.
+00:18:55 INFO  : Checking for BSP changes to sync application flags for project 'AudioSoftware'...
+00:18:56 INFO  : Checking for BSP changes to sync application flags for project 'VideoSW'...
+00:18:58 INFO  : Checking for BSP changes to sync application flags for project 'VideoSoftware'...
+00:22:55 INFO  : Checking for BSP changes to sync application flags for project 'AudioSoftware'...
+00:23:26 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:23:26 INFO  : Jtag cable 'Digilent Zed 210248469741' is selected.
+00:23:26 INFO  : 'jtag frequency' command is executed.
+00:23:26 INFO  : Context for 'APU' is selected.
+00:23:26 INFO  : System reset is completed.
+00:23:29 INFO  : 'after 3000' command is executed.
+00:23:29 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469741" && level==0 && jtag_device_ctx=="jsn-Zed-210248469741-03727093-0"}' command is executed.
+00:23:32 INFO  : Device configured successfully with "C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/bitstream/FinalProject.bit"
+00:23:32 INFO  : Context for 'APU' is selected.
+00:23:32 INFO  : Hardware design and registers information is loaded from 'C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/hw/FinalProject.xsa'.
+00:23:32 INFO  : 'configparams force-mem-access 1' command is executed.
+00:23:32 INFO  : Context for 'APU' is selected.
+00:23:32 INFO  : Sourcing of 'C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/psinit/ps7_init.tcl' is done.
+00:23:32 INFO  : 'ps7_init' command is executed.
+00:23:32 INFO  : 'ps7_post_config' command is executed.
+00:23:32 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:23:32 ERROR : Cannot halt processor core, timeout
+00:23:32 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469741" && level==0 && jtag_device_ctx=="jsn-Zed-210248469741-03727093-0"}
+fpga -file C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/bitstream/FinalProject.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/hw/FinalProject.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/Debug/AudioSoftware.elf
+----------------End of Script----------------
+
+00:23:32 ERROR : Cannot halt processor core, timeout
+00:24:02 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:24:02 INFO  : Jtag cable 'Digilent Zed 210248469741' is selected.
+00:24:02 INFO  : 'jtag frequency' command is executed.
+00:24:02 INFO  : Context for 'APU' is selected.
+00:24:02 INFO  : System reset is completed.
+00:24:05 INFO  : 'after 3000' command is executed.
+00:24:05 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469741" && level==0 && jtag_device_ctx=="jsn-Zed-210248469741-03727093-0"}' command is executed.
+00:24:07 INFO  : Device configured successfully with "C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/bitstream/FinalProject.bit"
+00:24:07 INFO  : Context for 'APU' is selected.
+00:24:07 INFO  : Hardware design and registers information is loaded from 'C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/hw/FinalProject.xsa'.
+00:24:07 INFO  : 'configparams force-mem-access 1' command is executed.
+00:24:07 INFO  : Context for 'APU' is selected.
+00:24:07 INFO  : Sourcing of 'C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/psinit/ps7_init.tcl' is done.
+00:24:08 INFO  : 'ps7_init' command is executed.
+00:24:08 INFO  : 'ps7_post_config' command is executed.
+00:24:08 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:24:08 INFO  : The application 'C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/Debug/AudioSoftware.elf' is downloaded to processor 'ps7_cortexa9_0'.
+00:24:08 INFO  : 'configparams force-mem-access 0' command is executed.
+00:24:08 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469741" && level==0 && jtag_device_ctx=="jsn-Zed-210248469741-03727093-0"}
+fpga -file C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/bitstream/FinalProject.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/hw/FinalProject.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/Debug/AudioSoftware.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+00:24:08 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:24:08 INFO  : 'con' command is executed.
+00:24:08 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+00:24:08 INFO  : Disconnected from the channel tcfchan#4.
+00:25:07 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:25:07 INFO  : Jtag cable 'Digilent Zed 210248469741' is selected.
+00:25:07 INFO  : 'jtag frequency' command is executed.
+00:25:07 INFO  : Context for 'APU' is selected.
+00:25:07 INFO  : System reset is completed.
+00:25:10 INFO  : 'after 3000' command is executed.
+00:25:11 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469741" && level==0 && jtag_device_ctx=="jsn-Zed-210248469741-03727093-0"}' command is executed.
+00:25:13 INFO  : Device configured successfully with "C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/bitstream/FinalProject.bit"
+00:25:13 INFO  : Context for 'APU' is selected.
+00:25:13 INFO  : Hardware design and registers information is loaded from 'C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/hw/FinalProject.xsa'.
+00:25:13 INFO  : 'configparams force-mem-access 1' command is executed.
+00:25:13 INFO  : Context for 'APU' is selected.
+00:25:13 INFO  : Sourcing of 'C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/psinit/ps7_init.tcl' is done.
+00:25:14 INFO  : 'ps7_init' command is executed.
+00:25:14 INFO  : 'ps7_post_config' command is executed.
+00:25:14 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:25:14 INFO  : The application 'C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/Debug/AudioSoftware.elf' is downloaded to processor 'ps7_cortexa9_0'.
+00:25:14 INFO  : 'configparams force-mem-access 0' command is executed.
+00:25:14 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469741" && level==0 && jtag_device_ctx=="jsn-Zed-210248469741-03727093-0"}
+fpga -file C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/bitstream/FinalProject.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/hw/FinalProject.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/Debug/AudioSoftware.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+00:25:14 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:25:14 INFO  : 'con' command is executed.
+00:25:14 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+00:25:14 INFO  : Disconnected from the channel tcfchan#5.
+00:51:38 INFO  : Checking for BSP changes to sync application flags for project 'AudioSoftware'...
+00:51:55 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:51:55 INFO  : Jtag cable 'Digilent Zed 210248469741' is selected.
+00:51:55 INFO  : 'jtag frequency' command is executed.
+00:51:55 INFO  : Context for 'APU' is selected.
+00:51:55 INFO  : System reset is completed.
+00:51:58 INFO  : 'after 3000' command is executed.
+00:51:58 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469741" && level==0 && jtag_device_ctx=="jsn-Zed-210248469741-03727093-0"}' command is executed.
+00:52:01 INFO  : Device configured successfully with "C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/bitstream/FinalProject.bit"
+00:52:01 INFO  : Context for 'APU' is selected.
+00:52:01 INFO  : Hardware design and registers information is loaded from 'C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/hw/FinalProject.xsa'.
+00:52:01 INFO  : 'configparams force-mem-access 1' command is executed.
+00:52:01 INFO  : Context for 'APU' is selected.
+00:52:01 INFO  : Sourcing of 'C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/psinit/ps7_init.tcl' is done.
+00:52:01 INFO  : 'ps7_init' command is executed.
+00:52:01 INFO  : 'ps7_post_config' command is executed.
+00:52:01 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:52:01 INFO  : The application 'C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/Debug/AudioSoftware.elf' is downloaded to processor 'ps7_cortexa9_0'.
+00:52:01 INFO  : 'configparams force-mem-access 0' command is executed.
+00:52:01 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469741" && level==0 && jtag_device_ctx=="jsn-Zed-210248469741-03727093-0"}
+fpga -file C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/bitstream/FinalProject.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/hw/FinalProject.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/Debug/AudioSoftware.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+00:52:01 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:52:01 INFO  : 'con' command is executed.
+00:52:01 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+00:52:01 INFO  : Disconnected from the channel tcfchan#6.
+00:53:01 INFO  : Checking for BSP changes to sync application flags for project 'AudioSoftware'...
+11:52:27 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\Christopher\Desktop\FP\ENSC_452\FP\temp_xsdb_launch_script.tcl
+11:52:31 INFO  : XSCT server has started successfully.
+11:52:31 INFO  : plnx-install-location is set to ''
+11:52:31 INFO  : Successfully done setting XSCT server connection channel  
+11:52:31 INFO  : Successfully done setting workspace for the tool. 
+11:52:38 INFO  : Platform repository initialization has completed.
+11:52:38 INFO  : Successfully done query RDI_DATADIR 
+11:52:38 INFO  : Registering command handlers for Vitis TCF services
+11:55:49 INFO  : Checking for BSP changes to sync application flags for project 'AudioSoftware'...
+11:56:29 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:56:30 INFO  : Jtag cable 'Digilent Zed 210248469741' is selected.
+11:56:30 INFO  : 'jtag frequency' command is executed.
+11:56:30 INFO  : Context for 'APU' is selected.
+11:56:30 INFO  : System reset is completed.
+11:56:33 INFO  : 'after 3000' command is executed.
+11:56:33 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469741" && level==0 && jtag_device_ctx=="jsn-Zed-210248469741-03727093-0"}' command is executed.
+11:56:35 INFO  : Device configured successfully with "C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/bitstream/FinalProject.bit"
+11:56:35 INFO  : Context for 'APU' is selected.
+11:56:35 INFO  : Hardware design and registers information is loaded from 'C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/hw/FinalProject.xsa'.
+11:56:35 INFO  : 'configparams force-mem-access 1' command is executed.
+11:56:35 INFO  : Context for 'APU' is selected.
+11:56:35 INFO  : Sourcing of 'C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/psinit/ps7_init.tcl' is done.
+11:56:36 INFO  : 'ps7_init' command is executed.
+11:56:36 INFO  : 'ps7_post_config' command is executed.
+11:56:36 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:56:36 INFO  : The application 'C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/Debug/AudioSoftware.elf' is downloaded to processor 'ps7_cortexa9_0'.
+11:56:36 INFO  : 'configparams force-mem-access 0' command is executed.
+11:56:36 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469741" && level==0 && jtag_device_ctx=="jsn-Zed-210248469741-03727093-0"}
+fpga -file C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/bitstream/FinalProject.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/hw/FinalProject.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/Debug/AudioSoftware.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+11:56:36 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:56:36 INFO  : 'con' command is executed.
+11:56:36 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+11:56:36 INFO  : Disconnected from the channel tcfchan#1.
+12:07:35 INFO  : Checking for BSP changes to sync application flags for project 'AudioSoftware'...
+12:09:21 INFO  : Checking for BSP changes to sync application flags for project 'AudioSoftware'...
+12:10:27 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:10:27 INFO  : Jtag cable 'Digilent Zed 210248469741' is selected.
+12:10:27 INFO  : 'jtag frequency' command is executed.
+12:10:28 INFO  : Context for 'APU' is selected.
+12:10:28 INFO  : System reset is completed.
+12:10:31 INFO  : 'after 3000' command is executed.
+12:10:31 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469741" && level==0 && jtag_device_ctx=="jsn-Zed-210248469741-03727093-0"}' command is executed.
+12:10:33 INFO  : Device configured successfully with "C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/bitstream/FinalProject.bit"
+12:10:33 INFO  : Context for 'APU' is selected.
+12:10:33 INFO  : Hardware design and registers information is loaded from 'C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/hw/FinalProject.xsa'.
+12:10:33 INFO  : 'configparams force-mem-access 1' command is executed.
+12:10:33 INFO  : Context for 'APU' is selected.
+12:10:33 INFO  : Sourcing of 'C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/psinit/ps7_init.tcl' is done.
+12:10:34 INFO  : 'ps7_init' command is executed.
+12:10:34 INFO  : 'ps7_post_config' command is executed.
+12:10:34 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:10:34 INFO  : The application 'C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/Debug/AudioSoftware.elf' is downloaded to processor 'ps7_cortexa9_0'.
+12:10:34 INFO  : 'configparams force-mem-access 0' command is executed.
+12:10:34 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469741" && level==0 && jtag_device_ctx=="jsn-Zed-210248469741-03727093-0"}
+fpga -file C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/bitstream/FinalProject.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/hw/FinalProject.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/Debug/AudioSoftware.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+12:10:34 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:10:34 INFO  : 'con' command is executed.
+12:10:34 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+12:10:34 INFO  : Disconnected from the channel tcfchan#2.
+12:12:47 INFO  : Checking for BSP changes to sync application flags for project 'AudioSoftware'...
+12:12:57 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:12:57 INFO  : Jtag cable 'Digilent Zed 210248469741' is selected.
+12:12:57 INFO  : 'jtag frequency' command is executed.
+12:12:57 INFO  : Context for 'APU' is selected.
+12:12:57 INFO  : System reset is completed.
+12:13:00 INFO  : 'after 3000' command is executed.
+12:13:00 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469741" && level==0 && jtag_device_ctx=="jsn-Zed-210248469741-03727093-0"}' command is executed.
+12:13:02 INFO  : Device configured successfully with "C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/bitstream/FinalProject.bit"
+12:13:02 INFO  : Context for 'APU' is selected.
+12:13:03 INFO  : Hardware design and registers information is loaded from 'C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/hw/FinalProject.xsa'.
+12:13:03 INFO  : 'configparams force-mem-access 1' command is executed.
+12:13:03 INFO  : Context for 'APU' is selected.
+12:13:03 INFO  : Sourcing of 'C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/psinit/ps7_init.tcl' is done.
+12:13:03 INFO  : 'ps7_init' command is executed.
+12:13:03 INFO  : 'ps7_post_config' command is executed.
+12:13:03 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:13:03 INFO  : The application 'C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/Debug/AudioSoftware.elf' is downloaded to processor 'ps7_cortexa9_0'.
+12:13:03 INFO  : 'configparams force-mem-access 0' command is executed.
+12:13:03 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469741" && level==0 && jtag_device_ctx=="jsn-Zed-210248469741-03727093-0"}
+fpga -file C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/bitstream/FinalProject.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/hw/FinalProject.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/Debug/AudioSoftware.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+12:13:03 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:13:03 INFO  : 'con' command is executed.
+12:13:03 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+12:13:03 INFO  : Disconnected from the channel tcfchan#3.
+12:14:34 INFO  : Checking for BSP changes to sync application flags for project 'AudioSoftware'...
+12:14:44 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:14:44 INFO  : Jtag cable 'Digilent Zed 210248469741' is selected.
+12:14:44 INFO  : 'jtag frequency' command is executed.
+12:14:44 INFO  : Context for 'APU' is selected.
+12:14:44 INFO  : System reset is completed.
+12:14:47 INFO  : 'after 3000' command is executed.
+12:14:47 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469741" && level==0 && jtag_device_ctx=="jsn-Zed-210248469741-03727093-0"}' command is executed.
+12:14:50 INFO  : Device configured successfully with "C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/bitstream/FinalProject.bit"
+12:14:50 INFO  : Context for 'APU' is selected.
+12:14:50 INFO  : Hardware design and registers information is loaded from 'C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/hw/FinalProject.xsa'.
+12:14:50 INFO  : 'configparams force-mem-access 1' command is executed.
+12:14:50 INFO  : Context for 'APU' is selected.
+12:14:50 INFO  : Sourcing of 'C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/psinit/ps7_init.tcl' is done.
+12:14:50 INFO  : 'ps7_init' command is executed.
+12:14:50 INFO  : 'ps7_post_config' command is executed.
+12:14:50 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:14:50 INFO  : The application 'C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/Debug/AudioSoftware.elf' is downloaded to processor 'ps7_cortexa9_0'.
+12:14:50 INFO  : 'configparams force-mem-access 0' command is executed.
+12:14:50 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469741" && level==0 && jtag_device_ctx=="jsn-Zed-210248469741-03727093-0"}
+fpga -file C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/bitstream/FinalProject.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/hw/FinalProject.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/Debug/AudioSoftware.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+12:14:51 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:14:51 INFO  : 'con' command is executed.
+12:14:51 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+12:14:51 INFO  : Disconnected from the channel tcfchan#4.
+12:16:31 INFO  : Checking for BSP changes to sync application flags for project 'AudioSoftware'...
+12:16:39 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:16:40 INFO  : Jtag cable 'Digilent Zed 210248469741' is selected.
+12:16:40 INFO  : 'jtag frequency' command is executed.
+12:16:40 INFO  : Context for 'APU' is selected.
+12:16:40 INFO  : System reset is completed.
+12:16:43 INFO  : 'after 3000' command is executed.
+12:16:43 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469741" && level==0 && jtag_device_ctx=="jsn-Zed-210248469741-03727093-0"}' command is executed.
+12:16:45 INFO  : Device configured successfully with "C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/bitstream/FinalProject.bit"
+12:16:45 INFO  : Context for 'APU' is selected.
+12:16:45 INFO  : Hardware design and registers information is loaded from 'C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/hw/FinalProject.xsa'.
+12:16:45 INFO  : 'configparams force-mem-access 1' command is executed.
+12:16:45 INFO  : Context for 'APU' is selected.
+12:16:45 INFO  : Sourcing of 'C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/psinit/ps7_init.tcl' is done.
+12:16:46 INFO  : 'ps7_init' command is executed.
+12:16:46 INFO  : 'ps7_post_config' command is executed.
+12:16:46 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:16:46 INFO  : The application 'C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/Debug/AudioSoftware.elf' is downloaded to processor 'ps7_cortexa9_0'.
+12:16:46 INFO  : 'configparams force-mem-access 0' command is executed.
+12:16:46 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469741" && level==0 && jtag_device_ctx=="jsn-Zed-210248469741-03727093-0"}
+fpga -file C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/bitstream/FinalProject.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/hw/FinalProject.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/Debug/AudioSoftware.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+12:16:46 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:16:46 INFO  : 'con' command is executed.
+12:16:46 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+12:16:46 INFO  : Disconnected from the channel tcfchan#5.
+12:17:17 INFO  : Checking for BSP changes to sync application flags for project 'AudioSoftware'...
+12:17:26 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:17:26 INFO  : Jtag cable 'Digilent Zed 210248469741' is selected.
+12:17:26 INFO  : 'jtag frequency' command is executed.
+12:17:26 INFO  : Context for 'APU' is selected.
+12:17:26 INFO  : System reset is completed.
+12:17:29 INFO  : 'after 3000' command is executed.
+12:17:29 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469741" && level==0 && jtag_device_ctx=="jsn-Zed-210248469741-03727093-0"}' command is executed.
+12:17:32 INFO  : Device configured successfully with "C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/bitstream/FinalProject.bit"
+12:17:32 INFO  : Context for 'APU' is selected.
+12:17:32 INFO  : Hardware design and registers information is loaded from 'C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/hw/FinalProject.xsa'.
+12:17:32 INFO  : 'configparams force-mem-access 1' command is executed.
+12:17:32 INFO  : Context for 'APU' is selected.
+12:17:32 INFO  : Sourcing of 'C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/psinit/ps7_init.tcl' is done.
+12:17:32 INFO  : 'ps7_init' command is executed.
+12:17:32 INFO  : 'ps7_post_config' command is executed.
+12:17:32 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:17:33 INFO  : The application 'C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/Debug/AudioSoftware.elf' is downloaded to processor 'ps7_cortexa9_0'.
+12:17:33 INFO  : 'configparams force-mem-access 0' command is executed.
+12:17:33 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469741" && level==0 && jtag_device_ctx=="jsn-Zed-210248469741-03727093-0"}
+fpga -file C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/bitstream/FinalProject.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/hw/FinalProject.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/Debug/AudioSoftware.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+12:17:33 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:17:33 INFO  : 'con' command is executed.
+12:17:33 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+12:17:33 INFO  : Disconnected from the channel tcfchan#6.
+12:19:30 INFO  : Checking for BSP changes to sync application flags for project 'AudioSoftware'...
+12:21:09 INFO  : Checking for BSP changes to sync application flags for project 'AudioSoftware'...
+12:22:29 INFO  : Checking for BSP changes to sync application flags for project 'AudioSoftware'...
+12:22:53 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:22:53 INFO  : Jtag cable 'Digilent Zed 210248469741' is selected.
+12:22:53 INFO  : 'jtag frequency' command is executed.
+12:22:53 INFO  : Context for 'APU' is selected.
+12:22:53 INFO  : System reset is completed.
+12:22:56 INFO  : 'after 3000' command is executed.
+12:22:56 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469741" && level==0 && jtag_device_ctx=="jsn-Zed-210248469741-03727093-0"}' command is executed.
+12:22:59 INFO  : Device configured successfully with "C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/bitstream/FinalProject.bit"
+12:22:59 INFO  : Context for 'APU' is selected.
+12:22:59 INFO  : Hardware design and registers information is loaded from 'C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/hw/FinalProject.xsa'.
+12:22:59 INFO  : 'configparams force-mem-access 1' command is executed.
+12:22:59 INFO  : Context for 'APU' is selected.
+12:22:59 INFO  : Sourcing of 'C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/psinit/ps7_init.tcl' is done.
+12:22:59 INFO  : 'ps7_init' command is executed.
+12:22:59 INFO  : 'ps7_post_config' command is executed.
+12:22:59 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:22:59 INFO  : The application 'C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/Debug/AudioSoftware.elf' is downloaded to processor 'ps7_cortexa9_0'.
+12:22:59 INFO  : 'configparams force-mem-access 0' command is executed.
+12:22:59 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469741" && level==0 && jtag_device_ctx=="jsn-Zed-210248469741-03727093-0"}
+fpga -file C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/bitstream/FinalProject.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/hw/FinalProject.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/Debug/AudioSoftware.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+12:22:59 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:22:59 INFO  : 'con' command is executed.
+12:22:59 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+12:22:59 INFO  : Disconnected from the channel tcfchan#7.
+12:23:19 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:23:19 INFO  : Jtag cable 'Digilent Zed 210248469741' is selected.
+12:23:19 INFO  : 'jtag frequency' command is executed.
+12:23:19 INFO  : Context for 'APU' is selected.
+12:23:19 INFO  : System reset is completed.
+12:23:22 INFO  : 'after 3000' command is executed.
+12:23:22 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469741" && level==0 && jtag_device_ctx=="jsn-Zed-210248469741-03727093-0"}' command is executed.
+12:23:24 INFO  : Device configured successfully with "C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/bitstream/FinalProject.bit"
+12:23:24 INFO  : Context for 'APU' is selected.
+12:23:27 INFO  : Hardware design and registers information is loaded from 'C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/hw/FinalProject.xsa'.
+12:23:27 INFO  : 'configparams force-mem-access 1' command is executed.
+12:23:27 INFO  : Context for 'APU' is selected.
+12:23:27 INFO  : Sourcing of 'C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/psinit/ps7_init.tcl' is done.
+12:23:28 INFO  : 'ps7_init' command is executed.
+12:23:28 INFO  : 'ps7_post_config' command is executed.
+12:23:28 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:23:28 INFO  : The application 'C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/Debug/AudioSoftware.elf' is downloaded to processor 'ps7_cortexa9_0'.
+12:23:28 INFO  : 'configparams force-mem-access 0' command is executed.
+12:23:28 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469741" && level==0 && jtag_device_ctx=="jsn-Zed-210248469741-03727093-0"}
+fpga -file C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/bitstream/FinalProject.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/hw/FinalProject.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/Debug/AudioSoftware.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+12:23:28 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:23:28 INFO  : 'con' command is executed.
+12:23:28 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+12:23:28 INFO  : Disconnected from the channel tcfchan#8.
+12:25:42 INFO  : Checking for BSP changes to sync application flags for project 'AudioSoftware'...
+12:25:52 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:25:52 INFO  : Jtag cable 'Digilent Zed 210248469741' is selected.
+12:25:52 INFO  : 'jtag frequency' command is executed.
+12:25:52 INFO  : Context for 'APU' is selected.
+12:25:52 INFO  : System reset is completed.
+12:25:55 INFO  : 'after 3000' command is executed.
+12:25:55 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469741" && level==0 && jtag_device_ctx=="jsn-Zed-210248469741-03727093-0"}' command is executed.
+12:25:58 INFO  : Device configured successfully with "C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/bitstream/FinalProject.bit"
+12:25:58 INFO  : Context for 'APU' is selected.
+12:25:58 INFO  : Hardware design and registers information is loaded from 'C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/hw/FinalProject.xsa'.
+12:25:58 INFO  : 'configparams force-mem-access 1' command is executed.
+12:25:58 INFO  : Context for 'APU' is selected.
+12:25:58 INFO  : Sourcing of 'C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/psinit/ps7_init.tcl' is done.
+12:25:58 INFO  : 'ps7_init' command is executed.
+12:25:58 INFO  : 'ps7_post_config' command is executed.
+12:25:58 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:25:58 INFO  : The application 'C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/Debug/AudioSoftware.elf' is downloaded to processor 'ps7_cortexa9_0'.
+12:25:58 INFO  : 'configparams force-mem-access 0' command is executed.
+12:25:58 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469741" && level==0 && jtag_device_ctx=="jsn-Zed-210248469741-03727093-0"}
+fpga -file C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/bitstream/FinalProject.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/hw/FinalProject.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/Debug/AudioSoftware.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+12:25:58 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:25:58 INFO  : 'con' command is executed.
+12:25:58 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+12:25:58 INFO  : Disconnected from the channel tcfchan#9.
+12:28:16 INFO  : Checking for BSP changes to sync application flags for project 'AudioSoftware'...
+12:28:24 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:28:24 INFO  : Jtag cable 'Digilent Zed 210248469741' is selected.
+12:28:24 INFO  : 'jtag frequency' command is executed.
+12:28:24 INFO  : Context for 'APU' is selected.
+12:28:24 INFO  : System reset is completed.
+12:28:27 INFO  : 'after 3000' command is executed.
+12:28:27 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469741" && level==0 && jtag_device_ctx=="jsn-Zed-210248469741-03727093-0"}' command is executed.
+12:28:30 INFO  : Device configured successfully with "C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/bitstream/FinalProject.bit"
+12:28:30 INFO  : Context for 'APU' is selected.
+12:28:30 INFO  : Hardware design and registers information is loaded from 'C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/hw/FinalProject.xsa'.
+12:28:30 INFO  : 'configparams force-mem-access 1' command is executed.
+12:28:30 INFO  : Context for 'APU' is selected.
+12:28:30 INFO  : Sourcing of 'C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/psinit/ps7_init.tcl' is done.
+12:28:30 INFO  : 'ps7_init' command is executed.
+12:28:30 INFO  : 'ps7_post_config' command is executed.
+12:28:30 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:28:30 INFO  : The application 'C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/Debug/AudioSoftware.elf' is downloaded to processor 'ps7_cortexa9_0'.
+12:28:30 INFO  : 'configparams force-mem-access 0' command is executed.
+12:28:30 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469741" && level==0 && jtag_device_ctx=="jsn-Zed-210248469741-03727093-0"}
+fpga -file C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/bitstream/FinalProject.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/hw/FinalProject.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/Debug/AudioSoftware.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+12:28:30 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:28:31 INFO  : 'con' command is executed.
+12:28:31 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+12:28:31 INFO  : Disconnected from the channel tcfchan#10.
+12:29:40 INFO  : Checking for BSP changes to sync application flags for project 'AudioSoftware'...
+12:30:07 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:30:08 INFO  : Jtag cable 'Digilent Zed 210248469741' is selected.
+12:30:08 INFO  : 'jtag frequency' command is executed.
+12:30:08 INFO  : Context for 'APU' is selected.
+12:30:08 INFO  : System reset is completed.
+12:30:11 INFO  : 'after 3000' command is executed.
+12:30:11 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469741" && level==0 && jtag_device_ctx=="jsn-Zed-210248469741-03727093-0"}' command is executed.
+12:30:13 INFO  : Device configured successfully with "C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/bitstream/FinalProject.bit"
+12:30:13 INFO  : Context for 'APU' is selected.
+12:30:13 INFO  : Hardware design and registers information is loaded from 'C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/hw/FinalProject.xsa'.
+12:30:13 INFO  : 'configparams force-mem-access 1' command is executed.
+12:30:13 INFO  : Context for 'APU' is selected.
+12:30:13 INFO  : Sourcing of 'C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/psinit/ps7_init.tcl' is done.
+12:30:14 INFO  : 'ps7_init' command is executed.
+12:30:14 INFO  : 'ps7_post_config' command is executed.
+12:30:14 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:30:14 INFO  : The application 'C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/Debug/AudioSoftware.elf' is downloaded to processor 'ps7_cortexa9_0'.
+12:30:14 INFO  : 'configparams force-mem-access 0' command is executed.
+12:30:14 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469741" && level==0 && jtag_device_ctx=="jsn-Zed-210248469741-03727093-0"}
+fpga -file C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/bitstream/FinalProject.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/hw/FinalProject.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/Debug/AudioSoftware.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+12:30:14 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:30:14 INFO  : 'con' command is executed.
+12:30:14 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+12:30:14 INFO  : Disconnected from the channel tcfchan#11.
+12:34:56 INFO  : Checking for BSP changes to sync application flags for project 'AudioSoftware'...
+12:35:08 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:35:08 INFO  : Jtag cable 'Digilent Zed 210248469741' is selected.
+12:35:08 INFO  : 'jtag frequency' command is executed.
+12:35:08 INFO  : Context for 'APU' is selected.
+12:35:09 INFO  : System reset is completed.
+12:35:12 INFO  : 'after 3000' command is executed.
+12:35:12 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469741" && level==0 && jtag_device_ctx=="jsn-Zed-210248469741-03727093-0"}' command is executed.
+12:35:14 INFO  : Device configured successfully with "C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/bitstream/FinalProject.bit"
+12:35:14 INFO  : Context for 'APU' is selected.
+12:35:14 INFO  : Hardware design and registers information is loaded from 'C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/hw/FinalProject.xsa'.
+12:35:14 INFO  : 'configparams force-mem-access 1' command is executed.
+12:35:14 INFO  : Context for 'APU' is selected.
+12:35:14 INFO  : Sourcing of 'C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/psinit/ps7_init.tcl' is done.
+12:35:15 INFO  : 'ps7_init' command is executed.
+12:35:15 INFO  : 'ps7_post_config' command is executed.
+12:35:15 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:35:15 INFO  : The application 'C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/Debug/AudioSoftware.elf' is downloaded to processor 'ps7_cortexa9_0'.
+12:35:15 INFO  : 'configparams force-mem-access 0' command is executed.
+12:35:15 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469741" && level==0 && jtag_device_ctx=="jsn-Zed-210248469741-03727093-0"}
+fpga -file C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/bitstream/FinalProject.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/hw/FinalProject.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/Debug/AudioSoftware.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+12:35:15 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:35:15 INFO  : 'con' command is executed.
+12:35:15 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+12:35:15 INFO  : Disconnected from the channel tcfchan#12.
+12:37:29 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:37:29 INFO  : Jtag cable 'Digilent Zed 210248469741' is selected.
+12:37:29 INFO  : 'jtag frequency' command is executed.
+12:37:29 INFO  : Context for 'APU' is selected.
+12:37:29 INFO  : System reset is completed.
+12:37:32 INFO  : 'after 3000' command is executed.
+12:37:32 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469741" && level==0 && jtag_device_ctx=="jsn-Zed-210248469741-03727093-0"}' command is executed.
+12:37:35 INFO  : Device configured successfully with "C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/bitstream/FinalProject.bit"
+12:37:35 INFO  : Context for 'APU' is selected.
+12:37:37 INFO  : Hardware design and registers information is loaded from 'C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/hw/FinalProject.xsa'.
+12:37:37 INFO  : 'configparams force-mem-access 1' command is executed.
+12:37:37 INFO  : Context for 'APU' is selected.
+12:37:37 INFO  : Sourcing of 'C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/psinit/ps7_init.tcl' is done.
+12:37:38 INFO  : 'ps7_init' command is executed.
+12:37:38 INFO  : 'ps7_post_config' command is executed.
+12:37:38 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:37:38 INFO  : The application 'C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/Debug/AudioSoftware.elf' is downloaded to processor 'ps7_cortexa9_0'.
+12:37:38 INFO  : 'configparams force-mem-access 0' command is executed.
+12:37:38 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469741" && level==0 && jtag_device_ctx=="jsn-Zed-210248469741-03727093-0"}
+fpga -file C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/bitstream/FinalProject.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/hw/FinalProject.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/Debug/AudioSoftware.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+12:37:38 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:37:38 INFO  : 'con' command is executed.
+12:37:38 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+12:37:38 INFO  : Disconnected from the channel tcfchan#13.
+13:34:00 INFO  : Checking for BSP changes to sync application flags for project 'AudioSoftware'...
+13:34:33 INFO  : Checking for BSP changes to sync application flags for project 'AudioSoftware'...
+13:35:00 INFO  : Checking for BSP changes to sync application flags for project 'AudioSoftware'...
+13:35:06 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:35:06 INFO  : Jtag cable 'Digilent Zed 210248469741' is selected.
+13:35:06 INFO  : 'jtag frequency' command is executed.
+13:35:06 INFO  : Context for 'APU' is selected.
+13:35:06 INFO  : System reset is completed.
+13:35:09 INFO  : 'after 3000' command is executed.
+13:35:09 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469741" && level==0 && jtag_device_ctx=="jsn-Zed-210248469741-03727093-0"}' command is executed.
+13:35:12 INFO  : Device configured successfully with "C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/bitstream/FinalProject.bit"
+13:35:12 INFO  : Context for 'APU' is selected.
+13:35:12 INFO  : Hardware design and registers information is loaded from 'C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/hw/FinalProject.xsa'.
+13:35:12 INFO  : 'configparams force-mem-access 1' command is executed.
+13:35:12 INFO  : Context for 'APU' is selected.
+13:35:12 INFO  : Sourcing of 'C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/psinit/ps7_init.tcl' is done.
+13:35:12 INFO  : 'ps7_init' command is executed.
+13:35:12 INFO  : 'ps7_post_config' command is executed.
+13:35:12 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:35:13 INFO  : The application 'C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/Debug/AudioSoftware.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:35:13 INFO  : 'configparams force-mem-access 0' command is executed.
+13:35:13 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469741" && level==0 && jtag_device_ctx=="jsn-Zed-210248469741-03727093-0"}
+fpga -file C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/bitstream/FinalProject.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/hw/FinalProject.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/Debug/AudioSoftware.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:35:13 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:35:13 INFO  : 'con' command is executed.
+13:35:13 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+13:35:13 INFO  : Disconnected from the channel tcfchan#14.
+13:35:49 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:35:49 INFO  : Jtag cable 'Digilent Zed 210248469741' is selected.
+13:35:49 INFO  : 'jtag frequency' command is executed.
+13:35:49 INFO  : Context for 'APU' is selected.
+13:35:49 INFO  : System reset is completed.
+13:35:52 INFO  : 'after 3000' command is executed.
+13:35:53 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469741" && level==0 && jtag_device_ctx=="jsn-Zed-210248469741-03727093-0"}' command is executed.
+13:35:55 INFO  : Device configured successfully with "C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/bitstream/FinalProject.bit"
+13:35:55 INFO  : Context for 'APU' is selected.
+13:35:57 INFO  : Hardware design and registers information is loaded from 'C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/hw/FinalProject.xsa'.
+13:35:57 INFO  : 'configparams force-mem-access 1' command is executed.
+13:35:57 INFO  : Context for 'APU' is selected.
+13:35:57 INFO  : Sourcing of 'C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/psinit/ps7_init.tcl' is done.
+13:35:58 INFO  : 'ps7_init' command is executed.
+13:35:58 INFO  : 'ps7_post_config' command is executed.
+13:35:58 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:35:58 INFO  : The application 'C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/Debug/AudioSoftware.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:35:58 INFO  : 'configparams force-mem-access 0' command is executed.
+13:35:58 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469741" && level==0 && jtag_device_ctx=="jsn-Zed-210248469741-03727093-0"}
+fpga -file C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/bitstream/FinalProject.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/hw/FinalProject.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/Debug/AudioSoftware.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:35:58 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:35:58 INFO  : 'con' command is executed.
+13:35:58 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+13:35:58 INFO  : Disconnected from the channel tcfchan#15.
+22:00:07 INFO  : Checking for BSP changes to sync application flags for project 'AudioSoftware'...
+22:00:19 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:00:19 INFO  : Jtag cable 'Digilent Zed 210248469741' is selected.
+22:00:19 INFO  : 'jtag frequency' command is executed.
+22:00:19 INFO  : Context for 'APU' is selected.
+22:00:19 INFO  : System reset is completed.
+22:00:22 INFO  : 'after 3000' command is executed.
+22:00:23 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469741" && level==0 && jtag_device_ctx=="jsn-Zed-210248469741-03727093-0"}' command is executed.
+22:00:25 INFO  : Device configured successfully with "C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/bitstream/FinalProject.bit"
+22:00:25 INFO  : Context for 'APU' is selected.
+22:00:25 INFO  : Hardware design and registers information is loaded from 'C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/hw/FinalProject.xsa'.
+22:00:25 INFO  : 'configparams force-mem-access 1' command is executed.
+22:00:25 INFO  : Context for 'APU' is selected.
+22:00:25 INFO  : Sourcing of 'C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/psinit/ps7_init.tcl' is done.
+22:00:25 INFO  : 'ps7_init' command is executed.
+22:00:25 INFO  : 'ps7_post_config' command is executed.
+22:00:25 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:00:26 INFO  : The application 'C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/Debug/AudioSoftware.elf' is downloaded to processor 'ps7_cortexa9_0'.
+22:00:26 INFO  : 'configparams force-mem-access 0' command is executed.
+22:00:26 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469741" && level==0 && jtag_device_ctx=="jsn-Zed-210248469741-03727093-0"}
+fpga -file C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/bitstream/FinalProject.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/hw/FinalProject.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/Debug/AudioSoftware.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+22:00:26 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:00:26 INFO  : 'con' command is executed.
+22:00:26 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+22:00:26 INFO  : Disconnected from the channel tcfchan#16.
+22:08:37 INFO  : Checking for BSP changes to sync application flags for project 'AudioSoftware'...
+22:08:59 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:09:00 INFO  : Jtag cable 'Digilent Zed 210248469741' is selected.
+22:09:00 INFO  : 'jtag frequency' command is executed.
+22:09:00 INFO  : Context for 'APU' is selected.
+22:09:00 INFO  : System reset is completed.
+22:09:03 INFO  : 'after 3000' command is executed.
+22:09:03 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469741" && level==0 && jtag_device_ctx=="jsn-Zed-210248469741-03727093-0"}' command is executed.
+22:09:05 INFO  : Device configured successfully with "C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/bitstream/FinalProject.bit"
+22:09:05 INFO  : Context for 'APU' is selected.
+22:09:05 INFO  : Hardware design and registers information is loaded from 'C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/hw/FinalProject.xsa'.
+22:09:05 INFO  : 'configparams force-mem-access 1' command is executed.
+22:09:05 INFO  : Context for 'APU' is selected.
+22:09:05 INFO  : Sourcing of 'C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/psinit/ps7_init.tcl' is done.
+22:09:06 INFO  : 'ps7_init' command is executed.
+22:09:06 INFO  : 'ps7_post_config' command is executed.
+22:09:06 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:09:06 INFO  : The application 'C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/Debug/AudioSoftware.elf' is downloaded to processor 'ps7_cortexa9_0'.
+22:09:06 INFO  : 'configparams force-mem-access 0' command is executed.
+22:09:06 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469741" && level==0 && jtag_device_ctx=="jsn-Zed-210248469741-03727093-0"}
+fpga -file C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/bitstream/FinalProject.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/hw/FinalProject.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/Debug/AudioSoftware.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+22:09:06 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:09:06 INFO  : 'con' command is executed.
+22:09:06 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+22:09:06 INFO  : Disconnected from the channel tcfchan#17.
+22:10:27 INFO  : Checking for BSP changes to sync application flags for project 'AudioSoftware'...
+22:11:09 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:11:09 INFO  : Jtag cable 'Digilent Zed 210248469741' is selected.
+22:11:09 INFO  : 'jtag frequency' command is executed.
+22:11:09 INFO  : Context for 'APU' is selected.
+22:11:09 INFO  : System reset is completed.
+22:11:12 INFO  : 'after 3000' command is executed.
+22:11:12 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469741" && level==0 && jtag_device_ctx=="jsn-Zed-210248469741-03727093-0"}' command is executed.
+22:11:15 INFO  : Device configured successfully with "C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/bitstream/FinalProject.bit"
+22:11:15 INFO  : Context for 'APU' is selected.
+22:11:15 INFO  : Hardware design and registers information is loaded from 'C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/hw/FinalProject.xsa'.
+22:11:15 INFO  : 'configparams force-mem-access 1' command is executed.
+22:11:15 INFO  : Context for 'APU' is selected.
+22:11:15 INFO  : Sourcing of 'C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/psinit/ps7_init.tcl' is done.
+22:11:15 INFO  : 'ps7_init' command is executed.
+22:11:15 INFO  : 'ps7_post_config' command is executed.
+22:11:15 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:11:15 INFO  : The application 'C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/Debug/AudioSoftware.elf' is downloaded to processor 'ps7_cortexa9_0'.
+22:11:15 INFO  : 'configparams force-mem-access 0' command is executed.
+22:11:15 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469741" && level==0 && jtag_device_ctx=="jsn-Zed-210248469741-03727093-0"}
+fpga -file C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/bitstream/FinalProject.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/hw/FinalProject.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSoftware/Debug/AudioSoftware.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+22:11:15 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:11:15 INFO  : 'con' command is executed.
+22:11:15 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+22:11:15 INFO  : Disconnected from the channel tcfchan#18.

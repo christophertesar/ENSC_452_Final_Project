@@ -1,0 +1,82 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Thu Feb  9 21:38:43 2023
+# Process ID: 7552
+# Current directory: C:/Users/Christopher/Desktop/FP/ENSC_452/hw_project
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent13488 C:\Users\Christopher\Desktop\FP\ENSC_452\hw_project\audio_tutorial.xpr
+# Log file: C:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/vivado.log
+# Journal file: C:/Users/Christopher/Desktop/FP/ENSC_452/hw_project\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.xpr
+INFO: [Project 1-313] Project file moved from 'C:/Users/Christopher/Desktop/FinalProject/ENSC_452/audio_tutorial' since last save.
+INFO: [filemgmt 56-1] IP Repository Path: Directory not found as 'C:/Users/Christopher/Desktop/FP/ENSC_452/AudioLabTest/ip_repo/zed_audio_ctrl'; using path 'C:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabTest/ip_repo/zed_audio_ctrl' instead.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Christopher/Desktop/FP/ENSC_452/vga_tutorial_students/vga_controller_ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabTest/ip_repo/zed_audio_ctrl'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.2/data/ip'.
+open_project: Time (s): cpu = 00:00:17 ; elapsed = 00:00:10 . Memory (MB): peak = 1000.070 ; gain = 0.000
+update_compile_order -fileset sources_1
+reset_run impl_1 -prev_step 
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Couldn't access process for termination
+
+launch_runs impl_1 -jobs 2
+[Thu Feb  9 21:56:02 2023] Launched impl_1...
+Run output will be captured here: C:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.runs/impl_1/runme.log
+open_run impl_1
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.164 . Memory (MB): peak = 1063.020 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 105 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2020.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'design_1_i/clk_wiz_0/clk_in1' is not directly connected to top level port. Synthesis is ignored for IBUF_LOW_PWR but preserved for implementation.
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.450 . Memory (MB): peak = 1765.770 ; gain = 0.000
+Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.452 . Memory (MB): peak = 1765.770 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1765.770 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 4 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 4 instances
+
+open_run: Time (s): cpu = 00:00:26 ; elapsed = 00:00:23 . Memory (MB): peak = 1886.945 ; gain = 886.875
+CRITICAL WARNING: [Timing 38-282] The design failed to meet the timing requirements. Please see the timing summary report for details on the timing violations.
+WARNING: [Timing 38-436] There are set_bus_skew constraint(s) in this design. Please run report_bus_skew to ensure that bus skew requirements are met.
+open_bd_design {C:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.srcs/sources_1/bd/design_1/design_1.bd}
+Reading block design file <C:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.srcs/sources_1/bd/design_1/design_1.bd>...
+Adding component instance block -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - ps7_0_axi_periph
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps7_0_100M
+Adding component instance block -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_0
+Adding component instance block -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_1
+Adding component instance block -- user.org:user:vga_controller:1.0 - vga_controller_0
+Adding component instance block -- xilinx.com:ip:clk_wiz:6.0 - clk_wiz_0
+Adding component instance block -- xilinx.com:ip:axi_timer:2.0 - axi_timer_0
+Adding component instance block -- xilinx.com:user:zed_audio_ctrl:1.0 - zed_audio_ctrl_1
+Successfully read diagram <design_1> from block design file <C:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.srcs/sources_1/bd/design_1/design_1.bd>
+open_bd_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2450.453 ; gain = 0.000
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Thu Feb  9 22:13:19 2023] Launched impl_1...
+Run output will be captured here: C:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Thu Feb  9 22:16:36 2023] Launched synth_1...
+Run output will be captured here: C:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.runs/synth_1/runme.log
+[Thu Feb  9 22:16:36 2023] Launched impl_1...
+Run output will be captured here: C:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.runs/impl_1/runme.log
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu Feb  9 22:32:32 2023...

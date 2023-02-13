@@ -1,4 +1,4 @@
-21:10:05 **** Incremental Build of configuration Debug for project VideoComponent ****
+15:53:32 **** Build of configuration Debug for project VideoComponent ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
@@ -6,5 +6,5 @@ a9-linaro-pre-build-step
 make --no-print-directory main-build
 make[1]: Nothing to be done for 'main-build'.
 
-21:10:05 Build Finished (took 311ms)
+15:53:32 Build Finished (took 330ms)
 

@@ -1,0 +1,43 @@
+00:18:56 **** Build of configuration Debug for project VideoSW ****
+make all 
+make --no-print-directory pre-build
+a9-linaro-pre-build-step
+' '
+make --no-print-directory main-build
+'Building file: ../src/main.cc'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/sw/FinalProject/standalone_ps7_cortexa9_1/bspinclude/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'void menu(int*)':
+../src/main.cc:162:2: warning: this 'while' clause does not guard... [-Wmisleading-indentation]
+  162 |  while (!XUartPs_IsReceiveData(UART_BASEADDR));
+      |  ^~~~~
+../src/main.cc:163:5: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'while'
+  163 |     inp = XUartPs_ReadReg(UART_BASEADDR, XUARTPS_FIFO_OFFSET);
+      |     ^~~
+../src/main.cc: In function 'int main()':
+../src/main.cc:184:6: warning: variable 'xStatus' set but not used [-Wunused-but-set-variable]
+  184 |  int xStatus;
+      |      ^~~~~~~
+../src/main.cc:211:6: warning: unused variable 'loop' [-Wunused-variable]
+  211 |  int loop = 0;
+      |      ^~~~
+../src/main.cc: In function 'void menu(int*)':
+../src/main.cc:153:23: warning: 'CntrlRegister' is used uninitialized in this function [-Wuninitialized]
+  153 |       ((CntrlRegister & ~XUARTPS_CR_EN_DIS_MASK) |
+      |                       ^
+'Finished building: ../src/main.cc'
+' '
+'Building target: VideoSW.elf'
+'Invoking: ARM v7 g++ linker'
+arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/sw/FinalProject/standalone_ps7_cortexa9_1/bsplib/lib -o "VideoSW.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: VideoSW.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size VideoSW.elf  |tee "VideoSW.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  42608	   2984	 145544	 191136	  2eaa0	VideoSW.elf
+'Finished building: VideoSW.elf.size'
+' '
+
+00:18:58 Build Finished (took 1s.527ms)
+

@@ -71,6 +71,7 @@ proc create_report { reportName command } {
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param chipscope.maxJobs 1
+set_msg_config -id {Common 17-41} -limit 10000000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7z020clg484-1
 
@@ -97,10 +98,6 @@ read_vhdl -library xil_defaultlib C:/Users/Christopher/Desktop/FP/ENSC_452/hw_pr
 add_files C:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.srcs/sources_1/bd/design_1/design_1.bd
 set_property used_in_implementation false [get_files -all c:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.gen/sources_1/bd/design_1/ip/design_1_xbar_0/design_1_xbar_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0_board.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_0/design_1_axi_gpio_0_0_board.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_0/design_1_axi_gpio_0_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_0/design_1_axi_gpio_0_0.xdc]
@@ -114,6 +111,10 @@ set_property used_in_implementation false [get_files -all c:/Users/Christopher/D
 set_property used_in_implementation false [get_files -all c:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.gen/sources_1/bd/design_1/ip/design_1_axi_timer_0_0/design_1_axi_timer_0_0.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.gen/sources_1/bd/design_1/ip/design_1_axi_timer_0_0/design_1_axi_timer_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.gen/sources_1/bd/design_1/design_1_ooc.xdc]
 
 OPTRACE "Adding files" END { }

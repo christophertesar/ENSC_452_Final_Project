@@ -1,0 +1,12 @@
+#import "input.h"
+#import <string.h>
+
+struct menu_option{
+	char* option_name;
+	struct menu_options* next;
+	struct menu_options* prev;
+};
+
+
+struct menu_options* generate_menu_options();
+void main_menu();
