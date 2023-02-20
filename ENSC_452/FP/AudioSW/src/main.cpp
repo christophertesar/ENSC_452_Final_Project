@@ -1,0 +1,133 @@
+#include "main_menu.h"
+
+#include <stdio.h>
+#include <xil_io.h>
+#include <sleep.h>
+#include <memory>
+#include "xiicps.h"
+#include <xil_printf.h>
+#include <xparameters.h>
+#include "xgpio.h"
+#include "xuartps.h"
+#include "stdlib.h"
+#include "audio.h"
+#include "xscutimer.h"
+#include "xscugic.h"
+#include "AudioControl.h"
+
+#define sev() __asm("sev")
+#define ARM1_STARTADR 0xFFFFFFF0
+#define ARM1_BASEADDR 0x10080000
+#define COMM_VAL (*(volatile unsigned long *)(0xFFFF0000))
+
+static void audio_timer_interrupt_handler(void*);
+
+static AudioControl audio_control = AudioControl(americanfootball_left_size/4, americanfootball_left, americanfootball_right);
+
+
+/* ---------------------------------------------------------------------------- *
+ * 									main()										*
+ * ---------------------------------------------------------------------------- *
+ * Runs all initial setup functions to initialise the audio codec and IP
+ * peripherals, before calling the interactive menu system.
+ * ---------------------------------------------------------------------------- */
+static void audio_timer_interrupt_handler(void *CallBackRef){
+	XScuTimer* myTimer_LOCAL = (XScuTimer *) CallBackRef;
+	if (audio_control.isSongPlaying()){
+		uint64_t i = audio_control.getIndex();
+		uint32_t vol = audio_control.getVolume();
+
+		uint32_t left = americanfootball_left[i * 4]  << 24 | (americanfootball_left[(i * 4) + 1] << 16) | (americanfootball_left[(i * 4) + 2] << 8) | (americanfootball_left[(i * 4) + 3]);
+		uint32_t right = americanfootball_right[i * 4]  << 24 | (americanfootball_right[(i * 4) + 1] << 16) | (americanfootball_right[(i * 4) + 2] << 8) | (americanfootball_right[(i * 4) + 3]);
+
+		left = left * vol;
+		right = right * vol;
+
+		Xil_Out32(I2S_DATA_TX_L_REG, left);
+		Xil_Out32(I2S_DATA_TX_R_REG, right);
+		audio_control.incrementIndex();
+	}
+
+	XScuTimer_ClearInterruptStatus(myTimer_LOCAL);
+}
+
+int main(void)
+{
+	xil_printf("Entering Main\r\n");
+	//Configure the IIC data structure
+	IicConfig(XPAR_XIICPS_0_DEVICE_ID);
+
+	//Configure the Audio Codec's PLL
+	AudioPllConfig();
+	AudioConfigureJacks();
+
+	COMM_VAL = 0;
+	//Disable cache on OCM
+	// S=b1 TEX=b100 AP=b11, Domain=b1111, C=b0, B=b0
+	// Xil_SetTlbAttributes(0xFFFF0000, 0x14de2);
+
+	xil_printf("ARM0: writing start address for ARM1\n\r");
+	Xil_Out32(ARM1_STARTADR, ARM1_BASEADDR);
+	dmb(); //waits until write has finished
+
+	//Wake up core 1
+	sev();
+	xil_printf("Woke up ARM Core 1\r\n");
+
+	// Declare two structs.  One for the Timer instance, and
+	// the other for the timer's config information
+	int Status;
+
+	XScuTimer my_Timer;
+	XScuTimer_Config *Timer_Config;
+
+	// Declare two structs.  One for the General Interrupt
+	// Controller (GIC) instance, and the other for config information
+	XScuGic my_Gic;
+	XScuGic_Config *Gic_Config;
+
+	Gic_Config = XScuGic_LookupConfig(XPAR_PS7_SCUGIC_0_DEVICE_ID);
+
+	// Initialise the GIC using the config information
+	Status = XScuGic_CfgInitialize(&my_Gic, Gic_Config, Gic_Config->CpuBaseAddress);
+
+	// Look up the the config information for the timer
+	Timer_Config = XScuTimer_LookupConfig(XPAR_PS7_SCUTIMER_0_DEVICE_ID);
+
+	// Initialise the timer using the config information
+	Status = XScuTimer_CfgInitialize(&my_Timer, Timer_Config, Timer_Config->BaseAddr);
+
+	Xil_ExceptionInit();
+
+	Xil_ExceptionRegisterHandler(XIL_EXCEPTION_ID_IRQ_INT, (Xil_ExceptionHandler)XScuGic_InterruptHandler, &my_Gic);
+
+	// Assign (connect) our interrupt handler for our Timer
+	Status = XScuGic_Connect(&my_Gic, XPAR_SCUTIMER_INTR, (Xil_ExceptionHandler)audio_timer_interrupt_handler, (void *)&my_Timer);
+
+	// Enable the interrupt *input* on the GIC for the timer's interrupt
+	XScuGic_Enable(&my_Gic, XPAR_SCUTIMER_INTR);
+
+	// Enable the interrupt *output* in the timer.
+	XScuTimer_EnableInterrupt(&my_Timer);
+
+	Xil_ExceptionEnable();
+
+	XScuTimer_LoadTimer(&my_Timer, SOUND_SAMPLING_PERIOD);
+
+	// Enable Auto reload mode on the timer.  When it expires, it re-loads
+	// the original value automatically.  This means that the timing interval
+	// is never skewed by the time taken for the interrupt handler to run
+	XScuTimer_EnableAutoReload(&my_Timer);
+
+	// Start the SCU timer running (it counts down)
+	XScuTimer_Start(&my_Timer);
+	AudioControl* audio_controller = &audio_control;
+
+	Game game(audio_controller);
+	/* Display interactive menu interface via terminal */
+	game.main_menu();
+
+	// Disconnect the interrupt for the Timer.
+	XScuGic_Disconnect(&my_Gic, XPAR_SCUTIMER_INTR);
+    return 0;
+}

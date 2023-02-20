@@ -17,6 +17,8 @@
 
 #include "xuartps.h"
 #include <string>
+#include "xscutimer.h"
+
 #define UART_BASEADDR XPAR_PS7_UART_1_BASEADDR
 #define COMM_VAL (*(volatile unsigned long *)(0xFFFF0000))
 extern u32 MMUTable;

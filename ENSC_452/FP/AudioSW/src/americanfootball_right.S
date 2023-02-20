@@ -1,0 +1,8 @@
+    .global americanfootball_right
+    .global americanfootball_right_size
+    .section .rodata
+americanfootball_right:
+    .incbin "C:\\Users\\Christopher\\Desktop\\FP\\ENSC_452\\FP\\AudioSW\\src\\americanfootball_right.data"
+1:
+american_footballright_size:
+    .int 1b - americanfootball_right

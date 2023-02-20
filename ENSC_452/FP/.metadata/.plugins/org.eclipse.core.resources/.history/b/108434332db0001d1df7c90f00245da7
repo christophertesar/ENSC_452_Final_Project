@@ -1,0 +1,10 @@
+
+class AudioControl{
+public:
+	AudioControl(){
+		
+	}
+private:
+	uint32_t volume;
+	uint64_t index;
+};

@@ -3,9 +3,9 @@
 	<name>AudioSoftware_system</name>
 	<comment></comment>
 	<projects>
-		<project>AudioSoftware</project>
 		<project>VideoSoftware</project>
 		<project>VideoSW</project>
+		<project>AudioSW</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

@@ -1,7 +1,0 @@
-#include "input.h"
-
-char wait_for_keyboard_input(){
-	while(!XUartPs_IsReceiveData(UART_BASEADDR)){
-	}
-	return XUartPs_ReadReg(UART_BASEADDR, XUARTPS_FIFO_OFFSET);
-}

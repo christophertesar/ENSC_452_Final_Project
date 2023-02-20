@@ -1,0 +1,52 @@
+#include "AudioControl.h"
+
+AudioControl::AudioControl(uint64_t max_index, uint8_t* current_song_left_channel, uint8_t* current_song_right_channel){
+	volume = 1;
+	index = 0;
+	this->max_index = max_index;
+	this->song_playing = true;
+
+}
+
+uint32_t AudioControl::get_volume(){
+	return this->volume;
+}
+
+void AudioControl::increment_volume(){
+	if (volume < 5)
+		volume++;
+}
+
+void AudioControl::decrease_volume(){
+	if (volume > 0)
+		volume--;
+}
+
+void AudioControl::increment_index(){
+	index++;
+	index %= max_index;
+}
+
+uint64_t AudioControl::get_index(){
+	return this->index;
+}
+
+void AudioControl::change_song(uint8_t* current_song_left_channel, uint8_t* current_song_right_channel, uint64_t max_index){
+	this->current_song_left_channel = current_song_left_channel;
+	this->current_song_right_channel = current_song_right_channel;
+	this->index = 0;
+	this->max_index = max_index;
+}
+
+void AudioControl::start_song(){
+	this->song_playing = true;
+}
+
+void AudioControl::stop_song(){
+	this->song_playing = false;
+}
+
+void AudioControl::restart_song(){
+	index = 0;
+}
+

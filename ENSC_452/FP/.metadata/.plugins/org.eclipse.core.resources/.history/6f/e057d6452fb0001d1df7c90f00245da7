@@ -1,0 +1,25 @@
+#include "AudioControl.h"
+
+AudioControl::AudioControl(uint64_t max_index, ){
+	volume = 1;
+	index = 0;
+	this->max_index = max_index;
+}
+
+AudioControl::increment_volume(){
+	if (volume < 5)
+		volume++;
+}
+
+AudioControl::decrease_volume(){
+	if (volume > 0)
+		volume--;
+}
+
+AudioControl::increment_index(){
+	if (index <= max_index)
+		index++;
+}
+
+AudioControl::
+

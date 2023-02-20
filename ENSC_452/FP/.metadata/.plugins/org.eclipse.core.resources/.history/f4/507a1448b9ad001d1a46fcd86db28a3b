@@ -1,0 +1,8 @@
+    .global american_football
+    .global american_football_size
+    .section .rodata
+blob:
+    .incbin "american_fooball.bin"
+1:
+blob_size:
+    .int 1b - american_football

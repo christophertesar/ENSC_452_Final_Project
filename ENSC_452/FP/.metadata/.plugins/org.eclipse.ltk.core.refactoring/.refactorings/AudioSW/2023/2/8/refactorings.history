@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;AudioSW/src/AudioControl&apos; to &apos;AudioControl.cpp&apos;" description="Rename resource &apos;AudioControl&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/AudioControl" name="AudioControl.cpp" stamp="1676794280534" updateReferences="true"/>
+</session>

@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+#ifndef AUDIOCONTROL.H
+#define AUDIOCONTROL.H
+
+class AudioControl{
+public:
+	AudioControl(uint64_t){};
+
+private:
+	uint32_t volume;
+	uint64_t index;
+	uint64_t max_index;
+	uint8_t* current_song_left_channel;
+	uint8_t* current_song_right_channel;
+};
+
+#endif

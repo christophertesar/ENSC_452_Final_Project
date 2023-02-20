@@ -1,25 +1,53 @@
-22:10:30 **** Incremental Build of configuration Debug for project AudioSoftware ****
+23:40:40 **** Incremental Build of configuration Release for project AudioSoftware ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
 ' '
 make --no-print-directory main-build
-'Building file: ../src/main_menu.c'
+'Building file: ../src/adventures_with_ip.c'
 'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main_menu.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/sw/FinalProject/standalone_domain/bspinclude/include -MMD -MP -MF"src/main_menu.d" -MT"src/main_menu.o" -o "src/main_menu.o" "../src/main_menu.c"
-'Finished building: ../src/main_menu.c'
+arm-none-eabi-gcc -Wall -O2 -c -fmessage-length=0 -MT"src/adventures_with_ip.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/sw/FinalProject/standalone_domain/bspinclude/include -MMD -MP -MF"src/adventures_with_ip.d" -MT"src/adventures_with_ip.o" -o "src/adventures_with_ip.o" "../src/adventures_with_ip.c"
+../src/adventures_with_ip.c: In function 'main':
+../src/adventures_with_ip.c:39:2: warning: implicit declaration of function 'Xil_SetTlbAttributes' [-Wimplicit-function-declaration]
+   39 |  Xil_SetTlbAttributes(0xFFFF0000, 0x14de2);
+      |  ^~~~~~~~~~~~~~~~~~~~
+../src/adventures_with_ip.c: In function 'menu':
+../src/adventures_with_ip.c:96:2: warning: this 'while' clause does not guard... [-Wmisleading-indentation]
+   96 |  while (!XUartPs_IsReceiveData(UART_BASEADDR));
+      |  ^~~~~
+../src/adventures_with_ip.c:97:5: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'while'
+   97 |     inp = XUartPs_ReadReg(UART_BASEADDR, XUARTPS_FIFO_OFFSET);
+      |     ^~~
+../src/adventures_with_ip.c:123:3: warning: implicit declaration of function 'record_stream' [-Wimplicit-function-declaration]
+  123 |   record_stream(audio_storage_left, audio_storage_right, AUDIO_BUFFER_SIZE, 0);
+      |   ^~~~~~~~~~~~~
+../src/adventures_with_ip.c:127:3: warning: implicit declaration of function 'tone_stream' [-Wimplicit-function-declaration]
+  127 |   tone_stream();
+      |   ^~~~~~~~~~~
+'Finished building: ../src/adventures_with_ip.c'
+' '
+'Building file: ../src/audio.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O2 -c -fmessage-length=0 -MT"src/audio.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/sw/FinalProject/standalone_domain/bspinclude/include -MMD -MP -MF"src/audio.d" -MT"src/audio.o" -o "src/audio.o" "../src/audio.c"
+'Finished building: ../src/audio.c'
+' '
+'Building file: ../src/ip_functions.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O2 -c -fmessage-length=0 -MT"src/ip_functions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/sw/FinalProject/standalone_domain/bspinclude/include -MMD -MP -MF"src/ip_functions.d" -MT"src/ip_functions.o" -o "src/ip_functions.o" "../src/ip_functions.c"
+../src/ip_functions.c:24:1: warning: multi-line comment [-Wcomment]
+'Finished building: ../src/ip_functions.c'
+   24 | // u32 nco_in, nco_out, in_left, in_right, out_left, out_right, step, \
+      | ^
 ' '
 'Building target: AudioSoftware.elf'
 'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/sw/FinalProject/standalone_domain/bsplib/lib -o "AudioSoftware.elf"  ./src/adventures_with_ip.o ./src/audio.o ./src/input.o ./src/ip_functions.o ./src/main_menu.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: AudioSoftware.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size AudioSoftware.elf  |tee "AudioSoftware.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  42936	   2232	2111688	2156856	 20e938	AudioSoftware.elf
-'Finished building: AudioSoftware.elf.size'
-' '
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/sw/FinalProject/standalone_domain/bsplib/lib -o "AudioSoftware.elf"  ./src/adventures_with_ip.o ./src/audio.o ./src/ip_functions.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/vitis/2020.2/gnu/aarch32/nt/gcc-arm-none-eabi/x86_64-oesdk-mingw32/usr/bin/arm-xilinx-eabi/../../libexec/arm-xilinx-eabi/gcc/arm-xilinx-eabi/9.2.0/real-ld.exe: ./src/ip_functions.o: in function `tone_stream':
+ip_functions.c:(.text+0x284): undefined reference to `sinf'
+c:/xilinx/vitis/2020.2/gnu/aarch32/nt/gcc-arm-none-eabi/x86_64-oesdk-mingw32/usr/bin/arm-xilinx-eabi/../../libexec/arm-xilinx-eabi/gcc/arm-xilinx-eabi/9.2.0/real-ld.exe: ip_functions.c:(.text+0x298): undefined reference to `round'
+collect2.exe: error: ld returned 1 exit status
+make[1]: *** [makefile:43: AudioSoftware.elf] Error 1
+make: *** [makefile:34: all] Error 2
 
-22:10:31 Build Finished (took 1s.85ms)
+23:40:42 Build Finished (took 1s.567ms)
 
