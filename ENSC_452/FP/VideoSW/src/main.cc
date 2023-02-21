@@ -1,32 +1,30 @@
-
 //Empty C++ Application
 #include <stdio.h>
-#include <sleep.h>
 #include "xil_types.h"
 #include "xtmrctr.h"
 #include "xparameters.h"
 
 #include "xil_io.h"
-#include "xil_mmu.h"
 #include "xil_exception.h"
-#include "xpseudo_asm.h"
-#include "xil_exception.h"
-#include "xil_cache.h"
 #include "xscugic.h"
+#include "xil_mmu.h"
 #include <cstdlib>
 
 #include "xuartps.h"
 #include <string>
-#include "xscutimer.h"
-
 #define UART_BASEADDR XPAR_PS7_UART_1_BASEADDR
-#define COMM_VAL (*(volatile unsigned long *)(0xFFFF0000))
-extern u32 MMUTable;
 
 volatile bool TIMER_INTR_FLG;
 XScuGic InterruptController; /* Instance of the Interrupt Controller */
 static XScuGic_Config *GicConfig;/* The configuration parameters of thecontroller */
 int NUM_BYTES_BUFFER = 5242880;
+
+extern uint8_t gh_menu[];
+extern int gh_menu_size;
+extern uint8_t gh_pause[];
+extern int gh_pause_size;
+extern uint8_t gh_gameplay[];
+extern int gh_gameplay_size;
 
 void Timer_InterruptHandler(XTmrCtr *data, u8 TmrCtrNumber)
 {
@@ -75,103 +73,67 @@ int ScuGicInterrupt_Init(u16 DeviceId,XTmrCtr *TimerInstancePtr)
 
 // use wmset to write faster
 // write twice to get rid of artifacting (the fuzzyness at the bottom)
-void load_initial_colours(int* image_buffer_pointer, int hex_1, int hex_2, int hex_3, int hex_4, int hex_5){
-
-	// update the random hex generation
-	// update the for loop to be 5 seperate loops
-	// add horizontal as a new menu option
-
-	for(int i=0; i<256*1024; i++)
-	{
-		image_buffer_pointer[i] = hex_1;
-	}
-
-	for(int i=256*1024; i<256*2*1024; i++)
-	{
-		image_buffer_pointer[i] = hex_2;
-	}
-
-	for(int i=256*2*1024; i<256*3*1024; i++)
-	{
-		image_buffer_pointer[i] = hex_3;
-	}
-
-	for(int i=256*3*1024; i<256*4*1024; i++)
-	{
-		image_buffer_pointer[i] = hex_4;
-	}
-
-	for(int i=256*4*1024; i<256*5*1024; i++)
-	{
-		image_buffer_pointer[i] = hex_4 + 0x123456;
-	}
-
-//	for(int i=0; i<1280*1024; i++)
+//void write_pixel_by_pixel(int* image_buffer_pointer)
+//{
+//	int counter = 0;
+//	for (int i : BEAUTIFUL_GUY)
 //	{
-//		if (i%1280 >= 0 && i%1280 < 256)
-//		{
-//			image_buffer_pointer[i] = std::__cxx11::stoul(hex_1, nullptr, 16);
-//		}
-//
-//		else if (i%1280 >= 256 && i%1280 < 512)
-//		{
-//			image_buffer_pointer[i] = std::__cxx11::stoul(hex_2, nullptr, 16);
-//		}
-//
-//		else if (i%1280 >= 512 && i%1280 < 768)
-//		{
-//			image_buffer_pointer[i] = std::__cxx11::stoul(hex_3, nullptr, 16);
-//		}
-//
-//		else if (i%1280 >= 768 && i%1280 < 1024)
-//		{
-//			image_buffer_pointer[i] = std::__cxx11::stoul(hex_4, nullptr, 16);
-//		}
-//
-//		else if (i%1280 >= 1024 && i%1280 < 1280)
-//		{
-//			image_buffer_pointer[i] = std::__cxx11::stoul(hex_5, nullptr, 16);
-//		}
+////		image_buffer_pointer[counter] = 0xFFFFFF;
+//		image_buffer_pointer[counter] = i;
+//		counter++;
 //	}
-}
+//}
+
+//void load_image_1(int* image_buffer_pointer)
+//{
+//	memcpy(image_buffer_pointer, &GUITAR_HERO_MENU, sizeof(GUITAR_HERO_MENU));
+//}
+
+//void load_image_2(int* image_buffer_pointer)
+//{
+//	memcpy(image_buffer_pointer, &GUITAR_HERO_GAMEPLAY, sizeof(GUITAR_HERO_GAMEPLAY));
+//}
+
+//void load_image_3(int* image_buffer_pointer)
+//{
+//	memcpy(image_buffer_pointer, &GUITAR_HERO_PAUSE, sizeof(GUITAR_HERO_PAUSE));
+//}
 
 void menu(int* image_buffer_pointer){
 	u8 inp = 0x00;
 	u32 CntrlRegister;
-
-	int hex_int_1;
-	int hex_int_2;
-	int hex_int_3;
-	int hex_int_4;
-//	int hex_int_5;
-
-	hex_int_1 = rand();
-	hex_int_2 = rand();
-	hex_int_3 = rand();
-	hex_int_4 = rand();
-//	hex_int_5 = rand();
 
 	XUartPs_WriteReg(UART_BASEADDR, XUARTPS_CR_OFFSET,
 				  ((CntrlRegister & ~XUARTPS_CR_EN_DIS_MASK) |
 				   XUARTPS_CR_TX_EN | XUARTPS_CR_RX_EN));
 
 	xil_printf("\r\n\r\n");
-	xil_printf("Welcome to the ENSC 452 video demo!\r\n");
-	xil_printf("Enter 's' to load a new random colour sequence\r\n");
+	xil_printf("MILESTONE 1!\r\n");
+	xil_printf("Enter '1' '2' or '3'\r\n");
 	xil_printf("----------------------------------------\r\n");
 
 	// Wait for input from UART via the terminal
 	while (!XUartPs_IsReceiveData(UART_BASEADDR));
-				inp = XUartPs_ReadReg(UART_BASEADDR, XUARTPS_FIFO_OFFSET);
+		inp = XUartPs_ReadReg(UART_BASEADDR, XUARTPS_FIFO_OFFSET);
 	// Select function based on UART input
 	switch(inp){
-	case 's':
-		xil_printf("Loading random colours\r\n");
+	case '1':
+		xil_printf("Loading image 1\r\n");
 		xil_printf("Press 'q' to return to the main menu\r\n");
 
-		// run twice to fix artifacting
-		load_initial_colours(image_buffer_pointer, hex_int_1, hex_int_2, hex_int_3, hex_int_4, hex_int_4);
-		load_initial_colours(image_buffer_pointer, hex_int_1, hex_int_2, hex_int_3, hex_int_4, hex_int_4);
+		memcpy(image_buffer_pointer, &gh_menu, gh_menu_size);
+		break;
+	case '2':
+		xil_printf("Loading image 2\r\n");
+		xil_printf("Press 'q' to return to the main menu\r\n");
+
+		memcpy(image_buffer_pointer, &gh_pause, gh_pause_size);
+		break;
+	case '3':
+		xil_printf("Loading image 3\r\n");
+		xil_printf("Press 'q' to return to the main menu\r\n");
+
+		memcpy(image_buffer_pointer, &gh_gameplay, gh_gameplay_size);
 		break;
 	default:
 		menu(image_buffer_pointer);
@@ -205,29 +167,24 @@ int main()
 
 	xStatus=ScuGicInterrupt_Init(XPAR_PS7_SCUGIC_0_DEVICE_ID,&TimerInstancePtr);
 
-	Xil_SetTlbAttributes(0xFFFF0000,0x14de2);
-
 	/*Enable the interrupt for the device and then cause (simulate) an interrupt so the handlers will be called*/
 	XScuGic_Enable(&InterruptController, 61);
 	XScuGic_SetPriorityTriggerType(&InterruptController, 61, 0xa0, 3);
 	int loop = 0;
 	int * image_buffer_pointer = (int *)0x00900000;
-//	int * image1_pointer = (int *)0x018D2008;
-//	int * image2_pointer = (int *)0x020BB00C;
-//	int * image3_pointer = (int *)0x028A4010;
-//	int * image4_pointer = (int *)0x0308D014;
-//	int * image5_pointer = (int *)0x03876018;
 
-	while(1){
-		while(COMM_VAL == 0){
-		};
-		xil_printf("Hello World - ARM1\n\r");
-		sleep(1);
-		COMM_VAL = 0;
-	}
+	Xil_SetTlbAttributes(0xFFFF0000,0x14de2);
 
 	while(1) {
+//		XTmrCtr_Start(&TimerInstancePtr,0);
+//		while(TIMER_INTR_FLG == false){
+//		}
+//
+//		TIMER_INTR_FLG = false;
+
 		menu(image_buffer_pointer);
+
+//		memcpy(image_buffer_pointer, &gh_menu, gh_menu_size);
 	}
 	return 0;
 }

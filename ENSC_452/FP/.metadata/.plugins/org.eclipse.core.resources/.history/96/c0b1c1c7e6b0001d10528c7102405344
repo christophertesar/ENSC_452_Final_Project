@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+#ifndef AUDIOCONTROL_H
+#define AUDIOCONTROL_H
+
+class AudioControl{
+
+public:
+	AudioControl(uint64_t, const uint8_t*, const uint8_t*);
+	AudioControl();
+	void incrementVolume(void);
+	void decreaseVolume(void);
+	void incrementIndex(void);
+	void changeSong(uint8_t* current_song_left_channel, uint8_t* current_song_right_channel, uint64_t max_index);
+	void startSong(void);
+	void stopSong(void);
+	void restartSong(void);
+	uint32_t getVolume();
+	uint64_t getIndex();
+	bool isSongPlaying();
+
+private:
+	bool song_playing;
+	uint32_t volume;
+	uint64_t index;
+	uint64_t max_index;
+	const uint8_t* current_song_left_channel;
+	const uint8_t* current_song_right_channel;
+};
+
+#endif

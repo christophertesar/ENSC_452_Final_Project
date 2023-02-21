@@ -2,7 +2,6 @@
 the_ROM_image:
 {
 	[bootloader]C:\Users\Christopher\Desktop\FP\ENSC_452\FP\FinalProject\export\FinalProject\sw\FinalProject\boot\fsbl.elf
-	C:\Users\Christopher\Desktop\FP\ENSC_452\FP\FinalProject\export\FinalProject\sw\FinalProject\boot\fsbl.elf
 	C:\Users\Christopher\Desktop\FP\ENSC_452\FP\VideoSW\Debug\VideoSW.elf
-	C:\Users\Christopher\Desktop\FP\ENSC_452\FP\AudioSoftware\Debug\AudioSoftware.elf
+	C:\Users\Christopher\Desktop\FP\ENSC_452\FP\AudioSW\Debug\AudioSW.elf
 }

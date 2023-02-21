@@ -11,10 +11,15 @@
 #define SETTINGS_MENU_TITLE 	"Settings"
 #define HISCORE_MENU_TITLE 		"Hi-Score"
 
-extern uint8_t americanfootball_left[];
-extern int americanfootball_left_size;
-extern uint8_t americanfootball_right[];
-extern int americanfootball_right_size;
+extern const uint8_t americanfootball_left[];
+extern const int americanfootball_left_size;
+extern const uint8_t americanfootball_right[];
+extern const int americanfootball_right_size;
+
+//extern const uint8_t something_left[];
+//extern const int something_left_size;
+//extern const uint8_t something_right[];
+//extern const int something_right_size;
 
 struct menu_options{
 	char option_name[MENU_OPTION_NAME_SIZE];

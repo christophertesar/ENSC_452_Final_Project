@@ -13,6 +13,7 @@
 #include "audio.h"
 #include "xscutimer.h"
 #include "xscugic.h"
+#include "xil_mmu.h"
 #include "AudioControl.h"
 
 #define sev() __asm("sev")
@@ -22,7 +23,7 @@
 
 static void audio_timer_interrupt_handler(void*);
 
-static AudioControl audio_control = AudioControl(americanfootball_left_size/4, americanfootball_left, americanfootball_right);
+static AudioControl audio_control = AudioControl(americanfootball_right_size/4, americanfootball_left, americanfootball_right);
 
 
 /* ---------------------------------------------------------------------------- *
@@ -36,9 +37,11 @@ static void audio_timer_interrupt_handler(void *CallBackRef){
 	if (audio_control.isSongPlaying()){
 		uint64_t i = audio_control.getIndex();
 		uint32_t vol = audio_control.getVolume();
+		const uint8_t* left_channel = audio_control.getCurrentSongLeftChannel();
+		const uint8_t* right_channel = audio_control.getCurrentSongRightChannel();
 
-		uint32_t left = americanfootball_left[i * 4]  << 24 | (americanfootball_left[(i * 4) + 1] << 16) | (americanfootball_left[(i * 4) + 2] << 8) | (americanfootball_left[(i * 4) + 3]);
-		uint32_t right = americanfootball_right[i * 4]  << 24 | (americanfootball_right[(i * 4) + 1] << 16) | (americanfootball_right[(i * 4) + 2] << 8) | (americanfootball_right[(i * 4) + 3]);
+		uint32_t left = left_channel[i * 4]  << 24 | (left_channel[(i * 4) + 1] << 16) | (left_channel[(i * 4) + 2] << 8) | (left_channel[(i * 4) + 3]);
+		uint32_t right = right_channel[i * 4]  << 24 | (right_channel[(i * 4) + 1] << 16) | (right_channel[(i * 4) + 2] << 8) | (right_channel[(i * 4) + 3]);
 
 		left = left * vol;
 		right = right * vol;
@@ -64,7 +67,7 @@ int main(void)
 	COMM_VAL = 0;
 	//Disable cache on OCM
 	// S=b1 TEX=b100 AP=b11, Domain=b1111, C=b0, B=b0
-	// Xil_SetTlbAttributes(0xFFFF0000, 0x14de2);
+	Xil_SetTlbAttributes(0xFFFF0000, 0x14de2);
 
 	xil_printf("ARM0: writing start address for ARM1\n\r");
 	Xil_Out32(ARM1_STARTADR, ARM1_BASEADDR);

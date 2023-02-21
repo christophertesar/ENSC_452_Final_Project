@@ -2,12 +2,13 @@
 
 AudioControl::AudioControl(){};
 
-AudioControl::AudioControl(uint64_t max_index, uint8_t* current_song_left_channel, uint8_t* current_song_right_channel){
+AudioControl::AudioControl(uint32_t max_index, const uint8_t* current_song_left_channel, const uint8_t* current_song_right_channel){
 	volume = 1;
 	index = 0;
 	this->max_index = max_index;
 	this->song_playing = true;
-
+	this->current_song_left_channel = current_song_left_channel;
+	this->current_song_right_channel = current_song_right_channel;
 }
 
 uint32_t AudioControl::getVolume(){
@@ -29,11 +30,11 @@ void AudioControl::incrementIndex(){
 	index = index % max_index;
 }
 
-uint64_t AudioControl::getIndex(){
+uint32_t AudioControl::getIndex(){
 	return this->index;
 }
 
-void AudioControl::changeSong(uint8_t* current_song_left_channel, uint8_t* current_song_right_channel, uint64_t max_index){
+void AudioControl::changeSong(const uint8_t* current_song_left_channel, const uint8_t* current_song_right_channel, uint32_t max_index){
 	this->current_song_left_channel = current_song_left_channel;
 	this->current_song_right_channel = current_song_right_channel;
 	this->index = 0;
@@ -54,5 +55,13 @@ void AudioControl::stopSong(){
 
 void AudioControl::restartSong(){
 	index = 0;
+}
+
+const uint8_t* AudioControl::getCurrentSongLeftChannel(){
+	return this->current_song_left_channel;
+}
+
+const uint8_t* AudioControl::getCurrentSongRightChannel(){
+	return this->current_song_right_channel;
 }
 
