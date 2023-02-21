@@ -1,25 +1,10 @@
-18:49:39 **** Incremental Build of configuration Debug for project AudioSW ****
+21:44:44 **** Incremental Build of configuration Debug for project AudioSW ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
 ' '
 make --no-print-directory main-build
-'Building file: ../src/main_menu.cpp'
-'Invoking: ARM v7 g++ compiler'
-arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main_menu.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/sw/FinalProject/standalone_domain/bspinclude/include -MMD -MP -MF"src/main_menu.d" -MT"src/main_menu.o" -o "src/main_menu.o" "../src/main_menu.cpp"
-'Finished building: ../src/main_menu.cpp'
-' '
-'Building target: AudioSW.elf'
-'Invoking: ARM v7 g++ linker'
-arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabReal/FinalProject/export/FinalProject/sw/FinalProject/standalone_domain/bsplib/lib -o "AudioSW.elf"  ./src/AudioControl.o ./src/adventures_with_ip.o ./src/americanfootball_left.o ./src/americanfootball_right.o ./src/audio.o ./src/input.o ./src/main.o ./src/main_menu.o ./src/something_left.o ./src/something_right.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
-'Finished building target: AudioSW.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size AudioSW.elf  |tee "AudioSW.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-45765128	   2980	2234588	48002696	2dc7688	AudioSW.elf
-'Finished building: AudioSW.elf.size'
-' '
+make[1]: Nothing to be done for 'main-build'.
 
-18:49:41 Build Finished (took 1s.444ms)
+21:44:45 Build Finished (took 674ms)
 
