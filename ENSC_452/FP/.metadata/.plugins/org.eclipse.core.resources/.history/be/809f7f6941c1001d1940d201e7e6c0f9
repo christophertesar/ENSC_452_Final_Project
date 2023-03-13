@@ -406,7 +406,6 @@ void Game::gameplay(char* level_name){
 							xil_printf("FAILED HIT (BAD TIMING OR INCORRECT BUTTON)\r\n");
 							draw_sprite_generic(this->vga_controller, BLACK_LANES_Y_SIZE, BLACK_LANES_X_SIZE, black_lanes, 0, 0);
 							draw_sprite_generic(this->vga_controller, CRINGE_Y_SIZE, CRINGE_X_SIZE, cringe, CRINGE_Y_LANE_OFFSET, CRINGE_X_LANE_OFFSET);
-							print_score(score);
 							Xil_DCacheFlush();
 							break;
 						}
@@ -419,7 +418,6 @@ void Game::gameplay(char* level_name){
 					xil_printf("FAILED HIT (NO PRESS)\r\n");
 					draw_sprite_generic(this->vga_controller, BLACK_LANES_Y_SIZE, BLACK_LANES_X_SIZE, black_lanes, 0, 0);
 					draw_sprite_generic(this->vga_controller, CRINGE_Y_SIZE, CRINGE_X_SIZE, cringe, CRINGE_Y_LANE_OFFSET, CRINGE_X_LANE_OFFSET);
-					print_score(score);
 					Xil_DCacheFlush();
 				}
 				draw_sprite(this->vga_controller, background_colour, count, x_offset);

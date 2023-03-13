@@ -15209,3 +15209,42 @@ configparams force-mem-access 0
 ----------------End of Script----------------
 
 18:41:06 INFO  : Disconnected from the channel tcfchan#8.
+18:50:20 INFO  : Checking for BSP changes to sync application flags for project 'video'...
+18:50:28 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:50:28 INFO  : Jtag cable 'Digilent Zed 210248469741' is selected.
+18:50:28 INFO  : 'jtag frequency' command is executed.
+18:50:28 INFO  : Context for 'APU' is selected.
+18:50:28 INFO  : System reset is completed.
+18:50:31 INFO  : 'after 3000' command is executed.
+18:50:31 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469741" && level==0 && jtag_device_ctx=="jsn-Zed-210248469741-03727093-0"}' command is executed.
+18:50:34 INFO  : Device configured successfully with "C:/Users/Christopher/Desktop/FP/ENSC_452/FP/video/_ide/bitstream/FP_Hardware.bit"
+18:50:34 INFO  : Context for 'APU' is selected.
+18:50:34 INFO  : Hardware design and registers information is loaded from 'C:/Users/Christopher/Desktop/FP/ENSC_452/FP/Test_Project_2/export/Test_Project_2/hw/FP_Hardware.xsa'.
+18:50:34 INFO  : 'configparams force-mem-access 1' command is executed.
+18:50:34 INFO  : Context for 'APU' is selected.
+18:50:34 INFO  : Sourcing of 'C:/Users/Christopher/Desktop/FP/ENSC_452/FP/video/_ide/psinit/ps7_init.tcl' is done.
+18:50:34 INFO  : 'ps7_init' command is executed.
+18:50:34 INFO  : 'ps7_post_config' command is executed.
+18:50:34 INFO  : Context for processor 'ps7_cortexa9_1' is selected.
+18:52:05 INFO  : The application 'C:/Users/Christopher/Desktop/FP/ENSC_452/FP/video/Debug/video.elf' is downloaded to processor 'ps7_cortexa9_1'.
+18:52:05 INFO  : 'configparams force-mem-access 0' command is executed.
+18:52:05 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469741" && level==0 && jtag_device_ctx=="jsn-Zed-210248469741-03727093-0"}
+fpga -file C:/Users/Christopher/Desktop/FP/ENSC_452/FP/video/_ide/bitstream/FP_Hardware.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/Christopher/Desktop/FP/ENSC_452/FP/Test_Project_2/export/Test_Project_2/hw/FP_Hardware.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/Christopher/Desktop/FP/ENSC_452/FP/video/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#1"}
+dow C:/Users/Christopher/Desktop/FP/ENSC_452/FP/video/Debug/video.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+18:53:58 INFO  : Disconnected from the channel tcfchan#9.

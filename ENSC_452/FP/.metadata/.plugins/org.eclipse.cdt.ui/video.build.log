@@ -1,4 +1,4 @@
-18:37:48 **** Incremental Build of configuration Debug for project video ****
+18:50:23 **** Incremental Build of configuration Debug for project video ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
@@ -17,9 +17,9 @@ arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=non
 'Invoking: ARM v7 Print Size'
 arm-none-eabi-size video.elf  |tee "video.elf.size"
    text	   data	    bss	    dec	    hex	filename
-39134703	   3632	2240996	41379331	2776603	video.elf
+39134767	   3632	2240996	41379395	2776643	video.elf
 'Finished building: video.elf.size'
 ' '
 
-18:37:50 Build Finished (took 2s.93ms)
+18:50:25 Build Finished (took 2s.92ms)
 
