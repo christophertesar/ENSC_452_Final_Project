@@ -60,3 +60,10 @@ platform generate
 platform generate
 platform generate
 platform generate
+platform active {FinalProject}
+platform config -updatehw {C:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/FP_Hardware.xsa}
+platform generate
+platform active {FinalProject}
+platform config -updatehw {C:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/FP_Hardware.xsa}
+platform config -updatehw {C:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/FP_Hardware.xsa}
+platform generate

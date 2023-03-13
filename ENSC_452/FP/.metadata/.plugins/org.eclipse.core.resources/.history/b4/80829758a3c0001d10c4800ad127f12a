@@ -1,0 +1,8 @@
+    .global A_note
+    .global A_note_size
+    .section .rodata
+A_note:
+    .incbin "C:\\Users\\Spencer\\vitis_final_project\\zzz_1\\src\\A_note.data"
+1:
+A_note_size:
+    .int 1b - A_note

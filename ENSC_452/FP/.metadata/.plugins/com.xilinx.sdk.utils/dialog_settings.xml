@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
-	<item key="scw_hwspec" value="C:\Users\Christopher\Desktop\FinalProject\ENSC_452\audio_tutorial"/>
+	<item key="scw_hwspec" value="C:\Users\Christopher\Desktop\FP\ENSC_452\hw_project"/>
+	<item key="bootgen_files_selection" value="C:\Users\Christopher\Desktop\FP\ENSC_452\FP\FinalProject\export\FinalProject\sw\FinalProject\boot"/>
+	<item key="soc_flash_files_selection" value="C:\Users\Christopher\Desktop\FP\ENSC_452\FP\FinalProject\export\FinalProject\sw\FinalProject\boot"/>
 </section>

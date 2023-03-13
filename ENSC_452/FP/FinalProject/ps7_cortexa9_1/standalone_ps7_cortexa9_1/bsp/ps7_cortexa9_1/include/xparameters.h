@@ -329,6 +329,17 @@
 
 /******************************************************************/
 
+/* Definitions for driver RANDOM_NUMBER_GENERATOR */
+#define XPAR_RANDOM_NUMBER_GENERATOR_NUM_INSTANCES 1
+
+/* Definitions for peripheral RANDOM_NUMBER_GENERA_0 */
+#define XPAR_RANDOM_NUMBER_GENERA_0_DEVICE_ID 0
+#define XPAR_RANDOM_NUMBER_GENERA_0_S00_AXI_BASEADDR 0x43C10000
+#define XPAR_RANDOM_NUMBER_GENERA_0_S00_AXI_HIGHADDR 0x43C103FF
+
+
+/******************************************************************/
+
 /* Definitions for Fabric interrupts connected to ps7_scugic_0 */
 #define XPAR_FABRIC_AXI_TIMER_0_INTERRUPT_INTR 61U
 

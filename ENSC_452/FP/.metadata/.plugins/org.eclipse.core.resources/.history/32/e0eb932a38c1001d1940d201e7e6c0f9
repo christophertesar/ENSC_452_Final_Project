@@ -1,0 +1,136 @@
+#include "input.h"
+#include "xil_cache.h"
+#include <string.h>
+
+#if !defined(MAIN_MENU_H)
+#define MAIN_MENU_H 1
+
+#define MENU_OPTION_NAME_SIZE 	20
+#define STRING_IS_EQUAL 		0
+#define PLAY_MENU_TITLE 		"Play"
+#define SETTINGS_MENU_TITLE 	"Settings"
+#define HISCORE_MENU_TITLE 		"Hi-Score"
+#define X_SIZE 					1280
+#define Y_SIZE 					1024
+#define NOTE_X_SIZE 			100
+#define NOTE_Y_SIZE 			50
+#define LEVEL_SELECT_Y			240
+#define LEVEL_SELECT_X			780
+#define SETTINGS_Y				465
+#define SETTINGS_X				940
+#define HIGHSCORES_Y			680
+#define HIGHSCORES_X			590
+#define LEVEL_1_Y				240
+#define LEVEL_1_X				530
+#define LEVEL_2_Y				420
+#define LEVEL_2_X				530
+#define LEVEL_3_Y				616
+#define LEVEL_3_X				530
+#define INCREASE_VOLUME_Y		250
+#define INCREASE_VOLUME_X		954
+#define DECREASE_VOLUME_Y		430
+#define DECREASE_VOLUME_X		998
+#define BACK_Y					930
+#define BACK_X					360
+#define CONTINUE_GAME_Y			256
+#define CONTINUE_GAME_X			867
+#define PAUSE_INCREASE_VOLUME_Y	420
+#define PAUSE_INCREASE_VOLUME_X	825
+#define PAUSE_DECREASE_VOLUME_Y 595
+#define PAUSE_DECREASE_VOLUME_X	818
+#define PAUSE_MAIN_MENU_Y		773
+#define PAUSE_MAIN_MENU_X		567
+#define A_NOTE_X_LANE_OFFSET	356
+#define S_NOTE_X_LANE_OFFSET	512
+#define D_NOTE_X_LANE_OFFSET	675
+#define F_NOTE_X_LANE_OFFSET	830
+#define LANE_Y_START			75
+#define LANE_Y_END				805
+#define YAY_X_SIZE				242
+#define YAY_Y_SIZE				178
+#define YAY_X_LANE_OFFSET		35
+#define YAY_Y_LANE_OFFSET		404
+#define CRINGE_X_SIZE			311
+#define CRINGE_Y_SIZE			157
+#define CRINGE_X_LANE_OFFSET	960
+#define CRINGE_Y_LANE_OFFSET	404
+#define BLACK_LANES_Y_SIZE		1024
+#define BLACK_LANES_X_SIZE		324
+
+#define ONE_X_SIZE				28
+#define ONE_Y_SIZE				47
+
+extern const uint8_t gh_menu[];
+extern const int gh_menu_size;
+extern const uint8_t gh_pause[];
+extern const int gh_pause_size;
+extern const uint8_t gh_gameplay[];
+extern const int gh_gameplay_size;
+extern const uint8_t gh_level_select[];
+extern const int gh_level_select_size;
+extern const uint8_t gh_sound_settings[];
+extern const int gh_sound_settings_size;
+extern const uint8_t gh_highscores[];
+extern const int gh_highscores_size;
+extern const uint8_t A_note[];
+extern const int A_note_size;
+extern const uint8_t S_note[];
+extern const int S_note_size;
+extern const uint8_t D_note[];
+extern const int D_note_size;
+extern const uint8_t F_note[];
+extern const int F_note_size;
+extern const uint8_t arrow[];
+extern const int arrow_size;
+extern const uint8_t background_colour[];
+extern const int background_colour_size;
+extern const uint8_t yay[];
+extern const int yay_size;
+extern const uint8_t cringe[];
+extern const int cringe_size;
+extern const uint8_t black_lanes[];
+extern const int black_lanes_size;
+
+// Number assets
+extern const uint8_t one[];
+extern const int one_size;
+
+struct menu_options{
+	char option_name[MENU_OPTION_NAME_SIZE];
+	struct menu_options* next;
+	struct menu_options* prev;
+};
+
+struct menu_options* generate_menu_options();
+struct menu_options* generate_play_menu_options();
+struct menu_options* generate_options_menu();
+struct menu_options* generate_pause_menu();
+
+class Game{
+public:
+	Game(int*);
+	void main_menu();
+	struct menu_options* generate_menu_options();
+	void delete_menu_options(struct menu_options*);
+	struct menu_options* generate_play_menu_options();
+	struct menu_options* generate_settings_menu_options();
+	struct menu_options* generate_pause_menu_options();
+	void play_game_menu();
+	void hiscore();
+	void options();
+	void play_game(char* level_name);
+	void gameplay(char* level_name);
+	void game_over();
+	void pause_menu(char* level_name);
+	void increase_game_volume();
+	void decrease_game_volume();
+	void draw_sprite(int* image_buffer_pointer, const uint8_t note[], int x_offset, int y_offset);
+	void draw_sprite_generic(int* image_buffer_pointer, const int SPRITE_Y_SIZE, const int SPRITE_X_SIZE, const uint8_t note[], int x_offset, int y_offset);
+	void drop_note(int* image_buffer_pointer, const uint8_t display_note[], int x_offset, int y_offset);
+private:
+	int* vga_controller;
+};
+
+
+
+#endif

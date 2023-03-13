@@ -1,0 +1,8 @@
+    .global gh_highscores
+    .global gh_highscores_size
+    .section .rodata
+gh_highscores:
+    .incbin "C:\\Users\\Spencer\\vitis_final_project\\zzz_1\\src\\gh_highscores.data"
+1:
+gh_highscores_size:
+    .int 1b - gh_highscores

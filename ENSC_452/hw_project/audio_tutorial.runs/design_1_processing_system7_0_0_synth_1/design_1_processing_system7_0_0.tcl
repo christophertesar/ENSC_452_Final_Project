@@ -70,6 +70,7 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "design_1_processing_system7_0_0_synth_1" START { ROLLUP_AUTO }
+set_param chipscope.maxJobs 1
 set_param project.vivado.isBlockSynthRun true
 set_msg_config -msgmgr_mode ooc_run
 OPTRACE "Creating in-memory project" START { }
@@ -86,6 +87,7 @@ set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
 set_property board_part em.avnet.com:zed:part0:1.4 [current_project]
 set_property ip_repo_paths {
+  c:/Users/Christopher/Desktop/FP/ENSC_452/ip_repo/random_number_generator/random_number_generator_1.0
   c:/Users/Christopher/Desktop/FP/ENSC_452/vga_tutorial_students/vga_controller_ip
   c:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabTest/ip_repo/zed_audio_ctrl
 } [current_project]

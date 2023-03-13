@@ -1,8 +1,0 @@
-    .global american_football_left
-    .global american_football_left_size
-    .section .rodata
-american_football_left:
-    .incbin "C:\\Users\\Christopher\\Desktop\\FP\\ENSC_452\\FP\\AudioSW\\src\\american_football_left.data"
-1:
-american_football_left_size:
-    .int 1b - american_football_left

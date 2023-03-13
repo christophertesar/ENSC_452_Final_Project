@@ -244,7 +244,7 @@ ARCHITECTURE design_1_vga_controller_0_0_arch OF design_1_vga_controller_0_0 IS
 BEGIN
   U0 : vga_controller
     GENERIC MAP (
-      image_buffer1_baseaddr => X"00900000",
+      image_buffer1_baseaddr => X"00090000",
       horizontal_length => 1280,
       vertical_length => 1024,
       h_front_porch => 48,

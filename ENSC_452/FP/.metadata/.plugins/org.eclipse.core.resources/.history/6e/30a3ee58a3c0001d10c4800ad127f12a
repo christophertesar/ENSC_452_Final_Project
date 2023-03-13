@@ -1,0 +1,8 @@
+    .global nice_menu
+    .global nice_menu_size
+    .section .rodata
+nice_menu:
+    .incbin "C:\\Users\\Spencer\\vitis_final_project\\zzz_1\\src\\menu.data"
+1:
+nice_menu_size:
+    .int 1b - nice_menu

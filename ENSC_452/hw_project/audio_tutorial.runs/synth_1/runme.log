@@ -11,6 +11,8 @@
 
 source design_1_wrapper.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Christopher/Desktop/FP/ENSC_452/ip_repo/rng_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Christopher/Desktop/FP/ENSC_452/ip_repo/random_number_generator/random_number_generator_1.0'.
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Christopher/Desktop/FP/ENSC_452/vga_tutorial_students/vga_controller_ip'.
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Christopher/Desktop/FinalProject/ENSC_452/AudioLabTest/ip_repo/zed_audio_ctrl'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.2/data/ip'.
@@ -21,9 +23,9 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020
 INFO: [Device 21-403] Loading part xc7z020clg484-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 13884
+INFO: [Synth 8-7075] Helper process launched with PID 11736
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 999.039 ; gain = 0.000
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 999.527 ; gain = 0.000
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'design_1_wrapper' [C:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.gen/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:55]
 INFO: [Synth 8-3491] module 'IOBUF' declared at 'C:/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:36242' bound to instance 'GPIO_0_tri_iobuf_0' of component 'IOBUF' [C:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.gen/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:125]
@@ -36,19 +38,19 @@ INFO: [Synth 8-6155] done synthesizing module 'IOBUF' (1#1) [C:/Xilinx/Vivado/20
 INFO: [Synth 8-3491] module 'IOBUF' declared at 'C:/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:36242' bound to instance 'GPIO_0_tri_iobuf_1' of component 'IOBUF' [C:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.gen/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:132]
 INFO: [Synth 8-3491] module 'IOBUF' declared at 'C:/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:36242' bound to instance 'IIC_0_scl_iobuf' of component 'IOBUF' [C:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.gen/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:139]
 INFO: [Synth 8-3491] module 'IOBUF' declared at 'C:/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:36242' bound to instance 'IIC_0_sda_iobuf' of component 'IOBUF' [C:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.gen/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:146]
-INFO: [Synth 8-3491] module 'design_1' declared at 'c:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.gen/sources_1/bd/design_1/synth/design_1.vhd:1555' bound to instance 'design_1_i' of component 'design_1' [C:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.gen/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:153]
-INFO: [Synth 8-638] synthesizing module 'design_1' [c:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.gen/sources_1/bd/design_1/synth/design_1.vhd:1606]
-INFO: [Synth 8-3491] module 'design_1_axi_gpio_0_0' declared at 'C:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.runs/synth_1/.Xil/Vivado-3352-DESKTOP-ATP0LPE/realtime/design_1_axi_gpio_0_0_stub.vhdl:5' bound to instance 'axi_gpio_0' of component 'design_1_axi_gpio_0_0' [c:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.gen/sources_1/bd/design_1/synth/design_1.vhd:2190]
-INFO: [Synth 8-638] synthesizing module 'design_1_axi_gpio_0_0' [C:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.runs/synth_1/.Xil/Vivado-3352-DESKTOP-ATP0LPE/realtime/design_1_axi_gpio_0_0_stub.vhdl:33]
-INFO: [Synth 8-3491] module 'design_1_axi_gpio_1_0' declared at 'C:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.runs/synth_1/.Xil/Vivado-3352-DESKTOP-ATP0LPE/realtime/design_1_axi_gpio_1_0_stub.vhdl:5' bound to instance 'axi_gpio_1' of component 'design_1_axi_gpio_1_0' [c:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.gen/sources_1/bd/design_1/synth/design_1.vhd:2215]
-INFO: [Synth 8-638] synthesizing module 'design_1_axi_gpio_1_0' [C:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.runs/synth_1/.Xil/Vivado-3352-DESKTOP-ATP0LPE/realtime/design_1_axi_gpio_1_0_stub.vhdl:32]
-INFO: [Synth 8-3491] module 'design_1_axi_timer_0_0' declared at 'C:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.runs/synth_1/.Xil/Vivado-3352-DESKTOP-ATP0LPE/realtime/design_1_axi_timer_0_0_stub.vhdl:5' bound to instance 'axi_timer_0' of component 'design_1_axi_timer_0_0' [c:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.gen/sources_1/bd/design_1/synth/design_1.vhd:2239]
-INFO: [Synth 8-638] synthesizing module 'design_1_axi_timer_0_0' [C:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.runs/synth_1/.Xil/Vivado-3352-DESKTOP-ATP0LPE/realtime/design_1_axi_timer_0_0_stub.vhdl:37]
-INFO: [Synth 8-3491] module 'design_1_clk_wiz_0_0' declared at 'C:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.runs/synth_1/.Xil/Vivado-3352-DESKTOP-ATP0LPE/realtime/design_1_clk_wiz_0_0_stub.vhdl:5' bound to instance 'clk_wiz_0' of component 'design_1_clk_wiz_0_0' [c:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.gen/sources_1/bd/design_1/synth/design_1.vhd:2268]
-INFO: [Synth 8-638] synthesizing module 'design_1_clk_wiz_0_0' [C:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.runs/synth_1/.Xil/Vivado-3352-DESKTOP-ATP0LPE/realtime/design_1_clk_wiz_0_0_stub.vhdl:15]
-INFO: [Synth 8-3491] module 'design_1_processing_system7_0_0' declared at 'C:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.runs/synth_1/.Xil/Vivado-3352-DESKTOP-ATP0LPE/realtime/design_1_processing_system7_0_0_stub.vhdl:5' bound to instance 'processing_system7_0' of component 'design_1_processing_system7_0_0' [c:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.gen/sources_1/bd/design_1/synth/design_1.vhd:2275]
-INFO: [Synth 8-638] synthesizing module 'design_1_processing_system7_0_0' [C:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.runs/synth_1/.Xil/Vivado-3352-DESKTOP-ATP0LPE/realtime/design_1_processing_system7_0_0_stub.vhdl:132]
-INFO: [Synth 8-638] synthesizing module 'design_1_ps7_0_axi_periph_0' [c:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.gen/sources_1/bd/design_1/synth/design_1.vhd:857]
+INFO: [Synth 8-3491] module 'design_1' declared at 'c:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.gen/sources_1/bd/design_1/synth/design_1.vhd:1812' bound to instance 'design_1_i' of component 'design_1' [C:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.gen/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:153]
+INFO: [Synth 8-638] synthesizing module 'design_1' [c:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.gen/sources_1/bd/design_1/synth/design_1.vhd:1863]
+INFO: [Synth 8-3491] module 'design_1_axi_gpio_0_0' declared at 'C:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.runs/synth_1/.Xil/Vivado-12976-DESKTOP-ATP0LPE/realtime/design_1_axi_gpio_0_0_stub.vhdl:5' bound to instance 'axi_gpio_0' of component 'design_1_axi_gpio_0_0' [c:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.gen/sources_1/bd/design_1/synth/design_1.vhd:2497]
+INFO: [Synth 8-638] synthesizing module 'design_1_axi_gpio_0_0' [C:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.runs/synth_1/.Xil/Vivado-12976-DESKTOP-ATP0LPE/realtime/design_1_axi_gpio_0_0_stub.vhdl:33]
+INFO: [Synth 8-3491] module 'design_1_axi_gpio_1_0' declared at 'C:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.runs/synth_1/.Xil/Vivado-12976-DESKTOP-ATP0LPE/realtime/design_1_axi_gpio_1_0_stub.vhdl:5' bound to instance 'axi_gpio_1' of component 'design_1_axi_gpio_1_0' [c:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.gen/sources_1/bd/design_1/synth/design_1.vhd:2522]
+INFO: [Synth 8-638] synthesizing module 'design_1_axi_gpio_1_0' [C:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.runs/synth_1/.Xil/Vivado-12976-DESKTOP-ATP0LPE/realtime/design_1_axi_gpio_1_0_stub.vhdl:32]
+INFO: [Synth 8-3491] module 'design_1_axi_timer_0_0' declared at 'C:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.runs/synth_1/.Xil/Vivado-12976-DESKTOP-ATP0LPE/realtime/design_1_axi_timer_0_0_stub.vhdl:5' bound to instance 'axi_timer_0' of component 'design_1_axi_timer_0_0' [c:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.gen/sources_1/bd/design_1/synth/design_1.vhd:2546]
+INFO: [Synth 8-638] synthesizing module 'design_1_axi_timer_0_0' [C:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.runs/synth_1/.Xil/Vivado-12976-DESKTOP-ATP0LPE/realtime/design_1_axi_timer_0_0_stub.vhdl:37]
+INFO: [Synth 8-3491] module 'design_1_clk_wiz_0_0' declared at 'C:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.runs/synth_1/.Xil/Vivado-12976-DESKTOP-ATP0LPE/realtime/design_1_clk_wiz_0_0_stub.vhdl:5' bound to instance 'clk_wiz_0' of component 'design_1_clk_wiz_0_0' [c:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.gen/sources_1/bd/design_1/synth/design_1.vhd:2575]
+INFO: [Synth 8-638] synthesizing module 'design_1_clk_wiz_0_0' [C:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.runs/synth_1/.Xil/Vivado-12976-DESKTOP-ATP0LPE/realtime/design_1_clk_wiz_0_0_stub.vhdl:15]
+INFO: [Synth 8-3491] module 'design_1_processing_system7_0_0' declared at 'C:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.runs/synth_1/.Xil/Vivado-12976-DESKTOP-ATP0LPE/realtime/design_1_processing_system7_0_0_stub.vhdl:5' bound to instance 'processing_system7_0' of component 'design_1_processing_system7_0_0' [c:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.gen/sources_1/bd/design_1/synth/design_1.vhd:2582]
+INFO: [Synth 8-638] synthesizing module 'design_1_processing_system7_0_0' [C:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.runs/synth_1/.Xil/Vivado-12976-DESKTOP-ATP0LPE/realtime/design_1_processing_system7_0_0_stub.vhdl:132]
+INFO: [Synth 8-638] synthesizing module 'design_1_ps7_0_axi_periph_0' [c:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.gen/sources_1/bd/design_1/synth/design_1.vhd:989]
 INFO: [Synth 8-638] synthesizing module 'm00_couplers_imp_15SPJYW' [c:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.gen/sources_1/bd/design_1/synth/design_1.vhd:57]
 INFO: [Synth 8-256] done synthesizing module 'm00_couplers_imp_15SPJYW' (2#1) [c:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.gen/sources_1/bd/design_1/synth/design_1.vhd:57]
 INFO: [Synth 8-638] synthesizing module 'm01_couplers_imp_XU9C55' [c:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.gen/sources_1/bd/design_1/synth/design_1.vhd:158]
@@ -57,34 +59,45 @@ INFO: [Synth 8-638] synthesizing module 'm02_couplers_imp_14WQB4R' [c:/Users/Chr
 INFO: [Synth 8-256] done synthesizing module 'm02_couplers_imp_14WQB4R' (4#1) [c:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.gen/sources_1/bd/design_1/synth/design_1.vhd:259]
 INFO: [Synth 8-638] synthesizing module 'm03_couplers_imp_YFYJ3U' [c:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.gen/sources_1/bd/design_1/synth/design_1.vhd:360]
 INFO: [Synth 8-256] done synthesizing module 'm03_couplers_imp_YFYJ3U' (5#1) [c:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.gen/sources_1/bd/design_1/synth/design_1.vhd:360]
-INFO: [Synth 8-638] synthesizing module 's00_couplers_imp_UYSKKA' [c:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.gen/sources_1/bd/design_1/synth/design_1.vhd:484]
-INFO: [Synth 8-3491] module 'design_1_auto_pc_0' declared at 'C:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.runs/synth_1/.Xil/Vivado-3352-DESKTOP-ATP0LPE/realtime/design_1_auto_pc_0_stub.vhdl:5' bound to instance 'auto_pc' of component 'design_1_auto_pc_0' [c:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.gen/sources_1/bd/design_1/synth/design_1.vhd:667]
-INFO: [Synth 8-638] synthesizing module 'design_1_auto_pc_0' [C:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.runs/synth_1/.Xil/Vivado-3352-DESKTOP-ATP0LPE/realtime/design_1_auto_pc_0_stub.vhdl:70]
-INFO: [Synth 8-256] done synthesizing module 's00_couplers_imp_UYSKKA' (6#1) [c:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.gen/sources_1/bd/design_1/synth/design_1.vhd:484]
-INFO: [Synth 8-3491] module 'design_1_xbar_0' declared at 'C:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.runs/synth_1/.Xil/Vivado-3352-DESKTOP-ATP0LPE/realtime/design_1_xbar_0_stub.vhdl:5' bound to instance 'xbar' of component 'design_1_xbar_0' [c:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.gen/sources_1/bd/design_1/synth/design_1.vhd:1456]
-INFO: [Synth 8-638] synthesizing module 'design_1_xbar_0' [C:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.runs/synth_1/.Xil/Vivado-3352-DESKTOP-ATP0LPE/realtime/design_1_xbar_0_stub.vhdl:51]
-INFO: [Synth 8-256] done synthesizing module 'design_1_ps7_0_axi_periph_0' (7#1) [c:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.gen/sources_1/bd/design_1/synth/design_1.vhd:857]
-INFO: [Synth 8-3491] module 'design_1_rst_ps7_0_100M_0' declared at 'C:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.runs/synth_1/.Xil/Vivado-3352-DESKTOP-ATP0LPE/realtime/design_1_rst_ps7_0_100M_0_stub.vhdl:5' bound to instance 'rst_ps7_0_100M' of component 'design_1_rst_ps7_0_100M_0' [c:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.gen/sources_1/bd/design_1/synth/design_1.vhd:2522]
-INFO: [Synth 8-638] synthesizing module 'design_1_rst_ps7_0_100M_0' [C:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.runs/synth_1/.Xil/Vivado-3352-DESKTOP-ATP0LPE/realtime/design_1_rst_ps7_0_100M_0_stub.vhdl:21]
-INFO: [Synth 8-3491] module 'design_1_vga_controller_0_0' declared at 'C:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.runs/synth_1/.Xil/Vivado-3352-DESKTOP-ATP0LPE/realtime/design_1_vga_controller_0_0_stub.vhdl:5' bound to instance 'vga_controller_0' of component 'design_1_vga_controller_0_0' [c:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.gen/sources_1/bd/design_1/synth/design_1.vhd:2535]
-INFO: [Synth 8-638] synthesizing module 'design_1_vga_controller_0_0' [C:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.runs/synth_1/.Xil/Vivado-3352-DESKTOP-ATP0LPE/realtime/design_1_vga_controller_0_0_stub.vhdl:64]
-INFO: [Synth 8-3491] module 'design_1_zed_audio_ctrl_1_0' declared at 'C:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.runs/synth_1/.Xil/Vivado-3352-DESKTOP-ATP0LPE/realtime/design_1_zed_audio_ctrl_1_0_stub.vhdl:5' bound to instance 'zed_audio_ctrl_1' of component 'design_1_zed_audio_ctrl_1_0' [c:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.gen/sources_1/bd/design_1/synth/design_1.vhd:2591]
-INFO: [Synth 8-638] synthesizing module 'design_1_zed_audio_ctrl_1_0' [C:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.runs/synth_1/.Xil/Vivado-3352-DESKTOP-ATP0LPE/realtime/design_1_zed_audio_ctrl_1_0_stub.vhdl:34]
-INFO: [Synth 8-256] done synthesizing module 'design_1' (8#1) [c:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.gen/sources_1/bd/design_1/synth/design_1.vhd:1606]
-INFO: [Synth 8-256] done synthesizing module 'design_1_wrapper' (9#1) [C:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.gen/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:55]
+INFO: [Synth 8-638] synthesizing module 'm04_couplers_imp_17KQ732' [c:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.gen/sources_1/bd/design_1/synth/design_1.vhd:465]
+INFO: [Synth 8-256] done synthesizing module 'm04_couplers_imp_17KQ732' (6#1) [c:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.gen/sources_1/bd/design_1/synth/design_1.vhd:465]
+INFO: [Synth 8-638] synthesizing module 's00_couplers_imp_UYSKKA' [c:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.gen/sources_1/bd/design_1/synth/design_1.vhd:595]
+INFO: [Synth 8-3491] module 'design_1_auto_pc_0' declared at 'C:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.runs/synth_1/.Xil/Vivado-12976-DESKTOP-ATP0LPE/realtime/design_1_auto_pc_0_stub.vhdl:5' bound to instance 'auto_pc' of component 'design_1_auto_pc_0' [c:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.gen/sources_1/bd/design_1/synth/design_1.vhd:778]
+INFO: [Synth 8-638] synthesizing module 'design_1_auto_pc_0' [C:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.runs/synth_1/.Xil/Vivado-12976-DESKTOP-ATP0LPE/realtime/design_1_auto_pc_0_stub.vhdl:70]
+INFO: [Synth 8-256] done synthesizing module 's00_couplers_imp_UYSKKA' (7#1) [c:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.gen/sources_1/bd/design_1/synth/design_1.vhd:595]
+INFO: [Synth 8-3491] module 'design_1_xbar_0' declared at 'C:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.runs/synth_1/.Xil/Vivado-12976-DESKTOP-ATP0LPE/realtime/design_1_xbar_0_stub.vhdl:5' bound to instance 'xbar' of component 'design_1_xbar_0' [c:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.gen/sources_1/bd/design_1/synth/design_1.vhd:1694]
+INFO: [Synth 8-638] synthesizing module 'design_1_xbar_0' [C:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.runs/synth_1/.Xil/Vivado-12976-DESKTOP-ATP0LPE/realtime/design_1_xbar_0_stub.vhdl:51]
+INFO: [Synth 8-256] done synthesizing module 'design_1_ps7_0_axi_periph_0' (8#1) [c:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.gen/sources_1/bd/design_1/synth/design_1.vhd:989]
+INFO: [Synth 8-3491] module 'design_1_rng_0_0' declared at 'C:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.runs/synth_1/.Xil/Vivado-12976-DESKTOP-ATP0LPE/realtime/design_1_rng_0_0_stub.vhdl:5' bound to instance 'rng_0' of component 'design_1_rng_0_0' [c:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.gen/sources_1/bd/design_1/synth/design_1.vhd:2850]
+INFO: [Synth 8-638] synthesizing module 'design_1_rng_0_0' [C:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.runs/synth_1/.Xil/Vivado-12976-DESKTOP-ATP0LPE/realtime/design_1_rng_0_0_stub.vhdl:32]
+INFO: [Synth 8-3491] module 'design_1_rst_ps7_0_100M_0' declared at 'C:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.runs/synth_1/.Xil/Vivado-12976-DESKTOP-ATP0LPE/realtime/design_1_rst_ps7_0_100M_0_stub.vhdl:5' bound to instance 'rst_ps7_0_100M' of component 'design_1_rst_ps7_0_100M_0' [c:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.gen/sources_1/bd/design_1/synth/design_1.vhd:2874]
+INFO: [Synth 8-638] synthesizing module 'design_1_rst_ps7_0_100M_0' [C:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.runs/synth_1/.Xil/Vivado-12976-DESKTOP-ATP0LPE/realtime/design_1_rst_ps7_0_100M_0_stub.vhdl:21]
+INFO: [Synth 8-3491] module 'design_1_vga_controller_0_0' declared at 'C:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.runs/synth_1/.Xil/Vivado-12976-DESKTOP-ATP0LPE/realtime/design_1_vga_controller_0_0_stub.vhdl:5' bound to instance 'vga_controller_0' of component 'design_1_vga_controller_0_0' [c:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.gen/sources_1/bd/design_1/synth/design_1.vhd:2887]
+INFO: [Synth 8-638] synthesizing module 'design_1_vga_controller_0_0' [C:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.runs/synth_1/.Xil/Vivado-12976-DESKTOP-ATP0LPE/realtime/design_1_vga_controller_0_0_stub.vhdl:64]
+INFO: [Synth 8-3491] module 'design_1_xlconstant_0_0' declared at 'c:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.gen/sources_1/bd/design_1/ip/design_1_xlconstant_0_0/synth/design_1_xlconstant_0_0.v:57' bound to instance 'xlconstant_0' of component 'design_1_xlconstant_0_0' [c:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.gen/sources_1/bd/design_1/synth/design_1.vhd:2943]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xlconstant_0_0' [c:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.gen/sources_1/bd/design_1/ip/design_1_xlconstant_0_0/synth/design_1_xlconstant_0_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_7_xlconstant' [c:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.gen/sources_1/bd/design_1/ipshared/fcfc/hdl/xlconstant_v1_1_vl_rfs.v:23]
+	Parameter CONST_VAL bound to: 1'b0 
+	Parameter CONST_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_7_xlconstant' (9#1) [c:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.gen/sources_1/bd/design_1/ipshared/fcfc/hdl/xlconstant_v1_1_vl_rfs.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xlconstant_0_0' (10#1) [c:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.gen/sources_1/bd/design_1/ip/design_1_xlconstant_0_0/synth/design_1_xlconstant_0_0.v:57]
+INFO: [Synth 8-3491] module 'design_1_zed_audio_ctrl_1_0' declared at 'C:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.runs/synth_1/.Xil/Vivado-12976-DESKTOP-ATP0LPE/realtime/design_1_zed_audio_ctrl_1_0_stub.vhdl:5' bound to instance 'zed_audio_ctrl_1' of component 'design_1_zed_audio_ctrl_1_0' [c:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.gen/sources_1/bd/design_1/synth/design_1.vhd:2947]
+INFO: [Synth 8-638] synthesizing module 'design_1_zed_audio_ctrl_1_0' [C:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.runs/synth_1/.Xil/Vivado-12976-DESKTOP-ATP0LPE/realtime/design_1_zed_audio_ctrl_1_0_stub.vhdl:34]
+INFO: [Synth 8-256] done synthesizing module 'design_1' (11#1) [c:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.gen/sources_1/bd/design_1/synth/design_1.vhd:1863]
+INFO: [Synth 8-256] done synthesizing module 'design_1_wrapper' (12#1) [C:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.gen/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:55]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 999.039 ; gain = 0.000
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 999.527 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 999.039 ; gain = 0.000
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 999.527 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 999.039 ; gain = 0.000
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 999.527 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.041 . Memory (MB): peak = 999.039 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.061 . Memory (MB): peak = 999.527 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 4 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -111,6 +124,8 @@ Parsing XDC File [c:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tuto
 Finished Parsing XDC File [c:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0_in_context.xdc] for cell 'design_1_i/rst_ps7_0_100M'
 Parsing XDC File [c:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc] for cell 'design_1_i/processing_system7_0'
 Finished Parsing XDC File [c:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc] for cell 'design_1_i/processing_system7_0'
+Parsing XDC File [c:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.gen/sources_1/bd/design_1/ip/design_1_rng_0_0/design_1_rng_0_0/design_1_rng_0_0_in_context.xdc] for cell 'design_1_i/rng_0'
+Finished Parsing XDC File [c:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.gen/sources_1/bd/design_1/ip/design_1_rng_0_0/design_1_rng_0_0/design_1_rng_0_0_in_context.xdc] for cell 'design_1_i/rng_0'
 Parsing XDC File [C:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.srcs/constrs_1/imports/constraints/adventures_with_ip.xdc]
 Finished Parsing XDC File [C:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.srcs/constrs_1/imports/constraints/adventures_with_ip.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.srcs/constrs_1/imports/constraints/adventures_with_ip.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_1_wrapper_propImpl.xdc].
@@ -119,21 +134,21 @@ Parsing XDC File [C:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tuto
 Finished Parsing XDC File [C:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 999.039 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 999.527 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 4 instances were transformed.
   IOBUF => IOBUF (IBUF, OBUFT): 4 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 999.039 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 999.527 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 999.039 ; gain = 0.000
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 999.527 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 999.039 ; gain = 0.000
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 999.527 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -410,11 +425,13 @@ Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/axi_timer_0. (constrai
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/zed_audio_ctrl_1. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/rst_ps7_0_100M. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/processing_system7_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/xlconstant_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/rng_0. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 999.039 ; gain = 0.000
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 999.527 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 999.039 ; gain = 0.000
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 999.527 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -436,25 +453,25 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 999.039 ; gain = 0.000
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 999.527 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 999.039 ; gain = 0.000
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 999.527 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 999.039 ; gain = 0.000
+Finished Timing Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 999.527 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 1014.062 ; gain = 15.023
+Finished Technology Mapping : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 1015.379 ; gain = 15.852
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -472,37 +489,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 1020.250 ; gain = 21.211
+Finished IO Insertion : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 1021.547 ; gain = 22.020
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 1020.250 ; gain = 21.211
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 1021.547 ; gain = 22.020
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 1020.250 ; gain = 21.211
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 1021.547 ; gain = 22.020
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 1020.250 ; gain = 21.211
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 1021.547 ; gain = 22.020
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 1020.250 ; gain = 21.211
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 1021.547 ; gain = 22.020
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 1020.250 ; gain = 21.211
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 1021.547 ; gain = 22.020
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -519,9 +536,10 @@ Report BlackBoxes:
 |5     |design_1_axi_timer_0_0          |         1|
 |6     |design_1_clk_wiz_0_0            |         1|
 |7     |design_1_processing_system7_0_0 |         1|
-|8     |design_1_rst_ps7_0_100M_0       |         1|
-|9     |design_1_vga_controller_0_0     |         1|
-|10    |design_1_zed_audio_ctrl_1_0     |         1|
+|8     |design_1_rng_0_0                |         1|
+|9     |design_1_rst_ps7_0_100M_0       |         1|
+|10    |design_1_vga_controller_0_0     |         1|
+|11    |design_1_zed_audio_ctrl_1_0     |         1|
 +------+--------------------------------+----------+
 
 Report Cell Usage: 
@@ -534,35 +552,36 @@ Report Cell Usage:
 |4     |design_1_axi_timer_0_0_bbox          |     1|
 |5     |design_1_clk_wiz_0_0_bbox            |     1|
 |6     |design_1_processing_system7_0_0_bbox |     1|
-|7     |design_1_rst_ps7_0_100M_0_bbox       |     1|
-|8     |design_1_vga_controller_0_0_bbox     |     1|
-|9     |design_1_xbar_0_bbox                 |     1|
-|10    |design_1_zed_audio_ctrl_1_0_bbox     |     1|
-|11    |IBUF                                 |    14|
-|12    |IOBUF                                |     4|
-|13    |OBUF                                 |    18|
+|7     |design_1_rng_0_0_bbox                |     1|
+|8     |design_1_rst_ps7_0_100M_0_bbox       |     1|
+|9     |design_1_vga_controller_0_0_bbox     |     1|
+|10    |design_1_xbar_0_bbox                 |     1|
+|11    |design_1_zed_audio_ctrl_1_0_bbox     |     1|
+|12    |IBUF                                 |    14|
+|13    |IOBUF                                |     4|
+|14    |OBUF                                 |    18|
 +------+-------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 1020.250 ; gain = 21.211
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 1021.547 ; gain = 22.020
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:27 . Memory (MB): peak = 1020.250 ; gain = 21.211
-Synthesis Optimization Complete : Time (s): cpu = 00:00:27 ; elapsed = 00:00:31 . Memory (MB): peak = 1020.250 ; gain = 21.211
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:27 . Memory (MB): peak = 1021.547 ; gain = 22.020
+Synthesis Optimization Complete : Time (s): cpu = 00:00:27 ; elapsed = 00:00:31 . Memory (MB): peak = 1021.547 ; gain = 22.020
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.035 . Memory (MB): peak = 1020.250 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.040 . Memory (MB): peak = 1021.547 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 4 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1042.137 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1038.891 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 4 instances were transformed.
   IOBUF => IOBUF (IBUF, OBUFT): 4 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-64 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+75 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:34 ; elapsed = 00:00:39 . Memory (MB): peak = 1042.137 ; gain = 43.098
+synth_design: Time (s): cpu = 00:00:34 ; elapsed = 00:00:40 . Memory (MB): peak = 1038.891 ; gain = 39.363
 INFO: [Common 17-1381] The checkpoint 'C:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/audio_tutorial.runs/synth_1/design_1_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Fri Feb 10 13:29:19 2023...
+INFO: [Common 17-206] Exiting Vivado at Sun Mar 12 00:42:43 2023...

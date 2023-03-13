@@ -16,10 +16,10 @@ extern const int americanfootball_left_size;
 extern const uint8_t americanfootball_right[];
 extern const int americanfootball_right_size;
 
-//extern const uint8_t something_left[];
-//extern const int something_left_size;
-//extern const uint8_t something_right[];
-//extern const int something_right_size;
+extern const uint8_t something_left[];
+extern const int something_left_size;
+extern const uint8_t something_right[];
+extern const int something_right_size;
 
 struct menu_options{
 	char option_name[MENU_OPTION_NAME_SIZE];

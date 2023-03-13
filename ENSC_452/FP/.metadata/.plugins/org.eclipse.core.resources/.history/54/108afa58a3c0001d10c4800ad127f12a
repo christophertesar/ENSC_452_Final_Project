@@ -1,0 +1,8 @@
+    .global yay
+    .global yay_size
+    .section .rodata
+yay:
+    .incbin "C:\\Users\\Spencer\\vitis_final_project\\zzz_1\\src\\yay.data"
+1:
+yay_size:
+    .int 1b - yay

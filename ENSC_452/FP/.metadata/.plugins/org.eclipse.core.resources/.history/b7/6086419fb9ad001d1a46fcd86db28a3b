@@ -1,8 +1,0 @@
-    .global american_football
-    .global american_football_size
-    .section .rodata
-american_football:
-    .incbin "american_fooball.bin"
-1:
-american_football_size:
-    .int 1b - american_football

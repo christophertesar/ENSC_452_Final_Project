@@ -128,6 +128,13 @@ int main(void)
 
 	Game game(audio_controller);
 	/* Display interactive menu interface via terminal */
+	xil_printf("hello\r\n");
+	while(1){
+		xil_printf("%i\r\n", Xil_In32(0x43C10000));
+		xil_printf("hello\r\n");
+		sleep(1);
+	}
+
 	game.main_menu();
 
 	// Disconnect the interrupt for the Timer.

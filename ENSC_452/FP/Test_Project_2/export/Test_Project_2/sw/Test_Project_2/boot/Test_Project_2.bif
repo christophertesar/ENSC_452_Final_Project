@@ -1,0 +1,8 @@
+/*Test_Project_2*/
+the_ROM_image:
+{
+  [bootloader]<Test_Project_2/boot/fsbl.elf>
+   <bitstream> 
+  <elf,ps7_cortexa9_0>
+  <elf,ps7_cortexa9_1>
+}

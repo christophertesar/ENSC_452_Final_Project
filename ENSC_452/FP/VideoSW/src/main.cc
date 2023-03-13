@@ -8,16 +8,23 @@
 #include "xil_exception.h"
 #include "xscugic.h"
 #include "xil_mmu.h"
+#include "sleep.h"
 #include <cstdlib>
 
 #include "xuartps.h"
 #include <string>
+
 #define UART_BASEADDR XPAR_PS7_UART_1_BASEADDR
+#define COMM_VAL (*(volatile unsigned long *)(0xFFFF0000))
 
 volatile bool TIMER_INTR_FLG;
 XScuGic InterruptController; /* Instance of the Interrupt Controller */
 static XScuGic_Config *GicConfig;/* The configuration parameters of thecontroller */
 int NUM_BYTES_BUFFER = 5242880;
+int X_SIZE = 1280;
+int Y_SIZE = 1024;
+int NOTE_X_SIZE = 100;
+int NOTE_Y_SIZE = 50;
 
 extern uint8_t gh_menu[];
 extern int gh_menu_size;
@@ -25,6 +32,8 @@ extern uint8_t gh_pause[];
 extern int gh_pause_size;
 extern uint8_t gh_gameplay[];
 extern int gh_gameplay_size;
+extern uint8_t A_note[];
+extern int A_note_size;
 
 void Timer_InterruptHandler(XTmrCtr *data, u8 TmrCtrNumber)
 {
@@ -43,7 +52,7 @@ int SetUpInterruptSystem(XScuGic *XScuGicInstancePtr){
 }
 
 /*Setup all interrupts of the system*/
-int ScuGicInterrupt_Init(u16 DeviceId,XTmrCtr *TimerInstancePtr)
+int ScuGicInterrupt_Init(u16 DeviceId, XTmrCtr *TimerInstancePtr)
 {
 	int Status;
 	GicConfig = XScuGic_LookupConfig(DeviceId);
@@ -71,33 +80,25 @@ int ScuGicInterrupt_Init(u16 DeviceId,XTmrCtr *TimerInstancePtr)
 	return XST_SUCCESS;
 }
 
-// use wmset to write faster
-// write twice to get rid of artifacting (the fuzzyness at the bottom)
-//void write_pixel_by_pixel(int* image_buffer_pointer)
-//{
-//	int counter = 0;
-//	for (int i : BEAUTIFUL_GUY)
-//	{
-////		image_buffer_pointer[counter] = 0xFFFFFF;
-//		image_buffer_pointer[counter] = i;
-//		counter++;
-//	}
-//}
+void fill_black(int* image_buffer_pointer)
+{
+	for(int i=0; i<1280*1024; i++)
+	{
+		image_buffer_pointer[i] = 0;
+	}
+}
 
-//void load_image_1(int* image_buffer_pointer)
-//{
-//	memcpy(image_buffer_pointer, &GUITAR_HERO_MENU, sizeof(GUITAR_HERO_MENU));
-//}
-
-//void load_image_2(int* image_buffer_pointer)
-//{
-//	memcpy(image_buffer_pointer, &GUITAR_HERO_GAMEPLAY, sizeof(GUITAR_HERO_GAMEPLAY));
-//}
-
-//void load_image_3(int* image_buffer_pointer)
-//{
-//	memcpy(image_buffer_pointer, &GUITAR_HERO_PAUSE, sizeof(GUITAR_HERO_PAUSE));
-//}
+void draw_sprite(int* image_buffer_pointer)
+{
+	uint8_t *sprite;
+	sprite = A_note;
+	for(int i = 0; i < NOTE_Y_SIZE; i++)
+	{
+		memcpy(image_buffer_pointer, sprite, NOTE_X_SIZE*4);
+		sprite += NOTE_X_SIZE*4;
+		image_buffer_pointer += X_SIZE;
+	}
+}
 
 void menu(int* image_buffer_pointer){
 	u8 inp = 0x00;
@@ -109,7 +110,7 @@ void menu(int* image_buffer_pointer){
 
 	xil_printf("\r\n\r\n");
 	xil_printf("MILESTONE 1!\r\n");
-	xil_printf("Enter '1' '2' or '3'\r\n");
+	xil_printf("Enter '1' for the main menu, '2' for the pause screen or '3' for a gameplay screen\r\n");
 	xil_printf("----------------------------------------\r\n");
 
 	// Wait for input from UART via the terminal
@@ -118,22 +119,36 @@ void menu(int* image_buffer_pointer){
 	// Select function based on UART input
 	switch(inp){
 	case '1':
-		xil_printf("Loading image 1\r\n");
+		xil_printf("Loading main menu\r\n");
 		xil_printf("Press 'q' to return to the main menu\r\n");
 
-		memcpy(image_buffer_pointer, &gh_menu, gh_menu_size);
+		memcpy(image_buffer_pointer, gh_menu, gh_menu_size);
 		break;
 	case '2':
-		xil_printf("Loading image 2\r\n");
+		xil_printf("Loading pause screen\r\n");
 		xil_printf("Press 'q' to return to the main menu\r\n");
 
-		memcpy(image_buffer_pointer, &gh_pause, gh_pause_size);
+		memcpy(image_buffer_pointer, gh_pause, gh_pause_size);
 		break;
 	case '3':
-		xil_printf("Loading image 3\r\n");
+		xil_printf("Loading gameplay image\r\n");
 		xil_printf("Press 'q' to return to the main menu\r\n");
 
-		memcpy(image_buffer_pointer, &gh_gameplay, gh_gameplay_size);
+		memcpy(image_buffer_pointer, gh_gameplay, gh_gameplay_size);
+		break;
+	case '4':
+		xil_printf("Loading notes\r\n");
+		xil_printf("Press 'q' to return to the main menu\r\n");
+
+		image_buffer_pointer += 50000;
+		draw_sprite(image_buffer_pointer);
+		break;
+	case '9':
+		xil_printf("Loading notes\r\n");
+		xil_printf("Press 'q' to return to the main menu\r\n");
+
+		fill_black(image_buffer_pointer);
+		fill_black(image_buffer_pointer);
 		break;
 	default:
 		menu(image_buffer_pointer);
@@ -176,12 +191,6 @@ int main()
 	Xil_SetTlbAttributes(0xFFFF0000,0x14de2);
 
 	while(1) {
-//		XTmrCtr_Start(&TimerInstancePtr,0);
-//		while(TIMER_INTR_FLG == false){
-//		}
-//
-//		TIMER_INTR_FLG = false;
-
 		menu(image_buffer_pointer);
 
 //		memcpy(image_buffer_pointer, &gh_menu, gh_menu_size);

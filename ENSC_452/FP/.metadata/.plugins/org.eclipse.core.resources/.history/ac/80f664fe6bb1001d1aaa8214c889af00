@@ -1,8 +1,0 @@
-    .global gh_menu
-    .global gh_menu_size
-    .section .rodata
-gh_menu:
-    .incbin "C:\\Users\\Spencer\\workspace\\vga_tutorial_1\\src\\menu.data"
-1:
-gh_menu_size:
-    .int 1b - gh_menu

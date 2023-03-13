@@ -1,0 +1,25 @@
+18:37:48 **** Incremental Build of configuration Debug for project video ****
+make all 
+make --no-print-directory pre-build
+a9-linaro-pre-build-step
+' '
+make --no-print-directory main-build
+'Building file: ../src/main_menu.cpp'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main_menu.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/Christopher/Desktop/FP/ENSC_452/FP/Test_Project_2/export/Test_Project_2/sw/Test_Project_2/standalone_ps7_cortexa9_1/bspinclude/include -MMD -MP -MF"src/main_menu.d" -MT"src/main_menu.o" -o "src/main_menu.o" "../src/main_menu.cpp"
+'Finished building: ../src/main_menu.cpp'
+' '
+'Building target: video.elf'
+'Invoking: ARM v7 g++ linker'
+arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/Users/Christopher/Desktop/FP/ENSC_452/FP/Test_Project_2/export/Test_Project_2/sw/Test_Project_2/standalone_ps7_cortexa9_1/bsplib/lib -o "video.elf"  ./src/A_note.o ./src/D_note.o ./src/F_note.o ./src/S_note.o ./src/arrow.o ./src/background_colour.o ./src/black_lanes.o ./src/cringe.o ./src/eight.o ./src/five.o ./src/four.o ./src/gh_gameplay.o ./src/gh_highscores.o ./src/gh_level_select.o ./src/gh_menu.o ./src/gh_pause.o ./src/gh_sound_settings.o ./src/input.o ./src/main.o ./src/main_menu.o ./src/nice_menu.o ./src/nine.o ./src/one.o ./src/seven.o ./src/six.o ./src/three.o ./src/two.o ./src/yay.o ./src/zero.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: video.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size video.elf  |tee "video.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+39134703	   3632	2240996	41379331	2776603	video.elf
+'Finished building: video.elf.size'
+' '
+
+18:37:50 Build Finished (took 2s.93ms)
+

@@ -1,0 +1,58 @@
+
+#include <stdio.h>
+#include <xil_io.h>
+#include <sleep.h>
+#include <memory>
+#include "xiicps.h"
+#include <xil_printf.h>
+#include <xparameters.h>
+#include "xgpio.h"
+#include "xuartps.h"
+#include "stdlib.h"
+#include "xscutimer.h"
+#include "xscugic.h"
+#include "xil_mmu.h"
+
+#define sev() __asm("sev")
+#define ARM1_STARTADR 0xFFFFFFF0
+#define ARM1_BASEADDR 0x10080000
+#define COMM_VAL (*(volatile unsigned long *)(0xFFFF0000))
+
+
+/* ---------------------------------------------------------------------------- *
+ * 									main()										*
+ * ---------------------------------------------------------------------------- *
+ * Runs all initial setup functions to initialise the audio codec and IP
+ * peripherals, before calling the interactive menu system.
+ * ---------------------------------------------------------------------------- */
+
+int main(void)
+{
+	xil_printf("Entering Main\r\n");
+	//Configure the IIC data structure
+
+	COMM_VAL = 0;
+	//Disable cache on OCM
+	// S=b1 TEX=b100 AP=b11, Domain=b1111, C=b0, B=b0
+	Xil_SetTlbAttributes(0xFFFF0000, 0x14de2);
+
+	xil_printf("ARM0: writing start address for ARM1\n\r");
+	Xil_Out32(ARM1_STARTADR, ARM1_BASEADDR);
+	dmb(); //waits until write has finished
+
+	//Wake up core 1
+//	sev();
+//	xil_printf("Woke up ARM Core 1\r\n");
+
+	/* Display interactive menu interface via terminal */
+	xil_printf("hello\r\n");
+	while(1){
+		int i = Xil_In32(0x43C10000);
+		xil_printf("hello %d\r\n", i);
+		sleep(1);
+	}
+
+
+	// Disconnect the interrupt for the Timer.
+    return 0;
+}
