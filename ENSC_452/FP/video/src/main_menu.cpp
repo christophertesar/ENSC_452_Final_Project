@@ -6,8 +6,9 @@
  * ---------------------------------------------------------------------------- *
  Method to display the main menu and provide functionality using the main menu.
  * ---------------------------------------------------------------------------- */
-Game::Game(int* vga_controller){
+Game::Game(int* vga_controller, AudioControl* audio_controller){
 	this->vga_controller = vga_controller;
+	this->audio_controller = audio_controller;
 }
 
 void Game::main_menu(){
@@ -323,6 +324,13 @@ void Game::play_game(char* level_name){
 }
 
 void Game::gameplay(char* level_name){
+	if (strcmp(level_name, "level_1") == STRING_IS_EQUAL){
+		this->audio_controller->changeSong(something_left, something_right, something_left_size/4);
+	}
+	else{
+		this->audio_controller->changeSong(americanfootball_left, americanfootball_right, americanfootball_left_size/4);
+	}
+
 	memcpy(this->vga_controller, gh_gameplay, gh_gameplay_size);
 	Xil_DCacheFlush();
 
@@ -336,6 +344,7 @@ void Game::gameplay(char* level_name){
 
 		if (key == 'n')
 		{
+			this->audio_controller->startSong();
 			int number_of_notes = 20;
 			int random_number = 0;
 			int x_offset = 0;
@@ -429,6 +438,7 @@ void Game::gameplay(char* level_name){
 			Xil_DCacheFlush();
 		}
 	}
+	this->audio_controller->stopSong();
 	pause_menu(level_name);
 }
 
@@ -559,10 +569,12 @@ void Game::pause_menu(char* level_name){
 }
 
 void Game::increase_game_volume(){
+	audio_controller->incrementVolume();
 	xil_printf("Increasing game volume.\r\n");
 }
 
 void Game::decrease_game_volume(){
+	audio_controller->decreaseVolume();
 	xil_printf("Decreasing game volume.\r\n");
 }
 

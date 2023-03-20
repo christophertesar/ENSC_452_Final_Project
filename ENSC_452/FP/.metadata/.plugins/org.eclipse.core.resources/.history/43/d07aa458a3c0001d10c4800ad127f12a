@@ -1,8 +1,0 @@
-    .global background_colour
-    .global background_colour_size
-    .section .rodata
-background_colour:
-    .incbin "C:\\Users\\Spencer\\vitis_final_project\\zzz_1\\src\\background_colour.data"
-1:
-background_colour_size:
-    .int 1b - background_colour

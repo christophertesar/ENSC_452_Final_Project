@@ -1,8 +1,0 @@
-    .global arrow
-    .global arrow_size
-    .section .rodata
-arrow:
-    .incbin "C:\\Users\\Spencer\\vitis_final_project\\zzz_1\\src\\arrow.data"
-1:
-arrow_size:
-    .int 1b - arrow

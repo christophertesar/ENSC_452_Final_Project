@@ -12,10 +12,14 @@
 #include "xscutimer.h"
 #include "xscugic.h"
 #include "xil_mmu.h"
+#include "audio.h"
 
 #define sev() __asm("sev")
 #define ARM1_STARTADR 0xFFFFFFF0
 #define ARM1_BASEADDR 0x10080000
+#define SIGNAL 0x00C00000
+#define LEFT_LOC 0x00C00004
+#define RIGHT_LOC 0x00C00008
 #define COMM_VAL (*(volatile unsigned long *)(0xFFFF0000))
 
 
@@ -41,18 +45,22 @@ int main(void)
 	dmb(); //waits until write has finished
 
 	//Wake up core 1
-//	sev();
-//	xil_printf("Woke up ARM Core 1\r\n");
+	sev();
+
+	int* signal_ptr = (int*) SIGNAL;
+	int* right_ptr = (int*) RIGHT_LOC;
+	int* left_ptr = (int*) LEFT_LOC;
 
 	/* Display interactive menu interface via terminal */
-	xil_printf("hello\r\n");
 	while(1){
-		int i = Xil_In32(0x43C10000);
-		xil_printf("hello %d\r\n", i);
-		sleep(1);
+		if (*signal_ptr){
+			Xil_Out32(I2S_DATA_TX_L_REG, *left_ptr);
+			Xil_Out32(I2S_DATA_TX_R_REG, *right_ptr);
+			*signal_ptr = 0;
+			*right_ptr = 0;
+			*left_ptr = 0;
+		}
 	}
-
-
 	// Disconnect the interrupt for the Timer.
     return 0;
 }

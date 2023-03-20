@@ -1,8 +1,0 @@
-    .global black_lanes
-    .global black_lanes_size
-    .section .rodata
-black_lanes:
-    .incbin "C:\\Users\\Spencer\\vitis_final_project\\zzz_1\\src\\black_lanes.data"
-1:
-black_lanes_size:
-    .int 1b - black_lanes

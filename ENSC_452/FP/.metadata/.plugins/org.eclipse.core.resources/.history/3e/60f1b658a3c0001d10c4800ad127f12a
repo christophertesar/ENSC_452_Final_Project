@@ -1,8 +1,0 @@
-    .global D_note
-    .global D_note_size
-    .section .rodata
-D_note:
-    .incbin "C:\\Users\\Spencer\\vitis_final_project\\zzz_1\\src\\D_note.data"
-1:
-D_note_size:
-    .int 1b - D_note

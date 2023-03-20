@@ -1,8 +1,0 @@
-    .global gh_sound_settings
-    .global gh_sound_settings_size
-    .section .rodata
-gh_sound_settings:
-    .incbin "C:\\Users\\Spencer\\vitis_final_project\\zzz_1\\src\\gh_sound_settings.data"
-1:
-gh_sound_settings_size:
-    .int 1b - gh_sound_settings

@@ -1,8 +1,0 @@
-    .global gh_gameplay
-    .global gh_gameplay_size
-    .section .rodata
-gh_gameplay:
-    .incbin "C:\\Users\\Spencer\\vitis_final_project\\zzz_1\\src\\gh_gameplay.data"
-1:
-gh_gameplay_size:
-    .int 1b - gh_gameplay

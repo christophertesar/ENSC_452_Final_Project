@@ -1,8 +1,0 @@
-    .global cringe
-    .global cringe_size
-    .section .rodata
-cringe:
-    .incbin "C:\\Users\\Spencer\\vitis_final_project\\zzz_1\\src\\cringe.data"
-1:
-cringe_size:
-    .int 1b - cringe

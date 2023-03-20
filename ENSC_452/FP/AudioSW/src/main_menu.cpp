@@ -201,9 +201,11 @@ void Game::gameplay(char* level_name){
 	xil_printf("Playing level: %s\r\n", level_name);
 	if (strcmp(level_name, "level_1") == STRING_IS_EQUAL){
 		this->audio_controller->changeSong(something_left, something_right, something_left_size/4);
+		this->audio_controller->stopSong();
 	}
 	else{
 		this->audio_controller->changeSong(americanfootball_left, americanfootball_right, americanfootball_left_size/4);
+		this->audio_controller->stopSong();
 	}
 
 }
