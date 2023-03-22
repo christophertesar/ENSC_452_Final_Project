@@ -1,4 +1,5 @@
 #include "main_menu.h"
+#include "AudioProtocol.h"
 #include <iostream>
 
 /* ---------------------------------------------------------------------------- *
@@ -6,9 +7,9 @@
  * ---------------------------------------------------------------------------- *
  Method to display the main menu and provide functionality using the main menu.
  * ---------------------------------------------------------------------------- */
-Game::Game(int* vga_controller, AudioControl* audio_controller){
+Game::Game(int* vga_controller){
 	this->vga_controller = vga_controller;
-	this->audio_controller = audio_controller;
+	this->audio_ptr = (volatile int*) SIGNAL_BASE;
 }
 
 void Game::main_menu(){
@@ -307,9 +308,11 @@ void Game::options(){
 			}
 		}
 		if (strcmp(cursor->option_name, "increase_volume") == STRING_IS_EQUAL){
+			*audio_ptr = *audio_ptr | INCREMENT_VOLUME;
 			increase_game_volume();
 		}
 		else if (strcmp(cursor->option_name, "decrease_volume") == STRING_IS_EQUAL){
+			*audio_ptr = *audio_ptr | DECREMENT_VOLUME;
 			decrease_game_volume();
 		}
 		else if (strcmp(cursor->option_name, "exit") == STRING_IS_EQUAL){
@@ -325,10 +328,12 @@ void Game::play_game(char* level_name){
 
 void Game::gameplay(char* level_name){
 	if (strcmp(level_name, "level_1") == STRING_IS_EQUAL){
-		this->audio_controller->changeSong(something_left, something_right, something_left_size/4);
+		//this->audio_controller->changeSong(something_left, something_right, something_left_size/4);
+		*audio_ptr = *audio_ptr | CHANGE_TO_SONG_1;
 	}
 	else{
-		this->audio_controller->changeSong(americanfootball_left, americanfootball_right, americanfootball_left_size/4);
+		//this->audio_controller->changeSong(americanfootball_left, americanfootball_right, americanfootball_left_size/4);
+		*audio_ptr = *audio_ptr | CHANGE_TO_SONG_2;
 	}
 
 	memcpy(this->vga_controller, gh_gameplay, gh_gameplay_size);
@@ -344,7 +349,8 @@ void Game::gameplay(char* level_name){
 
 		if (key == 'n')
 		{
-			this->audio_controller->startSong();
+			//this->audio_controller->startSong();
+			*audio_ptr = *audio_ptr | START_SONG;
 			int number_of_notes = 20;
 			int random_number = 0;
 			int x_offset = 0;
@@ -407,6 +413,7 @@ void Game::gameplay(char* level_name){
 
 						else if (input_while_drawing == 'p')
 						{
+							*audio_ptr = *audio_ptr | STOP_SONG;
 							pause_menu(level_name);
 						}
 
@@ -438,7 +445,8 @@ void Game::gameplay(char* level_name){
 			Xil_DCacheFlush();
 		}
 	}
-	this->audio_controller->stopSong();
+	//this->audio_controller->stopSong();
+	*audio_ptr = *audio_ptr | STOP_SONG;
 	pause_menu(level_name);
 }
 
@@ -569,12 +577,12 @@ void Game::pause_menu(char* level_name){
 }
 
 void Game::increase_game_volume(){
-	audio_controller->incrementVolume();
+	//audio_controller->incrementVolume();
 	xil_printf("Increasing game volume.\r\n");
 }
 
 void Game::decrease_game_volume(){
-	audio_controller->decreaseVolume();
+	//audio_controller->decreaseVolume();
 	xil_printf("Decreasing game volume.\r\n");
 }
 

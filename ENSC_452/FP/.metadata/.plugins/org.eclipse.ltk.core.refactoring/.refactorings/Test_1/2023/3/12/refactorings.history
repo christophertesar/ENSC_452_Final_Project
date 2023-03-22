@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move &apos;americanfootball_left.S, americanfootball_right.S, something_left.S, something_right.S, americanfootball_left.data, americanfootball_right.data, something_left.data, something_right.data&apos; to &apos;src&apos;" description="Move 8 resources to &apos;src&apos;" destination="src" element1="/video/src/americanfootball_left.S" element2="/video/src/americanfootball_right.S" element3="/video/src/something_left.S" element4="/video/src/something_right.S" element5="/video/src/americanfootball_left.data" element6="/video/src/americanfootball_right.data" element7="/video/src/something_left.data" element8="/video/src/something_right.data" flags="7" id="org.eclipse.ltk.core.refactoring.move.resources" resources="8" stamp="1679347585830" updateReferences="true"/>
+</session>

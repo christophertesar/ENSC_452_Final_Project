@@ -34,3 +34,7 @@ platform generate -domains standalone_domain,standalone_ps7_cortexa9_1,zynq_fsbl
 platform active {Test_Project_2}
 platform config -updatehw {C:/Users/Christopher/Desktop/FP/ENSC_452/hw_project/FP_Hardware.xsa}
 platform generate -domains 
+platform generate -domains standalone_ps7_cortexa9_1 
+platform generate -domains standalone_ps7_cortexa9_1 
+platform clean
+platform generate

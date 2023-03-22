@@ -116,15 +116,15 @@ extern const int nine_size;
 
 
 //Music Assets
-extern const uint8_t americanfootball_left[];
-extern const int americanfootball_left_size;
-extern const uint8_t americanfootball_right[];
-extern const int americanfootball_right_size;
-
-extern const uint8_t something_left[];
-extern const int something_left_size;
-extern const uint8_t something_right[];
-extern const int something_right_size;
+//extern const uint8_t americanfootball_left[];
+//extern const int americanfootball_left_size;
+//extern const uint8_t americanfootball_right[];
+//extern const int americanfootball_right_size;
+//
+//extern const uint8_t something_left[];
+//extern const int something_left_size;
+//extern const uint8_t something_right[];
+//extern const int something_right_size;
 
 
 struct menu_options{
@@ -140,7 +140,7 @@ struct menu_options* generate_pause_menu();
 
 class Game{
 public:
-	Game(int*, AudioControl*);
+	Game(int*);
 	void main_menu();
 	struct menu_options* generate_menu_options();
 	void delete_menu_options(struct menu_options*);
@@ -160,7 +160,8 @@ public:
 	void draw_sprite_generic(int* image_buffer_pointer, const int SPRITE_Y_SIZE, const int SPRITE_X_SIZE, const uint8_t note[], int x_offset, int y_offset);
 	void drop_note(int* image_buffer_pointer, const uint8_t display_note[], int x_offset, int y_offset);
 private:
-	AudioControl* audio_controller;
+//	AudioControl* audio_controller;
+	volatile int* audio_ptr;
 	int* vga_controller;
 	void print_score(uint32_t);
 	const uint8_t* get_number_sprite(int);

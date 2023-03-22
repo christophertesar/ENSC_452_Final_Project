@@ -28,9 +28,6 @@
 #define sev() __asm("sev")
 #define ARM1_STARTADR 0xFFFFFFF0
 #define ARM1_BASEADDR 0x10080000
-#define SIGNAL 0x00C00000
-#define LEFT_LOC 0x00C00004
-#define RIGHT_LOC 0x00C00008
 
 volatile bool TIMER_INTR_FLG;
 XScuGic InterruptController; /* Instance of the Interrupt Controller */
@@ -40,35 +37,12 @@ int NUM_BYTES_BUFFER = 5242880;
 extern uint8_t nice_menu[];
 extern int nice_menu_size;
 
-static void audio_timer_interrupt_handler(void*);
-
-static AudioControl audio_control = AudioControl(americanfootball_right_size/4, americanfootball_left, americanfootball_right);
-
+//static void audio_timer_interrupt_handler(void*);
+//
+//static AudioControl audio_control = AudioControl(americanfootball_right_size/4, americanfootball_left, americanfootball_right);
+//
 void audio_timer_interrupt_handler(void *CallBackRef){
-	XScuTimer* myTimer_LOCAL = (XScuTimer *) CallBackRef;
-	if (audio_control.isSongPlaying()){
-		uint64_t i = audio_control.getIndex();
-		uint32_t vol = audio_control.getVolume();
-		const uint8_t* left_channel = audio_control.getCurrentSongLeftChannel();
-		const uint8_t* right_channel = audio_control.getCurrentSongRightChannel();
-
-		uint32_t left = left_channel[i * 4]  << 24 | (left_channel[(i * 4) + 1] << 16) | (left_channel[(i * 4) + 2] << 8) | (left_channel[(i * 4) + 3]);
-		uint32_t right = right_channel[i * 4]  << 24 | (right_channel[(i * 4) + 1] << 16) | (right_channel[(i * 4) + 2] << 8) | (right_channel[(i * 4) + 3]);
-
-		left = left * vol;
-		right = right * vol;
-
-		int* right_loc = (int*) RIGHT_LOC;
-		int* left_loc = (int*) LEFT_LOC;
-		int* signal = (int*) SIGNAL;
-		*right_loc = right;
-		*left_loc = left;
-		*signal = 1;
-
-		audio_control.incrementIndex();
-	}
-
-	XScuTimer_ClearInterruptStatus(myTimer_LOCAL);
+	xil_printf("hi");
 }
 
 void Timer_InterruptHandler(XTmrCtr *data, u8 TmrCtrNumber)
@@ -118,28 +92,6 @@ int ScuGicInterrupt_Init(u16 DeviceId, XTmrCtr *TimerInstancePtr)
 
 int main()
 {
-	//Configure the IIC data structure
-	IicConfig(XPAR_XIICPS_0_DEVICE_ID);
-
-	//Configure the Audio Codec's PLL
-	AudioPllConfig();
-	AudioConfigureJacks();
-
-	COMM_VAL = 0;
-//	//Disable cache on OCM
-//	// S=b1 TEX=b100 AP=b11, Domain=b1111, C=b0, B=b0
-//	Xil_SetTlbAttributes(0xFFFF0000, 0x14de2);
-//
-//	xil_printf("ARM0: writing start address for ARM1\n\r");
-//	Xil_Out32(ARM1_STARTADR, ARM1_BASEADDR);
-//	dmb(); //waits until write has finished
-//
-//	//Wake up core 1
-//	sev();
-//	xil_printf("Woke up ARM Core 1\r\n");
-
-	// Declare two structs.  One for the Timer instance, and
-	// the other for the timer's config information
 	int Status;
 
 	XScuTimer my_Timer;
@@ -178,7 +130,7 @@ int main()
 
 	Xil_ExceptionEnable();
 
-	XScuTimer_LoadTimer(&my_Timer, SOUND_SAMPLING_PERIOD);
+	XScuTimer_LoadTimer(&my_Timer, 200000000);
 
 	// Enable Auto reload mode on the timer.  When it expires, it re-loads
 	// the original value automatically.  This means that the timing interval
@@ -188,41 +140,11 @@ int main()
 	// Start the SCU timer running (it counts down)
 	XScuTimer_Start(&my_Timer);
 
-	//--------------------Chris's timer stuff ^-------------------------------------------------
-
-	//XTmrCtr TimerInstancePtr;
-	//int xStatus;
-	//-----------Setup Timer Interrupt---------------------------------------
-
-//	xStatus = XTmrCtr_Initialize(&TimerInstancePtr,XPAR_AXI_TIMER_0_DEVICE_ID);
-//
-//	XTmrCtr_SetHandler(&TimerInstancePtr,
-//	(XTmrCtr_Handler)Timer_InterruptHandler,
-//	&TimerInstancePtr);
-//
-//	//Reset Values
-//	XTmrCtr_SetResetValue(&TimerInstancePtr,
-//	0, //Change with generic value
-//	//0xFFF0BDC0);
-//	//0x23C34600);
-//	0xDC3CB9FF);
-//	//Interrupt Mode and Auto reload
-//	XTmrCtr_SetOptions(&TimerInstancePtr,
-//	XPAR_AXI_TIMER_0_DEVICE_ID,
-//	(XTC_INT_MODE_OPTION | XTC_AUTO_RELOAD_OPTION ));
-//
-//	xStatus=ScuGicInterrupt_Init(XPAR_PS7_SCUGIC_0_DEVICE_ID,&TimerInstancePtr);
-//
-//	/*Enable the interrupt for the device and then cause (simulate) an interrupt so the handlers will be called*/
-//	XScuGic_Enable(&InterruptController, 61);
-//	XScuGic_SetPriorityTriggerType(&InterruptController, 61, 0xa0, 3);
 	int * vga_pointer = (int *)0x00900000;
 
 	Xil_SetTlbAttributes(0xFFFF0000,0x14de2);
 
-	AudioControl* audio_controller = &audio_control;
-
-	Game game(vga_pointer, audio_controller);
+	Game game(vga_pointer);
 	/* Display interactive menu interface via terminal */
 
 	game.main_menu();

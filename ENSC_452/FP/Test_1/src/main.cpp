@@ -7,20 +7,36 @@
 #include <xil_printf.h>
 #include <xparameters.h>
 #include "xgpio.h"
+#include "xtmrctr.h"
 #include "xuartps.h"
 #include "stdlib.h"
 #include "xscutimer.h"
 #include "xscugic.h"
 #include "xil_mmu.h"
+#include "xil_cache.h"
 #include "audio.h"
+#include "AudioControl.h"
+#include "AudioProtocol.h"
 
 #define sev() __asm("sev")
 #define ARM1_STARTADR 0xFFFFFFF0
 #define ARM1_BASEADDR 0x10080000
-#define SIGNAL 0x00C00000
-#define LEFT_LOC 0x00C00004
-#define RIGHT_LOC 0x00C00008
 #define COMM_VAL (*(volatile unsigned long *)(0xFFFF0000))
+
+volatile bool TIMER_INTR_FLG;
+XScuGic InterruptController; /* Instance of the Interrupt Controller */
+static XScuGic_Config *GicConfig;/* The configuration parameters of thecontroller */
+
+//Music Assets
+extern const uint8_t americanfootball_left[];
+extern const int americanfootball_left_size;
+extern const uint8_t americanfootball_right[];
+extern const int americanfootball_right_size;
+
+extern const uint8_t something_left[];
+extern const int something_left_size;
+extern const uint8_t something_right[];
+extern const int something_right_size;
 
 
 /* ---------------------------------------------------------------------------- *
@@ -30,8 +46,87 @@
  * peripherals, before calling the interactive menu system.
  * ---------------------------------------------------------------------------- */
 
+static void audio_timer_interrupt_handler(void*);
+
+static AudioControl audio_control = AudioControl(something_right_size/4, something_left, something_right);
+
+void audio_timer_interrupt_handler(void *CallBackRef){
+	XScuTimer* myTimer_LOCAL = (XScuTimer *) CallBackRef;
+	if (audio_control.isSongPlaying()){
+		uint64_t i = audio_control.getIndex();
+		uint32_t vol = audio_control.getVolume();
+		const uint8_t* left_channel = audio_control.getCurrentSongLeftChannel();
+		const uint8_t* right_channel = audio_control.getCurrentSongRightChannel();
+		uint32_t left = left_channel[i * 4]  << 24 | (left_channel[(i * 4) + 1] << 16) | (left_channel[(i * 4) + 2] << 8) | (left_channel[(i * 4) + 3]);
+		uint32_t right = right_channel[i * 4]  << 24 | (right_channel[(i * 4) + 1] << 16) | (right_channel[(i * 4) + 2] << 8) | (right_channel[(i * 4) + 3]);
+
+		left = left * vol;
+		right = right * vol;
+
+		Xil_Out32(I2S_DATA_TX_L_REG, left);
+		Xil_Out32(I2S_DATA_TX_R_REG, right);
+
+		audio_control.incrementIndex();
+	}
+
+	XScuTimer_ClearInterruptStatus(myTimer_LOCAL);
+}
+
+void Timer_InterruptHandler(XTmrCtr *data, u8 TmrCtrNumber)
+{
+	XTmrCtr_Stop(data,TmrCtrNumber);
+	XTmrCtr_Reset(data,TmrCtrNumber);
+	//Update Stuff
+	TIMER_INTR_FLG = true;
+}
+
+int SetUpInterruptSystem(XScuGic *XScuGicInstancePtr){
+	Xil_ExceptionRegisterHandler(XIL_EXCEPTION_ID_INT,
+	(Xil_ExceptionHandler) XScuGic_InterruptHandler,
+	XScuGicInstancePtr);
+	Xil_ExceptionEnable();
+	return XST_SUCCESS;
+}
+
+/*Setup all interrupts of the system*/
+int ScuGicInterrupt_Init(u16 DeviceId, XTmrCtr *TimerInstancePtr)
+{
+	int Status;
+	GicConfig = XScuGic_LookupConfig(DeviceId);
+	if (NULL == GicConfig) {
+		return XST_FAILURE;
+	}
+	Status = XScuGic_CfgInitialize(&InterruptController, GicConfig,
+	GicConfig->CpuBaseAddress);
+	if (Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+	Status = SetUpInterruptSystem(&InterruptController);
+	if (Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+	/*Connect a device driver handler that will be called when an interrupt for the device occurs, the device driver handler performs the specific interrupt processing for the device*/
+	Status = XScuGic_Connect(&InterruptController,
+	61,
+	(Xil_ExceptionHandler)XTmrCtr_InterruptHandler,
+	(void *)TimerInstancePtr);
+	if (Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+
+	return XST_SUCCESS;
+}
+
 int main(void)
 {
+	//Configure the IIC data structure
+	int Status;
+	IicConfig(XPAR_XIICPS_0_DEVICE_ID);
+
+	//Configure the Audio Codec's PLL
+	AudioPllConfig();
+	AudioConfigureJacks();
+
 	xil_printf("Entering Main\r\n");
 	//Configure the IIC data structure
 
@@ -47,18 +142,85 @@ int main(void)
 	//Wake up core 1
 	sev();
 
-	int* signal_ptr = (int*) SIGNAL;
-	int* right_ptr = (int*) RIGHT_LOC;
-	int* left_ptr = (int*) LEFT_LOC;
+	XScuTimer my_Timer;
+	XScuTimer_Config *Timer_Config;
+
+	// Declare two structs.  One for the General Interrupt
+	// Controller (GIC) instance, and the other for config information
+	XScuGic my_Gic;
+	XScuGic_Config *Gic_Config;
+
+	Gic_Config = XScuGic_LookupConfig(XPAR_PS7_SCUGIC_0_DEVICE_ID);
+
+	// Initialise the GIC using the config information
+	Status = XScuGic_CfgInitialize(&my_Gic, Gic_Config, Gic_Config->CpuBaseAddress);
+
+	// Look up the the config information for the timer
+	Timer_Config = XScuTimer_LookupConfig(XPAR_PS7_SCUTIMER_0_DEVICE_ID);
+
+	// Initialise the timer using the config information
+	Status = XScuTimer_CfgInitialize(&my_Timer, Timer_Config, Timer_Config->BaseAddr);
+
+	Xil_ExceptionInit();
+
+	Xil_ExceptionRegisterHandler(XIL_EXCEPTION_ID_IRQ_INT, (Xil_ExceptionHandler)XScuGic_InterruptHandler, &my_Gic);
+
+	// Assign (connect) our interrupt handler for our Timer
+	Status = XScuGic_Connect(&my_Gic, XPAR_SCUTIMER_INTR, (Xil_ExceptionHandler)audio_timer_interrupt_handler, (void *)&my_Timer);
+
+	// Enable the interrupt *input* on the GIC for the timer's interrupt
+	XScuGic_Enable(&my_Gic, XPAR_SCUTIMER_INTR);
+
+	//XScuGic_SetPriorityTriggerType(&my_Gic, XPAR_SCUTIMER_INTR, 0x08, 3);
+
+	// Enable the interrupt *output* in the timer.
+	XScuTimer_EnableInterrupt(&my_Timer);
+
+	Xil_ExceptionEnable();
+
+	XScuTimer_LoadTimer(&my_Timer, SOUND_SAMPLING_PERIOD);
+
+	// Enable Auto reload mode on the timer.  When it expires, it re-loads
+	// the original value automatically.  This means that the timing interval
+	// is never skewed by the time taken for the interrupt handler to run
+	XScuTimer_EnableAutoReload(&my_Timer);
+
+	// Start the SCU timer running (it counts down)
+	XScuTimer_Start(&my_Timer);
+
+	AudioControl* ac_ptr = &audio_control;
+
+	volatile int* signal_ptr = (volatile int*) SIGNAL_BASE;
+    *signal_ptr = 0;
 
 	/* Display interactive menu interface via terminal */
 	while(1){
 		if (*signal_ptr){
-			Xil_Out32(I2S_DATA_TX_L_REG, *left_ptr);
-			Xil_Out32(I2S_DATA_TX_R_REG, *right_ptr);
-			*signal_ptr = 0;
-			*right_ptr = 0;
-			*left_ptr = 0;
+			if(*signal_ptr & START_SONG){
+				ac_ptr->startSong();
+			}
+			else if(*signal_ptr & STOP_SONG){
+				ac_ptr->stopSong();
+			}
+			else if(*signal_ptr & INCREMENT_VOLUME){
+				ac_ptr->incrementVolume();
+			}
+			else if(*signal_ptr & DECREMENT_VOLUME){
+				ac_ptr->decreaseVolume();
+			}
+			else if(*signal_ptr & RESTART_SONG){
+				ac_ptr->restartSong();
+			}
+			else if(*signal_ptr & CHANGE_TO_SONG_1){
+				ac_ptr->changeSong(americanfootball_left, americanfootball_right, americanfootball_right_size/4);
+			}
+			else if(*signal_ptr & CHANGE_TO_SONG_2){
+				ac_ptr->changeSong(something_left, something_right, something_right_size/4);
+			}
+			else if(*signal_ptr & CHANGE_TO_SONG_3){
+				ac_ptr->changeSong(something_left, something_right, something_right_size/4);
+			}
+			*signal_ptr = 0; // Clear the signal.
 		}
 	}
 	// Disconnect the interrupt for the Timer.

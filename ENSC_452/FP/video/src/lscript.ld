@@ -37,6 +37,7 @@ ENTRY(_vector_table)
 
 SECTIONS
 {
+
 .text : {
    KEEP (*(.vectors))
    *(.boot)

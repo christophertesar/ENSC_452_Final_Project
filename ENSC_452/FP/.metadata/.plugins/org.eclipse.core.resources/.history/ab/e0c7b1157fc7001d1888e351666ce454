@@ -1,0 +1,8 @@
+    .global something_right
+    .global something_right_size
+    .section .rodata
+something_right:
+    .incbin "C:\\Users\\Christopher\\Desktop\\FP\\ENSC_452\\FP\\video\\Test_1\\something_right.data"
+1:
+something_right_size:
+    .int 1b - something_right

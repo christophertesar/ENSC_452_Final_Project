@@ -1,10 +1,10 @@
-20:52:12 **** Incremental Build of configuration Debug for project Test_1_system ****
+16:01:29 **** Build of configuration Debug for project Test_1_system ****
 make all 
 Generating bif file for the system project
-generate_system_bif.bat 55859 C:/Users/Christopher/Desktop/FP/ENSC_452/FP/Test_Project_2/export/Test_Project_2/Test_Project_2.xpfm standalone_domain,standalone_ps7_cortexa9_1 C:/Users/Christopher/Desktop/FP/ENSC_452/FP/Test_1_system/Debug/system.bif
+generate_system_bif.bat 60862 C:/Users/Christopher/Desktop/FP/ENSC_452/FP/Test_Project_2/export/Test_Project_2/Test_Project_2.xpfm standalone_domain,standalone_ps7_cortexa9_1 C:/Users/Christopher/Desktop/FP/ENSC_452/FP/Test_1_system/Debug/system.bif
 sdcard_gen --xpfm C:/Users/Christopher/Desktop/FP/ENSC_452/FP/Test_Project_2/export/Test_Project_2/Test_Project_2.xpfm --sys_config Test_Project_2 --bif C:/Users/Christopher/Desktop/FP/ENSC_452/FP/Test_1_system/Debug/system.bif --bitstream C:/Users/Christopher/Desktop/FP/ENSC_452/FP/Test_1/_ide/bitstream/FP_Hardware.bit --elf C:/Users/Christopher/Desktop/FP/ENSC_452/FP/Test_1/Debug/Test_1.elf,ps7_cortexa9_0 --elf C:/Users/Christopher/Desktop/FP/ENSC_452/FP/video/Debug/video.elf,ps7_cortexa9_1
 creating BOOT.BIN using C:/Users/Christopher/Desktop/FP/ENSC_452/FP/Test_1/_ide/bitstream/FP_Hardware.bit
 Running C:/Xilinx/Vitis/2020.2/bin/bootgen  -image C:/Users/Christopher/Desktop/FP/ENSC_452/FP/Test_1_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN
 
-20:52:20 Build Finished (took 7s.977ms)
+16:01:37 Build Finished (took 7s.749ms)
 

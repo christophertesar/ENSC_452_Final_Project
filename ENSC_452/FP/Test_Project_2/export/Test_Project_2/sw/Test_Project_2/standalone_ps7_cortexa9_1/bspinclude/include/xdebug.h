@@ -14,6 +14,8 @@ extern "C" {
 
 int printf(const char *format, ...);
 
+#define DEBUG
+
 #define XDBG_DEBUG_ERROR             0x00000001U    /* error  condition messages */
 #define XDBG_DEBUG_GENERAL           0x00000002U    /* general debug  messages */
 #define XDBG_DEBUG_ALL               0xFFFFFFFFU    /* all debugging data */
@@ -35,7 +37,7 @@ int printf(const char *format, ...);
 #define XDBG_DEBUG_TEMAC_ADPT_ALL    0x0000080FU    /* all temac adapter debug messages */
 
 
-#define xdbg_current_types (XDBG_DEBUG_GENERAL | XDBG_DEBUG_ERROR | XDBG_DEBUG_TEMAC_REG | XDBG_DEBUG_FIFO_RX | XDBG_DEBUG_FIFO_TX | XDBG_DEBUG_FIFO_REG)
+#define xdbg_current_types (XDBG_DEBUG_ALL)
 
 #define xdbg_stmnt(x)  x
 

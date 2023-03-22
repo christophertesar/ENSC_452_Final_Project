@@ -1,6 +1,6 @@
 Nothing to build in platform 'Test_Project_2'
 
-22:12:50 **** Incremental Build of configuration Debug for project video ****
+20:40:20 **** Incremental Build of configuration Debug for project video ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
@@ -10,10 +10,15 @@ make --no-print-directory main-build
 'Invoking: ARM v7 g++ compiler'
 arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/Christopher/Desktop/FP/ENSC_452/FP/Test_Project_2/export/Test_Project_2/sw/Test_Project_2/standalone_ps7_cortexa9_1/bspinclude/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
 ../src/main.cc: In function 'int main()':
-../src/main.cc:143:6: warning: variable 'Status' set but not used [-Wunused-but-set-variable]
-  143 |  int Status;
+../src/main.cc:95:6: warning: variable 'Status' set but not used [-Wunused-but-set-variable]
+   95 |  int Status;
       |      ^~~~~~
 'Finished building: ../src/main.cc'
+' '
+'Building file: ../src/main_menu.cpp'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main_menu.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/Christopher/Desktop/FP/ENSC_452/FP/Test_Project_2/export/Test_Project_2/sw/Test_Project_2/standalone_ps7_cortexa9_1/bspinclude/include -MMD -MP -MF"src/main_menu.d" -MT"src/main_menu.o" -o "src/main_menu.o" "../src/main_menu.cpp"
+'Finished building: ../src/main_menu.cpp'
 ' '
 'Building target: video.elf'
 'Invoking: ARM v7 g++ linker'
@@ -23,6 +28,6 @@ arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=non
 'Invoking: ARM v7 Print Size'
 arm-none-eabi-size video.elf  |tee "video.elf.size"
    text	   data	    bss	    dec	    hex	filename
-84858911	   3652	2241096	87103659	53118ab	video.elf
+84858223	   3648	2241068	87102939	53115db	video.elf
 'Finished building: video.elf.size'
 ' '

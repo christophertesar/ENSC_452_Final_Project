@@ -1,4 +1,4 @@
-21:27:56 **** Incremental Build of configuration Debug for project Test_1 ****
+19:20:58 **** Incremental Build of configuration Debug for project Test_1 ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
@@ -7,19 +7,23 @@ make --no-print-directory main-build
 'Building file: ../src/main.cpp'
 'Invoking: ARM v7 g++ compiler'
 arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/Christopher/Desktop/FP/ENSC_452/FP/Test_Project_2/export/Test_Project_2/sw/Test_Project_2/standalone_domain/bspinclude/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function 'int main()':
+../src/main.cpp:123:6: warning: variable 'Status' set but not used [-Wunused-but-set-variable]
+  123 |  int Status;
+      |      ^~~~~~
 'Finished building: ../src/main.cpp'
 ' '
 'Building target: Test_1.elf'
 'Invoking: ARM v7 g++ linker'
-arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/Users/Christopher/Desktop/FP/ENSC_452/FP/Test_Project_2/export/Test_Project_2/sw/Test_Project_2/standalone_domain/bsplib/lib -o "Test_1.elf"  ./src/audio.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/Users/Christopher/Desktop/FP/ENSC_452/FP/Test_Project_2/export/Test_Project_2/sw/Test_Project_2/standalone_domain/bsplib/lib -o "Test_1.elf"  ./src/AudioControl.o ./src/americanfootball_left.o ./src/americanfootball_right.o ./src/audio.o ./src/main.o ./src/something_left.o ./src/something_right.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
 'Finished building target: Test_1.elf'
 ' '
 'Invoking: ARM v7 Print Size'
 arm-none-eabi-size Test_1.elf  |tee "Test_1.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  41168	   2200	  22728	  66096	  10230	Test_1.elf
+45765908	   2996	  22764	45791668	2bab9b4	Test_1.elf
 'Finished building: Test_1.elf.size'
 ' '
 
-21:27:58 Build Finished (took 1s.564ms)
+19:21:00 Build Finished (took 2s.301ms)
 

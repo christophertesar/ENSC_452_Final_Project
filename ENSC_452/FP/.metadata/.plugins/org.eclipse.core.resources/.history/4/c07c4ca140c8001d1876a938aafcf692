@@ -1,0 +1,48 @@
+//Empty C++ Application
+#include <stdio.h>
+#include <string>
+#include "xiicps.h"
+#include <xil_printf.h>
+#include "xil_types.h"
+#include "xtmrctr.h"
+#include "xparameters.h"
+#include "xgpio.h"
+#include "xuartps.h"
+#include "stdlib.h"
+#include "audio.h"
+#include "xscutimer.h"
+
+#include "xil_cache.h"
+#include "xil_io.h"
+#include "xil_exception.h"
+#include "xscugic.h"
+#include "xil_mmu.h"
+#include "sleep.h"
+#include <cstdlib>
+
+#include "main_menu.h"
+#include "AudioControl.h"
+#include "AudioProtocol.h"
+
+#define UART_BASEADDR XPAR_PS7_UART_1_BASEADDR
+#define COMM_VAL (*(volatile unsigned long *)(0xFFFF0000))
+#define sev() __asm("sev")
+#define ARM1_STARTADR 0xFFFFFFF0
+#define ARM1_BASEADDR 0x10080000
+
+int NUM_BYTES_BUFFER = 5242880;
+
+extern uint8_t nice_menu[];
+extern int nice_menu_size;
+
+int main()
+{
+	int * vga_pointer = (int *)0x00900000;
+
+	Game game(vga_pointer);
+	/* Display interactive menu interface via terminal */
+
+	game.main_menu();
+
+	return 0;
+}
