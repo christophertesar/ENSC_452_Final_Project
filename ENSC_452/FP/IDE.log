@@ -19063,3 +19063,231 @@ con
 
 20:46:04 INFO  : Launch script is exported to file 'C:\Users\Christopher\Desktop\FP\ENSC_452\FP\Test_1_system\_ide\scripts\systemdebugger_test_1_system_standalone.tcl'
 22:57:21 INFO  : Disconnected from the channel tcfchan#23.
+20:19:30 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\Christopher\Desktop\FP\ENSC_452\FP\temp_xsdb_launch_script.tcl
+20:19:33 INFO  : XSCT server has started successfully.
+20:19:33 INFO  : plnx-install-location is set to ''
+20:19:33 INFO  : Successfully done setting XSCT server connection channel  
+20:19:33 INFO  : Successfully done setting workspace for the tool. 
+20:19:43 INFO  : Registering command handlers for Vitis TCF services
+20:19:44 INFO  : Platform repository initialization has completed.
+20:19:45 INFO  : Successfully done query RDI_DATADIR 
+21:09:22 INFO  : Checking for BSP changes to sync application flags for project 'video'...
+21:10:18 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:10:26 INFO  : Jtag cable 'Digilent Zed 210248469741' is selected.
+21:10:27 INFO  : 'jtag frequency' command is executed.
+21:10:27 INFO  : Context for 'APU' is selected.
+21:10:27 INFO  : System reset is completed.
+21:10:30 INFO  : 'after 3000' command is executed.
+21:10:30 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469741" && level==0 && jtag_device_ctx=="jsn-Zed-210248469741-03727093-0"}' command is executed.
+21:10:32 INFO  : Device configured successfully with "C:/Users/Christopher/Desktop/FP/ENSC_452/FP/Test_1/_ide/bitstream/FP_Hardware.bit"
+21:10:32 INFO  : Context for 'APU' is selected.
+21:10:32 INFO  : Hardware design and registers information is loaded from 'C:/Users/Christopher/Desktop/FP/ENSC_452/FP/Test_Project_2/export/Test_Project_2/hw/FP_Hardware.xsa'.
+21:10:32 INFO  : 'configparams force-mem-access 1' command is executed.
+21:10:32 INFO  : Context for 'APU' is selected.
+21:10:32 INFO  : Sourcing of 'C:/Users/Christopher/Desktop/FP/ENSC_452/FP/Test_1/_ide/psinit/ps7_init.tcl' is done.
+21:10:33 INFO  : 'ps7_init' command is executed.
+21:10:33 INFO  : 'ps7_post_config' command is executed.
+21:10:33 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:12:20 INFO  : The application 'C:/Users/Christopher/Desktop/FP/ENSC_452/FP/Test_1/Debug/Test_1.elf' is downloaded to processor 'ps7_cortexa9_0'.
+21:12:20 INFO  : Context for processor 'ps7_cortexa9_1' is selected.
+21:15:37 INFO  : The application 'C:/Users/Christopher/Desktop/FP/ENSC_452/FP/video/Debug/video.elf' is downloaded to processor 'ps7_cortexa9_1'.
+21:15:37 INFO  : 'configparams force-mem-access 0' command is executed.
+21:15:37 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469741" && level==0 && jtag_device_ctx=="jsn-Zed-210248469741-03727093-0"}
+fpga -file C:/Users/Christopher/Desktop/FP/ENSC_452/FP/Test_1/_ide/bitstream/FP_Hardware.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/Christopher/Desktop/FP/ENSC_452/FP/Test_Project_2/export/Test_Project_2/hw/FP_Hardware.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/Christopher/Desktop/FP/ENSC_452/FP/Test_1/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/Christopher/Desktop/FP/ENSC_452/FP/Test_1/Debug/Test_1.elf
+targets -set -nocase -filter {name =~ "*A9*#1"}
+dow C:/Users/Christopher/Desktop/FP/ENSC_452/FP/video/Debug/video.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:15:37 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:15:37 INFO  : 'con' command is executed.
+21:15:37 INFO  : Context for processor 'ps7_cortexa9_1' is selected.
+21:15:37 INFO  : 'con' command is executed.
+21:15:37 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+targets -set -nocase -filter {name =~ "*A9*#1"}
+con
+----------------End of Script----------------
+
+21:15:37 INFO  : Launch script is exported to file 'C:\Users\Christopher\Desktop\FP\ENSC_452\FP\Test_1_system\_ide\scripts\systemdebugger_test_1_system_standalone.tcl'
+21:33:40 INFO  : Disconnected from the channel tcfchan#1.
+21:33:46 INFO  : Checking for BSP changes to sync application flags for project 'video'...
+21:34:49 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:34:50 INFO  : Jtag cable 'Digilent Zed 210248469741' is selected.
+21:34:50 INFO  : 'jtag frequency' command is executed.
+21:34:50 INFO  : Context for 'APU' is selected.
+21:34:50 INFO  : System reset is completed.
+21:34:53 INFO  : 'after 3000' command is executed.
+21:34:53 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469741" && level==0 && jtag_device_ctx=="jsn-Zed-210248469741-03727093-0"}' command is executed.
+21:34:55 INFO  : Device configured successfully with "C:/Users/Christopher/Desktop/FP/ENSC_452/FP/Test_1/_ide/bitstream/FP_Hardware.bit"
+21:34:55 INFO  : Context for 'APU' is selected.
+21:34:55 INFO  : Hardware design and registers information is loaded from 'C:/Users/Christopher/Desktop/FP/ENSC_452/FP/Test_Project_2/export/Test_Project_2/hw/FP_Hardware.xsa'.
+21:34:55 INFO  : 'configparams force-mem-access 1' command is executed.
+21:34:55 INFO  : Context for 'APU' is selected.
+21:34:55 INFO  : Sourcing of 'C:/Users/Christopher/Desktop/FP/ENSC_452/FP/Test_1/_ide/psinit/ps7_init.tcl' is done.
+21:34:56 INFO  : 'ps7_init' command is executed.
+21:34:56 INFO  : 'ps7_post_config' command is executed.
+21:34:56 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:36:42 INFO  : The application 'C:/Users/Christopher/Desktop/FP/ENSC_452/FP/Test_1/Debug/Test_1.elf' is downloaded to processor 'ps7_cortexa9_0'.
+21:36:42 INFO  : Context for processor 'ps7_cortexa9_1' is selected.
+21:40:04 INFO  : The application 'C:/Users/Christopher/Desktop/FP/ENSC_452/FP/video/Debug/video.elf' is downloaded to processor 'ps7_cortexa9_1'.
+21:40:04 INFO  : 'configparams force-mem-access 0' command is executed.
+21:40:04 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469741" && level==0 && jtag_device_ctx=="jsn-Zed-210248469741-03727093-0"}
+fpga -file C:/Users/Christopher/Desktop/FP/ENSC_452/FP/Test_1/_ide/bitstream/FP_Hardware.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/Christopher/Desktop/FP/ENSC_452/FP/Test_Project_2/export/Test_Project_2/hw/FP_Hardware.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/Christopher/Desktop/FP/ENSC_452/FP/Test_1/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/Christopher/Desktop/FP/ENSC_452/FP/Test_1/Debug/Test_1.elf
+targets -set -nocase -filter {name =~ "*A9*#1"}
+dow C:/Users/Christopher/Desktop/FP/ENSC_452/FP/video/Debug/video.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:40:04 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:40:04 INFO  : 'con' command is executed.
+21:40:04 INFO  : Context for processor 'ps7_cortexa9_1' is selected.
+21:40:04 INFO  : 'con' command is executed.
+21:40:04 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+targets -set -nocase -filter {name =~ "*A9*#1"}
+con
+----------------End of Script----------------
+
+21:40:04 INFO  : Launch script is exported to file 'C:\Users\Christopher\Desktop\FP\ENSC_452\FP\Test_1_system\_ide\scripts\systemdebugger_test_1_system_standalone.tcl'
+21:57:25 INFO  : Disconnected from the channel tcfchan#2.
+21:57:26 INFO  : Checking for BSP changes to sync application flags for project 'video'...
+21:57:47 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:57:48 INFO  : Jtag cable 'Digilent Zed 210248469741' is selected.
+21:57:48 INFO  : 'jtag frequency' command is executed.
+21:57:48 INFO  : Context for 'APU' is selected.
+21:57:48 INFO  : System reset is completed.
+21:57:51 INFO  : 'after 3000' command is executed.
+21:57:51 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469741" && level==0 && jtag_device_ctx=="jsn-Zed-210248469741-03727093-0"}' command is executed.
+21:57:53 INFO  : Device configured successfully with "C:/Users/Christopher/Desktop/FP/ENSC_452/FP/Test_1/_ide/bitstream/FP_Hardware.bit"
+21:57:53 INFO  : Context for 'APU' is selected.
+21:57:53 INFO  : Hardware design and registers information is loaded from 'C:/Users/Christopher/Desktop/FP/ENSC_452/FP/Test_Project_2/export/Test_Project_2/hw/FP_Hardware.xsa'.
+21:57:53 INFO  : 'configparams force-mem-access 1' command is executed.
+21:57:53 INFO  : Context for 'APU' is selected.
+21:57:53 INFO  : Sourcing of 'C:/Users/Christopher/Desktop/FP/ENSC_452/FP/Test_1/_ide/psinit/ps7_init.tcl' is done.
+21:57:54 INFO  : 'ps7_init' command is executed.
+21:57:54 INFO  : 'ps7_post_config' command is executed.
+21:57:54 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:59:43 INFO  : The application 'C:/Users/Christopher/Desktop/FP/ENSC_452/FP/Test_1/Debug/Test_1.elf' is downloaded to processor 'ps7_cortexa9_0'.
+21:59:43 INFO  : Context for processor 'ps7_cortexa9_1' is selected.
+22:03:07 INFO  : The application 'C:/Users/Christopher/Desktop/FP/ENSC_452/FP/video/Debug/video.elf' is downloaded to processor 'ps7_cortexa9_1'.
+22:03:07 INFO  : 'configparams force-mem-access 0' command is executed.
+22:03:07 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469741" && level==0 && jtag_device_ctx=="jsn-Zed-210248469741-03727093-0"}
+fpga -file C:/Users/Christopher/Desktop/FP/ENSC_452/FP/Test_1/_ide/bitstream/FP_Hardware.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/Christopher/Desktop/FP/ENSC_452/FP/Test_Project_2/export/Test_Project_2/hw/FP_Hardware.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/Christopher/Desktop/FP/ENSC_452/FP/Test_1/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/Christopher/Desktop/FP/ENSC_452/FP/Test_1/Debug/Test_1.elf
+targets -set -nocase -filter {name =~ "*A9*#1"}
+dow C:/Users/Christopher/Desktop/FP/ENSC_452/FP/video/Debug/video.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+22:03:07 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:03:07 INFO  : 'con' command is executed.
+22:03:07 INFO  : Context for processor 'ps7_cortexa9_1' is selected.
+22:03:07 INFO  : 'con' command is executed.
+22:03:07 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+targets -set -nocase -filter {name =~ "*A9*#1"}
+con
+----------------End of Script----------------
+
+22:03:07 INFO  : Launch script is exported to file 'C:\Users\Christopher\Desktop\FP\ENSC_452\FP\Test_1_system\_ide\scripts\systemdebugger_test_1_system_standalone.tcl'
+22:29:05 INFO  : Disconnected from the channel tcfchan#3.
+22:29:07 INFO  : Checking for BSP changes to sync application flags for project 'video'...
+22:29:18 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:29:18 INFO  : Jtag cable 'Digilent Zed 210248469741' is selected.
+22:29:18 INFO  : 'jtag frequency' command is executed.
+22:29:18 INFO  : Context for 'APU' is selected.
+22:29:18 INFO  : System reset is completed.
+22:29:21 INFO  : 'after 3000' command is executed.
+22:29:22 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469741" && level==0 && jtag_device_ctx=="jsn-Zed-210248469741-03727093-0"}' command is executed.
+22:29:24 INFO  : Device configured successfully with "C:/Users/Christopher/Desktop/FP/ENSC_452/FP/Test_1/_ide/bitstream/FP_Hardware.bit"
+22:29:24 INFO  : Context for 'APU' is selected.
+22:29:24 INFO  : Hardware design and registers information is loaded from 'C:/Users/Christopher/Desktop/FP/ENSC_452/FP/Test_Project_2/export/Test_Project_2/hw/FP_Hardware.xsa'.
+22:29:24 INFO  : 'configparams force-mem-access 1' command is executed.
+22:29:24 INFO  : Context for 'APU' is selected.
+22:29:24 INFO  : Sourcing of 'C:/Users/Christopher/Desktop/FP/ENSC_452/FP/Test_1/_ide/psinit/ps7_init.tcl' is done.
+22:29:25 INFO  : 'ps7_init' command is executed.
+22:29:25 INFO  : 'ps7_post_config' command is executed.
+22:29:25 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:31:21 INFO  : The application 'C:/Users/Christopher/Desktop/FP/ENSC_452/FP/Test_1/Debug/Test_1.elf' is downloaded to processor 'ps7_cortexa9_0'.
+22:31:21 INFO  : Context for processor 'ps7_cortexa9_1' is selected.
+22:34:51 INFO  : The application 'C:/Users/Christopher/Desktop/FP/ENSC_452/FP/video/Debug/video.elf' is downloaded to processor 'ps7_cortexa9_1'.
+22:34:51 INFO  : 'configparams force-mem-access 0' command is executed.
+22:34:51 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469741" && level==0 && jtag_device_ctx=="jsn-Zed-210248469741-03727093-0"}
+fpga -file C:/Users/Christopher/Desktop/FP/ENSC_452/FP/Test_1/_ide/bitstream/FP_Hardware.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/Christopher/Desktop/FP/ENSC_452/FP/Test_Project_2/export/Test_Project_2/hw/FP_Hardware.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/Christopher/Desktop/FP/ENSC_452/FP/Test_1/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/Christopher/Desktop/FP/ENSC_452/FP/Test_1/Debug/Test_1.elf
+targets -set -nocase -filter {name =~ "*A9*#1"}
+dow C:/Users/Christopher/Desktop/FP/ENSC_452/FP/video/Debug/video.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+22:34:51 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:34:51 INFO  : 'con' command is executed.
+22:34:51 INFO  : Context for processor 'ps7_cortexa9_1' is selected.
+22:34:51 INFO  : 'con' command is executed.
+22:34:51 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+targets -set -nocase -filter {name =~ "*A9*#1"}
+con
+----------------End of Script----------------
+
+22:34:51 INFO  : Launch script is exported to file 'C:\Users\Christopher\Desktop\FP\ENSC_452\FP\Test_1_system\_ide\scripts\systemdebugger_test_1_system_standalone.tcl'
+22:43:49 INFO  : Disconnected from the channel tcfchan#4.

@@ -1,0 +1,1209 @@
+#include "main_menu.h"
+#include <iostream>
+
+/* ---------------------------------------------------------------------------- *
+ * 									menu()										*
+ * ---------------------------------------------------------------------------- *
+ Method to display the main menu and provide functionality using the main menu.
+ * ---------------------------------------------------------------------------- */
+Game::Game(int* vga_controller){
+	this->vga_controller = vga_controller;
+}
+
+void Game::main_menu(){
+	// display background
+	memcpy(this->vga_controller, gh_menu, gh_menu_size);
+	Xil_DCacheFlush();
+	draw_sprite(this->vga_controller, arrow, LEVEL_SELECT_Y, LEVEL_SELECT_X);
+	Xil_DCacheFlush();
+
+	struct menu_options* cursor = generate_menu_options();
+	while(1){
+		char key = 0;
+		xil_printf("Main Menu displayed.\r\n");
+
+		while(key != ENTER){
+			// If the user does up/down arrow, update the screen. If enter, change the game state.
+			// Wait for user input.
+			key = wait_for_keyboard_input();
+			// Using the user input, obtain what the user wants to do.
+			if (key == 's'){
+				//Generate appropriate screen, move cursor up one
+				cursor = cursor->next;
+				xil_printf("Cursor at: %s\r\n", cursor->option_name);
+			}
+			if (key == 'w'){
+				//Change state
+				cursor = cursor->prev;
+				xil_printf("Cursor at: %s\r\n", cursor->option_name);
+			}
+			if (key == ENTER){ //Enter key is pressed
+				xil_printf("Cursor at: %s\r\n", cursor->option_name);
+			}
+
+			if (strcmp(cursor->option_name, PLAY_MENU_TITLE) == STRING_IS_EQUAL){
+				memcpy(this->vga_controller, gh_menu, gh_menu_size);
+				Xil_DCacheFlush();
+				draw_sprite(this->vga_controller, arrow, LEVEL_SELECT_Y, LEVEL_SELECT_X);
+				Xil_DCacheFlush();
+			}
+
+			if (strcmp(cursor->option_name, SETTINGS_MENU_TITLE) == STRING_IS_EQUAL){
+				memcpy(this->vga_controller, gh_menu, gh_menu_size);
+				Xil_DCacheFlush();
+				draw_sprite(this->vga_controller, arrow, SETTINGS_Y, SETTINGS_X);
+				Xil_DCacheFlush();
+			}
+
+			if (strcmp(cursor->option_name, HISCORE_MENU_TITLE) == STRING_IS_EQUAL){
+				memcpy(this->vga_controller, gh_menu, gh_menu_size);
+				Xil_DCacheFlush();
+				draw_sprite(this->vga_controller, arrow, HIGHSCORES_Y, HIGHSCORES_X);
+				Xil_DCacheFlush();
+			}
+		}
+		// User can change the game state to: settings, start game, high scores.
+		if (strcmp(cursor->option_name, PLAY_MENU_TITLE) == STRING_IS_EQUAL){
+			play_game_menu();
+		}
+		else if (strcmp(cursor->option_name, SETTINGS_MENU_TITLE) == STRING_IS_EQUAL){
+			options();
+		}
+		else if (strcmp(cursor->option_name, HISCORE_MENU_TITLE) == STRING_IS_EQUAL){
+			hiscore();
+		}
+	}
+}
+
+struct menu_options* Game::generate_menu_options(){
+	struct menu_options* play = (struct menu_options*) malloc(sizeof(struct menu_options));
+	struct menu_options* settings = (struct menu_options*) malloc(sizeof(struct menu_options));
+	struct menu_options* hiscore = (struct menu_options*) malloc(sizeof(struct menu_options));
+
+	strcpy(play->option_name, PLAY_MENU_TITLE);
+	strcpy(settings->option_name, SETTINGS_MENU_TITLE);
+	strcpy(hiscore->option_name, HISCORE_MENU_TITLE);
+
+	play->next = settings;
+	settings->next = hiscore;
+	hiscore->next = play;
+
+	play->prev = hiscore;
+	settings->prev = play;
+	hiscore->prev = settings;
+
+	return play;
+}
+
+void Game::delete_menu_options(struct menu_options* menu_option){
+	//Function might be a lil sus
+	for(int i = 0; i < 3; i++){
+		struct menu_options* temp = menu_option->next;
+		free(menu_option);
+		menu_option = temp;
+	}
+	return;
+}
+
+struct menu_options* Game::generate_play_menu_options(){
+	struct menu_options* level_1= (struct menu_options*) malloc(sizeof(struct menu_options));
+	struct menu_options* level_2 = (struct menu_options*) malloc(sizeof(struct menu_options));
+	struct menu_options* level_3 = (struct menu_options*) malloc(sizeof(struct menu_options));
+	struct menu_options* back = (struct menu_options*) malloc(sizeof(struct menu_options));
+
+	strcpy(level_1->option_name, "level_1");
+	strcpy(level_2->option_name, "level_2");
+	strcpy(level_3->option_name, "level_3");
+	strcpy(back->option_name, "back");
+
+	level_1->next = level_2;
+	level_2->next = level_3;
+	level_3->next = back;
+	back->next = level_1;
+
+	level_1->prev = back;
+	level_2->prev = level_1;
+	level_3->prev = level_2;
+	back->prev = level_3;
+
+	return level_1;
+}
+
+struct menu_options* Game::generate_settings_menu_options(){
+	struct menu_options* increase_volume = (struct menu_options*) malloc(sizeof(struct menu_options));
+	struct menu_options* decrease_volume = (struct menu_options*) malloc(sizeof(struct menu_options));
+	struct menu_options* exit = (struct menu_options*) malloc(sizeof(struct menu_options));
+
+	strcpy(increase_volume->option_name, "increase_volume");
+	strcpy(decrease_volume->option_name, "decrease_volume");
+	strcpy(exit->option_name, "exit");
+
+	increase_volume->next = decrease_volume;
+	decrease_volume->next = exit;
+	exit->next = increase_volume;
+
+	increase_volume->prev = exit;
+	decrease_volume->prev = increase_volume;
+	exit->prev = decrease_volume;
+
+	return increase_volume;
+}
+
+
+struct menu_options* Game::generate_pause_menu_options(){
+	struct menu_options* continue_game = (struct menu_options*) malloc(sizeof(struct menu_options));
+	struct menu_options* increase_volume = (struct menu_options*) malloc(sizeof(struct menu_options));
+	struct menu_options* decrease_volume = (struct menu_options*) malloc(sizeof(struct menu_options));
+	struct menu_options* main_menu_option = (struct menu_options*) malloc(sizeof(struct menu_options));
+
+	strcpy(continue_game->option_name, "continue_game");
+	strcpy(increase_volume->option_name, "increase_volume");
+	strcpy(decrease_volume->option_name, "decrease_volume");
+	strcpy(main_menu_option->option_name, "main_menu_option");
+
+	continue_game->next = increase_volume;
+	increase_volume->next = decrease_volume;
+	decrease_volume->next = main_menu_option;
+	main_menu_option->next = continue_game;
+
+	continue_game->prev = main_menu_option;
+	increase_volume->prev = continue_game;
+	decrease_volume->prev = increase_volume;
+	main_menu_option->prev = decrease_volume;
+
+	return continue_game;
+}
+
+void Game::play_game_menu(){
+	// display background
+	memcpy(this->vga_controller, gh_level_select, gh_level_select_size);
+	Xil_DCacheFlush();
+	draw_sprite(this->vga_controller, arrow, LEVEL_1_Y, LEVEL_1_X);
+	Xil_DCacheFlush();
+
+	struct menu_options* cursor = generate_play_menu_options();
+	char key = 0;
+	xil_printf("Play game menu displayed.\r\n");
+	while(key != ENTER){
+		// If the user does up/down arrow, update the screen. If enter, change the game state.
+		// Wait for user input.
+		key = wait_for_keyboard_input();
+		// Using the user input, obtain what the user wants to do.
+		if (key == 'w'){
+			//Generate appropriate screen, move cursor up one
+			cursor = cursor->prev;
+			xil_printf("Cursor at: %s\r\n", cursor->option_name);
+		}
+		if (key == 's'){
+			//Change state
+			cursor = cursor->next;
+			xil_printf("Cursor at: %s\r\n", cursor->option_name);
+		}
+		if (key == ENTER){ //Enter key is pressed
+			xil_printf("Cursor at: %s\r\n", cursor->option_name);
+		}
+
+		if (strcmp(cursor->option_name, "level_1") == STRING_IS_EQUAL){
+			memcpy(this->vga_controller, gh_level_select, gh_level_select_size);
+			Xil_DCacheFlush();
+			draw_sprite(this->vga_controller, arrow, LEVEL_1_Y, LEVEL_1_X);
+			Xil_DCacheFlush();
+		}
+
+		if (strcmp(cursor->option_name, "level_2") == STRING_IS_EQUAL){
+			memcpy(this->vga_controller, gh_level_select, gh_level_select_size);
+			Xil_DCacheFlush();
+			draw_sprite(this->vga_controller, arrow, LEVEL_2_Y, LEVEL_2_X);
+			Xil_DCacheFlush();
+		}
+
+		if (strcmp(cursor->option_name, "level_3") == STRING_IS_EQUAL){
+			memcpy(this->vga_controller, gh_level_select, gh_level_select_size);
+			Xil_DCacheFlush();
+			draw_sprite(this->vga_controller, arrow, LEVEL_3_Y, LEVEL_3_X);
+			Xil_DCacheFlush();
+		}
+
+		if (strcmp(cursor->option_name, "back") == STRING_IS_EQUAL){
+			memcpy(this->vga_controller, gh_level_select, gh_level_select_size);
+			Xil_DCacheFlush();
+			draw_sprite(this->vga_controller, arrow, BACK_Y, BACK_X);
+			Xil_DCacheFlush();
+		}
+	}
+
+	if (strcmp(cursor->option_name, "back") == STRING_IS_EQUAL){
+		main_menu();
+	}
+	else{
+		play_game(cursor->option_name);
+	}
+}
+
+void Game::hiscore(){
+	memcpy(this->vga_controller, gh_highscores, gh_highscores_size);
+	Xil_DCacheFlush();
+
+	xil_printf("Hi-Score menu displayed. Press Enter to leave.\r\n");
+
+	char key = 0;
+	while(key != ENTER){
+		// If the user does up/down arrow, update the screen. If enter, change the game state.
+		// Wait for user input.
+		key = wait_for_keyboard_input();
+	}
+	main_menu();
+}
+
+void Game::options(){
+	memcpy(this->vga_controller, gh_sound_settings, gh_sound_settings_size);
+	Xil_DCacheFlush();
+	draw_sprite(this->vga_controller, arrow, INCREASE_VOLUME_Y, INCREASE_VOLUME_X);
+	Xil_DCacheFlush();
+
+	xil_printf("Options menu displayed.\r\n");
+	struct menu_options* cursor = generate_settings_menu_options();
+	while(1){
+		char key = 0;
+		while(key != ENTER){
+			// If the user does up/down arrow, update the screen. If enter, change the game state.
+			// Wait for user input.
+			key = wait_for_keyboard_input();
+			// Using the user input, obtain what the user wants to do.
+			if (key == 'w'){
+				//Generate appropriate screen, move cursor up one
+				cursor = cursor->prev;
+				xil_printf("Cursor at: %s\r\n", cursor->option_name);
+			}
+			if (key == 's'){
+				//Change state
+				cursor = cursor->next;
+				xil_printf("Cursor at: %s\r\n", cursor->option_name);
+			}
+			if (key == ENTER){ //Enter key is pressed
+				xil_printf("Cursor at: %s\r\n", cursor->option_name);
+			}
+
+			if (strcmp(cursor->option_name, "increase_volume") == STRING_IS_EQUAL){
+				memcpy(this->vga_controller, gh_sound_settings, gh_sound_settings_size);
+				Xil_DCacheFlush();
+				draw_sprite(this->vga_controller, arrow, INCREASE_VOLUME_Y, INCREASE_VOLUME_X);
+				Xil_DCacheFlush();
+			}
+
+			if (strcmp(cursor->option_name, "decrease_volume") == STRING_IS_EQUAL){
+				memcpy(this->vga_controller, gh_sound_settings, gh_sound_settings_size);
+				Xil_DCacheFlush();
+				draw_sprite(this->vga_controller, arrow, DECREASE_VOLUME_Y, DECREASE_VOLUME_X);
+				Xil_DCacheFlush();
+			}
+
+			if (strcmp(cursor->option_name, "exit") == STRING_IS_EQUAL){
+				memcpy(this->vga_controller, gh_sound_settings, gh_sound_settings_size);
+				Xil_DCacheFlush();
+				draw_sprite(this->vga_controller, arrow, BACK_Y, BACK_X);
+				Xil_DCacheFlush();
+			}
+		}
+		if (strcmp(cursor->option_name, "increase_volume") == STRING_IS_EQUAL){
+			increase_game_volume();
+		}
+		else if (strcmp(cursor->option_name, "decrease_volume") == STRING_IS_EQUAL){
+			decrease_game_volume();
+		}
+		else if (strcmp(cursor->option_name, "exit") == STRING_IS_EQUAL){
+			main_menu();
+		}
+	}
+}
+
+void Game::play_game(char* level_name){
+	gameplay(level_name);
+	game_over();
+}
+
+void Game::gameplay(char* level_name){
+	memcpy(this->vga_controller, gh_gameplay, gh_gameplay_size);
+	Xil_DCacheFlush();
+
+	xil_printf("Playing level: %s\r\n", level_name);
+	sleep(1);
+
+	uint32_t test_time;
+
+	XTime gbl_time_before_test;
+	XTime *p_gbl_time_before_test = &gbl_time_before_test;
+	XTime gbl_time_after_test;
+	XTime *p_gbl_time_after_test = &gbl_time_after_test;
+
+	char input_while_drawing = 0;
+	int count = 0;
+	int succesful_hit_flag = 0;
+	uint32_t score = 0;
+
+	int note_1_offset = 0;
+	int note_2_offset = 0;
+	int note_3_offset = 0;
+	int note_4_offset = 0;
+	int note_5_offset = 0;
+	int note_6_offset = 0;
+	int note_7_offset = 0;
+
+	int note_1_count = 0;
+	int note_2_count = 0;
+	int note_3_count = 0;
+	int note_4_count = 0;
+	int note_5_count = 0;
+	int note_6_count = 0;
+	int note_7_count = 0;
+
+	char note_1_expected_input = 0;
+	char note_2_expected_input = 0;
+	char note_3_expected_input = 0;
+	char note_4_expected_input = 0;
+	char note_5_expected_input = 0;
+	char note_6_expected_input = 0;
+	char note_7_expected_input = 0;
+
+	int note_1_when_to_start = 0;
+	int note_2_when_to_start = 0;
+	int note_3_when_to_start = 0;
+	int note_4_when_to_start = 0;
+	int note_5_when_to_start = 0;
+	int note_6_when_to_start = 0;
+	int note_7_when_to_start = 0;
+
+	int note_1_falling_flag = 0;
+	int note_2_falling_flag = 0;
+	int note_3_falling_flag = 0;
+	int note_4_falling_flag = 0;
+	int note_5_falling_flag = 0;
+	int note_6_falling_flag = 0;
+	int note_7_falling_flag = 0;
+
+	note_1_offset = A_NOTE_X_LANE_OFFSET;
+	note_2_offset = S_NOTE_X_LANE_OFFSET;
+	note_3_offset = F_NOTE_X_LANE_OFFSET;
+	note_4_offset = D_NOTE_X_LANE_OFFSET;
+	note_5_offset = A_NOTE_X_LANE_OFFSET;
+	note_6_offset = S_NOTE_X_LANE_OFFSET;
+	note_7_offset = F_NOTE_X_LANE_OFFSET;
+
+	note_1_count = 0;
+	note_2_count = 0;
+	note_3_count = 0;
+	note_4_count = 0;
+	note_5_count = 0;
+	note_6_count = 0;
+	note_7_count = 0;
+
+	note_1_expected_input = 'a';
+	note_2_expected_input = 's';
+	note_3_expected_input = 'f';
+	note_4_expected_input = 'd';
+	note_5_expected_input = 'a';
+	note_6_expected_input = 's';
+	note_7_expected_input = 'f';
+
+	// defined for initial dropping so that 7 notes fall
+	note_1_when_to_start = WHEN_TO_DROP_NOTES;
+	note_2_when_to_start = WHEN_TO_DROP_NOTES*2;
+	note_3_when_to_start = WHEN_TO_DROP_NOTES*3;
+	note_4_when_to_start = WHEN_TO_DROP_NOTES*4;
+	note_5_when_to_start = WHEN_TO_DROP_NOTES*5;
+	note_6_when_to_start = WHEN_TO_DROP_NOTES*6;
+	note_7_when_to_start = WHEN_TO_DROP_NOTES*7;
+
+	note_1_falling_flag = 0;
+	note_2_falling_flag = 0;
+	note_3_falling_flag = 0;
+	note_4_falling_flag = 0;
+	note_5_falling_flag = 0;
+	note_6_falling_flag = 0;
+	note_7_falling_flag = 0;
+
+	int random_number = 0;
+	while(1)
+	{
+		// time at start
+		XTime_GetTime(p_gbl_time_before_test);
+
+//				count++;
+		count += 2;
+		if (count % note_1_when_to_start == 0 && note_1_falling_flag != 1)
+		{
+			note_1_count = LANE_Y_START;
+			note_1_falling_flag = 1;
+
+			random_number = rand() % 4 + 1;
+			switch(random_number)
+			{
+				case 1:
+					note_1_offset = A_NOTE_X_LANE_OFFSET;
+					note_1_expected_input = 'a';
+					break;
+				case 2:
+					note_1_offset = S_NOTE_X_LANE_OFFSET;
+					note_1_expected_input = 's';
+					break;
+				case 3:
+					note_1_offset = D_NOTE_X_LANE_OFFSET;
+					note_1_expected_input = 'd';
+					break;
+				case 4:
+					note_1_offset = F_NOTE_X_LANE_OFFSET;
+					note_1_expected_input = 'f';
+					break;
+			}
+		}
+
+		else if (count % note_2_when_to_start == 0 && note_2_falling_flag != 1)
+		{
+			// reset after initial drop so that a note will continue to fall every 104
+			note_2_when_to_start= WHEN_TO_DROP_NOTES;
+			note_2_count = LANE_Y_START;
+			note_2_falling_flag = 1;
+
+			random_number = rand() % 4 + 1;
+			switch(random_number)
+			{
+				case 1:
+					note_2_offset = A_NOTE_X_LANE_OFFSET;
+					note_2_expected_input = 'a';
+					break;
+				case 2:
+					note_2_offset = S_NOTE_X_LANE_OFFSET;
+					note_2_expected_input = 's';
+					break;
+				case 3:
+					note_2_offset = D_NOTE_X_LANE_OFFSET;
+					note_2_expected_input = 'd';
+					break;
+				case 4:
+					note_2_offset = F_NOTE_X_LANE_OFFSET;
+					note_2_expected_input = 'f';
+					break;
+			}
+		}
+
+		else if (count % note_3_when_to_start == 0 && note_3_falling_flag != 1)
+		{
+			note_3_when_to_start = WHEN_TO_DROP_NOTES;
+			note_3_count = LANE_Y_START;
+			note_3_falling_flag = 1;
+
+			random_number = rand() % 4 + 1;
+			switch(random_number)
+			{
+				case 1:
+					note_3_offset = A_NOTE_X_LANE_OFFSET;
+					note_3_expected_input = 'a';
+					break;
+				case 2:
+					note_3_offset = S_NOTE_X_LANE_OFFSET;
+					note_3_expected_input = 's';
+					break;
+				case 3:
+					note_3_offset = D_NOTE_X_LANE_OFFSET;
+					note_3_expected_input = 'd';
+					break;
+				case 4:
+					note_3_offset = F_NOTE_X_LANE_OFFSET;
+					note_3_expected_input = 'f';
+					break;
+			}
+		}
+
+		else if (count % note_4_when_to_start == 0 && note_4_falling_flag != 1)
+		{
+			note_4_when_to_start = WHEN_TO_DROP_NOTES;
+			note_4_count = LANE_Y_START;
+			note_4_falling_flag = 1;
+
+			random_number = rand() % 4 + 1;
+			switch(random_number)
+			{
+				case 1:
+					note_4_offset = A_NOTE_X_LANE_OFFSET;
+					note_4_expected_input = 'a';
+					break;
+				case 2:
+					note_4_offset = S_NOTE_X_LANE_OFFSET;
+					note_4_expected_input = 's';
+					break;
+				case 3:
+					note_4_offset = D_NOTE_X_LANE_OFFSET;
+					note_4_expected_input = 'd';
+					break;
+				case 4:
+					note_4_offset = F_NOTE_X_LANE_OFFSET;
+					note_4_expected_input = 'f';
+					break;
+			}
+		}
+
+		else if (count % note_5_when_to_start == 0 && note_5_falling_flag != 1)
+		{
+			note_5_when_to_start = WHEN_TO_DROP_NOTES;
+			note_5_count = LANE_Y_START;
+			note_5_falling_flag = 1;
+
+			random_number = rand() % 4 + 1;
+			switch(random_number)
+			{
+				case 1:
+					note_5_offset = A_NOTE_X_LANE_OFFSET;
+					note_5_expected_input = 'a';
+					break;
+				case 2:
+					note_5_offset = S_NOTE_X_LANE_OFFSET;
+					note_5_expected_input = 's';
+					break;
+				case 3:
+					note_5_offset = D_NOTE_X_LANE_OFFSET;
+					note_5_expected_input = 'd';
+					break;
+				case 4:
+					note_5_offset = F_NOTE_X_LANE_OFFSET;
+					note_5_expected_input = 'f';
+					break;
+			}
+		}
+
+		else if (count % note_6_when_to_start == 0 && note_6_falling_flag != 1)
+		{
+			note_6_when_to_start = WHEN_TO_DROP_NOTES;
+			note_6_count = LANE_Y_START;
+			note_6_falling_flag = 1;
+
+			random_number = rand() % 4 + 1;
+			switch(random_number)
+			{
+				case 1:
+					note_6_offset = A_NOTE_X_LANE_OFFSET;
+					note_6_expected_input = 'a';
+					break;
+				case 2:
+					note_6_offset = S_NOTE_X_LANE_OFFSET;
+					note_6_expected_input = 's';
+					break;
+				case 3:
+					note_6_offset = D_NOTE_X_LANE_OFFSET;
+					note_6_expected_input = 'd';
+					break;
+				case 4:
+					note_6_offset = F_NOTE_X_LANE_OFFSET;
+					note_6_expected_input = 'f';
+					break;
+			}
+		}
+
+		else if (count % note_7_when_to_start == 0 && note_7_falling_flag != 1)
+		{
+			note_7_when_to_start = WHEN_TO_DROP_NOTES;
+			note_7_count = LANE_Y_START;
+			note_7_falling_flag = 1;
+
+			random_number = rand() % 4 + 1;
+			switch(random_number)
+			{
+				case 1:
+					note_7_offset = A_NOTE_X_LANE_OFFSET;
+					note_7_expected_input = 'a';
+					break;
+				case 2:
+					note_7_offset = S_NOTE_X_LANE_OFFSET;
+					note_7_expected_input = 's';
+					break;
+				case 3:
+					note_7_offset = D_NOTE_X_LANE_OFFSET;
+					note_7_expected_input = 'd';
+					break;
+				case 4:
+					note_7_offset = F_NOTE_X_LANE_OFFSET;
+					note_7_expected_input = 'f';
+					break;
+			}
+		}
+
+		display_notes(this->vga_controller, note_1_offset, note_2_offset, note_3_offset, note_4_offset, note_5_offset, note_6_offset, note_7_offset, note_1_count, note_2_count, note_3_count, note_4_count, note_5_count, note_6_count, note_7_count);
+
+		if (note_1_falling_flag) note_1_count += 2;
+
+		if (note_2_falling_flag) note_2_count += 2;
+
+		if (note_3_falling_flag) note_3_count += 2;
+
+		if (note_4_falling_flag) note_4_count += 2;
+
+		if (note_5_falling_flag) note_5_count += 2;
+
+		if (note_6_falling_flag) note_6_count += 2;
+
+		if (note_7_falling_flag) note_7_count += 2;
+
+		if (XUartPs_IsReceiveData(XPAR_PS7_UART_1_BASEADDR))
+		{
+			input_while_drawing = XUartPs_ReadReg(XPAR_PS7_UART_1_BASEADDR, XUARTPS_FIFO_OFFSET);
+
+			if (input_while_drawing == 'p')
+			{
+				pause_menu(level_name);
+			}
+
+			else if (note_1_count >= (LANE_Y_END - 65) && input_while_drawing == note_1_expected_input)
+			{
+				xil_printf("SUCCESSFUL HIT\r\n");
+				draw_sprite_generic(this->vga_controller, BLACK_LANES_Y_SIZE, BLACK_LANES_X_SIZE, black_lanes, 0, CRINGE_X_LANE_OFFSET);
+				draw_sprite_generic(this->vga_controller, YAY_Y_SIZE, YAY_X_SIZE, yay, YAY_Y_LANE_OFFSET, YAY_X_LANE_OFFSET);
+				draw_sprite(this->vga_controller, background_colour, note_1_count-2, note_1_offset);
+
+				succesful_hit_flag = 1;
+				note_1_count = 0;
+				note_1_falling_flag = 0;
+
+				score += 100;
+				print_score(score);
+				Xil_DCacheFlush();
+			}
+
+			else if (note_2_count >= (LANE_Y_END - 65) && input_while_drawing == note_2_expected_input)
+			{
+				xil_printf("SUCCESSFUL HIT\r\n");
+				draw_sprite_generic(this->vga_controller, BLACK_LANES_Y_SIZE, BLACK_LANES_X_SIZE, black_lanes, 0, CRINGE_X_LANE_OFFSET);
+				draw_sprite_generic(this->vga_controller, YAY_Y_SIZE, YAY_X_SIZE, yay, YAY_Y_LANE_OFFSET, YAY_X_LANE_OFFSET);
+				draw_sprite(this->vga_controller, background_colour, note_2_count-2, note_2_offset);
+
+				succesful_hit_flag = 1;
+				note_2_count = 0;
+				note_2_falling_flag = 0;
+
+				score += 100;
+				print_score(score);
+				Xil_DCacheFlush();
+			}
+
+			else if (note_3_count >= (LANE_Y_END - 65) && input_while_drawing == note_3_expected_input)
+			{
+				xil_printf("SUCCESSFUL HIT\r\n");
+				draw_sprite_generic(this->vga_controller, BLACK_LANES_Y_SIZE, BLACK_LANES_X_SIZE, black_lanes, 0, CRINGE_X_LANE_OFFSET);
+				draw_sprite_generic(this->vga_controller, YAY_Y_SIZE, YAY_X_SIZE, yay, YAY_Y_LANE_OFFSET, YAY_X_LANE_OFFSET);
+				draw_sprite(this->vga_controller, background_colour, note_3_count-2, note_3_offset);
+
+				succesful_hit_flag = 1;
+				note_3_count = 0;
+				note_3_falling_flag = 0;
+
+				score += 100;
+				print_score(score);
+				Xil_DCacheFlush();
+			}
+
+			else if (note_4_count >= (LANE_Y_END - 65) && input_while_drawing == note_4_expected_input)
+			{
+				xil_printf("SUCCESSFUL HIT\r\n");
+				draw_sprite_generic(this->vga_controller, BLACK_LANES_Y_SIZE, BLACK_LANES_X_SIZE, black_lanes, 0, CRINGE_X_LANE_OFFSET);
+				draw_sprite_generic(this->vga_controller, YAY_Y_SIZE, YAY_X_SIZE, yay, YAY_Y_LANE_OFFSET, YAY_X_LANE_OFFSET);
+				draw_sprite(this->vga_controller, background_colour, note_4_count-2, note_4_offset);
+
+				succesful_hit_flag = 1;
+				note_4_count = 0;
+				note_4_falling_flag = 0;
+
+				score += 100;
+				print_score(score);
+				Xil_DCacheFlush();
+			}
+
+			else if (note_5_count >= (LANE_Y_END - 65) && input_while_drawing == note_5_expected_input)
+			{
+				xil_printf("SUCCESSFUL HIT\r\n");
+				draw_sprite_generic(this->vga_controller, BLACK_LANES_Y_SIZE, BLACK_LANES_X_SIZE, black_lanes, 0, CRINGE_X_LANE_OFFSET);
+				draw_sprite_generic(this->vga_controller, YAY_Y_SIZE, YAY_X_SIZE, yay, YAY_Y_LANE_OFFSET, YAY_X_LANE_OFFSET);
+				draw_sprite(this->vga_controller, background_colour, note_5_count-2, note_5_offset);
+
+				succesful_hit_flag = 1;
+				note_5_count = 0;
+				note_5_falling_flag = 0;
+
+				score += 100;
+				print_score(score);
+				Xil_DCacheFlush();
+			}
+
+			else if (note_6_count >= (LANE_Y_END - 65) && input_while_drawing == note_6_expected_input)
+			{
+				xil_printf("SUCCESSFUL HIT\r\n");
+				draw_sprite_generic(this->vga_controller, BLACK_LANES_Y_SIZE, BLACK_LANES_X_SIZE, black_lanes, 0, CRINGE_X_LANE_OFFSET);
+				draw_sprite_generic(this->vga_controller, YAY_Y_SIZE, YAY_X_SIZE, yay, YAY_Y_LANE_OFFSET, YAY_X_LANE_OFFSET);
+				draw_sprite(this->vga_controller, background_colour, note_6_count-2, note_6_offset);
+
+				succesful_hit_flag = 1;
+				note_6_count = 0;
+				note_6_falling_flag = 0;
+
+				score += 100;
+				print_score(score);
+				Xil_DCacheFlush();
+			}
+
+			else if (note_7_count >= (LANE_Y_END - 65) && input_while_drawing == note_7_expected_input)
+			{
+				xil_printf("SUCCESSFUL HIT\r\n");
+				draw_sprite_generic(this->vga_controller, BLACK_LANES_Y_SIZE, BLACK_LANES_X_SIZE, black_lanes, 0, CRINGE_X_LANE_OFFSET);
+				draw_sprite_generic(this->vga_controller, YAY_Y_SIZE, YAY_X_SIZE, yay, YAY_Y_LANE_OFFSET, YAY_X_LANE_OFFSET);
+				draw_sprite(this->vga_controller, background_colour, note_7_count-2, note_7_offset);
+
+				succesful_hit_flag = 1;
+				note_7_count = 0;
+				note_7_falling_flag = 0;
+
+				score += 100;
+				print_score(score);
+				Xil_DCacheFlush();
+			}
+
+			else
+			{
+				xil_printf("FAILED HIT (BAD TIMING OR INCORRECT BUTTON)\r\n");
+				draw_sprite_generic(this->vga_controller, BLACK_LANES_Y_SIZE, BLACK_LANES_X_SIZE, black_lanes, 0, 0);
+				draw_sprite_generic(this->vga_controller, CRINGE_Y_SIZE, CRINGE_X_SIZE, cringe, CRINGE_Y_LANE_OFFSET, CRINGE_X_LANE_OFFSET);
+				print_score(score);
+				Xil_DCacheFlush();
+			}
+		}
+
+		if (note_1_count == LANE_Y_END)
+		{
+			xil_printf("FAILED HIT (NO PRESS)\r\n");
+			draw_sprite_generic(this->vga_controller, BLACK_LANES_Y_SIZE, BLACK_LANES_X_SIZE, black_lanes, 0, 0);
+			draw_sprite_generic(this->vga_controller, CRINGE_Y_SIZE, CRINGE_X_SIZE, cringe, CRINGE_Y_LANE_OFFSET, CRINGE_X_LANE_OFFSET);
+			draw_sprite(this->vga_controller, background_colour, note_1_count-2, note_1_offset);
+			print_score(score);
+			Xil_DCacheFlush();
+
+			note_1_count = 0;
+			note_1_falling_flag = 0;
+		}
+
+		if (note_2_count == LANE_Y_END)
+		{
+			xil_printf("FAILED HIT (NO PRESS)\r\n");
+			draw_sprite_generic(this->vga_controller, BLACK_LANES_Y_SIZE, BLACK_LANES_X_SIZE, black_lanes, 0, 0);
+			draw_sprite_generic(this->vga_controller, CRINGE_Y_SIZE, CRINGE_X_SIZE, cringe, CRINGE_Y_LANE_OFFSET, CRINGE_X_LANE_OFFSET);
+			draw_sprite(this->vga_controller, background_colour, note_2_count-2, note_2_offset);
+			print_score(score);
+			Xil_DCacheFlush();
+
+			note_2_count = 0;
+			note_2_falling_flag = 0;
+		}
+
+		if (note_3_count == LANE_Y_END)
+		{
+			xil_printf("FAILED HIT (NO PRESS)\r\n");
+			draw_sprite_generic(this->vga_controller, BLACK_LANES_Y_SIZE, BLACK_LANES_X_SIZE, black_lanes, 0, 0);
+			draw_sprite_generic(this->vga_controller, CRINGE_Y_SIZE, CRINGE_X_SIZE, cringe, CRINGE_Y_LANE_OFFSET, CRINGE_X_LANE_OFFSET);
+			draw_sprite(this->vga_controller, background_colour, note_3_count-2, note_3_offset);
+			print_score(score);
+			Xil_DCacheFlush();
+
+			note_3_count = 0;
+			note_3_falling_flag = 0;
+		}
+
+		if (note_4_count == LANE_Y_END)
+		{
+			xil_printf("FAILED HIT (NO PRESS)\r\n");
+			draw_sprite_generic(this->vga_controller, BLACK_LANES_Y_SIZE, BLACK_LANES_X_SIZE, black_lanes, 0, 0);
+			draw_sprite_generic(this->vga_controller, CRINGE_Y_SIZE, CRINGE_X_SIZE, cringe, CRINGE_Y_LANE_OFFSET, CRINGE_X_LANE_OFFSET);
+			draw_sprite(this->vga_controller, background_colour, note_4_count-2, note_4_offset);
+			print_score(score);
+			Xil_DCacheFlush();
+
+			note_4_count = 0;
+			note_4_falling_flag = 0;
+		}
+
+		if (note_5_count == LANE_Y_END)
+		{
+			xil_printf("FAILED HIT (NO PRESS)\r\n");
+			draw_sprite_generic(this->vga_controller, BLACK_LANES_Y_SIZE, BLACK_LANES_X_SIZE, black_lanes, 0, 0);
+			draw_sprite_generic(this->vga_controller, CRINGE_Y_SIZE, CRINGE_X_SIZE, cringe, CRINGE_Y_LANE_OFFSET, CRINGE_X_LANE_OFFSET);
+			draw_sprite(this->vga_controller, background_colour, note_5_count-2, note_5_offset);
+			print_score(score);
+			Xil_DCacheFlush();
+
+			note_5_count = 0;
+			note_5_falling_flag = 0;
+		}
+
+		if (note_6_count == LANE_Y_END)
+		{
+			xil_printf("FAILED HIT (NO PRESS)\r\n");
+			draw_sprite_generic(this->vga_controller, BLACK_LANES_Y_SIZE, BLACK_LANES_X_SIZE, black_lanes, 0, 0);
+			draw_sprite_generic(this->vga_controller, CRINGE_Y_SIZE, CRINGE_X_SIZE, cringe, CRINGE_Y_LANE_OFFSET, CRINGE_X_LANE_OFFSET);
+			draw_sprite(this->vga_controller, background_colour, note_6_count-2, note_6_offset);
+			print_score(score);
+			Xil_DCacheFlush();
+
+			note_6_count = 0;
+			note_6_falling_flag = 0;
+		}
+
+		if (note_7_count == LANE_Y_END)
+		{
+			xil_printf("FAILED HIT (NO PRESS)\r\n");
+			draw_sprite_generic(this->vga_controller, BLACK_LANES_Y_SIZE, BLACK_LANES_X_SIZE, black_lanes, 0, 0);
+			draw_sprite_generic(this->vga_controller, CRINGE_Y_SIZE, CRINGE_X_SIZE, cringe, CRINGE_Y_LANE_OFFSET, CRINGE_X_LANE_OFFSET);
+			draw_sprite(this->vga_controller, background_colour, note_7_count-2, note_7_offset);
+			print_score(score);
+			Xil_DCacheFlush();
+
+			note_7_count = 0;
+			note_7_falling_flag = 0;
+		}
+
+		// time at end
+		XTime_GetTime(p_gbl_time_after_test);
+
+		test_time = (u64) gbl_time_after_test - (u64) gbl_time_before_test;
+
+		uint32_t sleep_time = (4000) - (test_time/(200*10^9));
+
+		// if we're gonna sleep for way too long i'd rather sleep for
+		// an improper frame rate than our game freezing for minutes
+		// (because of unsigned overflow or whatever
+		if (sleep_time > 4000) sleep_time = 4000;
+
+		usleep(sleep_time);
+	}
+}
+
+void Game::game_over(){
+	xil_printf("Level over. Displaying score.\r\n");
+	main_menu();
+}
+
+
+void Game::pause_menu(char* level_name){
+	memcpy(this->vga_controller, gh_pause, gh_pause_size);
+	Xil_DCacheFlush();
+	draw_sprite(this->vga_controller, arrow, CONTINUE_GAME_Y, CONTINUE_GAME_X);
+	Xil_DCacheFlush();
+
+	xil_printf("Pause menu displayed.\r\n");
+	struct menu_options* cursor = generate_pause_menu_options();
+	while(1){
+		char key = 0;
+		while(key != ENTER){
+			// If the user does up/down arrow, update the screen. If enter, change the game state.
+			// Wait for user input.
+			key = wait_for_keyboard_input();
+			// Using the user input, obtain what the user wants to do.
+			if (key == 'w'){
+				//Generate appropriate screen, move cursor up one
+				cursor = cursor->prev;
+				xil_printf("Cursor at: %s\r\n", cursor->option_name);
+			}
+			if (key == 's'){
+				//Change state
+				cursor = cursor->next;
+				xil_printf("Cursor at: %s\r\n", cursor->option_name);
+			}
+			if (key == ENTER){ //Enter key is pressed
+				xil_printf("Cursor at: %s\r\n", cursor->option_name);
+			}
+
+			if (strcmp(cursor->option_name, "continue_game") == STRING_IS_EQUAL){
+				memcpy(this->vga_controller, gh_pause, gh_pause_size);
+				Xil_DCacheFlush();
+				draw_sprite(this->vga_controller, arrow, CONTINUE_GAME_Y, CONTINUE_GAME_X);
+				Xil_DCacheFlush();
+			}
+
+			if (strcmp(cursor->option_name, "increase_volume") == STRING_IS_EQUAL){
+				memcpy(this->vga_controller, gh_pause, gh_pause_size);
+				Xil_DCacheFlush();
+				draw_sprite(this->vga_controller, arrow, PAUSE_INCREASE_VOLUME_Y, PAUSE_INCREASE_VOLUME_X);
+				Xil_DCacheFlush();
+			}
+
+			if (strcmp(cursor->option_name, "decrease_volume") == STRING_IS_EQUAL){
+				memcpy(this->vga_controller, gh_pause, gh_pause_size);
+				Xil_DCacheFlush();
+				draw_sprite(this->vga_controller, arrow, PAUSE_DECREASE_VOLUME_Y, PAUSE_DECREASE_VOLUME_X);
+				Xil_DCacheFlush();
+			}
+
+			if (strcmp(cursor->option_name, "main_menu_option") == STRING_IS_EQUAL){
+				memcpy(this->vga_controller, gh_pause, gh_pause_size);
+				Xil_DCacheFlush();
+				draw_sprite(this->vga_controller, arrow, PAUSE_MAIN_MENU_Y, PAUSE_MAIN_MENU_X);
+				Xil_DCacheFlush();
+			}
+		}
+		if (strcmp(cursor->option_name, "increase_volume") == STRING_IS_EQUAL){
+			increase_game_volume();
+		}
+		else if (strcmp(cursor->option_name, "decrease_volume") == STRING_IS_EQUAL){
+			decrease_game_volume();
+		}
+		else if (strcmp(cursor->option_name, "main_menu_option") == STRING_IS_EQUAL){
+			main_menu();
+		}
+		else if (strcmp(cursor->option_name, "continue_game") == STRING_IS_EQUAL){
+			gameplay(level_name);
+		}
+	}
+}
+
+void Game::increase_game_volume(){
+	xil_printf("Increasing game volume.\r\n");
+}
+
+void Game::decrease_game_volume(){
+	xil_printf("Decreasing game volume.\r\n");
+}
+
+void Game::draw_sprite(int* image_buffer_pointer, const uint8_t note[], int x_offset, int y_offset)
+{
+	int offset = 0;
+
+	offset = ((X_SIZE*x_offset) + y_offset);
+	image_buffer_pointer += offset;
+	const uint8_t *sprite;
+	sprite = note;
+
+	for(int i = 0; i < NOTE_Y_SIZE; i++)
+	{
+		memcpy(image_buffer_pointer, sprite, NOTE_X_SIZE*4);
+		sprite += NOTE_X_SIZE*4;
+		image_buffer_pointer += X_SIZE;
+	}
+}
+
+void Game::draw_sprite_generic(int* image_buffer_pointer, const int SPRITE_Y_SIZE, const int SPRITE_X_SIZE, const uint8_t note[], int x_offset, int y_offset)
+{
+	int offset = 0;
+
+	offset = ((X_SIZE*x_offset) + y_offset);
+	image_buffer_pointer += offset;
+	const uint8_t *sprite;
+	sprite = note;
+
+	for(int i = 0; i < SPRITE_Y_SIZE; i++)
+	{
+		memcpy(image_buffer_pointer, sprite, SPRITE_X_SIZE*4);
+		sprite += SPRITE_X_SIZE*4;
+		image_buffer_pointer += X_SIZE;
+	}
+}
+
+void Game::drop_note(int* image_buffer_pointer, const uint8_t display_note[], int x_offset, int y_offset)
+{
+	draw_sprite(this->vga_controller, background_colour, x_offset-2, y_offset);
+	draw_sprite(this->vga_controller, display_note, x_offset, y_offset);
+	Xil_DCacheFlush();
+}
+
+
+void Game::display_notes(int* image_buffer_pointer, int note_1_offset, int note_2_offset, int note_3_offset, int note_4_offset, int note_5_offset, int note_6_offset, int note_7_offset, int note_1_count, int note_2_count, int note_3_count, int note_4_count, int note_5_count, int note_6_count, int note_7_count)
+{
+	const uint8_t *display_note_1;
+	const uint8_t *display_note_2;
+	const uint8_t *display_note_3;
+	const uint8_t *display_note_4;
+	const uint8_t *display_note_5;
+	const uint8_t *display_note_6;
+	const uint8_t *display_note_7;
+
+	if (note_1_offset > 0 && note_1_count < LANE_Y_END && note_1_count >= LANE_Y_START)
+	{
+		switch(note_1_offset)
+		{
+			case A_NOTE_X_LANE_OFFSET:
+				display_note_1 = A_note;
+				break;
+			case S_NOTE_X_LANE_OFFSET:
+				display_note_1 = S_note;
+				break;
+			case D_NOTE_X_LANE_OFFSET:
+				display_note_1 = D_note;
+				break;
+			case F_NOTE_X_LANE_OFFSET:
+				display_note_1 = F_note;
+				break;
+		}
+		drop_note(this->vga_controller, display_note_1, note_1_count, note_1_offset);
+	}
+
+	if (note_2_offset > 0 && note_2_count < LANE_Y_END && note_2_count >= LANE_Y_START)
+	{
+		switch(note_2_offset)
+		{
+			case A_NOTE_X_LANE_OFFSET:
+				display_note_2 = A_note;
+				break;
+			case S_NOTE_X_LANE_OFFSET:
+				display_note_2 = S_note;
+				break;
+			case D_NOTE_X_LANE_OFFSET:
+				display_note_2 = D_note;
+				break;
+			case F_NOTE_X_LANE_OFFSET:
+				display_note_2 = F_note;
+				break;
+		}
+		drop_note(this->vga_controller, display_note_2, note_2_count, note_2_offset);
+	}
+
+	if (note_3_offset > 0 && note_3_count < LANE_Y_END && note_3_count >= LANE_Y_START)
+	{
+		switch(note_3_offset)
+		{
+			case A_NOTE_X_LANE_OFFSET:
+				display_note_3 = A_note;
+				break;
+			case S_NOTE_X_LANE_OFFSET:
+				display_note_3 = S_note;
+				break;
+			case D_NOTE_X_LANE_OFFSET:
+				display_note_3 = D_note;
+				break;
+			case F_NOTE_X_LANE_OFFSET:
+				display_note_3 = F_note;
+				break;
+		}
+		drop_note(this->vga_controller, display_note_3, note_3_count, note_3_offset);
+	}
+
+	if (note_4_offset > 0 && note_4_count < LANE_Y_END && note_4_count >= LANE_Y_START)
+	{
+		switch(note_4_offset)
+		{
+			case A_NOTE_X_LANE_OFFSET:
+				display_note_4 = A_note;
+				break;
+			case S_NOTE_X_LANE_OFFSET:
+				display_note_4 = S_note;
+				break;
+			case D_NOTE_X_LANE_OFFSET:
+				display_note_4 = D_note;
+				break;
+			case F_NOTE_X_LANE_OFFSET:
+				display_note_4 = F_note;
+				break;
+		}
+		drop_note(this->vga_controller, display_note_4, note_4_count, note_4_offset);
+	}
+
+	if (note_5_offset > 0 && note_5_count < LANE_Y_END && note_5_count >= LANE_Y_START)
+	{
+		switch(note_5_offset)
+		{
+			case A_NOTE_X_LANE_OFFSET:
+				display_note_5 = A_note;
+				break;
+			case S_NOTE_X_LANE_OFFSET:
+				display_note_5 = S_note;
+				break;
+			case D_NOTE_X_LANE_OFFSET:
+				display_note_5 = D_note;
+				break;
+			case F_NOTE_X_LANE_OFFSET:
+				display_note_5 = F_note;
+				break;
+		}
+		drop_note(this->vga_controller, display_note_5, note_5_count, note_5_offset);
+	}
+
+	if (note_6_offset > 0 && note_6_count < LANE_Y_END && note_6_count >= LANE_Y_START)
+	{
+		switch(note_6_offset)
+		{
+			case A_NOTE_X_LANE_OFFSET:
+				display_note_6 = A_note;
+				break;
+			case S_NOTE_X_LANE_OFFSET:
+				display_note_6 = S_note;
+				break;
+			case D_NOTE_X_LANE_OFFSET:
+				display_note_6 = D_note;
+				break;
+			case F_NOTE_X_LANE_OFFSET:
+				display_note_6 = F_note;
+				break;
+		}
+		drop_note(this->vga_controller, display_note_6, note_6_count, note_6_offset);
+	}
+
+	if (note_7_offset > 0 && note_7_count < LANE_Y_END && note_7_count >= LANE_Y_START)
+	{
+		switch(note_7_offset)
+		{
+			case A_NOTE_X_LANE_OFFSET:
+				display_note_7 = A_note;
+				break;
+			case S_NOTE_X_LANE_OFFSET:
+				display_note_7 = S_note;
+				break;
+			case D_NOTE_X_LANE_OFFSET:
+				display_note_7 = D_note;
+				break;
+			case F_NOTE_X_LANE_OFFSET:
+				display_note_7 = F_note;
+				break;
+		}
+		drop_note(this->vga_controller, display_note_7, note_7_count, note_7_offset);
+	}
+}
+
+void Game::print_score(uint32_t score){
+	int base_location = 188;
+	int digit_place = 0;
+	while(score != 0){
+		int digit_to_print = score % 10;
+		score /= 10;
+		draw_sprite_generic(this->vga_controller, NUMBERS_Y_SIZE, NUMBERS_X_SIZE, get_number_sprite(digit_to_print), 800, base_location - digit_place * 28);
+		digit_place++;
+	}
+}
+
+const uint8_t* Game::get_number_sprite(int num){
+	if(num == 0){
+		return zero;
+	}
+	else if(num == 1){
+		return one;
+	}
+	else if(num == 2){
+		return two;
+	}
+	else if(num == 3){
+		return three;
+	}
+	else if(num == 4){
+		return four;
+	}
+	else if(num == 5){
+		return five;
+	}
+	else if(num == 6){
+		return six;
+	}
+	else if(num == 7){
+		return seven;
+	}
+	else if(num == 8){
+		return eight;
+	}
+	else if(num == 9){
+		return nine;
+	}
+	else{
+		xil_printf("Error Printing Number Sprite.");
+	}
+	return zero;
+}
+

@@ -899,3 +899,10 @@ timestamp=[2023-03-21 18:53:45], mode=BUILD, duration=0:00:02.944, duration_ms=2
 timestamp=[2023-03-21 19:03:52], mode=BUILD, duration=0:00:03.843, duration_ms=3843, data={name=video, configuration=Debug, clean_build=false}
 timestamp=[2023-03-21 19:21:00], mode=BUILD, duration=0:00:02.324, duration_ms=2324, data={name=Test_1, configuration=Debug, clean_build=false}
 timestamp=[2023-03-21 20:40:25], mode=BUILD, duration=0:00:05.185, duration_ms=5185, data={name=video, configuration=Debug, clean_build=false}
+timestamp=[2023-03-22 20:19:38], mode=WORKBENCH_START, duration=0:00:17.538, duration_ms=17538, data={}
+timestamp=[2023-03-22 20:19:40], mode=WORKBENCH_UI_INIT, duration=0:00:02.061, duration_ms=2061, data={editors_count=47, platform_editors_count=13, projects_count=10, platform_projects_count=2, active_platform_editor=false, projects=AudioSW,AudioSoftware_system,FinalProject,RemoteSystemsTempFiles,Test_1,Test_1_system,Test_Project_2,VideoSW,VideoSoftware,video}
+timestamp=[2023-03-22 20:19:44], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:02.063, duration_ms=2063, data={}
+timestamp=[2023-03-22 21:09:31], mode=BUILD, duration=0:00:04.751, duration_ms=4751, data={name=video, configuration=Debug, clean_build=false}
+timestamp=[2023-03-22 21:33:52], mode=BUILD, duration=0:00:03.489, duration_ms=3489, data={name=video, configuration=Debug, clean_build=false}
+timestamp=[2023-03-22 21:57:32], mode=BUILD, duration=0:00:02.627, duration_ms=2627, data={name=video, configuration=Debug, clean_build=false}
+timestamp=[2023-03-22 22:29:13], mode=BUILD, duration=0:00:02.569, duration_ms=2569, data={name=video, configuration=Debug, clean_build=false}

@@ -1,7 +1,7 @@
 #include "input.h"
 #include "xil_cache.h"
-#include "AudioControl.h"
 #include <string.h>
+#include "xtime_l.h"
 
 #if !defined(MAIN_MENU_H)
 #define MAIN_MENU_H 1
@@ -57,7 +57,7 @@
 #define CRINGE_Y_LANE_OFFSET	404
 #define BLACK_LANES_Y_SIZE		1024
 #define BLACK_LANES_X_SIZE		324
-
+#define WHEN_TO_DROP_NOTES		106
 #define NUMBERS_X_SIZE			28
 #define NUMBERS_Y_SIZE			47
 
@@ -114,19 +114,6 @@ extern const int eight_size;
 extern const uint8_t nine[];
 extern const int nine_size;
 
-
-//Music Assets
-//extern const uint8_t americanfootball_left[];
-//extern const int americanfootball_left_size;
-//extern const uint8_t americanfootball_right[];
-//extern const int americanfootball_right_size;
-//
-//extern const uint8_t something_left[];
-//extern const int something_left_size;
-//extern const uint8_t something_right[];
-//extern const int something_right_size;
-
-
 struct menu_options{
 	char option_name[MENU_OPTION_NAME_SIZE];
 	struct menu_options* next;
@@ -159,8 +146,8 @@ public:
 	void draw_sprite(int* image_buffer_pointer, const uint8_t note[], int x_offset, int y_offset);
 	void draw_sprite_generic(int* image_buffer_pointer, const int SPRITE_Y_SIZE, const int SPRITE_X_SIZE, const uint8_t note[], int x_offset, int y_offset);
 	void drop_note(int* image_buffer_pointer, const uint8_t display_note[], int x_offset, int y_offset);
+	void display_notes(int* image_buffer_pointer, int note_1_offset, int note_2_offset, int note_3_offset, int note_4_offset, int note_5_offset, int note_6_offset, int note_7_offset, int note_1_count, int note_2_count, int note_3_count, int note_4_count, int note_5_count, int note_6_count, int note_7_count);
 private:
-//	AudioControl* audio_controller;
 	volatile int* audio_ptr;
 	int* vga_controller;
 	void print_score(uint32_t);
