@@ -1,4 +1,4 @@
-22:29:10 **** Incremental Build of configuration Debug for project video ****
+23:22:47 **** Incremental Build of configuration Debug for project video ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
@@ -13,9 +13,6 @@ C:/Users/Christopher/Desktop/FP/ENSC_452/FP/Test_Project_2/export/Test_Project_2
    65 | #pragma message ("For the sleep routines, Global timer is being used")
       |                                                                      ^
 ../src/main_menu.cpp: In member function 'void Game::gameplay(char*)':
-../src/main_menu.cpp:890:18: warning: comparison of integer expressions of different signedness: 'uint32_t' {aka 'long unsigned int'} and 'int' [-Wsign-compare]
-  890 |   if (sleep_time > frame_time) sleep_time = frame_time;
-      |       ~~~~~~~~~~~^~~~~~~~~~~~
 ../src/main_menu.cpp:351:6: warning: variable 'succesful_hit_flag' set but not used [-Wunused-but-set-variable]
   351 |  int succesful_hit_flag = 0;
       |      ^~~~~~~~~~~~~~~~~~
@@ -29,9 +26,9 @@ arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=non
 'Invoking: ARM v7 Print Size'
 arm-none-eabi-size video.elf  |tee "video.elf.size"
    text	   data	    bss	    dec	    hex	filename
-84864695	   3648	2241076	87109419	5312f2b	video.elf
+84864667	   3648	2241068	87109383	5312f07	video.elf
 'Finished building: video.elf.size'
 ' '
 
-22:29:13 Build Finished (took 2s.548ms)
+23:22:50 Build Finished (took 2s.448ms)
 

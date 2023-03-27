@@ -350,7 +350,7 @@ void Game::gameplay(char* level_name){
 	int count = 0;
 	int succesful_hit_flag = 0;
 	uint32_t score = 0;
-	int frame_time = 4300;
+	uint32_t frame_time = 7922;
 
 	int note_1_offset = 0;
 	int note_2_offset = 0;
@@ -881,8 +881,7 @@ void Game::gameplay(char* level_name){
 		XTime_GetTime(p_gbl_time_after_test);
 
 		test_time = (u64) gbl_time_after_test - (u64) gbl_time_before_test;
-
-		uint32_t sleep_time = (frame_time) - (test_time/(200*10^9));
+		uint32_t sleep_time = (frame_time) - (test_time/100);
 
 		// if we're gonna sleep for way too long i'd rather sleep for
 		// an improper frame rate than our game freezing for minutes

@@ -27,7 +27,4 @@ dow C:/Users/Christopher/Desktop/FP/ENSC_452/FP/AudioSW/Debug/AudioSW.elf
 targets -set -nocase -filter {name =~ "*A9*#1"}
 dow C:/Users/Christopher/Desktop/FP/ENSC_452/FP/VideoSW/Debug/VideoSW.elf
 configparams force-mem-access 0
-targets -set -nocase -filter {name =~ "*A9*#0"}
-con
-targets -set -nocase -filter {name =~ "*A9*#1"}
-con
+bpadd -addr &main

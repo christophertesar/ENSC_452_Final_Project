@@ -42,7 +42,6 @@ extern int nice_menu_size;
 //static AudioControl audio_control = AudioControl(americanfootball_right_size/4, americanfootball_left, americanfootball_right);
 //
 void audio_timer_interrupt_handler(void *CallBackRef){
-	xil_printf("hi");
 }
 
 void Timer_InterruptHandler(XTmrCtr *data, u8 TmrCtrNumber)
